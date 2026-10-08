@@ -30,6 +30,12 @@ main{max-width:600px;margin:0 auto;padding:1rem .9rem 5rem}
 .jp{cursor:pointer;border-bottom:1.5px dotted #d98a85;transition:background .15s;border-radius:4px;padding:0 1px}
 .jp:active,.jp.speaking{background:var(--primary-soft)}
 .jp.speaking{border-bottom:2px solid var(--primary)}
+.rate-ctl{position:sticky;top:0;z-index:50;display:flex;gap:.4rem;align-items:center;justify-content:center;
+  background:rgba(255,255,255,.94);padding:.45rem;border-radius:0 0 14px 14px;
+  box-shadow:0 2px 12px rgba(0,0,0,.06);font-size:.82rem;color:var(--muted);margin:0 -.5rem .6rem}
+.rate-ctl .rate-btn{border:1px solid #e8ddd2;background:#fff;color:var(--muted);border-radius:999px;
+  padding:.28rem .8rem;font-size:.82rem;cursor:pointer}
+.rate-ctl .rate-btn.active{background:var(--primary);border-color:var(--primary);color:#fff;font-weight:700}
 .reading{color:var(--muted);font-size:.85em}
 .vocab-num{display:inline-flex;width:1.7rem;height:1.7rem;border-radius:50%;background:var(--primary-soft);color:var(--primary-deep);font-weight:800;font-size:.85rem;align-items:center;justify-content:center;margin-right:.5rem}
 .vocab-zh{color:var(--primary-deep);font-weight:700}
@@ -79,7 +85,12 @@ h2.lesson-h{font-size:1.25rem;font-weight:800;margin-bottom:.2rem}
   <div class="sub" style="margin-top:.5rem;font-size:.95rem;font-weight:700">問候・自我介紹</div>
 </header>
 <main>
-  <div class="card" style="margin-top:1rem">🔊 撳任何 <span class="jp" onclick="speak(this)" data-speak="日文">日文</span>（虛線底線）即播真人錄音，再撳一下停止</div>
+  <div class="rate-ctl">🔊 語速
+    <button class="rate-btn" data-rate="0.7" onclick="setRate(0.7)">0.7x 慢</button>
+    <button class="rate-btn" data-rate="1" onclick="setRate(1)">1.0x 標準</button>
+    <button class="rate-btn" data-rate="1.25" onclick="setRate(1.25)">1.25x 快</button>
+  </div>
+  <div class="card">🔊 撳任何 <span class="jp" onclick="speak(this)" data-speak="日文">日文</span>（虛線底線）即播真人錄音，再撳一下停止</div>
   <div class="card">識講「我係邊個」，就係日文嘅第一步。今日內容看似簡單，但係成個課程嘅地基。</div>
   <div class="sec-title"><span class="dot"></span>📖 單字（12個）</div><div class="card"><span class="vocab-num">1</span><span class="jp" data-speak="私" data-audio="audio/day1/w01.mp3" onclick="speak(this)" title="🔊 撳我讀出">私</span><span class="reading">（わたし）</span> <span class="vocab-zh">— 我</span><div class="vocab-ex">例：<span class="jp" data-speak="私は香港人です。" data-audio="audio/day1/s01.mp3" onclick="speak(this)" title="🔊 撳我讀出">私は香港人です。</span><br>（我係香港人。）</div></div>
 <div class="card"><span class="vocab-num">2</span><span class="jp" data-speak="名前" data-audio="audio/day1/w02.mp3" onclick="speak(this)" title="🔊 撳我讀出">名前</span><span class="reading">（なまえ）</span> <span class="vocab-zh">— 名字</span><div class="vocab-ex">例：<span class="jp" data-speak="私の名前はファンです。" data-audio="audio/day1/s02.mp3" onclick="speak(this)" title="🔊 撳我讀出">私の名前はファンです。</span><br>（我個名係范。）</div></div>
@@ -102,6 +113,15 @@ h2.lesson-h{font-size:1.25rem;font-weight:800;margin-bottom:.2rem}
 <footer>每晚 21:00 自動更新 ｜ Pison自編課程</footer>
 <script>
 var currentAudio=null, currentEl=null;
+var playRate=1;
+try{ var saved=parseFloat(localStorage.getItem('n5n4_rate')); if(saved>0) playRate=saved; }catch(e){}
+function setRate(r){
+  playRate=r;
+  try{ localStorage.setItem('n5n4_rate',String(r)); }catch(e){}
+  var btns=document.querySelectorAll('.rate-btn');
+  for(var i=0;i<btns.length;i++){ btns[i].classList.toggle('active', parseFloat(btns[i].dataset.rate)===r); }
+  stopAll();
+}
 function stopAll(){
   try{ if('speechSynthesis' in window) speechSynthesis.cancel(); }catch(e){}
   if(currentAudio){ try{ currentAudio.pause(); }catch(e){} currentAudio=null; }
@@ -127,6 +147,7 @@ function speak(el){
     var au=el.dataset.audio;
     if(au){
       var a=new Audio(au);
+      try{ a.playbackRate=playRate; }catch(e){}
       currentAudio=a; currentEl=el; el.classList.add('speaking');
       a.onended=function(){ stopAll(); };
       a.onerror=function(){ stopAll(); speakFallback(el); };
@@ -137,6 +158,7 @@ function speak(el){
     speakFallback(el);
   }catch(e){}
 }
+try{ setRate(playRate); }catch(e){}
 </script>
 </body>
 </html>
