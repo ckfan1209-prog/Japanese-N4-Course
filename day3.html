@@ -37,6 +37,9 @@ strong { color:#2f3560; }
 .num-item { display:flex; gap:.65rem; padding:.55rem .7rem; border-radius:12px; margin:.3rem 0; background:#fafbfe; }
 .num { flex-shrink:0; width:26px; height:26px; border-radius:50%; background:var(--primary-soft); color:var(--primary); font-weight:800; font-size:.78rem; display:flex; align-items:center; justify-content:center; margin-top:.15rem; }
 .num-body { font-size:.9rem; }
+.jp { cursor:pointer; border-bottom:1.5px dotted #a5b4fc; transition:background .15s; }
+.jp:active, .jp.speaking { background:var(--primary-soft); border-bottom-color:var(--primary); }
+.tts-hint { font-size:.72rem; color:#5b6072; background:var(--primary-soft); border-radius:10px; padding:.45rem .8rem; margin:0 0 1rem; }
 .back { display:block; text-align:center; background:var(--primary); color:#fff; text-decoration:none; padding:.85rem; border-radius:14px; font-weight:700; font-size:.9rem; margin-top:1.4rem; }
 </style>
 </head>
@@ -48,51 +51,66 @@ strong { color:#2f3560; }
   <div class="theme"></div>
 </div>
 <main>
-<p>📅 <strong>今日進度：第 3 日 / 182</strong>｜Phase 1：N5 總鞏固 + N4 門檻（週 1：假名複習・自我介紹・數字時間）</p>
+<div class="tts-hint">🔊 撳任何日文（虛線底線）都會即時讀出，再撳一下停止</div>
+<p>📅 <strong>今日進度：第 3 日 / 182</strong>｜Phase 1：N5 總鞏固 + N4 門檻（週 1：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">假名複習・自我介紹・數字時間</span>）</p>
 <p>今日係星期六！唔學新嘢，出<strong>本週總複習＋5 條小測驗</strong>。你已經連續兩日完成進度，今日就用 15 分鐘驗收一下——測驗喺文末，建議先唔好望返轉頭，直接作答先睇答案！</p>
 <hr>
 <p>📚 <strong>本週目前學過嘅內容回顧</strong></p>
 <p><strong>單字（Day 1–2 共 24 個重點）：</strong></p>
 <ul>
-<li>數字：一（いち）、二（に）、三（さん）、四（よん／し）、五（ご）、六（ろく）、七（しち／なな）、八（はち）、九（く／きゅう）、十（じゅう）</li>
-<li>時間：今（いま）、朝（あさ）、昼（ひる）、夜（よる）、今日（きょう）、明日（あした）、昨日（きのう）、時間（じかん）、〜半（はん）、午前（ごぜん）、午後（ごご）、何時（なんじ）</li>
-<li>自我介紹相關：私（わたし）、名前（なまえ）、学生（がくせい）、先生（せんせい）、日本人（にほんじん）等</li>
+<li>數字：一（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">いち</span>）、二（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">に</span>）、三（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">さん</span>）、四（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">よん</span>／<span class="jp" onclick="speak(this)" title="🔊 撳我讀">し</span>）、五（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ご</span>）、六（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ろく</span>）、七（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">しち</span>／<span class="jp" onclick="speak(this)" title="🔊 撳我讀">なな</span>）、八（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">はち</span>）、九（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">く</span>／<span class="jp" onclick="speak(this)" title="🔊 撳我讀">きゅう</span>）、十（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">じゅう</span>）</li>
+<li>時間：今（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">いま</span>）、朝（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">あさ</span>）、昼（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ひる</span>）、夜（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">よる</span>）、今日（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">きょう</span>）、明日（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">あした</span>）、昨日（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">きのう</span>）、時間（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">じかん</span>）、〜半（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">はん</span>）、午前（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ごぜん</span>）、午後（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ごご</span>）、何時（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">なんじ</span>）</li>
+<li>自我介紹相關：私（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">わたし</span>）、名前（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">なまえ</span>）、学生（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">がくせい</span>）、先生（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">せんせい</span>）、日本人（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">にほんじん</span>）等</li>
 </ul>
 <p><strong>兩個死記位（最易錯！）：</strong></p>
 <ul>
-<li>四時讀「<strong>よじ</strong>」唔係「よんじ」；九時讀「<strong>くじ</strong>」唔係「きゅうじ」</li>
-<li>今日讀「きょう」（日常口語），尋日「きのう」個「う」要拉長音</li>
+<li>四時讀「<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">よじ</span></strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">」唔係「よんじ」</span>；九時讀「<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">くじ</span></strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">」唔係「きゅうじ」</span></li>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀">今日讀「きょう」</span>（日常口語），<span class="jp" onclick="speak(this)" title="🔊 撳我讀">尋日「きのう」個「う」要拉長音</span></li>
 </ul>
 <p><strong>文法：</strong></p>
 <ul>
-<li>① 肯定：〜は〜です（A 係 B）／否定：〜は〜じゃありません／ではありません（A 唔係 B）</li>
-<li>② 問時間：何時ですか。答：〜時（〜分）です。「〜から〜まで」＝ 由〜到〜</li>
+<li>① 肯定：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">〜は〜です</span>（A 係 B）／否定：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">〜は〜じゃありません</span>／<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ではありません</span>（A 唔係 B）</li>
+<li>② 問時間：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">何時ですか。答</span>：〜時（〜分）<span class="jp" onclick="speak(this)" title="🔊 撳我讀">です。「〜から〜まで」</span>＝ 由〜到〜</li>
 </ul>
 <hr>
 <p>📝 <strong>小測驗（5 題）— 試下唔好睇筆記作答！</strong></p>
 <p><strong>第 1 題（聽音辨字）</strong>：以下邊個係「四時」嘅正確讀音？</p>
-<p>A. よんじ　B. よじ　C. しじ　D. しちじ</p>
-<p><strong>第 2 題（讀音）</strong>：「今日は暑いです。」入面「今日」點讀？</p>
-<p>A. こんにち　B. きょう　C. きにち　D. こんにち</p>
+<p>A. <span class="jp" onclick="speak(this)" title="🔊 撳我讀">よんじ</span>　B. <span class="jp" onclick="speak(this)" title="🔊 撳我讀">よじ</span>　C. <span class="jp" onclick="speak(this)" title="🔊 撳我讀">しじ</span>　D. <span class="jp" onclick="speak(this)" title="🔊 撳我讀">しちじ</span></p>
+<p><strong>第 2 題（讀音）</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">「今日は暑いです。」入面「今日」點讀？</span></p>
+<p>A. <span class="jp" onclick="speak(this)" title="🔊 撳我讀">こんにち</span>　B. <span class="jp" onclick="speak(this)" title="🔊 撳我讀">きょう</span>　C. <span class="jp" onclick="speak(this)" title="🔊 撳我讀">きにち</span>　D. <span class="jp" onclick="speak(this)" title="🔊 撳我讀">こんにち</span></p>
 <p><strong>第 3 題（文法選擇）</strong>：「我唔係老師。」日文應該點講？</p>
-<p>A. 私は先生です。</p>
-<p>B. 私は先生がいません。</p>
-<p>C. 私は先生じゃありません。</p>
-<p>D. 私は先生にです。</p>
+<p>A. <span class="jp" onclick="speak(this)" title="🔊 撳我讀">私は先生です。</span></p>
+<p>B. <span class="jp" onclick="speak(this)" title="🔊 撳我讀">私は先生がいません。</span></p>
+<p>C. <span class="jp" onclick="speak(this)" title="🔊 撳我讀">私は先生じゃありません。</span></p>
+<p>D. <span class="jp" onclick="speak(this)" title="🔊 撳我讀">私は先生にです。</span></p>
 <p><strong>第 4 題（中譯日）</strong>：將「間舖由十點開到三點半」譯成日文。</p>
-<p>（提示：舖＝店（みせ）、開＝開きます不使咁深——用「〜から〜までです」句型就得）</p>
-<p><strong>第 5 題（聽力實戰）</strong>：而家睇住你個鐘，用日文寫低而家嘅時間（例：今、三時半です。）。寫完讀出聲一次。</p>
+<p>（提示：舖＝店（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">みせ</span>）、開＝<span class="jp" onclick="speak(this)" title="🔊 撳我讀">開きます不使咁深</span>——<span class="jp" onclick="speak(this)" title="🔊 撳我讀">用「〜から〜までです」句型就得</span>）</p>
+<p><strong>第 5 題（聽力實戰）</strong>：而家睇住你個鐘，用日文寫低而家嘅時間（例：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">今、三時半です。</span>）。寫完讀出聲一次。</p>
 <hr>
 <p>⬇️ <strong>答案（作答完先好望！）</strong></p>
-<div class="num-item"><span class="num">1</span><div class="num-body"><strong>B（よじ）</strong> — 四時係特別讀法，一定要記「よじ」，唔好講「よんじ」。</div></div>
-<div class="num-item"><span class="num">2</span><div class="num-body"><strong>B（きょう）</strong> — 日常講「きょう」；「こんにち」都存在但主要用喺書面語同「こんにちわ」以外嘅正式場合。</div></div>
-<div class="num-item"><span class="num">3</span><div class="num-body"><strong>C（私は先生じゃありません。）</strong> — 否定用「じゃありません」（口語）或「ではありません」（正式），助詞係「は」。</div></div>
-<div class="num-item"><span class="num">4</span><div class="num-body"><strong>店は十時から三時半までです。（みせはじゅうじからさんじはんまでです。）</strong> — 「〜から〜まで」句型，三時半＝さんじはん。</div></div>
-<div class="num-item"><span class="num">5</span><div class="num-body">無標準答案——只要「今、〜時（〜分）です。」句型啱就 OK。例如下午 6 點半：「今、六時半です。（いま、ろくじはんです。）」</div></div>
+<div class="num-item"><span class="num">1</span><div class="num-body"><strong>B（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">よじ</span>）</strong> — 四時係特別讀法，<span class="jp" onclick="speak(this)" title="🔊 撳我讀">一定要記「よじ」</span>，<span class="jp" onclick="speak(this)" title="🔊 撳我讀">唔好講「よんじ」。</span></div></div>
+<div class="num-item"><span class="num">2</span><div class="num-body"><strong>B（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">きょう</span>）</strong> — <span class="jp" onclick="speak(this)" title="🔊 撳我讀">日常講「きょう」</span>；<span class="jp" onclick="speak(this)" title="🔊 撳我讀">「こんにち」都存在但主要用喺書面語同「こんにちわ」以外嘅正式場合。</span></div></div>
+<div class="num-item"><span class="num">3</span><div class="num-body"><strong>C（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">私は先生じゃありません。</span>）</strong> — <span class="jp" onclick="speak(this)" title="🔊 撳我讀">否定用「じゃありません」</span>（口語）<span class="jp" onclick="speak(this)" title="🔊 撳我讀">或「ではありません」</span>（正式），<span class="jp" onclick="speak(this)" title="🔊 撳我讀">助詞係「は」。</span></div></div>
+<div class="num-item"><span class="num">4</span><div class="num-body"><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">店は十時から三時半までです。</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">みせはじゅうじからさんじはんまでです。</span>）</strong> — <span class="jp" onclick="speak(this)" title="🔊 撳我讀">「〜から〜まで」句型</span>，三時半＝<span class="jp" onclick="speak(this)" title="🔊 撳我讀">さんじはん。</span></div></div>
+<div class="num-item"><span class="num">5</span><div class="num-body">無標準答案——只要「今、〜時（〜分）<span class="jp" onclick="speak(this)" title="🔊 撳我讀">です。」句型啱就</span> OK。例如下午 6 點半：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">「今、六時半です。</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">いま、ろくじはんです。</span>）」</div></div>
 <hr>
 <p>計分：5 題全對＝你已經穩陣行完第一週嘅數字時間關！錯咗 1–2 題好正常，翻睇返尋日同前日嘅內容就得。</p>
 <p>聽日（星期日）係輕量聽力特訓日，唔使學新嘢，輕鬆下。講真，開課三日都冇甩底，已經跑贏好多人——你做測驗嗰陣，5 題入面邊一題你係最有信心即刻答啱嘅？</p>
 <a class="back" href="index.html">← 返回目錄</a>
 </main>
+<script>
+function speak(el){
+  try{
+    var t=(el.dataset.speak||el.textContent||'').replace(/\s+/g,' ').trim();
+    if(!('speechSynthesis' in window)){alert('你個瀏覽器唔支援語音朗讀');return;}
+    var u=new SpeechSynthesisUtterance(t);
+    u.lang='ja-JP'; u.rate=0.85;
+    speechSynthesis.cancel();
+    speechSynthesis.speak(u);
+    el.classList.add('speaking');
+    u.onend=function(){el.classList.remove('speaking');};
+  }catch(e){}
+}
+</script>
 </body>
 </html>

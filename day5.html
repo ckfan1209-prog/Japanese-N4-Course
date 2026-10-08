@@ -37,6 +37,9 @@ strong { color:#2f3560; }
 .num-item { display:flex; gap:.65rem; padding:.55rem .7rem; border-radius:12px; margin:.3rem 0; background:#fafbfe; }
 .num { flex-shrink:0; width:26px; height:26px; border-radius:50%; background:var(--primary-soft); color:var(--primary); font-weight:800; font-size:.78rem; display:flex; align-items:center; justify-content:center; margin-top:.15rem; }
 .num-body { font-size:.9rem; }
+.jp { cursor:pointer; border-bottom:1.5px dotted #a5b4fc; transition:background .15s; }
+.jp:active, .jp.speaking { background:var(--primary-soft); border-bottom-color:var(--primary); }
+.tts-hint { font-size:.72rem; color:#5b6072; background:var(--primary-soft); border-radius:10px; padding:.45rem .8rem; margin:0 0 1rem; }
 .back { display:block; text-align:center; background:var(--primary); color:#fff; text-decoration:none; padding:.85rem; border-radius:14px; font-weight:700; font-size:.9rem; margin-top:1.4rem; }
 </style>
 </head>
@@ -48,57 +51,72 @@ strong { color:#2f3560; }
   <div class="theme"></div>
 </div>
 <main>
-<p>📅 <strong>今日進度：第 5 日 / 182</strong>｜Phase 1：N5 總鞏固 + N4 門檻（週 1：平假名/片假名・自我介紹・數字/時間/<strong>日期</strong>）</p>
+<div class="tts-hint">🔊 撳任何日文（虛線底線）都會即時讀出，再撳一下停止</div>
+<p>📅 <strong>今日進度：第 5 日 / 182</strong>｜Phase 1：N5 總鞏固 + N4 門檻（週 1：平假名/<span class="jp" onclick="speak(this)" title="🔊 撳我讀">片假名・自我介紹・數字</span>/時間/<strong>日期</strong>）</p>
 <p>今日星期一，係 week 1 嘅最後一塊拼圖：<strong>日期同星期表達</strong>。學完呢課，你就可以完整咁講「幾年幾月幾日、星期幾、幾點」，自我介紹嗰套基本盤就齊了。</p>
 <hr>
 <p>📖 <strong>單字 12 個</strong></p>
-<div class="num-item"><span class="num">1</span><div class="num-body"><strong>月曜日</strong>（げつようび）— 星期一&lt;br&gt;例：月曜日に仕事が始まります。（星期一開始工作。）</div></div>
-<div class="num-item"><span class="num">2</span><div class="num-body"><strong>火曜日</strong>（かようび）— 星期二&lt;br&gt;例：火曜日は少し暇です。（星期二比較得閒。）</div></div>
-<div class="num-item"><span class="num">3</span><div class="num-body"><strong>水曜日</strong>（すいようび）— 星期三&lt;br&gt;例：水曜日に映画を見ます。（星期三睇戲。）</div></div>
-<div class="num-item"><span class="num">4</span><div class="num-body"><strong>木曜日</strong>（もくようび）— 星期四&lt;br&gt;例：木曜日に友だちと会います。（星期四同朋友見面。）</div></div>
-<div class="num-item"><span class="num">5</span><div class="num-body"><strong>金曜日</strong>（きんようび）— 星期五&lt;br&gt;例：金曜日の夜は楽しいです。（星期五夜晚最開心。）</div></div>
-<div class="num-item"><span class="num">6</span><div class="num-body"><strong>土曜日</strong>（どようび）— 星期六&lt;br&gt;例：土曜日は家で休みます。（星期六喺屋企休息。）</div></div>
-<div class="num-item"><span class="num">7</span><div class="num-body"><strong>日曜日</strong>（にちようび）— 星期日&lt;br&gt;例：日曜日に買い物へ行きます。（星期日去買嘢。）</div></div>
-<div class="num-item"><span class="num">8</span><div class="num-body"><strong>今日</strong>（きょう）— 今天&lt;br&gt;例：今日は10月5日です。（今日係10月5日。）</div></div>
-<div class="num-item"><span class="num">9</span><div class="num-body"><strong>明日</strong>（あした）— 明天&lt;br&gt;例：明日は火曜日です。（聽日係星期二。）</div></div>
-<div class="num-item"><span class="num">10</span><div class="num-body"><strong>昨日</strong>（きのう）— 昨天&lt;br&gt;例：昨日は日曜日でした。（尋日係星期日。）</div></div>
-<div class="num-item"><span class="num">11</span><div class="num-body"><strong>誕生日</strong>（たんじょうび）— 生日&lt;br&gt;例：私の誕生日は12月25日です。（我生日係12月25日。）</div></div>
-<div class="num-item"><span class="num">12</span><div class="num-body"><strong>休み</strong>（やすみ）— 休息／假期&lt;br&gt;例：日曜日は休みです。（星期日係休息日。）</div></div>
-<p>⚠️ 讀音陷阱：<strong>「〜日」（日子）讀「〜にち」，但日期幾號嘅讀法好唔規則</strong> — 1日＝ついたち、4日＝よっか、7日＝なのか、14日＝じゅうよっか、20日＝はつか。呢幾個遲啲會專門操，今日先記星期。</p>
+<div class="num-item"><span class="num">1</span><div class="num-body"><strong>月曜日</strong>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">げつようび</span>）— 星期一&lt;br&gt;例：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">月曜日に仕事が始まります。</span>（星期一開始工作。）</div></div>
+<div class="num-item"><span class="num">2</span><div class="num-body"><strong>火曜日</strong>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">かようび</span>）— 星期二&lt;br&gt;例：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">火曜日は少し暇です。</span>（星期二比較得閒。）</div></div>
+<div class="num-item"><span class="num">3</span><div class="num-body"><strong>水曜日</strong>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">すいようび</span>）— 星期三&lt;br&gt;例：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">水曜日に映画を見ます。</span>（星期三睇戲。）</div></div>
+<div class="num-item"><span class="num">4</span><div class="num-body"><strong>木曜日</strong>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">もくようび</span>）— 星期四&lt;br&gt;例：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">木曜日に友だちと会います。</span>（星期四同朋友見面。）</div></div>
+<div class="num-item"><span class="num">5</span><div class="num-body"><strong>金曜日</strong>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">きんようび</span>）— 星期五&lt;br&gt;例：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">金曜日の夜は楽しいです。</span>（星期五夜晚最開心。）</div></div>
+<div class="num-item"><span class="num">6</span><div class="num-body"><strong>土曜日</strong>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">どようび</span>）— 星期六&lt;br&gt;例：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">土曜日は家で休みます。</span>（星期六喺屋企休息。）</div></div>
+<div class="num-item"><span class="num">7</span><div class="num-body"><strong>日曜日</strong>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">にちようび</span>）— 星期日&lt;br&gt;例：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">日曜日に買い物へ行きます。</span>（星期日去買嘢。）</div></div>
+<div class="num-item"><span class="num">8</span><div class="num-body"><strong>今日</strong>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">きょう</span>）— 今天&lt;br&gt;例：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">今日は</span>10月5<span class="jp" onclick="speak(this)" title="🔊 撳我讀">日です。</span>（今日係10月5日。）</div></div>
+<div class="num-item"><span class="num">9</span><div class="num-body"><strong>明日</strong>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">あした</span>）— 明天&lt;br&gt;例：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">明日は火曜日です。</span>（聽日係星期二。）</div></div>
+<div class="num-item"><span class="num">10</span><div class="num-body"><strong>昨日</strong>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">きのう</span>）— 昨天&lt;br&gt;例：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">昨日は日曜日でした。</span>（尋日係星期日。）</div></div>
+<div class="num-item"><span class="num">11</span><div class="num-body"><strong>誕生日</strong>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">たんじょうび</span>）— 生日&lt;br&gt;例：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">私の誕生日は</span>12月25<span class="jp" onclick="speak(this)" title="🔊 撳我讀">日です。</span>（我生日係12月25日。）</div></div>
+<div class="num-item"><span class="num">12</span><div class="num-body"><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">休み</span></strong>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">やすみ</span>）— 休息／假期&lt;br&gt;例：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">日曜日は休みです。</span>（星期日係休息日。）</div></div>
+<p>⚠️ 讀音陷阱：<strong>「〜日」（日子）<span class="jp" onclick="speak(this)" title="🔊 撳我讀">讀「〜にち」</span>，但日期幾號嘅讀法好唔規則</strong> — 1日＝<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ついたち、</span>4日＝<span class="jp" onclick="speak(this)" title="🔊 撳我讀">よっか、</span>7日＝<span class="jp" onclick="speak(this)" title="🔊 撳我讀">なのか、</span>14日＝<span class="jp" onclick="speak(this)" title="🔊 撳我讀">じゅうよっか、</span>20日＝<span class="jp" onclick="speak(this)" title="🔊 撳我讀">はつか。呢幾個遲啲會專門操</span>，今日先記星期。</p>
 <hr>
-<p>✍️ <strong>文法：日期＋助詞「に」</strong></p>
-<p><strong>接續方式</strong>：<code>時間詞（星期／日期）＋ に ＋ 動詞句</code></p>
+<p>✍️ <strong>文法：日期＋<span class="jp" onclick="speak(this)" title="🔊 撳我讀">助詞「に」</span></strong></p>
+<p><strong>接續方式</strong>：<code>時間詞（星期／日期）＋ <span class="jp" onclick="speak(this)" title="🔊 撳我讀">に</span> ＋ 動詞句</code></p>
 <ul>
-<li>「に」用喺具體日子度，表示「喺嗰日發生」：</li>
-<li><strong>日曜日に</strong>買い物します。（星期日去買嘢。）</li>
-<li><strong>10月5日に</strong>日本へ行きます。（10月5日去日本。）</li>
-<li>但係「今日／明日／昨日／毎日」呢啲詞<strong>唔加「に」</strong>：</li>
-<li>✅ 明日行きます　❌ 明日<strong>に</strong>行きます</li>
-<li>問星期幾用「何曜日（なんようび）」：</li>
-<li>今日は<strong>何曜日ですか</strong>。— 今日係星期幾呀？</li>
-<li>水曜日です。— 星期三。</li>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀">「に」用喺具體日子度</span>，表示「喺嗰日發生」：</li>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">日曜日に</span></strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">買い物します。</span>（星期日去買嘢。）</li>
+<li><strong>10月5<span class="jp" onclick="speak(this)" title="🔊 撳我讀">日に</span></strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">日本へ行きます。</span>（10月5日去日本。）</li>
+<li>但係「今日／明日／昨日／毎日」呢啲詞<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">唔加「に」</span></strong>：</li>
+<li>✅ <span class="jp" onclick="speak(this)" title="🔊 撳我讀">明日行きます</span>　❌ 明日<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">に</span></strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">行きます</span></li>
+<li>問星期幾用「何曜日（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">なんようび</span>）」：</li>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀">今日は</span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">何曜日ですか</span></strong>。— 今日係星期幾呀？</li>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀">水曜日です。</span>— 星期三。</li>
 </ul>
-<p>✏️ <strong>造句練習</strong>：用「〜曜日に＋動詞」寫一句你自己下星期嘅計劃。例如：「金曜日に日本語を勉強します。」寫完聽日對答案。</p>
+<p>✏️ <strong>造句練習</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">用「〜曜日に</span>＋動詞」寫一句你自己下星期嘅計劃。例如：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">「金曜日に日本語を勉強します。」寫完聽日對答案。</span></p>
 <hr>
 <p>🈴 <strong>漢字 7 個（星期七傑＋常用）</strong></p>
 <div class="table-wrap"><table>
 <tr><th>漢字</th><th>音讀</th><th>訓讀</th><th>例詞</th></tr>
-<tr><td>月</td><td>ゲツ／ガツ</td><td>つき</td><td>月曜日・今月（こんげつ）</td></tr>
-<tr><td>火</td><td>カ</td><td>ひ</td><td>火曜日・花火（はなび）</td></tr>
-<tr><td>水</td><td>スイ</td><td>みず</td><td>水曜日・水（みず）</td></tr>
-<tr><td>木</td><td>モク</td><td>き</td><td>木曜日・木（き）</td></tr>
-<tr><td>金</td><td>キン</td><td>かね</td><td>金曜日・お金（おかね）</td></tr>
-<tr><td>日</td><td>ニチ／ジツ</td><td>ひ</td><td>日曜日・毎日（まいにち）</td></tr>
-<tr><td>生</td><td>セイ</td><td>う（まれる）</td><td>誕生日・先生（せんせい）</td></tr>
+<tr><td>月</td><td><span class="jp" onclick="speak(this)" title="🔊 撳我讀">ゲツ</span>／<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ガツ</span></td><td><span class="jp" onclick="speak(this)" title="🔊 撳我讀">つき</span></td><td><span class="jp" onclick="speak(this)" title="🔊 撳我讀">月曜日・今月</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">こんげつ</span>）</td></tr>
+<tr><td>火</td><td><span class="jp" onclick="speak(this)" title="🔊 撳我讀">カ</span></td><td><span class="jp" onclick="speak(this)" title="🔊 撳我讀">ひ</span></td><td><span class="jp" onclick="speak(this)" title="🔊 撳我讀">火曜日・花火</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">はなび</span>）</td></tr>
+<tr><td>水</td><td><span class="jp" onclick="speak(this)" title="🔊 撳我讀">スイ</span></td><td><span class="jp" onclick="speak(this)" title="🔊 撳我讀">みず</span></td><td><span class="jp" onclick="speak(this)" title="🔊 撳我讀">水曜日・水</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">みず</span>）</td></tr>
+<tr><td>木</td><td><span class="jp" onclick="speak(this)" title="🔊 撳我讀">モク</span></td><td><span class="jp" onclick="speak(this)" title="🔊 撳我讀">き</span></td><td><span class="jp" onclick="speak(this)" title="🔊 撳我讀">木曜日・木</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">き</span>）</td></tr>
+<tr><td>金</td><td><span class="jp" onclick="speak(this)" title="🔊 撳我讀">キン</span></td><td><span class="jp" onclick="speak(this)" title="🔊 撳我讀">かね</span></td><td><span class="jp" onclick="speak(this)" title="🔊 撳我讀">金曜日・お金</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">おかね</span>）</td></tr>
+<tr><td>日</td><td><span class="jp" onclick="speak(this)" title="🔊 撳我讀">ニチ</span>／<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ジツ</span></td><td><span class="jp" onclick="speak(this)" title="🔊 撳我讀">ひ</span></td><td><span class="jp" onclick="speak(this)" title="🔊 撳我讀">日曜日・毎日</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">まいにち</span>）</td></tr>
+<tr><td>生</td><td><span class="jp" onclick="speak(this)" title="🔊 撳我讀">セイ</span></td><td><span class="jp" onclick="speak(this)" title="🔊 撳我讀">う</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">まれる</span>）</td><td><span class="jp" onclick="speak(this)" title="🔊 撳我讀">誕生日・先生</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">せんせい</span>）</td></tr>
 </table></div>
 <p>💡 記法：星期七個字其實係「月火水木金土日」七曜，來自中國古代曆法，日本日曆到而家都係咁寫。</p>
 <hr>
 <p>👂 <strong>聽讀任務（20 分鐘）</strong></p>
-<div class="num-item"><span class="num">1</span><div class="num-body"><strong>讀（10 分）</strong>：攞返你 Day 1 寫嘅自我介紹（冇寫嘅話而家補返），加一句「私の誕生日は◯月◯日です。」，出聲讀 3 次。</div></div>
-<div class="num-item"><span class="num">2</span><div class="num-body"><strong>聽（10 分）</strong>：YouTube 搜「<strong>曜日のうた 曜日の歌</strong>」（日本細路仔學星期嘅歌，好上口），播一次跟住唱一次。然後開啲排程（Next 了！日文日曆 app 都得），把今個星期每一日喺心入面用日文講一次：「今日は月曜日です。」</div></div>
+<div class="num-item"><span class="num">1</span><div class="num-body"><strong>讀（10 分）</strong>：攞返你 Day 1 寫嘅自我介紹（冇寫嘅話而家補返），<span class="jp" onclick="speak(this)" title="🔊 撳我讀">加一句「私の誕生日は</span>◯月◯<span class="jp" onclick="speak(this)" title="🔊 撳我讀">日です。」</span>，出聲讀 3 次。</div></div>
+<div class="num-item"><span class="num">2</span><div class="num-body"><strong>聽（10 分）</strong>：YouTube 搜「<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">曜日のうた</span> <span class="jp" onclick="speak(this)" title="🔊 撳我讀">曜日の歌</span></strong>」（日本細路仔學星期嘅歌，好上口），播一次跟住唱一次。然後開啲排程（Next 了！日文日曆 app 都得），把今個星期每一日喺心入面用日文講一次：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">「今日は月曜日です。」</span></div></div>
 <hr>
-<p>📌 講真，五日連續冇甩底，你已經跑贏九成開始學日文嘅人。問你一條快題：<strong>「來緊星期六」用日文你即刻識唔識講？</strong>（提示：土曜日）— 試下喺心入面答一次，聽日同你對下！がんばって！💪</p>
+<p>📌 講真，五日連續冇甩底，你已經跑贏九成開始學日文嘅人。問你一條快題：<strong>「來緊星期六」用日文你即刻識唔識講？</strong>（提示：土曜日）— 試下喺心入面答一次，<span class="jp" onclick="speak(this)" title="🔊 撳我讀">聽日同你對下！がんばって！</span>💪</p>
 <a class="back" href="index.html">← 返回目錄</a>
 </main>
+<script>
+function speak(el){
+  try{
+    var t=(el.dataset.speak||el.textContent||'').replace(/\s+/g,' ').trim();
+    if(!('speechSynthesis' in window)){alert('你個瀏覽器唔支援語音朗讀');return;}
+    var u=new SpeechSynthesisUtterance(t);
+    u.lang='ja-JP'; u.rate=0.85;
+    speechSynthesis.cancel();
+    speechSynthesis.speak(u);
+    el.classList.add('speaking');
+    u.onend=function(){el.classList.remove('speaking');};
+  }catch(e){}
+}
+</script>
 </body>
 </html>

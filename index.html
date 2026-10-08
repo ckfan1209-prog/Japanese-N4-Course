@@ -61,49 +61,23 @@ footer { text-align:center; padding:1.5rem; color:var(--muted); font-size:.72rem
 <main>
   <div class="sec-title"><span class="dot"></span>全部課堂</div>
   <div class="grid">
-    <a class="card normal" href="day8.html">
-  <div class="card-top"><span class="card-day">Day 8</span><span class="card-wd">木</span></div>
-  <div class="card-date">2026-10-08</div>
-  <div class="card-theme"></div>
-  
-</a><a class="card normal" href="day7.html">
-  <div class="card-top"><span class="card-day">Day 7</span><span class="card-wd">水</span></div>
-  <div class="card-date">2026-10-07</div>
-  <div class="card-theme"></div>
-  
-</a><a class="card normal" href="day6.html">
-  <div class="card-top"><span class="card-day">Day 6</span><span class="card-wd">火</span></div>
-  <div class="card-date">2026-10-06</div>
-  <div class="card-theme"></div>
-  
-</a><a class="card normal" href="day5.html">
-  <div class="card-top"><span class="card-day">Day 5</span><span class="card-wd">月</span></div>
-  <div class="card-date">2026-10-05</div>
-  <div class="card-theme"></div>
-  
-</a><a class="card listen" href="day4.html">
-  <div class="card-top"><span class="card-day">Day 4</span><span class="card-wd">日</span></div>
-  <div class="card-date">2026-10-04</div>
-  <div class="card-theme"></div>
-  <span class="chip">👂 聽力日</span>
-</a><a class="card quiz" href="day3.html">
-  <div class="card-top"><span class="card-day">Day 3</span><span class="card-wd">土</span></div>
-  <div class="card-date">2026-10-03</div>
-  <div class="card-theme"></div>
-  <span class="chip">📝 測驗日</span>
-</a><a class="card quiz" href="day2.html">
-  <div class="card-top"><span class="card-day">Day 2</span><span class="card-wd">金</span></div>
-  <div class="card-date">2026-10-02</div>
-  <div class="card-theme"></div>
-  <span class="chip">📝 測驗日</span>
-</a><a class="card normal" href="day1.html">
-  <div class="card-top"><span class="card-day">Day 1</span><span class="card-wd">木</span></div>
-  <div class="card-date">2026-10-01</div>
-  <div class="card-theme"></div>
-  
-</a>
+    <a class="card normal" href="day8.html"><div class="card-top"><span class="card-day">Day 8</span><span class="card-wd">木</span></div><div class="card-date">2026-10-08</div><div class="card-theme"></div></a><a class="card normal" href="day7.html"><div class="card-top"><span class="card-day">Day 7</span><span class="card-wd">水</span></div><div class="card-date">2026-10-07</div><div class="card-theme"></div></a><a class="card normal" href="day6.html"><div class="card-top"><span class="card-day">Day 6</span><span class="card-wd">火</span></div><div class="card-date">2026-10-06</div><div class="card-theme"></div></a><a class="card normal" href="day5.html"><div class="card-top"><span class="card-day">Day 5</span><span class="card-wd">月</span></div><div class="card-date">2026-10-05</div><div class="card-theme"></div></a><a class="card listen" href="day4.html"><div class="card-top"><span class="card-day">Day 4</span><span class="card-wd">日</span></div><div class="card-date">2026-10-04</div><div class="card-theme"></div><span class="chip">👂 聽力日</span></a><a class="card quiz" href="day3.html"><div class="card-top"><span class="card-day">Day 3</span><span class="card-wd">土</span></div><div class="card-date">2026-10-03</div><div class="card-theme"></div><span class="chip">📝 測驗日</span></a><a class="card quiz" href="day2.html"><div class="card-top"><span class="card-day">Day 2</span><span class="card-wd">金</span></div><div class="card-date">2026-10-02</div><div class="card-theme"></div><span class="chip">📝 測驗日</span></a><a class="card normal" href="day1.html"><div class="card-top"><span class="card-day">Day 1</span><span class="card-wd">木</span></div><div class="card-date">2026-10-01</div><div class="card-theme"></div></a>
   </div>
 </main>
 <footer>每晚 21:30 自動更新 ｜ Hermes Agent</footer>
+<script>
+function speak(el){
+  try{
+    var t=(el.dataset.speak||el.textContent||'').replace(/\s+/g,' ').trim();
+    if(!('speechSynthesis' in window)){alert('你個瀏覽器唔支援語音朗讀');return;}
+    var u=new SpeechSynthesisUtterance(t);
+    u.lang='ja-JP'; u.rate=0.85;
+    speechSynthesis.cancel();
+    speechSynthesis.speak(u);
+    el.classList.add('speaking');
+    u.onend=function(){el.classList.remove('speaking');};
+  }catch(e){}
+}
+</script>
 </body>
 </html>

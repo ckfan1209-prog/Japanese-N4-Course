@@ -37,6 +37,9 @@ strong { color:#2f3560; }
 .num-item { display:flex; gap:.65rem; padding:.55rem .7rem; border-radius:12px; margin:.3rem 0; background:#fafbfe; }
 .num { flex-shrink:0; width:26px; height:26px; border-radius:50%; background:var(--primary-soft); color:var(--primary); font-weight:800; font-size:.78rem; display:flex; align-items:center; justify-content:center; margin-top:.15rem; }
 .num-body { font-size:.9rem; }
+.jp { cursor:pointer; border-bottom:1.5px dotted #a5b4fc; transition:background .15s; }
+.jp:active, .jp.speaking { background:var(--primary-soft); border-bottom-color:var(--primary); }
+.tts-hint { font-size:.72rem; color:#5b6072; background:var(--primary-soft); border-radius:10px; padding:.45rem .8rem; margin:0 0 1rem; }
 .back { display:block; text-align:center; background:var(--primary); color:#fff; text-decoration:none; padding:.85rem; border-radius:14px; font-weight:700; font-size:.9rem; margin-top:1.4rem; }
 </style>
 </head>
@@ -48,63 +51,78 @@ strong { color:#2f3560; }
   <div class="theme"></div>
 </div>
 <main>
-<p>📅 <strong>今日進度：第 6 日 / 182</strong>｜Phase 1：N5 總鞏固 + N4 門檻（週 2：N5 核心文法 — <strong>です／ます・助詞「は」</strong>）</p>
-<p>先對尋日條快題：「來緊星期六」＝<strong>来週の土曜日（らいしゅうのどようび）</strong>。你答到幾多成？</p>
-<p>今日正式入週 2，開始操 N5 核心文法。第一課係全日語嘅地基：<strong>です／ます 同埋助詞「は」</strong>。呢兩樣熟咗，之後所有句型都係喺上面起樓。</p>
+<div class="tts-hint">🔊 撳任何日文（虛線底線）都會即時讀出，再撳一下停止</div>
+<p>📅 <strong>今日進度：第 6 日 / 182</strong>｜Phase 1：N5 總鞏固 + N4 門檻（週 2：N5 核心文法 — <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">です</span>／<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ます・助詞「は」</span></strong>）</p>
+<p>先對尋日條快題：「來緊星期六」＝<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">来週の土曜日</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">らいしゅうのどようび</span>）</strong>。你答到幾多成？</p>
+<p>今日正式入週 2，開始操 N5 核心文法。第一課係全日語嘅地基：<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">です</span>／<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ます</span> <span class="jp" onclick="speak(this)" title="🔊 撳我讀">同埋助詞「は」</span></strong>。呢兩樣熟咗，之後所有句型都係喺上面起樓。</p>
 <hr>
 <p>📖 <strong>單字 12 個</strong></p>
-<div class="num-item"><span class="num">1</span><div class="num-body"><strong>学校</strong>（がっこう）— 學校&lt;br&gt;例：弟は学校へ行きます。（細佬返學。）</div></div>
-<div class="num-item"><span class="num">2</span><div class="num-body"><strong>会社</strong>（かいしゃ）— 公司&lt;br&gt;例：父は会社に行きます。（爸爸返公司。）</div></div>
-<div class="num-item"><span class="num">3</span><div class="num-body"><strong>先生</strong>（せんせい）— 老師&lt;br&gt;例：田中さんは先生です。（田中先生係老師。）</div></div>
-<div class="num-item"><span class="num">4</span><div class="num-body"><strong>学生</strong>（がくせい）— 學生&lt;br&gt;例：私は学生です。（我係學生。）</div></div>
-<div class="num-item"><span class="num">5</span><div class="num-body"><strong>家族</strong>（かぞく）— 家人&lt;br&gt;例：家族は5人です。（屋企有5個人。）</div></div>
-<div class="num-item"><span class="num">6</span><div class="num-body"><strong>名前</strong>（なまえ）— 名字&lt;br&gt;例：お名前は何ですか。（你叫咩名？）</div></div>
-<div class="num-item"><span class="num">7</span><div class="num-body"><strong>仕事</strong>（しごと）— 工作&lt;br&gt;例：仕事は9時に始まります。（工作9點開始。）</div></div>
-<div class="num-item"><span class="num">8</span><div class="num-body"><strong>趣味</strong>（しゅみ）— 興趣&lt;br&gt;例：趣味は音楽です。（興趣係聽音樂。）</div></div>
-<div class="num-item"><span class="num">9</span><div class="num-body"><strong>日本語</strong>（にほんご）— 日文&lt;br&gt;例：日本語を勉強します。（學日文。）</div></div>
-<div class="num-item"><span class="num">10</span><div class="num-body"><strong>猫</strong>（ねこ）— 貓&lt;br&gt;例：この猫は白いです。（呢隻貓係白色。）</div></div>
-<div class="num-item"><span class="num">11</span><div class="num-body"><strong>英語</strong>（えいご）— 英文&lt;br&gt;例：英語がわかります。（識英文。）</div></div>
-<div class="num-item"><span class="num">12</span><div class="num-body"><strong>人</strong>（ひと）— 人&lt;br&gt;例：あの人は誰ですか。（嗰個係邊個？）</div></div>
-<p>⚠️ 陷阱：<strong>会社員（かいしゃいん）＝上班族</strong>，唔好同「会社」（公司）撈亂；「〜人」（國籍人）讀「〜じん」，例如日本人（にほんじん），但「人」單用讀「ひと」。</p>
+<div class="num-item"><span class="num">1</span><div class="num-body"><strong>学校</strong>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">がっこう</span>）— 學校&lt;br&gt;例：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">弟は学校へ行きます。</span>（細佬返學。）</div></div>
+<div class="num-item"><span class="num">2</span><div class="num-body"><strong>会社</strong>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">かいしゃ</span>）— 公司&lt;br&gt;例：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">父は会社に行きます。</span>（爸爸返公司。）</div></div>
+<div class="num-item"><span class="num">3</span><div class="num-body"><strong>先生</strong>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">せんせい</span>）— 老師&lt;br&gt;例：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">田中さんは先生です。</span>（田中先生係老師。）</div></div>
+<div class="num-item"><span class="num">4</span><div class="num-body"><strong>学生</strong>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">がくせい</span>）— 學生&lt;br&gt;例：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">私は学生です。</span>（我係學生。）</div></div>
+<div class="num-item"><span class="num">5</span><div class="num-body"><strong>家族</strong>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">かぞく</span>）— 家人&lt;br&gt;例：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">家族は</span>5<span class="jp" onclick="speak(this)" title="🔊 撳我讀">人です。</span>（屋企有5個人。）</div></div>
+<div class="num-item"><span class="num">6</span><div class="num-body"><strong>名前</strong>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">なまえ</span>）— 名字&lt;br&gt;例：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">お名前は何ですか。</span>（你叫咩名？）</div></div>
+<div class="num-item"><span class="num">7</span><div class="num-body"><strong>仕事</strong>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">しごと</span>）— 工作&lt;br&gt;例：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">仕事は</span>9<span class="jp" onclick="speak(this)" title="🔊 撳我讀">時に始まります。</span>（工作9點開始。）</div></div>
+<div class="num-item"><span class="num">8</span><div class="num-body"><strong>趣味</strong>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">しゅみ</span>）— 興趣&lt;br&gt;例：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">趣味は音楽です。</span>（興趣係聽音樂。）</div></div>
+<div class="num-item"><span class="num">9</span><div class="num-body"><strong>日本語</strong>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">にほんご</span>）— 日文&lt;br&gt;例：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">日本語を勉強します。</span>（學日文。）</div></div>
+<div class="num-item"><span class="num">10</span><div class="num-body"><strong>猫</strong>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ねこ</span>）— 貓&lt;br&gt;例：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">この猫は白いです。</span>（呢隻貓係白色。）</div></div>
+<div class="num-item"><span class="num">11</span><div class="num-body"><strong>英語</strong>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">えいご</span>）— 英文&lt;br&gt;例：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">英語がわかります。</span>（識英文。）</div></div>
+<div class="num-item"><span class="num">12</span><div class="num-body"><strong>人</strong>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ひと</span>）— 人&lt;br&gt;例：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">あの人は誰ですか。</span>（嗰個係邊個？）</div></div>
+<p>⚠️ 陷阱：<strong>会社員（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">かいしゃいん</span>）＝上班族</strong>，唔好同「会社」（公司）撈亂；「〜人」（國籍人）<span class="jp" onclick="speak(this)" title="🔊 撳我讀">讀「〜じん」</span>，例如日本人（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">にほんじん</span>），<span class="jp" onclick="speak(this)" title="🔊 撳我讀">但「人」單用讀「ひと」。</span></p>
 <hr>
-<p>✍️ <strong>文法：です／ます + 主題助詞「は」</strong></p>
-<p><strong>① です（名詞句）</strong>：<code>A は B です</code> ＝「A 係 B」</p>
+<p>✍️ <strong>文法：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">です</span>／<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ます</span> + <span class="jp" onclick="speak(this)" title="🔊 撳我讀">主題助詞「は」</span></strong></p>
+<p><strong>① <span class="jp" onclick="speak(this)" title="🔊 撳我讀">です</span>（名詞句）</strong>：<code>A <span class="jp" onclick="speak(this)" title="🔊 撳我讀">は</span> B <span class="jp" onclick="speak(this)" title="🔊 撳我讀">です</span></code> ＝「A 係 B」</p>
 <ul>
-<li>私<strong>は</strong>学生<strong>です</strong>。（我係學生。）</li>
-<li>負面：学生<strong>ではありません</strong>／学生<strong>じゃないです</strong>（唔係學生。）</li>
-<li>過去：学生<strong>でした</strong>（以前係學生。）</li>
+<li>私<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">は</span></strong>学生<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">です</span></strong>。（我係學生。）</li>
+<li>負面：学生<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">ではありません</span></strong>／学生<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">じゃないです</span></strong>（唔係學生。）</li>
+<li>過去：学生<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">でした</span></strong>（以前係學生。）</li>
 </ul>
-<p><strong>② ます（動詞句）</strong>：<code>動詞ます形</code> ＝禮貌體</p>
+<p><strong>② <span class="jp" onclick="speak(this)" title="🔊 撳我讀">ます</span>（動詞句）</strong>：<code><span class="jp" onclick="speak(this)" title="🔊 撳我讀">動詞ます形</span></code> ＝禮貌體</p>
 <ul>
-<li>毎日日本語<strong>を勉強します</strong>。（每日學日文。）</li>
-<li>負面：勉強し<strong>ません</strong>；過去：勉強し<strong>ました</strong></li>
+<li>毎日日本語<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">を勉強します</span></strong>。（每日學日文。）</li>
+<li>負面：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">勉強し</span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">ません</span></strong>；過去：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">勉強し</span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">ました</span></strong></li>
 </ul>
-<p><strong>③ 助詞「は」</strong>：主題標記，讀音係 <strong>wa</strong> 唔係 ha！</p>
+<p><strong>③ <span class="jp" onclick="speak(this)" title="🔊 撳我讀">助詞「は」</span></strong>：主題標記，讀音係 <strong>wa</strong> 唔係 ha！</p>
 <ul>
-<li>田中さん<strong>は</strong>先生です。— 講嘅主題係「田中」。</li>
-<li>「は」同「が」嘅分別今日唔急：先記住<strong>新資訊用が、舊話題用は</strong>，之後專門開一課。</li>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀">田中さん</span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">は</span></strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">先生です。</span>— 講嘅主題係「田中」。</li>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀">「は」同「が」嘅分別今日唔急</span>：先記住<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">新資訊用が、舊話題用は</span></strong>，之後專門開一課。</li>
 </ul>
-<p>✏️ <strong>造句練習</strong>：用 <code>A は B です</code> 同 <code>A は〜ます</code> 各寫一句自我介紹。例如：「私は香港人です。日本語を勉強します。」聽日對答案。</p>
+<p>✏️ <strong>造句練習</strong>：用 <code>A <span class="jp" onclick="speak(this)" title="🔊 撳我讀">は</span> B <span class="jp" onclick="speak(this)" title="🔊 撳我讀">です</span></code> 同 <code>A <span class="jp" onclick="speak(this)" title="🔊 撳我讀">は〜ます</span></code> 各寫一句自我介紹。例如：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">「私は香港人です。日本語を勉強します。」聽日對答案。</span></p>
 <hr>
 <p>🈴 <strong>漢字 7 個</strong></p>
 <div class="table-wrap"><table>
 <tr><th>漢字</th><th>音讀</th><th>訓讀</th><th>例詞</th></tr>
-<tr><td>学</td><td>ガク</td><td>まな（ぶ）</td><td>学生・大学（だいがく）</td></tr>
-<tr><td>校</td><td>コウ</td><td>—</td><td>学校・高校（こうこう）</td></tr>
-<tr><td>会</td><td>カイ</td><td>あ（う）</td><td>会社・会議（かいぎ）</td></tr>
-<tr><td>社</td><td>シャ</td><td>—</td><td>会社・神社（じんじゃ）</td></tr>
-<tr><td>先</td><td>セン</td><td>—</td><td>先生・先週（せんしゅう）</td></tr>
-<tr><td>名</td><td>メイ</td><td>な</td><td>名前・有名（ゆうめい）</td></tr>
-<tr><td>私</td><td>シ</td><td>わたし</td><td>私・私立（しりつ）</td></tr>
+<tr><td>学</td><td><span class="jp" onclick="speak(this)" title="🔊 撳我讀">ガク</span></td><td><span class="jp" onclick="speak(this)" title="🔊 撳我讀">まな</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ぶ</span>）</td><td><span class="jp" onclick="speak(this)" title="🔊 撳我讀">学生・大学</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">だいがく</span>）</td></tr>
+<tr><td>校</td><td><span class="jp" onclick="speak(this)" title="🔊 撳我讀">コウ</span></td><td>—</td><td><span class="jp" onclick="speak(this)" title="🔊 撳我讀">学校・高校</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">こうこう</span>）</td></tr>
+<tr><td>会</td><td><span class="jp" onclick="speak(this)" title="🔊 撳我讀">カイ</span></td><td><span class="jp" onclick="speak(this)" title="🔊 撳我讀">あ</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">う</span>）</td><td><span class="jp" onclick="speak(this)" title="🔊 撳我讀">会社・会議</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">かいぎ</span>）</td></tr>
+<tr><td>社</td><td><span class="jp" onclick="speak(this)" title="🔊 撳我讀">シャ</span></td><td>—</td><td><span class="jp" onclick="speak(this)" title="🔊 撳我讀">会社・神社</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">じんじゃ</span>）</td></tr>
+<tr><td>先</td><td><span class="jp" onclick="speak(this)" title="🔊 撳我讀">セン</span></td><td>—</td><td><span class="jp" onclick="speak(this)" title="🔊 撳我讀">先生・先週</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">せんしゅう</span>）</td></tr>
+<tr><td>名</td><td><span class="jp" onclick="speak(this)" title="🔊 撳我讀">メイ</span></td><td><span class="jp" onclick="speak(this)" title="🔊 撳我讀">な</span></td><td><span class="jp" onclick="speak(this)" title="🔊 撳我讀">名前・有名</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ゆうめい</span>）</td></tr>
+<tr><td>私</td><td><span class="jp" onclick="speak(this)" title="🔊 撳我讀">シ</span></td><td><span class="jp" onclick="speak(this)" title="🔊 撳我讀">わたし</span></td><td><span class="jp" onclick="speak(this)" title="🔊 撳我讀">私・私立</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">しりつ</span>）</td></tr>
 </table></div>
-<p>💡 記法：「校」只有音讀冇訓讀，日本字卡上會寫「W」階（和語なし）；「私」係最常用嘅自稱，正式場合用わたし，男仔 Casual 用僕（ぼく）。</p>
+<p>💡 記法：「校」只有音讀冇訓讀，日本字卡上會寫「W」階（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">和語なし</span>）；「私」係最常用嘅自稱，<span class="jp" onclick="speak(this)" title="🔊 撳我讀">正式場合用わたし</span>，男仔 Casual 用僕（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ぼく</span>）。</p>
 <hr>
 <p>👂 <strong>聽讀任務（20 分鐘）</strong></p>
-<div class="num-item"><span class="num">1</span><div class="num-body"><strong>讀（10 分）</strong>：攞返 Day 6 嘅自我介紹（有生日嗰版），用今日教嘅 <code>〜は〜です</code> 逐句檢查有冇用錯助詞，然後出聲讀 3 次，重點留意「は」讀 wa。</div></div>
-<div class="num-item"><span class="num">2</span><div class="num-body"><strong>聽（10 分）</strong>：YouTube 搜「<strong>JLPT N5 聞き取り やさしい 会話</strong>」或者 NHK News Web Easy 揀一篇短文，第一回合唔睇字淨係聽，第二回合跟住讀（shadowing）。目標：捉到 3 句有你今個禮拜學過嘅單字嘅句子。</div></div>
+<div class="num-item"><span class="num">1</span><div class="num-body"><strong>讀（10 分）</strong>：攞返 Day 6 嘅自我介紹（有生日嗰版），用今日教嘅 <code><span class="jp" onclick="speak(this)" title="🔊 撳我讀">〜は〜です</span></code> 逐句檢查有冇用錯助詞，然後出聲讀 3 次，<span class="jp" onclick="speak(this)" title="🔊 撳我讀">重點留意「は」讀</span> wa。</div></div>
+<div class="num-item"><span class="num">2</span><div class="num-body"><strong>聽（10 分）</strong>：YouTube 搜「<strong>JLPT N5 <span class="jp" onclick="speak(this)" title="🔊 撳我讀">聞き取り</span> <span class="jp" onclick="speak(this)" title="🔊 撳我讀">やさしい</span> 会話</strong>」或者 NHK News Web Easy 揀一篇短文，第一回合唔睇字淨係聽，第二回合跟住讀（shadowing）。目標：捉到 3 句有你今個禮拜學過嘅單字嘅句子。</div></div>
 <hr>
-<p>📌 第 6 日，第一個禮拜完滿收工，你嘅日語地基已經打好第一批樁。問你一條快題：<strong>「我唔係學生」用日文點講？</strong>（提示：じゃないです）— 心入面答一次，聽日對答案！がんばって！💪</p>
+<p>📌 第 6 日，第一個禮拜完滿收工，你嘅日語地基已經打好第一批樁。問你一條快題：<strong>「我唔係學生」用日文點講？</strong>（提示：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">じゃないです</span>）— 心入面答一次，<span class="jp" onclick="speak(this)" title="🔊 撳我讀">聽日對答案！がんばって！</span>💪</p>
 <a class="back" href="index.html">← 返回目錄</a>
 </main>
+<script>
+function speak(el){
+  try{
+    var t=(el.dataset.speak||el.textContent||'').replace(/\s+/g,' ').trim();
+    if(!('speechSynthesis' in window)){alert('你個瀏覽器唔支援語音朗讀');return;}
+    var u=new SpeechSynthesisUtterance(t);
+    u.lang='ja-JP'; u.rate=0.85;
+    speechSynthesis.cancel();
+    speechSynthesis.speak(u);
+    el.classList.add('speaking');
+    u.onend=function(){el.classList.remove('speaking');};
+  }catch(e){}
+}
+</script>
 </body>
 </html>

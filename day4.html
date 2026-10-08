@@ -37,6 +37,9 @@ strong { color:#2f3560; }
 .num-item { display:flex; gap:.65rem; padding:.55rem .7rem; border-radius:12px; margin:.3rem 0; background:#fafbfe; }
 .num { flex-shrink:0; width:26px; height:26px; border-radius:50%; background:var(--primary-soft); color:var(--primary); font-weight:800; font-size:.78rem; display:flex; align-items:center; justify-content:center; margin-top:.15rem; }
 .num-body { font-size:.9rem; }
+.jp { cursor:pointer; border-bottom:1.5px dotted #a5b4fc; transition:background .15s; }
+.jp:active, .jp.speaking { background:var(--primary-soft); border-bottom-color:var(--primary); }
+.tts-hint { font-size:.72rem; color:#5b6072; background:var(--primary-soft); border-radius:10px; padding:.45rem .8rem; margin:0 0 1rem; }
 .back { display:block; text-align:center; background:var(--primary); color:#fff; text-decoration:none; padding:.85rem; border-radius:14px; font-weight:700; font-size:.9rem; margin-top:1.4rem; }
 </style>
 </head>
@@ -48,12 +51,13 @@ strong { color:#2f3560; }
   <div class="theme"></div>
 </div>
 <main>
-<p>📅 <strong>今日進度：第 4 日 / 182</strong>｜Phase 1：N5 總鞏固 + N4 門檻（週 1：假名複習・自我介紹・數字時間）</p>
+<div class="tts-hint">🔊 撳任何日文（虛線底線）都會即時讀出，再撳一下停止</div>
+<p>📅 <strong>今日進度：第 4 日 / 182</strong>｜Phase 1：N5 總鞏固 + N4 門檻（週 1：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">假名複習・自我介紹・數字時間</span>）</p>
 <p>今日星期日 — 輕量聽力特訓日，唔學新嘢，20 分鐘搞掂。（註：我嘅文字轉語音工具今次故障，出唔到音檔，所以聽力材料用下面的自學方案替代，內容一樣咁貼課程。）</p>
 <hr>
 <p>👂 <strong>聽力特訓（今日主題：數字＋時間辨音）</strong></p>
 <p><strong>Step 1：影子跟讀（Shadowing）10 分鐘</strong></p>
-<p>搵 YouTube 搜「<strong>日本語の数字 1〜100 聞き取り</strong>」或「<strong>N5 時間表現 リスニング</strong>」，揀一條 10 分鐘內嘅片。玩法：</p>
+<p>搵 YouTube 搜「<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">日本語の数字</span> 1〜100 <span class="jp" onclick="speak(this)" title="🔊 撳我讀">聞き取り</span></strong>」或「<strong>N5 時間表現 <span class="jp" onclick="speak(this)" title="🔊 撳我讀">リスニング</span></strong>」，揀一條 10 分鐘內嘅片。玩法：</p>
 <ul>
 <li>播一句 → 暫停 → 出聲跟住講一次（唔好淨係聽！把口郁先會記得住）</li>
 <li>聽到時間句（〜時／〜時半）就即時寫低中文意思</li>
@@ -61,21 +65,35 @@ strong { color:#2f3560; }
 <p><strong>Step 2：聽寫挑戰 5 分鐘</strong></p>
 <p>返屋企人附近，叫屋企人隨意報 5 個時間（中文都得），你即場用日文講出嚟。例：</p>
 <ul>
-<li>「9 點」→ <strong>くじ</strong>（唔係 きゅうじ！）</li>
-<li>「4 點半」→ <strong>よじはん</strong></li>
-<li>「7 點」→ <strong>しちじ</strong> 或 <strong>ななじ</strong> 都得</li>
+<li>「9 點」→ <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">くじ</span></strong>（唔係 <span class="jp" onclick="speak(this)" title="🔊 撳我讀">きゅうじ！</span>）</li>
+<li>「4 點半」→ <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">よじはん</span></strong></li>
+<li>「7 點」→ <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">しちじ</span></strong> 或 <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">ななじ</span></strong> 都得</li>
 </ul>
 <p><strong>Step 3：自言自語 5 分鐘</strong></p>
-<p>今日每個鐘頭望一次錶，心裡面用日文講一次：「今、〜時です。」呢個習慣 zero 成本，但係時間表達會喺一星期內變反射動作。</p>
+<p>今日每個鐘頭望一次錶，心裡面用日文講一次：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">「今、〜時です。」呢個習慣</span> zero 成本，但係時間表達會喺一星期內變反射動作。</p>
 <hr>
 <p>📌 <strong>今日重溫兩個死記位（聽力最易中伏）</strong></p>
 <ul>
-<li>四時 ＝ <strong>よじ</strong>／九時 ＝ <strong>くじ</strong> — 聽到「よん」「きゅう」加「じ」就一定唔係講時間</li>
-<li>半 ＝ <strong>はん</strong> —「〜時半」讀做「〜じはん」</li>
+<li>四時 ＝ <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">よじ</span></strong>／九時 ＝ <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">くじ</span></strong> — <span class="jp" onclick="speak(this)" title="🔊 撳我讀">聽到「よん」「きゅう」加「じ」就一定唔係講時間</span></li>
+<li>半 ＝ <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">はん</span></strong> —<span class="jp" onclick="speak(this)" title="🔊 撳我讀">「〜時半」讀做「〜じはん」</span></li>
 </ul>
 <hr>
-<p>聽日星期一進入新內容（我哋會開始形容詞變化），所以今日真係可以輕鬆啲。講真，連續四日冇甩底，仲主動做埋聽力——你而家已經建立咗一個好穩嘅習慣。問你：今日 Step 3 嘅「自言自語報時」，你估你自己一日落幾多次「今、〜時です」？試下數下，聽日話我知！がんばって！💪</p>
+<p>聽日星期一進入新內容（我哋會開始形容詞變化），所以今日真係可以輕鬆啲。講真，連續四日冇甩底，仲主動做埋聽力——你而家已經建立咗一個好穩嘅習慣。問你：今日 Step 3 嘅「自言自語報時」，<span class="jp" onclick="speak(this)" title="🔊 撳我讀">你估你自己一日落幾多次「今、〜時です」？試下數下</span>，<span class="jp" onclick="speak(this)" title="🔊 撳我讀">聽日話我知！がんばって！</span>💪</p>
 <a class="back" href="index.html">← 返回目錄</a>
 </main>
+<script>
+function speak(el){
+  try{
+    var t=(el.dataset.speak||el.textContent||'').replace(/\s+/g,' ').trim();
+    if(!('speechSynthesis' in window)){alert('你個瀏覽器唔支援語音朗讀');return;}
+    var u=new SpeechSynthesisUtterance(t);
+    u.lang='ja-JP'; u.rate=0.85;
+    speechSynthesis.cancel();
+    speechSynthesis.speak(u);
+    el.classList.add('speaking');
+    u.onend=function(){el.classList.remove('speaking');};
+  }catch(e){}
+}
+</script>
 </body>
 </html>
