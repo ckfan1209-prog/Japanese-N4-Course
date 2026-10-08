@@ -91,35 +91,42 @@ h2.lesson-h{font-size:1.25rem;font-weight:800;margin-bottom:.2rem}
 </main>
 <footer>每晚 21:00 自動更新 ｜ Pison自編課程</footer>
 <script>
-var currentEl=null;
-function pickJaVoice(){
-  try{
-    var vs=speechSynthesis.getVoices().filter(function(v){return /^ja/i.test(v.lang);});
-    if(vs.length) return vs[0];
-  }catch(e){}
-  return null;
+var currentAudio=null, currentEl=null;
+function stopAll(){
+  try{ if('speechSynthesis' in window) speechSynthesis.cancel(); }catch(e){}
+  if(currentAudio){ try{ currentAudio.pause(); }catch(e){} currentAudio=null; }
+  if(currentEl){ currentEl.classList.remove('speaking'); currentEl=null; }
 }
-if('speechSynthesis' in window){ try{ speechSynthesis.getVoices(); }catch(e){} }
-function speak(el){
+function speakFallback(el){
   try{
     if(!('speechSynthesis' in window)){alert('你個瀏覽器唔支援語音朗讀');return;}
-    if(currentEl===el && (speechSynthesis.speaking||speechSynthesis.pending)){ speechSynthesis.cancel(); return; }
-    speechSynthesis.cancel();
     var t=(el.dataset.speak||el.textContent||'').replace(/\s+/g,' ').trim();
     if(!t) return;
     var u=new SpeechSynthesisUtterance(t);
     u.lang='ja-JP'; u.rate=0.85;
-    var v=pickJaVoice(); if(v) u.voice=v;
     currentEl=el; el.classList.add('speaking');
     var done=function(){ el.classList.remove('speaking'); if(currentEl===el) currentEl=null; };
     u.onend=done; u.onerror=done;
     speechSynthesis.speak(u);
   }catch(e){}
 }
-window.addEventListener('touchend',function unlock(){
-  try{ if('speechSynthesis' in window) speechSynthesis.resume(); }catch(e){}
-  window.removeEventListener('touchend',unlock);
-},{passive:true});
+function speak(el){
+  try{
+    if(currentEl===el){ stopAll(); return; }
+    stopAll();
+    var au=el.dataset.audio;
+    if(au){
+      var a=new Audio(au);
+      currentAudio=a; currentEl=el; el.classList.add('speaking');
+      a.onended=function(){ stopAll(); };
+      a.onerror=function(){ stopAll(); speakFallback(el); };
+      var p=a.play();
+      if(p&&p.catch){ p.catch(function(){ stopAll(); }); }
+      return;
+    }
+    speakFallback(el);
+  }catch(e){}
+}
 </script>
 </body>
 </html>
