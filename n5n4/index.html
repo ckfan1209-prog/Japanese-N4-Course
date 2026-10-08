@@ -30,6 +30,12 @@ main{max-width:600px;margin:0 auto;padding:1rem .9rem 5rem}
 .jp{cursor:pointer;border-bottom:1.5px dotted #d98a85;transition:background .15s;border-radius:4px;padding:0 1px}
 .jp:active,.jp.speaking{background:var(--primary-soft)}
 .jp.speaking{border-bottom:2px solid var(--primary)}
+.rate-ctl{position:sticky;top:0;z-index:50;display:flex;gap:.4rem;align-items:center;justify-content:center;
+  background:rgba(255,255,255,.94);padding:.45rem;border-radius:0 0 14px 14px;
+  box-shadow:0 2px 12px rgba(0,0,0,.06);font-size:.82rem;color:var(--muted);margin:0 -.5rem .6rem}
+.rate-ctl .rate-btn{border:1px solid #e8ddd2;background:#fff;color:var(--muted);border-radius:999px;
+  padding:.28rem .8rem;font-size:.82rem;cursor:pointer}
+.rate-ctl .rate-btn.active{background:var(--primary);border-color:var(--primary);color:#fff;font-weight:700}
 .reading{color:var(--muted);font-size:.85em}
 .vocab-num{display:inline-flex;width:1.7rem;height:1.7rem;border-radius:50%;background:var(--primary-soft);color:var(--primary-deep);font-weight:800;font-size:.85rem;align-items:center;justify-content:center;margin-right:.5rem}
 .vocab-zh{color:var(--primary-deep);font-weight:700}
@@ -92,6 +98,15 @@ h2.lesson-h{font-size:1.25rem;font-weight:800;margin-bottom:.2rem}
 <footer>每晚 21:00 自動更新 ｜ Pison自編課程</footer>
 <script>
 var currentAudio=null, currentEl=null;
+var playRate=1;
+try{ var saved=parseFloat(localStorage.getItem('n5n4_rate')); if(saved>0) playRate=saved; }catch(e){}
+function setRate(r){
+  playRate=r;
+  try{ localStorage.setItem('n5n4_rate',String(r)); }catch(e){}
+  var btns=document.querySelectorAll('.rate-btn');
+  for(var i=0;i<btns.length;i++){ btns[i].classList.toggle('active', parseFloat(btns[i].dataset.rate)===r); }
+  stopAll();
+}
 function stopAll(){
   try{ if('speechSynthesis' in window) speechSynthesis.cancel(); }catch(e){}
   if(currentAudio){ try{ currentAudio.pause(); }catch(e){} currentAudio=null; }
@@ -117,6 +132,7 @@ function speak(el){
     var au=el.dataset.audio;
     if(au){
       var a=new Audio(au);
+      try{ a.playbackRate=playRate; }catch(e){}
       currentAudio=a; currentEl=el; el.classList.add('speaking');
       a.onended=function(){ stopAll(); };
       a.onerror=function(){ stopAll(); speakFallback(el); };
@@ -127,6 +143,7 @@ function speak(el){
     speakFallback(el);
   }catch(e){}
 }
+try{ setRate(playRate); }catch(e){}
 </script>
 </body>
 </html>
