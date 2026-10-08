@@ -2,43 +2,52 @@
 <html lang="zh-HK">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>第 4 日 ｜ 日語 N4</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#6366f1">
+<title>Day 4 ｜ 日語 N4</title>
 <style>
+:root {
+  --bg:#f4f5fb; --card:#ffffff; --text:#1e2235; --muted:#8b90a7;
+  --primary:#6366f1; --primary-soft:#eef0ff; --radius:16px;
+}
 * { margin:0; padding:0; box-sizing:border-box; }
-body { font-family:"Hiragino Sans","Noto Sans TC",-apple-system,sans-serif; background:#f7fafc; color:#2d3748; line-height:1.75; }
-nav { position:sticky; top:0; background:#5a67d8; color:#fff; padding:.8rem 1rem; display:flex; justify-content:space-between; align-items:center; z-index:10; }
-nav a { color:#fff; text-decoration:none; font-size:.9rem; background:rgba(255,255,255,.15); padding:.35rem .8rem; border-radius:8px; }
-nav .title { font-weight:700; font-size:.95rem; }
-main { max-width:640px; margin:0 auto; padding:1.2rem 1rem 3rem; }
-h2 { font-size:1.2rem; margin:1.4rem 0 .6rem; color:#4c51bf; border-left:4px solid #667eea; padding-left:.6rem; }
-h3 { font-size:1.05rem; margin:1.2rem 0 .5rem; color:#2c5282; }
-p { margin:.5rem 0; }
-ul { margin:.5rem 0 .5rem 1.3rem; }
-li { margin:.25rem 0; }
-hr { border:none; border-top:1px dashed #cbd5e0; margin:1.2rem 0; }
-table { border-collapse:collapse; width:100%; margin:.8rem 0; font-size:.85rem; background:#fff; }
-th, td { border:1px solid #e2e8f0; padding:.45rem .6rem; text-align:left; }
-th { background:#edf2f7; }
-tr:nth-child(even) { background:#f7fafc; }
-code { background:#edf2f7; padding:.1rem .35rem; border-radius:4px; font-size:.9em; }
-.num-item { margin:.4rem 0; }
-.num { color:#5a67d8; font-weight:700; }
-.meta { background:#fff; border-radius:12px; padding:.8rem 1rem; margin-bottom:1rem; box-shadow:0 1px 4px rgba(0,0,0,.05); font-size:.85rem; color:#718096; }
+body { font-family:-apple-system,"PingFang TC","Noto Sans TC","Hiragino Sans",sans-serif; background:var(--bg); color:var(--text); line-height:1.8; }
+nav { position:sticky; top:0; z-index:20; background:rgba(99,102,241,.92); backdrop-filter:blur(12px); color:#fff; padding:.85rem 1rem; display:flex; justify-content:space-between; align-items:center; }
+nav .title { font-weight:800; font-size:.98rem; }
+nav a { color:#fff; text-decoration:none; font-size:.82rem; background:rgba(255,255,255,.18); padding:.4rem .85rem; border-radius:99px; }
+.hero { background:linear-gradient(140deg,#6366f1,#8b5cf6); color:#fff; padding:1.6rem 1.2rem 1.4rem; border-radius:0 0 26px 26px; }
+.hero .day-label { font-size:.8rem; opacity:.85; letter-spacing:1px; }
+.hero h1 { font-size:1.5rem; font-weight:800; margin:.2rem 0; }
+.hero .theme { font-size:.8rem; opacity:.9; margin-top:.3rem; }
+main { max-width:600px; margin:0 auto; padding:1.1rem 1rem 4rem; }
+h2 { font-size:1.02rem; margin:1.6rem 0 .7rem; color:var(--primary); font-weight:800; display:flex; align-items:center; gap:.45rem; }
+h2::before { content:""; width:4px; height:1.05em; background:linear-gradient(180deg,#6366f1,#a855f7); border-radius:4px; }
+h3 { font-size:.95rem; margin:1.1rem 0 .45rem; color:#3f4664; }
+p { margin:.5rem 0; font-size:.92rem; }
+ul { margin:.4rem 0 .4rem 1.25rem; }
+li { margin:.3rem 0; font-size:.9rem; }
+hr { border:none; border-top:1.5px dashed #e3e6f2; margin:1.3rem 0; }
+.table-wrap { overflow-x:auto; margin:.8rem 0; border-radius:12px; box-shadow:0 0 0 1px #e8eaf5; }
+table { border-collapse:collapse; width:100%; font-size:.83rem; background:#fff; border-radius:12px; overflow:hidden; }
+th, td { padding:.5rem .7rem; text-align:left; border-bottom:1px solid #eef0f7; }
+th { background:var(--primary-soft); color:#4338ca; font-size:.8rem; }
+tr:last-child td { border-bottom:none; }
+code { background:var(--primary-soft); color:#4338ca; padding:.12rem .4rem; border-radius:6px; font-size:.88em; }
+strong { color:#2f3560; }
+.num-item { display:flex; gap:.65rem; padding:.55rem .7rem; border-radius:12px; margin:.3rem 0; background:#fafbfe; }
+.num { flex-shrink:0; width:26px; height:26px; border-radius:50%; background:var(--primary-soft); color:var(--primary); font-weight:800; font-size:.78rem; display:flex; align-items:center; justify-content:center; margin-top:.15rem; }
+.num-body { font-size:.9rem; }
+.back { display:block; text-align:center; background:var(--primary); color:#fff; text-decoration:none; padding:.85rem; border-radius:14px; font-weight:700; font-size:.9rem; margin-top:1.4rem; }
 </style>
 </head>
 <body>
-<nav><span class="title">第 4 日</span><a href="index.html">← 目錄</a></nav>
+<nav><span class="title">🇯🇵 N4 ｜ Day 4</span><a href="index.html">目錄</a></nav>
+<div class="hero">
+  <div class="day-label">DAY 4 / 182 ｜ 2026-10-05</div>
+  <h1>📝 週末總複習 + 測驗</h1>
+  <div class="theme">Phase 1：N5 總鞏固 + N4 門檻（週 1：平假名/片假名・自我介紹・數字/時間/**日期**）</div>
+</div>
 <main>
-<div class="meta">📅 2026-10-05 ｜ Phase 1：N5 總鞏固 + N4 門檻（週 1：平假名/片假名・自我介紹・數字/時間/**日期**）</div>
-<p><strong>Job ID:</strong> af2d4af4d972</p>
-<p><strong>Run Time:</strong> 2026-10-05 21:32:09</p>
-<p><strong>Schedule:</strong> every day at 21:30</p>
-<h3>Prompt</h3>
-<p>[IMPORTANT: You are running as a scheduled cron job. DELIVERY: Your final response will be automatically delivered to the user — do NOT use send_message or try to deliver the output yourself. Just produce your report/output as your final response and the system handles the rest. SILENT: If there is genuinely nothing new to report, respond with exactly &quot;[SILENT]&quot; (nothing else) to suppress delivery. [SILENT] is a literal ASCII control token — never translate or rephrase it, whatever language the rest of your answer uses. Never combine [SILENT] with content — either report your findings normally, or say [SILENT] and nothing more. FAILURE: If a delegated child fails and this cron run must be recorded as failed, put [CRON_FAILURE] on the first line by itself, then explain the child failure on following lines. RECURSION: This is a run of an EXISTING scheduled job — execute the task now. NEVER create or update a cron job because of recurring or future-schedule language in the task prompt below; treat phrasing like &quot;each Monday&quot; or &quot;every day at 9&quot; as context for this run, not as a request to schedule another job.]</p>
-<h3>Your previous run&#x27;s output</h3>
-<p>The following is this job&#x27;s most recent non-silent output from a previous run. Use it for continuity: avoid repeating what was already reported, and continue where the last run left off.</p>
-<p>```</p>
 <p>📅 <strong>今日進度：第 4 日 / 182</strong>｜Phase 1：N5 總鞏固 + N4 門檻（週 1：假名複習・自我介紹・數字時間）</p>
 <p>今日星期日 — 輕量聽力特訓日，唔學新嘢，20 分鐘搞掂。（註：我嘅文字轉語音工具今次故障，出唔到音檔，所以聽力材料用下面的自學方案替代，內容一樣咁貼課程。）</p>
 <hr>
@@ -73,30 +82,18 @@ code { background:#edf2f7; padding:.1rem .35rem; border-radius:4px; font-size:.9
 <p>今日星期一，係 week 1 嘅最後一塊拼圖：<strong>日期同星期表達</strong>。學完呢課，你就可以完整咁講「幾年幾月幾日、星期幾、幾點」，自我介紹嗰套基本盤就齊了。</p>
 <hr>
 <p>📖 <strong>單字 12 個</strong></p>
-<div class="num-item"><span class="num">1.</span> <strong>月曜日</strong>（げつようび）— 星期一</div>
-<p>例：月曜日に仕事が始まります。（星期一開始工作。）</p>
-<div class="num-item"><span class="num">2.</span> <strong>火曜日</strong>（かようび）— 星期二</div>
-<p>例：火曜日は少し暇です。（星期二比較得閒。）</p>
-<div class="num-item"><span class="num">3.</span> <strong>水曜日</strong>（すいようび）— 星期三</div>
-<p>例：水曜日に映画を見ます。（星期三睇戲。）</p>
-<div class="num-item"><span class="num">4.</span> <strong>木曜日</strong>（もくようび）— 星期四</div>
-<p>例：木曜日に友だちと会います。（星期四同朋友見面。）</p>
-<div class="num-item"><span class="num">5.</span> <strong>金曜日</strong>（きんようび）— 星期五</div>
-<p>例：金曜日の夜は楽しいです。（星期五夜晚最開心。）</p>
-<div class="num-item"><span class="num">6.</span> <strong>土曜日</strong>（どようび）— 星期六</div>
-<p>例：土曜日は家で休みます。（星期六喺屋企休息。）</p>
-<div class="num-item"><span class="num">7.</span> <strong>日曜日</strong>（にちようび）— 星期日</div>
-<p>例：日曜日に買い物へ行きます。（星期日去買嘢。）</p>
-<div class="num-item"><span class="num">8.</span> <strong>今日</strong>（きょう）— 今天</div>
-<p>例：今日は10月5日です。（今日係10月5日。）</p>
-<div class="num-item"><span class="num">9.</span> <strong>明日</strong>（あした）— 明天</div>
-<p>例：明日は火曜日です。（聽日係星期二。）</p>
-<div class="num-item"><span class="num">10.</span> <strong>昨日</strong>（きのう）— 昨天</div>
-<p>例：昨日は日曜日でした。（尋日係星期日。）</p>
-<div class="num-item"><span class="num">11.</span> <strong>誕生日</strong>（たんじょうび）— 生日</div>
-<p>例：私の誕生日は12月25日です。（我生日係12月25日。）</p>
-<div class="num-item"><span class="num">12.</span> <strong>休み</strong>（やすみ）— 休息／假期</div>
-<p>例：日曜日は休みです。（星期日係休息日。）</p>
+<div class="num-item"><span class="num">1</span><div class="num-body"><strong>月曜日</strong>（げつようび）— 星期一&lt;br&gt;例：月曜日に仕事が始まります。（星期一開始工作。）</div></div>
+<div class="num-item"><span class="num">2</span><div class="num-body"><strong>火曜日</strong>（かようび）— 星期二&lt;br&gt;例：火曜日は少し暇です。（星期二比較得閒。）</div></div>
+<div class="num-item"><span class="num">3</span><div class="num-body"><strong>水曜日</strong>（すいようび）— 星期三&lt;br&gt;例：水曜日に映画を見ます。（星期三睇戲。）</div></div>
+<div class="num-item"><span class="num">4</span><div class="num-body"><strong>木曜日</strong>（もくようび）— 星期四&lt;br&gt;例：木曜日に友だちと会います。（星期四同朋友見面。）</div></div>
+<div class="num-item"><span class="num">5</span><div class="num-body"><strong>金曜日</strong>（きんようび）— 星期五&lt;br&gt;例：金曜日の夜は楽しいです。（星期五夜晚最開心。）</div></div>
+<div class="num-item"><span class="num">6</span><div class="num-body"><strong>土曜日</strong>（どようび）— 星期六&lt;br&gt;例：土曜日は家で休みます。（星期六喺屋企休息。）</div></div>
+<div class="num-item"><span class="num">7</span><div class="num-body"><strong>日曜日</strong>（にちようび）— 星期日&lt;br&gt;例：日曜日に買い物へ行きます。（星期日去買嘢。）</div></div>
+<div class="num-item"><span class="num">8</span><div class="num-body"><strong>今日</strong>（きょう）— 今天&lt;br&gt;例：今日は10月5日です。（今日係10月5日。）</div></div>
+<div class="num-item"><span class="num">9</span><div class="num-body"><strong>明日</strong>（あした）— 明天&lt;br&gt;例：明日は火曜日です。（聽日係星期二。）</div></div>
+<div class="num-item"><span class="num">10</span><div class="num-body"><strong>昨日</strong>（きのう）— 昨天&lt;br&gt;例：昨日は日曜日でした。（尋日係星期日。）</div></div>
+<div class="num-item"><span class="num">11</span><div class="num-body"><strong>誕生日</strong>（たんじょうび）— 生日&lt;br&gt;例：私の誕生日は12月25日です。（我生日係12月25日。）</div></div>
+<div class="num-item"><span class="num">12</span><div class="num-body"><strong>休み</strong>（やすみ）— 休息／假期&lt;br&gt;例：日曜日は休みです。（星期日係休息日。）</div></div>
 <p>⚠️ 讀音陷阱：<strong>「〜日」（日子）讀「〜にち」，但日期幾號嘅讀法好唔規則</strong> — 1日＝ついたち、4日＝よっか、7日＝なのか、14日＝じゅうよっか、20日＝はつか。呢幾個遲啲會專門操，今日先記星期。</p>
 <hr>
 <p>✍️ <strong>文法：日期＋助詞「に」</strong></p>
@@ -114,39 +111,24 @@ code { background:#edf2f7; padding:.1rem .35rem; border-radius:4px; font-size:.9
 <p>✏️ <strong>造句練習</strong>：用「〜曜日に＋動詞」寫一句你自己下星期嘅計劃。例如：「金曜日に日本語を勉強します。」寫完聽日對答案。</p>
 <hr>
 <p>🈴 <strong>漢字 7 個（星期七傑＋常用）</strong></p>
-<table>
+<div class="table-wrap"><table>
 <tr><th>漢字</th><th>音讀</th><th>訓讀</th><th>例詞</th></tr>
-</table>
-<table>
-</table>
-<table>
-<tr><th>月</th><th>ゲツ／ガツ</th><th>つき</th><th>月曜日・今月（こんげつ）</th></tr>
-</table>
-<table>
-<tr><th>火</th><th>カ</th><th>ひ</th><th>火曜日・花火（はなび）</th></tr>
-</table>
-<table>
-<tr><th>水</th><th>スイ</th><th>みず</th><th>水曜日・水（みず）</th></tr>
-</table>
-<table>
-<tr><th>木</th><th>モク</th><th>き</th><th>木曜日・木（き）</th></tr>
-</table>
-<table>
-<tr><th>金</th><th>キン</th><th>かね</th><th>金曜日・お金（おかね）</th></tr>
-</table>
-<table>
-<tr><th>日</th><th>ニチ／ジツ</th><th>ひ</th><th>日曜日・毎日（まいにち）</th></tr>
-</table>
-<table>
-<tr><th>生</th><th>セイ</th><th>う（まれる）</th><th>誕生日・先生（せんせい）</th></tr>
-</table>
+<tr><td>月</td><td>ゲツ／ガツ</td><td>つき</td><td>月曜日・今月（こんげつ）</td></tr>
+<tr><td>火</td><td>カ</td><td>ひ</td><td>火曜日・花火（はなび）</td></tr>
+<tr><td>水</td><td>スイ</td><td>みず</td><td>水曜日・水（みず）</td></tr>
+<tr><td>木</td><td>モク</td><td>き</td><td>木曜日・木（き）</td></tr>
+<tr><td>金</td><td>キン</td><td>かね</td><td>金曜日・お金（おかね）</td></tr>
+<tr><td>日</td><td>ニチ／ジツ</td><td>ひ</td><td>日曜日・毎日（まいにち）</td></tr>
+<tr><td>生</td><td>セイ</td><td>う（まれる）</td><td>誕生日・先生（せんせい）</td></tr>
+</table></div>
 <p>💡 記法：星期七個字其實係「月火水木金土日」七曜，來自中國古代曆法，日本日曆到而家都係咁寫。</p>
 <hr>
 <p>👂 <strong>聽讀任務（20 分鐘）</strong></p>
-<div class="num-item"><span class="num">1.</span> <strong>讀（10 分）</strong>：攞返你 Day 1 寫嘅自我介紹（冇寫嘅話而家補返），加一句「私の誕生日は◯月◯日です。」，出聲讀 3 次。</div>
-<div class="num-item"><span class="num">2.</span> <strong>聽（10 分）</strong>：YouTube 搜「<strong>曜日のうた 曜日の歌</strong>」（日本細路仔學星期嘅歌，好上口），播一次跟住唱一次。然後開啲排程（Next 了！日文日曆 app 都得），把今個星期每一日喺心入面用日文講一次：「今日は月曜日です。」</div>
+<div class="num-item"><span class="num">1</span><div class="num-body"><strong>讀（10 分）</strong>：攞返你 Day 1 寫嘅自我介紹（冇寫嘅話而家補返），加一句「私の誕生日は◯月◯日です。」，出聲讀 3 次。</div></div>
+<div class="num-item"><span class="num">2</span><div class="num-body"><strong>聽（10 分）</strong>：YouTube 搜「<strong>曜日のうた 曜日の歌</strong>」（日本細路仔學星期嘅歌，好上口），播一次跟住唱一次。然後開啲排程（Next 了！日文日曆 app 都得），把今個星期每一日喺心入面用日文講一次：「今日は月曜日です。」</div></div>
 <hr>
 <p>📌 講真，五日連續冇甩底，你已經跑贏九成開始學日文嘅人。問你一條快題：<strong>「來緊星期六」用日文你即刻識唔識講？</strong>（提示：土曜日）— 試下喺心入面答一次，聽日同你對下！がんばって！💪</p>
+<a class="back" href="index.html">← 返回目錄</a>
 </main>
 </body>
 </html>
