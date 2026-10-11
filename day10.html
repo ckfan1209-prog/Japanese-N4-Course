@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#6366f1">
+<title>Day 10 ｜ 日語 N4</title>
+<style>
+:root {
+  --bg:#f4f5fb; --card:#ffffff; --text:#1e2235; --muted:#8b90a7;
+  --primary:#6366f1; --primary-soft:#eef0ff; --radius:16px;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,"PingFang TC","Noto Sans TC","Hiragino Sans",sans-serif; background:var(--bg); color:var(--text); line-height:1.8; }
+nav { position:sticky; top:0; z-index:20; background:rgba(99,102,241,.92); backdrop-filter:blur(12px); color:#fff; padding:.85rem 1rem; display:flex; justify-content:space-between; align-items:center; }
+nav .title { font-weight:800; font-size:.98rem; }
+nav a { color:#fff; text-decoration:none; font-size:.82rem; background:rgba(255,255,255,.18); padding:.4rem .85rem; border-radius:99px; }
+.hero { background:linear-gradient(140deg,#6366f1,#8b5cf6); color:#fff; padding:1.6rem 1.2rem 1.4rem; border-radius:0 0 26px 26px; }
+.hero .day-label { font-size:.8rem; opacity:.85; letter-spacing:1px; }
+.hero h1 { font-size:1.5rem; font-weight:800; margin:.2rem 0; }
+.hero .theme { font-size:.8rem; opacity:.9; margin-top:.3rem; }
+main { max-width:600px; margin:0 auto; padding:1.1rem 1rem 4rem; }
+h2 { font-size:1.02rem; margin:1.6rem 0 .7rem; color:var(--primary); font-weight:800; display:flex; align-items:center; gap:.45rem; }
+h2::before { content:""; width:4px; height:1.05em; background:linear-gradient(180deg,#6366f1,#a855f7); border-radius:4px; }
+h3 { font-size:.95rem; margin:1.1rem 0 .45rem; color:#3f4664; }
+p { margin:.5rem 0; font-size:.92rem; }
+ul { margin:.4rem 0 .4rem 1.25rem; }
+li { margin:.3rem 0; font-size:.9rem; }
+hr { border:none; border-top:1.5px dashed #e3e6f2; margin:1.3rem 0; }
+.table-wrap { overflow-x:auto; margin:.8rem 0; border-radius:12px; box-shadow:0 0 0 1px #e8eaf5; }
+table { border-collapse:collapse; width:100%; font-size:.83rem; background:#fff; border-radius:12px; overflow:hidden; }
+th, td { padding:.5rem .7rem; text-align:left; border-bottom:1px solid #eef0f7; }
+th { background:var(--primary-soft); color:#4338ca; font-size:.8rem; }
+tr:last-child td { border-bottom:none; }
+code { background:var(--primary-soft); color:#4338ca; padding:.12rem .4rem; border-radius:6px; font-size:.88em; }
+strong { color:#2f3560; }
+.num-item { display:flex; gap:.65rem; padding:.55rem .7rem; border-radius:12px; margin:.3rem 0; background:#fafbfe; }
+.num { flex-shrink:0; width:26px; height:26px; border-radius:50%; background:var(--primary-soft); color:var(--primary); font-weight:800; font-size:.78rem; display:flex; align-items:center; justify-content:center; margin-top:.15rem; }
+.num-body { font-size:.9rem; }
+.jp { cursor:pointer; border-bottom:1.5px dotted #a5b4fc; transition:background .15s; }
+.jp:active, .jp.speaking { background:var(--primary-soft); border-bottom-color:var(--primary); }
+.tts-hint { font-size:.72rem; color:#5b6072; background:var(--primary-soft); border-radius:10px; padding:.45rem .8rem; margin:0 0 1rem; }
+.back { display:block; text-align:center; background:var(--primary); color:#fff; text-decoration:none; padding:.85rem; border-radius:14px; font-weight:700; font-size:.9rem; margin-top:1.4rem; }
+</style>
+</head>
+<body>
+<nav><span class="title">🇯🇵 N4 ｜ Day 10</span><a href="index.html">目錄</a></nav>
+<div class="hero">
+  <div class="day-label">DAY 10 / 182 ｜ 2026-10-10</div>
+  <h1>📝 週末總複習 + 測驗</h1>
+  <div class="theme"></div>
+</div>
+<main>
+<div class="tts-hint">🔊 撳任何日文（虛線底線）都會即時讀出，再撳一下停止</div>
+<p>📅 <strong>今日進度：第 10 日 / 182</strong>｜Phase 1：N5 總鞏固 + N4 門檻（<strong>週六總複習日：週 2 全回顧 + 小測驗</strong>）</p>
+<p>✅ <strong>尋日快題答案</strong>：「呢間餐廳又平又好味」→ <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">この店は安いです。そして、おいしいです。</span></strong>（呢間舖好平。而且好味。）— 兩個 <span class="jp" onclick="speak(this)" title="🔊 撳我讀">い形容詞先用「そして」</span>駁住；<span class="jp" onclick="speak(this)" title="🔊 撳我讀">用「安くて」</span>一句過嘅講法（て形接續）喺週 4 先教，唔急。</p>
+<hr>
+<h3>📋 週 2 總複習（Day 6–9）</h3>
+<p><strong>① <span class="jp" onclick="speak(this)" title="🔊 撳我讀">です</span>／<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ます・助詞「は」</span></strong>（Day 6）</p>
+<ul>
+<li>肯定：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">〜です</span> → 過去：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">〜でした</span> → 否定：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">〜じゃないです</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">〜ではありません</span>）</li>
+<li>例：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">私は学生です。</span>→ 過去：私は学生<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">でした</span></strong>。</li>
+<li>「は」讀 <strong>wa</strong>：私は（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">わたしは</span>）</li>
+</ul>
+<p><strong>② 助詞「を」+「に」</strong>（Day 7）</p>
+<ul>
+<li><strong>を</strong>（讀 o）＝動作對象：本<strong>を</strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">読みます。</span>／ご飯<strong>を</strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">食べます。</span></li>
+<li><strong>に</strong>＝時間點／目的地：7時<strong>に</strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">起きます。</span>／学校<strong>に</strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">行きます。</span></li>
+</ul>
+<p><strong>③ 助詞「で」+「は」vs「が」</strong>（Day 8）</p>
+<ul>
+<li><strong>で</strong>＝動作發生嘅地方／手段：図書館<strong>で</strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">勉強します。</span>／<span class="jp" onclick="speak(this)" title="🔊 撳我讀">バス</span><strong>で</strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">行きます。</span></li>
+<li>對比三兄弟：<strong>を</strong>（對象）・<strong>に</strong>（時間/目的地）・<strong>で</strong>（地方/手段）</li>
+<li><strong>は</strong>（主題）vs <strong>が</strong>（焦點）：象<strong>は</strong>鼻<strong>が</strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">長いです。</span>（象呢樣嘢，佢個鼻長）</li>
+</ul>
+<p><strong>④ 形容詞：い vs な</strong>（Day 9）</p>
+<ul>
+<li>判斷法：<strong>見到結尾「い」→ <span class="jp" onclick="speak(this)" title="🔊 撳我讀">先檢查係咪「きれい</span>／嫌い」呢啲伏兵 → 唔係先當 い形容詞</strong></li>
+<li>い形容詞：安い → <span class="jp" onclick="speak(this)" title="🔊 撳我讀">安くない</span> → <span class="jp" onclick="speak(this)" title="🔊 撳我讀">安かった</span> → <span class="jp" onclick="speak(this)" title="🔊 撳我讀">安くなかった</span></li>
+<li>な形容詞：静か → <span class="jp" onclick="speak(this)" title="🔊 撳我讀">静かじゃありません</span> → <span class="jp" onclick="speak(this)" title="🔊 撳我讀">静かでした</span></li>
+<li>修飾名詞：安<strong>い</strong>店（直接駁）vs 静か<strong>な</strong>町（要加な）</li>
+</ul>
+<h3>🈴 漢字總複習（週 2 全部 18 個）</h3>
+<p><strong>Day 6</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">学・校・会・社・先・名・</span>私｜<strong>Day 7</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">行・食・飲・買・見・</span>聞｜<strong>Day 8</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">図・書・</span>館｜<strong>Day 9</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">大・小・高・安・新・</span>古</p>
+<p>一句串起嚟：<strong>私</strong>は<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">大きい</span>学校</strong>の<strong>図書館</strong>で<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">新しい</span>本</strong>を<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">買いました</span></strong>。（我喺間大學校嘅圖書館買咗本新書。）— 一句用咗 10 個今週漢字，出聲讀 3 次！</p>
+<hr>
+<h3>✏️ 小測驗（5 題，答案喺文末）</h3>
+<p><strong>Q1</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">「これは本です。」</span>嘅<strong>過去式</strong>點寫？</p>
+<p><strong>Q2</strong>：揀啱助詞：私は毎朝7時（　）<span class="jp" onclick="speak(this)" title="🔊 撳我讀">起きます。</span></p>
+<p>A. を　B. に　C. で</p>
+<p><strong>Q3</strong>：揀啱助詞：図書館（　）本（　）<span class="jp" onclick="speak(this)" title="🔊 撳我讀">読みます。</span></p>
+<p>A. を／で　B. で／に　C. で／を</p>
+<p><strong>Q4</strong>：揀啱：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="象">象<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ぞう</span>）</small></span>＿＿<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="鼻">鼻<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">はな</span>）</small></span>＿＿<span class="jp" onclick="speak(this)" title="🔊 撳我讀">長いです。</span></p>
+<p>A. は／が　B. が／は　C. は／は</p>
+<p><strong>Q5</strong>：下面哪句有錯？錯喺邊？</p>
+<p>A. <span class="jp" onclick="speak(this)" title="🔊 撳我讀">有名な店に行きます。</span>　B. <span class="jp" onclick="speak(this)" title="🔊 撳我讀">静かい町に住んでいます。</span>　C. <span class="jp" onclick="speak(this)" title="🔊 撳我讀">新しい車を買いました。</span></p>
+<hr>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p><strong>📥 答案</strong></p>
+<ul>
+<li><strong>Q1</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">これは</span>本<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">でした</span></strong>。（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">です</span> 過去式）</li>
+<li><strong>Q2</strong>：<strong>B（に）</strong>— 具體時間點用 に</li>
+<li><strong>Q3</strong>：<strong>C（で／を）</strong>— 地方用 で、對象用 を</li>
+<li><strong>Q4</strong>：<strong>A（は／が）</strong>— 經典句：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">象は鼻が長いです。</span>大主題用 は、重點描述部分用 が</li>
+<li><strong>Q5</strong>：<strong>B</strong> —「静か」係 <strong>な形容詞</strong>，修飾名詞要加な →「静か<strong>な</strong>町」。A、C 啱。</li>
+</ul>
+<p>5 題全對？你已經可以用人話介紹自己、講行程、形容嘢 — N5 核心文法過半數入晒袋！錯咗嘅題目，返去對應嗰日嘅推送睇一次就得。聽日（星期日）係輕量聽力特訓日，<span class="jp" onclick="speak(this)" title="🔊 撳我讀">瞓個好覺！頑張って！</span>💪</p>
+<hr>
+<p>🌐 網站已更新（真人發音）：https://ckfan1209-prog.github.io/Japanese-N4-Course/（今次 build 已收錄至 Day 9 並補上 75 句真人發音音檔；今日 Day 10 內容將於下次 build 時收錄）</p>
+<a class="back" href="index.html">← 返回目錄</a>
+</main>
+<script>
+var _jaVoice=null;
+function pickVoice(){
+  var vs=speechSynthesis.getVoices();
+  if(!vs.length)return null;
+  var ja=vs.filter(function(v){return /^ja(-|_)JP/i.test(v.lang)||v.lang==='ja';});
+  if(!ja.length)return null;
+  // Preference order: local enhanced/premium voices first, then known-good names
+  function score(v){
+    var s=0, n=v.name.toLowerCase();
+    if(v.localService)s+=40;
+    if(/premium|enhanced|elite|neural/.test(n))s+=50;
+    if(/o-ren|oren/.test(n))s+=30;
+    if(/kyoko/.test(n))s+=25;
+    if(/google/.test(n))s+=20;   // Chrome's Google Japanese voice is quite natural
+    if(/siri/.test(n))s+=15;
+    return s;
+  }
+  ja.sort(function(a,b){return score(b)-score(a);});
+  return ja[0];
+}
+speechSynthesis.onvoiceschanged=function(){_jaVoice=pickVoice();};
+function speak(el){
+  try{
+    var t=(el.dataset.speak||el.textContent||'').replace(/\s+/g,' ').trim();
+    if(!('speechSynthesis' in window)){alert('你個瀏覽器唔支援語音朗讀');return;}
+    if(!_jaVoice)_jaVoice=pickVoice();
+    var u=new SpeechSynthesisUtterance(t);
+    u.lang='ja-JP';
+    if(_jaVoice)u.voice=_jaVoice;
+    u.rate=0.85; u.pitch=1.0;
+    speechSynthesis.cancel();
+    speechSynthesis.speak(u);
+    el.classList.add('speaking');
+    u.onend=function(){el.classList.remove('speaking');};
+  }catch(e){}
+}
+</script>
+</body>
+</html>
