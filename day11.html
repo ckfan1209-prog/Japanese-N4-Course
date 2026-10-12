@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#6366f1">
+<title>Day 11 ｜ 日語 N4</title>
+<style>
+:root {
+  --bg:#f4f5fb; --card:#ffffff; --text:#1e2235; --muted:#8b90a7;
+  --primary:#6366f1; --primary-soft:#eef0ff; --radius:16px;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,"PingFang TC","Noto Sans TC","Hiragino Sans",sans-serif; background:var(--bg); color:var(--text); line-height:1.8; }
+nav { position:sticky; top:0; z-index:20; background:rgba(99,102,241,.92); backdrop-filter:blur(12px); color:#fff; padding:.85rem 1rem; display:flex; justify-content:space-between; align-items:center; }
+nav .title { font-weight:800; font-size:.98rem; }
+nav a { color:#fff; text-decoration:none; font-size:.82rem; background:rgba(255,255,255,.18); padding:.4rem .85rem; border-radius:99px; }
+.hero { background:linear-gradient(140deg,#6366f1,#8b5cf6); color:#fff; padding:1.6rem 1.2rem 1.4rem; border-radius:0 0 26px 26px; }
+.hero .day-label { font-size:.8rem; opacity:.85; letter-spacing:1px; }
+.hero h1 { font-size:1.5rem; font-weight:800; margin:.2rem 0; }
+.hero .theme { font-size:.8rem; opacity:.9; margin-top:.3rem; }
+main { max-width:600px; margin:0 auto; padding:1.1rem 1rem 4rem; }
+h2 { font-size:1.02rem; margin:1.6rem 0 .7rem; color:var(--primary); font-weight:800; display:flex; align-items:center; gap:.45rem; }
+h2::before { content:""; width:4px; height:1.05em; background:linear-gradient(180deg,#6366f1,#a855f7); border-radius:4px; }
+h3 { font-size:.95rem; margin:1.1rem 0 .45rem; color:#3f4664; }
+p { margin:.5rem 0; font-size:.92rem; }
+ul { margin:.4rem 0 .4rem 1.25rem; }
+li { margin:.3rem 0; font-size:.9rem; }
+hr { border:none; border-top:1.5px dashed #e3e6f2; margin:1.3rem 0; }
+.table-wrap { overflow-x:auto; margin:.8rem 0; border-radius:12px; box-shadow:0 0 0 1px #e8eaf5; }
+table { border-collapse:collapse; width:100%; font-size:.83rem; background:#fff; border-radius:12px; overflow:hidden; }
+th, td { padding:.5rem .7rem; text-align:left; border-bottom:1px solid #eef0f7; }
+th { background:var(--primary-soft); color:#4338ca; font-size:.8rem; }
+tr:last-child td { border-bottom:none; }
+code { background:var(--primary-soft); color:#4338ca; padding:.12rem .4rem; border-radius:6px; font-size:.88em; }
+strong { color:#2f3560; }
+.num-item { display:flex; gap:.65rem; padding:.55rem .7rem; border-radius:12px; margin:.3rem 0; background:#fafbfe; }
+.num { flex-shrink:0; width:26px; height:26px; border-radius:50%; background:var(--primary-soft); color:var(--primary); font-weight:800; font-size:.78rem; display:flex; align-items:center; justify-content:center; margin-top:.15rem; }
+.num-body { font-size:.9rem; }
+.jp { cursor:pointer; border-bottom:1.5px dotted #a5b4fc; transition:background .15s; }
+.jp:active, .jp.speaking { background:var(--primary-soft); border-bottom-color:var(--primary); }
+.tts-hint { font-size:.72rem; color:#5b6072; background:var(--primary-soft); border-radius:10px; padding:.45rem .8rem; margin:0 0 1rem; }
+.back { display:block; text-align:center; background:var(--primary); color:#fff; text-decoration:none; padding:.85rem; border-radius:14px; font-weight:700; font-size:.9rem; margin-top:1.4rem; }
+</style>
+</head>
+<body>
+<nav><span class="title">🇯🇵 N4 ｜ Day 11</span><a href="index.html">目錄</a></nav>
+<div class="hero">
+  <div class="day-label">DAY 11 / 182 ｜ 2026-10-11</div>
+  <h1>📝 週末總複習 + 測驗</h1>
+  <div class="theme"></div>
+</div>
+<main>
+<div class="tts-hint">🔊 撳任何日文（虛線底線）都會即時讀出，再撳一下停止</div>
+<p>📅 <strong>今日進度：第 11 日 / 182</strong>｜Phase 1：N5 總鞏固 + N4 門檻（<strong>週日聽力特訓日：輕量 + 休息</strong>）</p>
+<p>✅ 尋日週 2 小測驗做咗未？今日唔出新文法 — 聽力日！目的係將今週學嘅 <span class="jp" onclick="speak(this)" title="🔊 撳我讀">です</span>／助詞／形容詞「由眼入耳」。</p>
+<hr>
+<h3>👂 聽力特訓（約 20 分鐘）</h3>
+<p><strong>Part 1｜<span class="jp" onclick="speak(this)" title="🔊 撳我讀">シャドーイング</span>（跟讀）— 今週文法句子</strong></p>
+<p>下面 5 句去網站聽真人發音，<strong>聽一次 → 出聲跟一次 → 望住字跟一次</strong>，每句 3 次：</p>
+<div class="num-item"><span class="num">1</span><div class="num-body"><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">私は毎朝六時に起きます。</span></strong>（我毎朝六點起身。）→ に＝時間點</div></div>
+<div class="num-item"><span class="num">2</span><div class="num-body"><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">姉は昨日、新しい服を買いました。</span></strong>（家姐尋日買咗件新衫。）→ を＋<span class="jp" onclick="speak(this)" title="🔊 撳我讀">過去式でした</span></div></div>
+<div class="num-item"><span class="num">3</span><div class="num-body"><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">この店は有名です。そして、安いです。</span></strong>（呢間舖好出名。而且好平。）→ <span class="jp" onclick="speak(this)" title="🔊 撳我讀">そして</span> 接續</div></div>
+<div class="num-item"><span class="num">4</span><div class="num-body"><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">犬は好きですが、猫は好きじゃないです。</span></strong>（狗就鍾意，但係貓就唔鍾意。）→ が＝轉折</div></div>
+<div class="num-item"><span class="num">5</span><div class="num-body"><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">象は鼻が長いです。</span></strong>（象呢樣嘢，個鼻長。）→ は／が 經典句</div></div>
+<p><strong>Part 2｜聽解對話（先聽、再睇字、最後對譯）</strong></p>
+<p>&gt; A：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">すみません、図書館はどこですか。</span></p>
+<p>&gt; B：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">あのビルの二階です。</span></p>
+<p>&gt; A：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">今日は何時までですか。</span></p>
+<p>&gt; B：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">五時までです。でも、土曜日は休みです。</span></p>
+<p>&gt; A：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">どうもありがとうございます。</span></p>
+<p><strong>對譯</strong>：A：唔好意思，圖書館喺邊？B：喺嗰棟樓二樓。A：今日開到幾點？B：開到五點。不過星期六休息。A：多謝晒。</p>
+<p><strong>Part 3｜聽力小挑戰（3 題，答案喺文末；第一次唔好睇住字聽！）</strong></p>
+<p><strong>①</strong> <span class="jp" onclick="speak(this)" title="🔊 撳我讀">「私は毎朝、バスで学校へ行きます。学校は家から遠いです。」</span></p>
+<p>Q：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">私は何で学校へ行きますか。</span></p>
+<p><strong>②</strong> <span class="jp" onclick="speak(this)" title="🔊 撳我讀">「田中さんは</span>昨日、<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="大きい店で帽子"><span class="jp" onclick="speak(this)" title="🔊 撳我讀">大きい店で</span>帽子<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ぼうし</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀">を買いました。白い帽子です。」</span></p>
+<p>Q：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">田中さんが買った帽子はどんな帽子ですか。</span></p>
+<p><strong>③</strong> <span class="jp" onclick="speak(this)" title="🔊 撳我讀">「この町は古いですが、とても有名です。レストランも高いですが、おいしいです。」</span></p>
+<p>Q：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">この町について、正しいものはどれですか。</span></p>
+<p>A. <span class="jp" onclick="speak(this)" title="🔊 撳我讀">新しい町です</span>　B. <span class="jp" onclick="speak(this)" title="🔊 撳我讀">有名な町です</span>　C. <span class="jp" onclick="speak(this)" title="🔊 撳我讀">レストランは安いです</span></p>
+<hr>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p><strong>📥 答案</strong></p>
+<ul>
+<li><strong>①</strong>：<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">バス</span></strong>（巴士）— 手段用「で」</li>
+<li><strong>②</strong>：<strong>白い帽子</strong>（白色嘅帽）— <span class="jp" onclick="speak(this)" title="🔊 撳我讀">い形容詞「白い」</span>直接修飾名詞</li>
+<li><strong>③</strong>：<strong>B</strong> —<span class="jp" onclick="speak(this)" title="🔊 撳我讀">「この町は〜有名です」。</span>A 錯（町係「古い」）；C 錯（餐廳「高い」）</li>
+</ul>
+<p>聽力貼士：N4 聽解成日「最後一句先係答案」— Part 2 對話 B <span class="jp" onclick="speak(this)" title="🔊 撳我讀">講咗「でも」</span>，後面嗰句先至關鍵！聽日（週一）開始週 3 新內容：<strong>動詞分類（五段／一段／サ変／カ変）</strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">。今晚早啲休息！おやすみなさい</span> 😴</p>
+<hr>
+<p>⚙️ 自動化：site rebuild + push 完成（途中 remote 有分歧，已 rebase 解決）；Aivis 真人發音已為 Day 10 合成 37 條 MP3 並推上 GitHub。</p>
+<p>🌐 網站已更新（真人發音）：https://ckfan1209-prog.github.io/Japanese-N4-Course/</p>
+<a class="back" href="index.html">← 返回目錄</a>
+</main>
+<script>
+var _jaVoice=null;
+function pickVoice(){
+  var vs=speechSynthesis.getVoices();
+  if(!vs.length)return null;
+  var ja=vs.filter(function(v){return /^ja(-|_)JP/i.test(v.lang)||v.lang==='ja';});
+  if(!ja.length)return null;
+  // Preference order: local enhanced/premium voices first, then known-good names
+  function score(v){
+    var s=0, n=v.name.toLowerCase();
+    if(v.localService)s+=40;
+    if(/premium|enhanced|elite|neural/.test(n))s+=50;
+    if(/o-ren|oren/.test(n))s+=30;
+    if(/kyoko/.test(n))s+=25;
+    if(/google/.test(n))s+=20;   // Chrome's Google Japanese voice is quite natural
+    if(/siri/.test(n))s+=15;
+    return s;
+  }
+  ja.sort(function(a,b){return score(b)-score(a);});
+  return ja[0];
+}
+speechSynthesis.onvoiceschanged=function(){_jaVoice=pickVoice();};
+function speak(el){
+  try{
+    var t=(el.dataset.speak||el.textContent||'').replace(/\s+/g,' ').trim();
+    if(!('speechSynthesis' in window)){alert('你個瀏覽器唔支援語音朗讀');return;}
+    if(!_jaVoice)_jaVoice=pickVoice();
+    var u=new SpeechSynthesisUtterance(t);
+    u.lang='ja-JP';
+    if(_jaVoice)u.voice=_jaVoice;
+    u.rate=0.85; u.pitch=1.0;
+    speechSynthesis.cancel();
+    speechSynthesis.speak(u);
+    el.classList.add('speaking');
+    u.onend=function(){el.classList.remove('speaking');};
+  }catch(e){}
+}
+</script>
+</body>
+</html>
