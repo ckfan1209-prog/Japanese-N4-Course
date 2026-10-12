@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#c9403b">
+<title>Day 5 ｜ N5→N4 九十二日課程</title>
+<style>
+:root{
+  --bg:#faf7f2; --card:#ffffff; --text:#2b2620; --muted:#97907f;
+  --primary:#c9403b; --primary-soft:#fdeeee; --primary-deep:#a93229;
+  --radius:18px;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{font-family:-apple-system,"PingFang TC","Noto Sans TC","Hiragino Sans",sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+header{background:linear-gradient(140deg,#c9403b 0%,#d9534a 55%,#e07a3f 100%);color:#fff;padding:2.2rem 1.2rem 1.6rem;border-radius:0 0 28px 28px}
+.header-row{display:flex;justify-content:space-between;align-items:center}
+header h1{font-size:1.45rem;font-weight:800;letter-spacing:.5px}
+header .sub{opacity:.88;font-size:.82rem;margin-top:.3rem}
+.ring{width:74px;height:74px;border-radius:50%;background:conic-gradient(#fff calc(var(--p)*1%),rgba(255,255,255,.25) 0);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ring-in{width:58px;height:58px;border-radius:50%;background:#b23a34;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.ring-in b{font-size:1.05rem}.ring-in span{font-size:.55rem;opacity:.8}
+.stats{display:flex;gap:.6rem;margin-top:1.1rem}
+.stat{flex:1;background:rgba(255,255,255,.16);backdrop-filter:blur(6px);border-radius:14px;padding:.6rem .8rem}
+.stat b{font-size:1.15rem;display:block}.stat span{font-size:.68rem;opacity:.85}
+main{max-width:600px;margin:0 auto;padding:1rem .9rem 5rem}
+.sec-title{font-size:1rem;font-weight:800;margin:1.4rem 0 .7rem;display:flex;align-items:center;gap:.45rem}
+.sec-title .dot{width:9px;height:9px;border-radius:50%;background:var(--primary)}
+.card{background:var(--card);border-radius:var(--radius);padding:1rem 1.05rem;margin-bottom:.85rem;box-shadow:0 1px 3px rgba(43,38,32,.06),0 4px 14px rgba(43,38,32,.05)}
+.jp{cursor:pointer;border-bottom:1.5px dotted #d98a85;transition:background .15s;border-radius:4px;padding:0 1px}
+.jp:active,.jp.speaking{background:var(--primary-soft)}
+.jp.speaking{border-bottom:2px solid var(--primary)}
+.rate-ctl{position:sticky;top:0;z-index:50;display:flex;gap:.4rem;align-items:center;justify-content:center;
+  background:rgba(255,255,255,.94);padding:.45rem;border-radius:0 0 14px 14px;
+  box-shadow:0 2px 12px rgba(0,0,0,.06);font-size:.82rem;color:var(--muted);margin:0 -.5rem .6rem}
+.rate-ctl .rate-btn{border:1px solid #e8ddd2;background:#fff;color:var(--muted);border-radius:999px;
+  padding:.28rem .8rem;font-size:.82rem;cursor:pointer}
+.rate-ctl .rate-btn.active{background:var(--primary);border-color:var(--primary);color:#fff;font-weight:700}
+.reading{color:var(--muted);font-size:.85em}
+.vocab-num{display:inline-flex;width:1.7rem;height:1.7rem;border-radius:50%;background:var(--primary-soft);color:var(--primary-deep);font-weight:800;font-size:.85rem;align-items:center;justify-content:center;margin-right:.5rem}
+.vocab-zh{color:var(--primary-deep);font-weight:700}
+.vocab-ex{margin:.35rem 0 0 2.2rem;font-size:.92rem;color:#5b544a}
+.pattern{background:#2b2620;color:#f5e9d8;border-radius:12px;padding:.7rem .9rem;font-size:.95rem;margin:.5rem 0;font-family:inherit}
+.g-title{font-weight:800;font-size:1.02rem;color:var(--primary-deep)}
+.g-explain{margin:.4rem 0}
+.g-ex{margin:.3rem 0 .3rem 1rem}
+.practice{background:var(--primary-soft);border-radius:12px;padding:.7rem .9rem;margin-top:.6rem;font-size:.92rem}
+.practice b{color:var(--primary-deep)}
+.practice .ans{color:var(--muted);font-size:.85rem;margin-top:.25rem}
+.kanji-row{display:flex;gap:.8rem;align-items:baseline;padding:.45rem 0;border-bottom:1px dashed #e8e0d2}
+.kanji-row:last-child{border-bottom:none}
+.kanji-ch{font-size:1.5rem;font-weight:800;min-width:2.2rem;text-align:center}
+.kanji-rd{font-size:.82rem;color:var(--muted)}
+.kanji-wd{font-size:.9rem}
+.task{background:var(--card);border-radius:var(--radius);padding:1rem 1.05rem;margin-bottom:.85rem;box-shadow:0 1px 3px rgba(43,38,32,.06)}
+.task b{color:var(--primary-deep)}
+.nav{display:flex;justify-content:space-between;gap:.7rem;margin-top:1.4rem}
+.nav a{flex:1;text-align:center;background:var(--card);border-radius:14px;padding:.8rem;text-decoration:none;color:var(--primary-deep);font-weight:700;box-shadow:0 1px 3px rgba(43,38,32,.08)}
+.nav a.disabled{opacity:.35;pointer-events:none}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
+@media(min-width:480px){.grid{grid-template-columns:1fr 1fr 1fr}}
+.dcard{background:var(--card);border-radius:var(--radius);padding:.95rem 1rem;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(43,38,32,.06),0 4px 14px rgba(43,38,32,.05);transition:transform .12s;display:block}
+.dcard:active{transform:scale(.96)}
+.dcard-top{display:flex;justify-content:space-between;align-items:baseline}
+.dcard-day{font-weight:800;font-size:1.05rem;color:var(--primary)}
+.dcard-wd{font-size:.75rem;color:var(--muted)}
+.dcard-date{font-size:.72rem;color:var(--muted);margin-top:.15rem}
+.dcard-theme{font-size:.76rem;color:#5b544a;margin-top:.35rem;line-height:1.35}
+.chip{display:inline-block;font-size:.64rem;padding:.18rem .55rem;border-radius:99px;margin-top:.5rem;font-weight:600;background:var(--primary-soft);color:var(--primary-deep)}
+footer{text-align:center;padding:1.5rem;color:var(--muted);font-size:.72rem}
+.back{display:inline-block;color:#fff;opacity:.9;text-decoration:none;font-size:.85rem;margin-bottom:.6rem}
+.day-meta{opacity:.88;font-size:.82rem;margin-top:.3rem}
+h2.lesson-h{font-size:1.25rem;font-weight:800;margin-bottom:.2rem}
+</style>
+</head>
+<body>
+<header>
+  <a class="back" href="index.html">← 目錄</a>
+  <div class="header-row">
+    <div>
+      <h1>📘 Day 5 / 92</h1>
+      <div class="day-meta">2026-10-12（一）｜N5期・Week 1</div>
+    </div>
+  </div>
+  <div class="sub" style="margin-top:.5rem;font-size:.95rem;font-weight:700">曜日・〜月〜日（日期）／〜の〜（所有）</div>
+</header>
+<main>
+  <div class="rate-ctl">🔊 語速
+    <button class="rate-btn" data-rate="0.7" onclick="setRate(0.7)">0.7x 慢</button>
+    <button class="rate-btn" data-rate="1" onclick="setRate(1)">1.0x 標準</button>
+    <button class="rate-btn" data-rate="1.25" onclick="setRate(1.25)">1.25x 快</button>
+  </div>
+  <div class="card">🔊 撳任何 <span class="jp" onclick="speak(this)" data-speak="日文">日文</span>（虛線底線）即播真人錄音，再撳一下停止</div>
+  <div class="card">識咗「幾點」，今日學埋「幾月幾號星期幾」＋萬用連接詞「〜の」——時間＋所屬，兩大日常必需品一次過到手。</div>
+  <div class="sec-title"><span class="dot"></span>📖 單字（12個）</div><div class="card"><span class="vocab-num">1</span><span class="jp" data-speak="月曜日" data-audio="audio/day5/w01.mp3" onclick="speak(this)" title="🔊 撳我讀出">月曜日</span><span class="reading">（げつようび）</span> <span class="vocab-zh">— 星期一</span><div class="vocab-ex">例：<span class="jp" data-speak="今日は月曜日です。" data-audio="audio/day5/s01.mp3" onclick="speak(this)" title="🔊 撳我讀出">今日は月曜日です。</span><br>（今日係星期一。）</div></div>
+<div class="card"><span class="vocab-num">2</span><span class="jp" data-speak="火曜日" data-audio="audio/day5/w02.mp3" onclick="speak(this)" title="🔊 撳我讀出">火曜日</span><span class="reading">（かようび）</span> <span class="vocab-zh">— 星期二</span><div class="vocab-ex">例：<span class="jp" data-speak="火曜日は学校です。" data-audio="audio/day5/s02.mp3" onclick="speak(this)" title="🔊 撳我讀出">火曜日は学校です。</span><br>（星期二返學。（がっこう＝學校））</div></div>
+<div class="card"><span class="vocab-num">3</span><span class="jp" data-speak="水曜日" data-audio="audio/day5/w03.mp3" onclick="speak(this)" title="🔊 撳我讀出">水曜日</span><span class="reading">（すいようび）</span> <span class="vocab-zh">— 星期三</span><div class="vocab-ex">例：<span class="jp" data-speak="水曜日は休みです。" data-audio="audio/day5/s03.mp3" onclick="speak(this)" title="🔊 撳我讀出">水曜日は休みです。</span><br>（星期三休息。（やすみ＝休息））</div></div>
+<div class="card"><span class="vocab-num">4</span><span class="jp" data-speak="木曜日" data-audio="audio/day5/w04.mp3" onclick="speak(this)" title="🔊 撳我讀出">木曜日</span><span class="reading">（もくようび）</span> <span class="vocab-zh">— 星期四</span><div class="vocab-ex">例：<span class="jp" data-speak="木曜日は会議です。" data-audio="audio/day5/s04.mp3" onclick="speak(this)" title="🔊 撳我讀出">木曜日は会議です。</span><br>（星期四開會。（かいぎ＝會議））</div></div>
+<div class="card"><span class="vocab-num">5</span><span class="jp" data-speak="金曜日" data-audio="audio/day5/w05.mp3" onclick="speak(this)" title="🔊 撳我讀出">金曜日</span><span class="reading">（きんようび）</span> <span class="vocab-zh">— 星期五</span><div class="vocab-ex">例：<span class="jp" data-speak="金曜日は飲み会です。" data-audio="audio/day5/s05.mp3" onclick="speak(this)" title="🔊 撳我讀出">金曜日は飲み会です。</span><br>（星期五飲酒聚會。（のみかい＝酒局））</div></div>
+<div class="card"><span class="vocab-num">6</span><span class="jp" data-speak="土曜日" data-audio="audio/day5/w06.mp3" onclick="speak(this)" title="🔊 撳我讀出">土曜日</span><span class="reading">（どようび）</span> <span class="vocab-zh">— 星期六</span><div class="vocab-ex">例：<span class="jp" data-speak="土曜日は買い物です。" data-audio="audio/day5/s06.mp3" onclick="speak(this)" title="🔊 撳我讀出">土曜日は買い物です。</span><br>（星期六去買嘢。（かいもの＝購物））</div></div>
+<div class="card"><span class="vocab-num">7</span><span class="jp" data-speak="日曜日" data-audio="audio/day5/w07.mp3" onclick="speak(this)" title="🔊 撳我讀出">日曜日</span><span class="reading">（にちようび）</span> <span class="vocab-zh">— 星期日</span><div class="vocab-ex">例：<span class="jp" data-speak="日曜日は家です。" data-audio="audio/day5/s07.mp3" onclick="speak(this)" title="🔊 撳我讀出">日曜日は家です。</span><br>（星期日喺屋企。）</div></div>
+<div class="card"><span class="vocab-num">8</span><span class="jp" data-speak="月" data-audio="audio/day5/w08.mp3" onclick="speak(this)" title="🔊 撳我讀出">月</span><span class="reading">（がつ）</span> <span class="vocab-zh">— （幾）月</span><div class="vocab-ex">例：<span class="jp" data-speak="誕生日は十一月です。" data-audio="audio/day5/s08.mp3" onclick="speak(this)" title="🔊 撳我讀出">誕生日は十一月です。</span><br>（生日係十一月。）</div></div>
+<div class="card"><span class="vocab-num">9</span><span class="jp" data-speak="日" data-audio="audio/day5/w09.mp3" onclick="speak(this)" title="🔊 撳我讀出">日</span><span class="reading">（にち）</span> <span class="vocab-zh">— （幾）號</span><div class="vocab-ex">例：<span class="jp" data-speak="今日は十二日です。" data-audio="audio/day5/s09.mp3" onclick="speak(this)" title="🔊 撳我讀出">今日は十二日です。</span><br>（今日係十二號。）</div></div>
+<div class="card"><span class="vocab-num">10</span><span class="jp" data-speak="今日" data-audio="audio/day5/w10.mp3" onclick="speak(this)" title="🔊 撳我讀出">今日</span><span class="reading">（きょう）</span> <span class="vocab-zh">— 今日</span><div class="vocab-ex">例：<span class="jp" data-speak="今日は何曜日ですか。" data-audio="audio/day5/s10.mp3" onclick="speak(this)" title="🔊 撳我讀出">今日は何曜日ですか。</span><br>（今日係星期幾？）</div></div>
+<div class="card"><span class="vocab-num">11</span><span class="jp" data-speak="明日" data-audio="audio/day5/w11.mp3" onclick="speak(this)" title="🔊 撳我讀出">明日</span><span class="reading">（あした）</span> <span class="vocab-zh">— 明日</span><div class="vocab-ex">例：<span class="jp" data-speak="明日は火曜日です。" data-audio="audio/day5/s11.mp3" onclick="speak(this)" title="🔊 撳我讀出">明日は火曜日です。</span><br>（聽日係星期二。）</div></div>
+<div class="card"><span class="vocab-num">12</span><span class="jp" data-speak="昨日" data-audio="audio/day5/w12.mp3" onclick="speak(this)" title="🔊 撳我讀出">昨日</span><span class="reading">（きのう）</span> <span class="vocab-zh">— 昨日</span><div class="vocab-ex">例：<span class="jp" data-speak="昨日は日曜日でした。" data-audio="audio/day5/s12.mp3" onclick="speak(this)" title="🔊 撳我讀出">昨日は日曜日でした。</span><br>（噚日係星期日。）</div></div><div class="sec-title"><span class="dot"></span>✍️ 文法（2點）</div><div class="card"><div class="g-title">〜月〜日・曜日（日期・星期）</div><div class="pattern">接續：数字 ＋ 月（がつ）＋ 数字 ＋ 日（にち）／ 〜曜日 ／ 何月何日（なんがつなんにち）ですか</div><div class="g-explain">「月」喺日期讀 がつ（十月＝じゅうがつ）；「日」喺日期讀 にち（十二日＝じゅうににち），但特殊讀法：一日＝ついたち、二十日＝はつか。星期：月曜日（げつようび）～日曜日（にちようび）；問星期幾：何曜日（なんようび）ですか。</div><div class="g-ex">例：<span class="jp" data-speak="今日は十月十二日です。" data-audio="audio/day5/g1e1.mp3" onclick="speak(this)" title="🔊 撳我讀出">今日は十月十二日です。</span><br>（今日係十月十二日。（じゅうがつじゅうににち））</div><div class="g-ex">例：<span class="jp" data-speak="誕生日は十一月一日です。" data-audio="audio/day5/g1e2.mp3" onclick="speak(this)" title="🔊 撳我讀出">誕生日は十一月一日です。</span><br>（生日係十一月一日。（じゅういちがつついたち））</div><div class="g-ex">例：<span class="jp" data-speak="今日は月曜日です。" data-audio="audio/day5/g1e3.mp3" onclick="speak(this)" title="🔊 撳我讀出">今日は月曜日です。</span><br>（今日係星期一。）</div><div class="g-ex">例：<span class="jp" data-speak="会議は金曜日です。" data-audio="audio/day5/g1e4.mp3" onclick="speak(this)" title="🔊 撳我讀出">会議は金曜日です。</span><br>（會議係星期五。）</div><div class="practice"><b>✏️ 造句練習：</b>用日文講「今日係十月十二日，星期一」。<div class="ans">參考答案：今日は十月十二日、月曜日です。</div></div></div>
+<div class="card"><div class="g-title">〜の〜（所有／屬性）</div><div class="pattern">接續：名詞1 ＋ の ＋ 名詞2</div><div class="g-explain">名詞1 の 名詞2：表示所屬（私の本＝我嘅書）或屬性（日本語の本＝日文嘅書）。疑問：誰の（だれの）〜ですか＝邊個嘅〜？可以連用：私の友達の車（我朋友嘅車）。</div><div class="g-ex">例：<span class="jp" data-speak="これは私のかばんです。" data-audio="audio/day5/g2e1.mp3" onclick="speak(this)" title="🔊 撳我讀出">これは私のかばんです。</span><br>（呢個係我嘅袋。）</div><div class="g-ex">例：<span class="jp" data-speak="あれは会社の車です。" data-audio="audio/day5/g2e2.mp3" onclick="speak(this)" title="🔊 撳我讀出">あれは会社の車です。</span><br>（嗰架係公司嘅車。）</div><div class="g-ex">例：<span class="jp" data-speak="これは誰の時計ですか。" data-audio="audio/day5/g2e3.mp3" onclick="speak(this)" title="🔊 撳我讀出">これは誰の時計ですか。</span><br>（呢個係邊個嘅錶？）</div><div class="practice"><b>✏️ 造句練習：</b>用「〜の〜」講「呢個係我嘅錶」。<div class="ans">參考答案：これは私の時計です。</div></div></div><div class="sec-title"><span class="dot"></span>🈴 漢字</div><div class="card"><div class="kanji-row"><span class="kanji-ch"><span class="jp" data-speak="日" onclick="speak(this)" title="🔊 撳我讀出">日</span></span><span class="kanji-rd">音：にち・じつ／訓：ひ・か</span><span class="kanji-wd">日曜日（にちようび）、三日（みっか）、日本（にほん）</span></div>
+<div class="kanji-row"><span class="kanji-ch"><span class="jp" data-speak="月" onclick="speak(this)" title="🔊 撳我讀出">月</span></span><span class="kanji-rd">音：げつ・がつ／訓：つき</span><span class="kanji-wd">月曜日（げつようび）、十月（じゅうがつ）、今月（こんげつ）</span></div>
+<div class="kanji-row"><span class="kanji-ch"><span class="jp" data-speak="曜" onclick="speak(this)" title="🔊 撳我讀出">曜</span></span><span class="kanji-rd">音：よう／訓：</span><span class="kanji-wd">曜日（ようび）、金曜日（きんようび）</span></div></div><div class="sec-title"><span class="dot"></span>👂 聽讀任務</div><div class="task"><b>讀：</b>12個單字各大聲讀3次（特別練 かようび・すいようび・もくようび），再大聲講：自己生日日期、今日日期星期、3個「〜の〜」短語（例：私の本）。</div><div class="task"><b>聽：</b>YouTube 搜尋「日本語 曜日 月日 聞き取り」，聽寫十個唔同嘅日期＋星期，寫到全啱為止。</div>
+  <div class="card">💪 日期加埋所有格「〜の」——你已經識講「幾時」＋「邊個嘅」，聽日（Day 6）係本週測驗日，準時見！</div>
+  <div class="nav"><a href="day4.html">← Day 4</a><a href="index.html">目錄</a><a class="disabled">聽日見 →</a></div>
+</main>
+<footer>每晚 21:00 自動更新 ｜ Pison自編課程</footer>
+<script>
+var currentAudio=null, currentEl=null;
+var playRate=1;
+try{ var saved=parseFloat(localStorage.getItem('n5n4_rate')); if(saved>0) playRate=saved; }catch(e){}
+function setRate(r){
+  playRate=r;
+  try{ localStorage.setItem('n5n4_rate',String(r)); }catch(e){}
+  var btns=document.querySelectorAll('.rate-btn');
+  for(var i=0;i<btns.length;i++){ btns[i].classList.toggle('active', parseFloat(btns[i].dataset.rate)===r); }
+  stopAll();
+}
+function stopAll(){
+  try{ if('speechSynthesis' in window) speechSynthesis.cancel(); }catch(e){}
+  if(currentAudio){ try{ currentAudio.pause(); }catch(e){} currentAudio=null; }
+  if(currentEl){ currentEl.classList.remove('speaking'); currentEl=null; }
+}
+function speakFallback(el){
+  try{
+    if(!('speechSynthesis' in window)){alert('你個瀏覽器唔支援語音朗讀');return;}
+    var t=(el.dataset.speak||el.textContent||'').replace(/\s+/g,' ').trim();
+    if(!t) return;
+    var u=new SpeechSynthesisUtterance(t);
+    u.lang='ja-JP'; u.rate=0.85;
+    currentEl=el; el.classList.add('speaking');
+    var done=function(){ el.classList.remove('speaking'); if(currentEl===el) currentEl=null; };
+    u.onend=done; u.onerror=done;
+    speechSynthesis.speak(u);
+  }catch(e){}
+}
+function speak(el){
+  try{
+    if(currentEl===el){ stopAll(); return; }
+    stopAll();
+    var au=el.dataset.audio;
+    if(au){
+      var a=new Audio(au);
+      try{ a.playbackRate=playRate; }catch(e){}
+      currentAudio=a; currentEl=el; el.classList.add('speaking');
+      a.onended=function(){ stopAll(); };
+      a.onerror=function(){ stopAll(); speakFallback(el); };
+      var p=a.play();
+      if(p&&p.catch){ p.catch(function(){ stopAll(); }); }
+      return;
+    }
+    speakFallback(el);
+  }catch(e){}
+}
+try{ setRate(playRate); }catch(e){}
+</script>
+</body>
+</html>
