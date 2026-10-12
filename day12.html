@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#6366f1">
+<title>Day 12 ｜ 日語 N4</title>
+<style>
+:root {
+  --bg:#f4f5fb; --card:#ffffff; --text:#1e2235; --muted:#8b90a7;
+  --primary:#6366f1; --primary-soft:#eef0ff; --radius:16px;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,"PingFang TC","Noto Sans TC","Hiragino Sans",sans-serif; background:var(--bg); color:var(--text); line-height:1.8; }
+nav { position:sticky; top:0; z-index:20; background:rgba(99,102,241,.92); backdrop-filter:blur(12px); color:#fff; padding:.85rem 1rem; display:flex; justify-content:space-between; align-items:center; }
+nav .title { font-weight:800; font-size:.98rem; }
+nav a { color:#fff; text-decoration:none; font-size:.82rem; background:rgba(255,255,255,.18); padding:.4rem .85rem; border-radius:99px; }
+.hero { background:linear-gradient(140deg,#6366f1,#8b5cf6); color:#fff; padding:1.6rem 1.2rem 1.4rem; border-radius:0 0 26px 26px; }
+.hero .day-label { font-size:.8rem; opacity:.85; letter-spacing:1px; }
+.hero h1 { font-size:1.5rem; font-weight:800; margin:.2rem 0; }
+.hero .theme { font-size:.8rem; opacity:.9; margin-top:.3rem; }
+main { max-width:600px; margin:0 auto; padding:1.1rem 1rem 4rem; }
+h2 { font-size:1.02rem; margin:1.6rem 0 .7rem; color:var(--primary); font-weight:800; display:flex; align-items:center; gap:.45rem; }
+h2::before { content:""; width:4px; height:1.05em; background:linear-gradient(180deg,#6366f1,#a855f7); border-radius:4px; }
+h3 { font-size:.95rem; margin:1.1rem 0 .45rem; color:#3f4664; }
+p { margin:.5rem 0; font-size:.92rem; }
+ul { margin:.4rem 0 .4rem 1.25rem; }
+li { margin:.3rem 0; font-size:.9rem; }
+hr { border:none; border-top:1.5px dashed #e3e6f2; margin:1.3rem 0; }
+.table-wrap { overflow-x:auto; margin:.8rem 0; border-radius:12px; box-shadow:0 0 0 1px #e8eaf5; }
+table { border-collapse:collapse; width:100%; font-size:.83rem; background:#fff; border-radius:12px; overflow:hidden; }
+th, td { padding:.5rem .7rem; text-align:left; border-bottom:1px solid #eef0f7; }
+th { background:var(--primary-soft); color:#4338ca; font-size:.8rem; }
+tr:last-child td { border-bottom:none; }
+code { background:var(--primary-soft); color:#4338ca; padding:.12rem .4rem; border-radius:6px; font-size:.88em; }
+strong { color:#2f3560; }
+.num-item { display:flex; gap:.65rem; padding:.55rem .7rem; border-radius:12px; margin:.3rem 0; background:#fafbfe; }
+.num { flex-shrink:0; width:26px; height:26px; border-radius:50%; background:var(--primary-soft); color:var(--primary); font-weight:800; font-size:.78rem; display:flex; align-items:center; justify-content:center; margin-top:.15rem; }
+.num-body { font-size:.9rem; }
+.jp { cursor:pointer; border-bottom:1.5px dotted #a5b4fc; transition:background .15s; }
+.jp:active, .jp.speaking { background:var(--primary-soft); border-bottom-color:var(--primary); }
+.tts-hint { font-size:.72rem; color:#5b6072; background:var(--primary-soft); border-radius:10px; padding:.45rem .8rem; margin:0 0 1rem; }
+.back { display:block; text-align:center; background:var(--primary); color:#fff; text-decoration:none; padding:.85rem; border-radius:14px; font-weight:700; font-size:.9rem; margin-top:1.4rem; }
+</style>
+</head>
+<body>
+<nav><span class="title">🇯🇵 N4 ｜ Day 12</span><a href="index.html">目錄</a></nav>
+<div class="hero">
+  <div class="day-label">DAY 12 / 182 ｜ 2026-10-12</div>
+  <h1>今日研讀內容</h1>
+  <div class="theme"></div>
+</div>
+<main>
+<div class="tts-hint">🔊 撳任何日文（虛線底線）都會即時讀出，再撳一下停止</div>
+<p>📅 <strong>今日進度：第 12 日 / 182</strong>｜Phase 1：N5 總鞏固 + N4 門檻（<strong>週 3 新內容開始：動詞分類</strong>）</p>
+<p>昨日聽力日辛苦晒！今個星期我哋進入 N5 後半最重要嘅一課：<strong>動詞</strong>。今日先學「點將日文動詞分類」— 分好類之後，聽日學 <span class="jp" onclick="speak(this)" title="🔊 撳我讀">ます</span>形 就會順晒。</p>
+<hr>
+<h3>📖 單字（12 個：全部係動詞，今日主角）</h3>
+<p><strong>一段動詞（做例子用）</strong></p>
+<ul>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">起きる</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">おきる</span>）</strong> — 起身　例：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">毎朝六時に起きます。</span></li>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">食べる</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">たべる</span>）</strong> — 食　例：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">朝ごはんを食べます。</span></li>
+<li><strong>見る（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">みる</span>）</strong> — 睇　例：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">テレビを見ます。</span></li>
+<li><strong>寝る（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ねる</span>）</strong> — 瞓、就寢　例：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">毎晩十一時に寝ます。</span></li>
+</ul>
+<p><strong>五段動詞</strong></p>
+<ul>
+<li><strong>行く（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">いく</span>）</strong> — 去　例：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">学校へ行きます。</span></li>
+<li><strong>買う（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">かう</span>）</strong> — 買　例：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">果物を買います。</span></li>
+<li><strong>読む（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">よむ</span>）</strong> — 讀　例：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">本を読みます。</span></li>
+<li><strong>話す（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">はなす</span>）</strong> — 講、說　例：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">日本語を話します。</span></li>
+<li><strong>待つ（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">まつ</span>）</strong> — 等　例：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">バスを待ちます。</span></li>
+</ul>
+<p><strong>三類動詞</strong></p>
+<ul>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">する</span></strong> — 做　例：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">仕事をします。</span></li>
+<li><strong>来る（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">くる</span>）</strong> — 來　例：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">友だちが来ます。</span></li>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="勉強する"><span class="jp" onclick="speak(this)" title="🔊 撳我讀">勉強する</span><small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">べんきょうする</span>）</small></span>** — 溫習　例：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">日本語を勉強します。</span></li>
+</ul>
+<hr>
+<h3>✍️ 文法：動詞三類（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">グループ</span>1・2・3）</h3>
+<p>日文動詞照「辞書形（原形）」分三大類，之後所有變化（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ます形、て</span>形等）都係跟類型行：</p>
+<p><strong>① <span class="jp" onclick="speak(this)" title="🔊 撳我讀">グループ</span>1（五段動詞）</strong>：辞書形最尾係「う段」<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="音">音<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">う・く・ぐ・す・つ・ぬ・ぶ・む・る</span>）</small></span></p>
+<p>→ <span class="jp" onclick="speak(this)" title="🔊 撳我讀">ます</span>形：尾音由う段搬到<strong>い段</strong>＋<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ます</span></p>
+<ul>
+<li>買う → 買い<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">ます</span></strong>｜読む → 読み<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">ます</span></strong>｜待つ → 待ち<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">ます</span></strong>｜話す → 話し<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">ます</span></strong></li>
+</ul>
+<p><strong>② <span class="jp" onclick="speak(this)" title="🔊 撳我讀">グループ</span>2（一段動詞）</strong>：辞書形係「る」前有 <strong>い</strong> 段或 <strong>え</strong> 段音</p>
+<p>→ <span class="jp" onclick="speak(this)" title="🔊 撳我讀">ます</span>形：直接刪「る」＋<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ます</span></p>
+<ul>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀">起きる</span> → 起き<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">ます</span></strong>｜<span class="jp" onclick="speak(this)" title="🔊 撳我讀">食べる</span> → 食べ<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">ます</span></strong>｜寝る → 寝<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">ます</span></strong></li>
+</ul>
+<p><strong>③ <span class="jp" onclick="speak(this)" title="🔊 撳我讀">グループ</span>3（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">サ変・カ</span>変）</strong>：只有兩個，死記</p>
+<ul>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">する</span> → <span class="jp" onclick="speak(this)" title="🔊 撳我讀">します</span></strong>（サ変，包括「名詞＋<span class="jp" onclick="speak(this)" title="🔊 撳我讀">する」</span>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">勉強する</span>→<span class="jp" onclick="speak(this)" title="🔊 撳我讀">勉強します</span>）</li>
+<li><strong>来る（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">くる</span>）→ <span class="jp" onclick="speak(this)" title="🔊 撳我讀">来ます</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">きます</span>）</strong>（カ変，讀音由 ku 變 ki）</li>
+</ul>
+<p><strong>⚠️ 陷阱位</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">「る」前係い</span>段、但其實係五段嘅例外詞（要死記）：</p>
+<ul>
+<li><strong>帰る（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">かえる</span>）→ <span class="jp" onclick="speak(this)" title="🔊 撳我讀">帰ります</span></strong>（返屋企）｜<strong>走る（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">はしる</span>）→ <span class="jp" onclick="speak(this)" title="🔊 撳我讀">走ります</span></strong>（跑）｜<strong>知る（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">しる</span>）→ <span class="jp" onclick="speak(this)" title="🔊 撳我讀">知ります</span></strong>（知）</li>
+</ul>
+<p><strong>✏️ 造句練習</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">用「帰る」同「勉強する」</span>各造一句 <span class="jp" onclick="speak(this)" title="🔊 撳我讀">ます</span>形句子。</p>
+<p>（例：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">「私は毎日六時に家へ帰ります。」</span>— 你嘅版本可以係幾點帰／溫習咩）</p>
+<hr>
+<h3>🈴 漢字（6 個）</h3>
+<ul>
+<li><strong>行</strong>　音讀：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">コウ</span>（旅行）｜訓讀：い（く）＝去 — 例詞：行く、旅行、銀行</li>
+<li><strong>読</strong>　音讀：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ドク</span>（読書）｜訓讀：よ（む）＝讀 — 例詞：読む、読書</li>
+<li><strong>話</strong>　音讀：ワ（電話）｜訓讀：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">はな</span>（す）＝講 — 例詞：話す、電話、会話</li>
+<li><strong>待</strong>　音讀：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">タイ</span>（招待）｜訓讀：ま（つ）＝等 — 例詞：待つ、招待</li>
+<li><strong>帰</strong>　音讀：キ（帰国）｜訓讀：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">かえ</span>（る）＝返 — 例詞：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">帰る、帰国、帰り</span>道</li>
+<li><strong>売</strong>　音讀：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">バイ</span>（売店）｜訓讀：う（る）＝賣 — 例詞：売る、売店</li>
+</ul>
+<hr>
+<h3>👂 聽讀任務（約 20 分鐘）</h3>
+<div class="num-item"><span class="num">1</span><div class="num-body"><strong>朗讀上面 12 個動詞</strong>各 3 次（用網站真人發音跟讀），特別留意「来る（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">くる</span>）→ <span class="jp" onclick="speak(this)" title="🔊 撳我讀">来ます</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">きます</span>）」個音變。</div></div>
+<div class="num-item"><span class="num">2</span><div class="num-body"><strong>影子跟讀以下短文</strong>（聽一次 → 出聲跟一次 → 望住字跟一次）：</div></div>
+<p>&gt; <span class="jp" onclick="speak(this)" title="🔊 撳我讀">毎朝、私は六時に起きます。朝ごはんを食べてから、学校へ行きます。学校で日本語を勉強します。昼ごはんは友だちと食べます。家へ帰ってから、本を読みます。毎晩十一時に寝ます。</span></p>
+<div class="num-item"><span class="num">3</span><div class="num-body"><strong>分類小挑戰</strong>（口頭答）：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">以下動詞屬於邊個グループ？</span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">読む・寝る・する・帰る・見る・待つ</span></strong></div></div>
+<p><strong>答案</strong>：読む＝1｜寝る＝2｜<span class="jp" onclick="speak(this)" title="🔊 撳我讀">する</span>＝3｜帰る＝<strong>1</strong>（陷阱！）｜見る＝2｜待つ＝1</p>
+<p>聽日（週二）學 <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">ます</span>形變化全面練習 + <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="ます形否定"><span class="jp" onclick="speak(this)" title="🔊 撳我讀">ます</span>形否定<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ません</span>）</small></span></strong>。今日嘅作業：12 個動詞抄一次＋<span class="jp" onclick="speak(this)" title="🔊 撳我讀">標返佢係第幾グループ！</span></p>
+<a class="back" href="index.html">← 返回目錄</a>
+</main>
+<script>
+var _jaVoice=null;
+function pickVoice(){
+  var vs=speechSynthesis.getVoices();
+  if(!vs.length)return null;
+  var ja=vs.filter(function(v){return /^ja(-|_)JP/i.test(v.lang)||v.lang==='ja';});
+  if(!ja.length)return null;
+  // Preference order: local enhanced/premium voices first, then known-good names
+  function score(v){
+    var s=0, n=v.name.toLowerCase();
+    if(v.localService)s+=40;
+    if(/premium|enhanced|elite|neural/.test(n))s+=50;
+    if(/o-ren|oren/.test(n))s+=30;
+    if(/kyoko/.test(n))s+=25;
+    if(/google/.test(n))s+=20;   // Chrome's Google Japanese voice is quite natural
+    if(/siri/.test(n))s+=15;
+    return s;
+  }
+  ja.sort(function(a,b){return score(b)-score(a);});
+  return ja[0];
+}
+speechSynthesis.onvoiceschanged=function(){_jaVoice=pickVoice();};
+function speak(el){
+  try{
+    var t=(el.dataset.speak||el.textContent||'').replace(/\s+/g,' ').trim();
+    if(!('speechSynthesis' in window)){alert('你個瀏覽器唔支援語音朗讀');return;}
+    if(!_jaVoice)_jaVoice=pickVoice();
+    var u=new SpeechSynthesisUtterance(t);
+    u.lang='ja-JP';
+    if(_jaVoice)u.voice=_jaVoice;
+    u.rate=0.85; u.pitch=1.0;
+    speechSynthesis.cancel();
+    speechSynthesis.speak(u);
+    el.classList.add('speaking');
+    u.onend=function(){el.classList.remove('speaking');};
+  }catch(e){}
+}
+</script>
+</body>
+</html>
