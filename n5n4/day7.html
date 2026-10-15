@@ -94,7 +94,7 @@ h2.lesson-h{font-size:1.25rem;font-weight:800;margin-bottom:.2rem}
   <div class="card">學咗六日，今日唔教新嘢——畀個腦同對耳放假，專心練聽同複習。日文聽唔明，好多時唔係單字唔識，而係認唔出個音。今日就係開耳日。</div>
   <div class="sec-title"><span class="dot"></span>👂 聽讀任務</div><div class="task"><b>讀：</b>跟讀 12 句（每句大聲讀 5 次＋錄低自己，再播返自己條聲，捉同真人錄音唔同嘅音——重點留意「は→wa」、「つ」、「ふ」、「しち／なな」）：1）はじめまして、私はファンです。 2）田中さんは先生です。 3）あの人は医者ではありません。 4）あなたは留学生ですか。 5）いいえ、留学生ではありません。 6）これは私の本です。 7）それはだれの傘ですか。 8）あれは私の車です。 9）今は午前十時半です。 10）今日は十月十四日水曜日です。 11）明日は十月十五日木曜日です。 12）これは友達の電話です。 讀完寫 5 句短文自我介紹（名＋職業＋嚟自邊度＋今日日期），大聲讀 3 次。</div><div class="task"><b>聽：</b>① YouTube 搜尋「みんなの日本語 第1課」：聽自我介紹對話，聽到完全跟得上先停。② 搜尋「みんなの日本語 第5課」：數字・時間嗰段，播一句停一句自己跟讀。③ 聽寫挑戰：去課程網站撳 Day2–5 任意單字（0.7x 慢速，唔好睇畫面），每字聽 3 次，寫返假名＋中文，寫完先對答案，目標 20 個全中。</div><div class="sec-title"><span class="dot"></span>🔁 複習</div><div class="card">Week 1 收官清單：① 〜は〜です／ではありません（判斷句）② 〜ですか＋はい／いいえ（疑問句）③ こそあど：近自己「こ」／近對方「そ」／遠雙方「あ」——代名詞これ・それ・あれ，連體詞この・その・あの＋名詞 ④ 數字 1–100＋〜時〜分（午前／午後／半）⑤ 日期：月＝がつ、日＝にち，特殊讀法ついたち（一日）・はつか（二十日）⑥ 〜の〜（所屬）。漢字已學：日・一〜十・百・月・曜。聽日進入 Week 2：助詞核心（が・を・に・で・へ・と・も・から・まで）。</div>
   <div class="card">💪 一個星期，由「わたしは」講到「十月十四日水曜日」——對耳仔今日開咗竅，聽日進入 Week 2 助詞核心，繼續！</div>
-  <div class="nav"><a href="day6.html">← Day 6</a><a href="index.html">目錄</a><a class="disabled">聽日見 →</a></div>
+  <div class="nav"><a href="day6.html">← Day 6</a><a href="index.html">目錄</a><a href="day8.html">Day 8 →</a></div>
 </main>
 <footer>每晚 21:00 自動更新 ｜ Pison自編課程</footer>
 <script>
@@ -113,17 +113,55 @@ function stopAll(){
   if(currentAudio){ try{ currentAudio.pause(); }catch(e){} currentAudio=null; }
   if(currentEl){ currentEl.classList.remove('speaking'); currentEl=null; }
 }
+/* 日文語音選擇：後備朗讀一定要用日文聲，唔可以靜靜跌去英文聲 */
+var jaVoice=null;
+function loadJaVoice(){
+  try{
+    var vs=speechSynthesis.getVoices()||[];
+    var i, lg;
+    for(i=0;i<vs.length;i++){ lg=String(vs[i].lang||'').toLowerCase(); if(lg.indexOf('ja')===0){ jaVoice=vs[i]; return; } }
+    for(i=0;i<vs.length;i++){ if(/kyoko|otoya|japan/i.test(String(vs[i].name||''))){ jaVoice=vs[i]; return; } }
+  }catch(e){}
+}
+try{ if('speechSynthesis' in window){ loadJaVoice(); speechSynthesis.onvoiceschanged=loadJaVoice; } }catch(e){}
 function speakFallback(el){
   try{
     if(!('speechSynthesis' in window)){alert('你個瀏覽器唔支援語音朗讀');return;}
     var t=(el.dataset.speak||el.textContent||'').replace(/\s+/g,' ').trim();
     if(!t) return;
-    var u=new SpeechSynthesisUtterance(t);
-    u.lang='ja-JP'; u.rate=0.85;
-    currentEl=el; el.classList.add('speaking');
-    var done=function(){ el.classList.remove('speaking'); if(currentEl===el) currentEl=null; };
-    u.onend=done; u.onerror=done;
-    speechSynthesis.speak(u);
+    try{ speechSynthesis.cancel(); }catch(e){}
+    var startSpeak=function(){
+      var u=new SpeechSynthesisUtterance(t);
+      u.lang='ja-JP'; u.rate=0.85;
+      if(jaVoice){ u.voice=jaVoice; }
+      currentEl=el; el.classList.add('speaking');
+      var done=function(){ el.classList.remove('speaking'); if(currentEl===el) currentEl=null; };
+      u.onend=done; u.onerror=done;
+      speechSynthesis.speak(u);
+    };
+    var restoreHandler=function(){ try{ speechSynthesis.onvoiceschanged=loadJaVoice; }catch(e){} };
+    loadJaVoice();
+    if(jaVoice){ startSpeak(); return; }
+    /* iOS 嘅 voices 係異步載入，等一等；等極都冇日文聲就唔讀（唔好用英文聲亂讀） */
+    var settled=false;
+    var noVoice=function(){
+      if(settled) return; settled=true; restoreHandler();
+      alert('錄音載入唔到，部機又搵唔到日文語音——請檢查網絡之後再撳一次');
+    };
+    var timer=setTimeout(function(){
+      if(settled) return;
+      loadJaVoice();
+      settled=true; restoreHandler();
+      if(jaVoice){ startSpeak(); } else { noVoice(); }
+    },1500);
+    try{
+      speechSynthesis.onvoiceschanged=function(){
+        if(settled) return;
+        loadJaVoice();
+        settled=true; clearTimeout(timer); restoreHandler();
+        if(jaVoice){ startSpeak(); } else { noVoice(); }
+      };
+    }catch(e){ clearTimeout(timer); noVoice(); }
   }catch(e){}
 }
 function speak(el){
@@ -132,13 +170,15 @@ function speak(el){
     stopAll();
     var au=el.dataset.audio;
     if(au){
+      var fellBack=false;
+      var doFallback=function(){ if(fellBack) return; fellBack=true; stopAll(); speakFallback(el); };
       var a=new Audio(au);
       try{ a.playbackRate=playRate; }catch(e){}
       currentAudio=a; currentEl=el; el.classList.add('speaking');
       a.onended=function(){ stopAll(); };
-      a.onerror=function(){ stopAll(); speakFallback(el); };
+      a.onerror=doFallback;
       var p=a.play();
-      if(p&&p.catch){ p.catch(function(){ stopAll(); }); }
+      if(p&&p.catch){ p.catch(doFallback); }
       return;
     }
     speakFallback(el);
