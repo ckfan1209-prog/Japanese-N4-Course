@@ -108,7 +108,7 @@ h2.lesson-h{font-size:1.25rem;font-weight:800;margin-bottom:.2rem}
 <div class="kanji-row"><span class="kanji-ch"><span class="jp" data-speak="一" onclick="speak(this)" title="🔊 撳我讀出">一</span></span><span class="kanji-rd">音：いち／訓：ひとつ</span><span class="kanji-wd">一人（ひとり）</span></div>
 <div class="kanji-row"><span class="kanji-ch"><span class="jp" data-speak="二" onclick="speak(this)" title="🔊 撳我讀出">二</span></span><span class="kanji-rd">音：に／訓：ふたつ</span><span class="kanji-wd">二人（ふたり）</span></div></div><div class="sec-title"><span class="dot"></span>👂 聽讀任務</div><div class="task"><b>讀：</b>12個單字各大聲讀3次，再寫3句自我介紹（名＋職業＋嚟自邊度）。</div><div class="task"><b>聽：</b>YouTube 搜尋「みんなの日本語 第1課」，聽自我介紹對話，聽到識跟住講為止。</div>
   <div class="card">💪 万事起頭難，但你已經行咗最難嗰步——開始咗！聽日學疑問句同指示詞，準時見！</div>
-  <div class="nav"><a class="disabled">← Day 0</a><a href="index.html">目錄</a><a class="disabled">聽日見 →</a></div>
+  <div class="nav"><a class="disabled">← Day 0</a><a href="index.html">目錄</a><a href="day2.html">Day 2 →</a></div>
 </main>
 <footer>每晚 21:00 自動更新 ｜ Pison自編課程</footer>
 <script>
@@ -127,17 +127,55 @@ function stopAll(){
   if(currentAudio){ try{ currentAudio.pause(); }catch(e){} currentAudio=null; }
   if(currentEl){ currentEl.classList.remove('speaking'); currentEl=null; }
 }
+/* 日文語音選擇：後備朗讀一定要用日文聲，唔可以靜靜跌去英文聲 */
+var jaVoice=null;
+function loadJaVoice(){
+  try{
+    var vs=speechSynthesis.getVoices()||[];
+    var i, lg;
+    for(i=0;i<vs.length;i++){ lg=String(vs[i].lang||'').toLowerCase(); if(lg.indexOf('ja')===0){ jaVoice=vs[i]; return; } }
+    for(i=0;i<vs.length;i++){ if(/kyoko|otoya|japan/i.test(String(vs[i].name||''))){ jaVoice=vs[i]; return; } }
+  }catch(e){}
+}
+try{ if('speechSynthesis' in window){ loadJaVoice(); speechSynthesis.onvoiceschanged=loadJaVoice; } }catch(e){}
 function speakFallback(el){
   try{
     if(!('speechSynthesis' in window)){alert('你個瀏覽器唔支援語音朗讀');return;}
     var t=(el.dataset.speak||el.textContent||'').replace(/\s+/g,' ').trim();
     if(!t) return;
-    var u=new SpeechSynthesisUtterance(t);
-    u.lang='ja-JP'; u.rate=0.85;
-    currentEl=el; el.classList.add('speaking');
-    var done=function(){ el.classList.remove('speaking'); if(currentEl===el) currentEl=null; };
-    u.onend=done; u.onerror=done;
-    speechSynthesis.speak(u);
+    try{ speechSynthesis.cancel(); }catch(e){}
+    var startSpeak=function(){
+      var u=new SpeechSynthesisUtterance(t);
+      u.lang='ja-JP'; u.rate=0.85;
+      if(jaVoice){ u.voice=jaVoice; }
+      currentEl=el; el.classList.add('speaking');
+      var done=function(){ el.classList.remove('speaking'); if(currentEl===el) currentEl=null; };
+      u.onend=done; u.onerror=done;
+      speechSynthesis.speak(u);
+    };
+    var restoreHandler=function(){ try{ speechSynthesis.onvoiceschanged=loadJaVoice; }catch(e){} };
+    loadJaVoice();
+    if(jaVoice){ startSpeak(); return; }
+    /* iOS 嘅 voices 係異步載入，等一等；等極都冇日文聲就唔讀（唔好用英文聲亂讀） */
+    var settled=false;
+    var noVoice=function(){
+      if(settled) return; settled=true; restoreHandler();
+      alert('錄音載入唔到，部機又搵唔到日文語音——請檢查網絡之後再撳一次');
+    };
+    var timer=setTimeout(function(){
+      if(settled) return;
+      loadJaVoice();
+      settled=true; restoreHandler();
+      if(jaVoice){ startSpeak(); } else { noVoice(); }
+    },1500);
+    try{
+      speechSynthesis.onvoiceschanged=function(){
+        if(settled) return;
+        loadJaVoice();
+        settled=true; clearTimeout(timer); restoreHandler();
+        if(jaVoice){ startSpeak(); } else { noVoice(); }
+      };
+    }catch(e){ clearTimeout(timer); noVoice(); }
   }catch(e){}
 }
 function speak(el){
@@ -146,13 +184,15 @@ function speak(el){
     stopAll();
     var au=el.dataset.audio;
     if(au){
+      var fellBack=false;
+      var doFallback=function(){ if(fellBack) return; fellBack=true; stopAll(); speakFallback(el); };
       var a=new Audio(au);
       try{ a.playbackRate=playRate; }catch(e){}
       currentAudio=a; currentEl=el; el.classList.add('speaking');
       a.onended=function(){ stopAll(); };
-      a.onerror=function(){ stopAll(); speakFallback(el); };
+      a.onerror=doFallback;
       var p=a.play();
-      if(p&&p.catch){ p.catch(function(){ stopAll(); }); }
+      if(p&&p.catch){ p.catch(doFallback); }
       return;
     }
     speakFallback(el);
