@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#1f6fb5">
+<title>旅遊日語 25 課｜Pison自編</title>
+<style>
+:root{
+  --bg:#faf7f2; --card:#ffffff; --text:#2b2620; --muted:#97907f;
+  --primary:#c9403b; --primary-soft:#fdeeee; --primary-deep:#a93229;
+  --radius:18px;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{font-family:-apple-system,"PingFang TC","Noto Sans TC","Hiragino Sans",sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+header{background:linear-gradient(140deg,#1f6fb5 0%,#2f8fd0 55%,#3fb0a5 100%);color:#fff;padding:2.2rem 1.2rem 1.6rem;border-radius:0 0 28px 28px}
+.header-row{display:flex;justify-content:space-between;align-items:center}
+header h1{font-size:1.45rem;font-weight:800;letter-spacing:.5px}
+header .sub{opacity:.88;font-size:.82rem;margin-top:.3rem}
+.ring{width:74px;height:74px;border-radius:50%;background:conic-gradient(#fff calc(var(--p)*1%),rgba(255,255,255,.25) 0);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ring-in{width:58px;height:58px;border-radius:50%;background:#1a5c93;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.ring-in b{font-size:1.05rem}.ring-in span{font-size:.55rem;opacity:.8}
+.stats{display:flex;gap:.6rem;margin-top:1.1rem}
+.stat{flex:1;background:rgba(255,255,255,.16);backdrop-filter:blur(6px);border-radius:14px;padding:.6rem .8rem}
+.stat b{font-size:1.15rem;display:block}.stat span{font-size:.68rem;opacity:.85}
+main{max-width:600px;margin:0 auto;padding:1rem .9rem 5rem}
+.sec-title{font-size:1rem;font-weight:800;margin:1.4rem 0 .7rem;display:flex;align-items:center;gap:.45rem}
+.sec-title .dot{width:9px;height:9px;border-radius:50%;background:var(--primary)}
+.card{background:var(--card);border-radius:var(--radius);padding:1rem 1.05rem;margin-bottom:.85rem;box-shadow:0 1px 3px rgba(43,38,32,.06),0 4px 14px rgba(43,38,32,.05)}
+.jp{cursor:pointer;border-bottom:1.5px dotted #d98a85;transition:background .15s;border-radius:4px;padding:0 1px}
+.jp:active,.jp.speaking{background:var(--primary-soft)}
+.jp.speaking{border-bottom:2px solid var(--primary)}
+.rate-ctl{position:sticky;top:0;z-index:50;display:flex;gap:.4rem;align-items:center;justify-content:center;
+  background:rgba(255,255,255,.94);padding:.45rem;border-radius:0 0 14px 14px;
+  box-shadow:0 2px 12px rgba(0,0,0,.06);font-size:.82rem;color:var(--muted);margin:0 -.5rem .6rem}
+.rate-ctl .rate-btn{border:1px solid #e8ddd2;background:#fff;color:var(--muted);border-radius:999px;
+  padding:.28rem .8rem;font-size:.82rem;cursor:pointer}
+.rate-ctl .rate-btn.active{background:var(--primary);border-color:var(--primary);color:#fff;font-weight:700}
+.reading{color:var(--muted);font-size:.85em}
+.vocab-num{display:inline-flex;width:1.7rem;height:1.7rem;border-radius:50%;background:var(--primary-soft);color:var(--primary-deep);font-weight:800;font-size:.85rem;align-items:center;justify-content:center;margin-right:.5rem}
+.vocab-zh{color:var(--primary-deep);font-weight:700}
+.phrase-zh{margin:.3rem 0 0 2.2rem;font-size:.92rem;color:#5b544a}
+.phrase-jp{font-size:1.05rem}
+.dlg-line{padding:.55rem 0;border-bottom:1px dashed #e8e0d2}
+.dlg-line:last-child{border-bottom:none}
+.dlg-sp{display:inline-block;font-size:.72rem;font-weight:800;color:#fff;background:#2f8fd0;border-radius:99px;padding:.1rem .6rem;margin-bottom:.25rem}
+.dlg-jp{font-size:1.02rem}
+.dlg-zh{font-size:.88rem;color:#5b544a}
+.tip{background:#fff8e6;border:1px solid #f0dfa8}
+.nav{display:flex;justify-content:space-between;gap:.7rem;margin-top:1.4rem}
+.nav a{flex:1;text-align:center;background:var(--card);border-radius:14px;padding:.8rem;text-decoration:none;color:var(--primary-deep);font-weight:700;box-shadow:0 1px 3px rgba(43,38,32,.08)}
+.nav a.disabled{opacity:.35;pointer-events:none}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
+@media(min-width:480px){.grid{grid-template-columns:1fr 1fr 1fr}}
+.dcard{background:var(--card);border-radius:var(--radius);padding:.95rem 1rem;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(43,38,32,.06),0 4px 14px rgba(43,38,32,.05);transition:transform .12s;display:block}
+.dcard:active{transform:scale(.96)}
+.dcard-top{display:flex;justify-content:space-between;align-items:baseline}
+.dcard-day{font-weight:800;font-size:1.05rem;color:#1f6fb5}
+.dcard-theme{font-size:.82rem;font-weight:700;margin-top:.15rem}
+.dcard-scene{font-size:.72rem;color:var(--muted);margin-top:.3rem;line-height:1.35}
+footer{text-align:center;padding:1.5rem;color:var(--muted);font-size:.72rem}
+.back{display:inline-block;color:#fff;opacity:.9;text-decoration:none;font-size:.85rem;margin-bottom:.6rem}
+.day-meta{opacity:.88;font-size:.82rem;margin-top:.3rem}
+h2.lesson-h{font-size:1.25rem;font-weight:800;margin-bottom:.2rem}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-row">
+    <div>
+      <h1>🗾 旅遊日語 25 課</h1>
+      <div class="sub">去日本玩，一句搞掂 ｜ 全 25 課一次過</div>
+    </div>
+    <div class="ring" style="--p:100"><div class="ring-in"><b>25</b><span>/ 25</span></div></div>
+  </div>
+  <div class="stats">
+    <div class="stat"><b>25</b><span>課堂</span></div>
+    <div class="stat"><b>250</b><span>實用句</span></div>
+    <div class="stat"><b>399</b><span>真人錄音</span></div>
+  </div>
+</header>
+<main>
+  <div class="card" style="margin-top:1rem">🔊 每句日文撳一下即時讀出，再撳停止。語速掣會記住你嘅選擇。</div>
+  <div class="sec-title"><span class="dot"></span>全部課堂</div>
+  <div class="grid">
+    <a class="dcard" href="t01.html"><div class="dcard-top"><span class="dcard-day">第 1 課</span></div><div class="dcard-theme">🗾 問候語</div><div class="dcard-scene">去到日本，第一步唔係拎住地圖問路，而係識得點樣同人打招呼。呢課教你由朝到晚嘅問候語，開口講一句，即刻拉近距離。</div></a><a class="dcard" href="t02.html"><div class="dcard-top"><span class="dcard-day">第 2 課</span></div><div class="dcard-theme">🗾 自我介紹</div><div class="dcard-scene">參加當地體驗團或者住民宿，成日都要簡單介紹下自己。學識講個名、嚟自邊度、做咩工作，已經夠同人傾兩句。</div></a><a class="dcard" href="t03.html"><div class="dcard-top"><span class="dcard-day">第 3 課</span></div><div class="dcard-theme">🗾 數字・價錢</div><div class="dcard-scene">喺日本買嘢食飯搭車，樣樣都關數字事。由一數到十，再學埋幾百幾千點講，睇價錢牌唔使再估估吓。</div></a><a class="dcard" href="t04.html"><div class="dcard-top"><span class="dcard-day">第 4 課</span></div><div class="dcard-theme">🗾 機場入境</div><div class="dcard-scene">落機第一關就係入境審查，職員問嚟問去都係嗰幾句。預先識聽識答，就唔使企喺度騰雞。</div></a><a class="dcard" href="t05.html"><div class="dcard-top"><span class="dcard-day">第 5 課</span></div><div class="dcard-theme">🗾 換錢＋買交通票</div><div class="dcard-scene">唱錢同買車飛係落地之後最先要搞掂嘅兩件事。識講「想唱錢」同「買張去邊度嘅飛」，全程唔使估。</div></a><a class="dcard" href="t06.html"><div class="dcard-top"><span class="dcard-day">第 6 課</span></div><div class="dcard-theme">🗾 搭電車</div><div class="dcard-scene">日本電車路線密到似蜘蛛網，唔識問隨時搭錯車。學識問月台、問方向、問邊度轉車，就唔怕蕩失路。</div></a><a class="dcard" href="t07.html"><div class="dcard-top"><span class="dcard-day">第 7 課</span></div><div class="dcard-theme">🗾 問路</div><div class="dcard-scene">就算有 Google Map，去到啲橫街窄巷一樣會蕩失路。識問「喺邊度」「遠唔遠」，再聽得明「轉左轉右」，就實搵到路。</div></a><a class="dcard" href="t08.html"><div class="dcard-top"><span class="dcard-day">第 8 課</span></div><div class="dcard-theme">🗾 酒店 check-in</div><div class="dcard-scene">經過一日舟車勞頓，終於到酒店。識講「我有預約」、問早餐時間同 Wi-Fi 密碼，check-in 三分鐘搞掂。</div></a><a class="dcard" href="t09.html"><div class="dcard-top"><span class="dcard-day">第 9 課</span></div><div class="dcard-theme">🗾 酒店服務要求</div><div class="dcard-scene">喺酒店房度有嘢想要，或者間房有問題，識用日文開口問職員就唔使比手劃腳啦。</div></a><a class="dcard" href="t10.html"><div class="dcard-top"><span class="dcard-day">第 10 課</span></div><div class="dcard-theme">🗾 酒店 check-out＋寄行李</div><div class="dcard-scene">退房嗰陣要還鎖匙、找數，仲可以叫酒店幫你收住行李，輕輕鬆鬆玩埋最後一日。</div></a><a class="dcard" href="t11.html"><div class="dcard-top"><span class="dcard-day">第 11 課</span></div><div class="dcard-theme">🗾 餐廳入座＋點餐</div><div class="dcard-scene">入到餐廳門口，講幾多位、想坐邊，然後指住餐牌點餐，呢課一次過搞掂。</div></a><a class="dcard" href="t12.html"><div class="dcard-top"><span class="dcard-day">第 12 課</span></div><div class="dcard-theme">🗾 餐廳要求＋結帳</div><div class="dcard-scene">食到一半想加嘢、叫嘢飲，食完埋單，呢啲就係餐廳入面最常用嘅句子。</div></a><a class="dcard" href="t13.html"><div class="dcard-top"><span class="dcard-day">第 13 課</span></div><div class="dcard-theme">🗾 居酒屋</div><div class="dcard-scene">收工同朋友去居酒屋飲返杯，學識點嘢飲、叫小食同乾杯，氣氛即刻唔同。</div></a><a class="dcard" href="t14.html"><div class="dcard-top"><span class="dcard-day">第 14 課</span></div><div class="dcard-theme">🗾 便利店</div><div class="dcard-scene">便利店買嘢食，識講要唔要叮熱、要唔要膠袋同筷子，買嘢快手好多。</div></a><a class="dcard" href="t15.html"><div class="dcard-top"><span class="dcard-day">第 15 課</span></div><div class="dcard-theme">🗾 藥妝店</div><div class="dcard-scene">去藥妝店掃貨，識問嘢喺邊、邊隻好同埋有冇免稅，買得精明又慳錢。</div></a><a class="dcard" href="t16.html"><div class="dcard-top"><span class="dcard-day">第 16 課</span></div><div class="dcard-theme">🗾 購物（試穿＋價錢）</div><div class="dcard-scene">睇中件衫想試身、轉碼數、問價錢，識呢幾句，shopping嗰陣唔使淨係識指指點點。</div></a><a class="dcard" href="t17.html"><div class="dcard-top"><span class="dcard-day">第 17 課</span></div><div class="dcard-theme">🗾 退稅</div><div class="dcard-scene">買嘢滿額可以退稅，識問有冇免稅、聽得明店員叫你畀護照同簽名，慳返唔少。</div></a><a class="dcard" href="t18.html"><div class="dcard-top"><span class="dcard-day">第 18 課</span></div><div class="dcard-theme">🗾 景點門票</div><div class="dcard-scene">去景點玩，第一步就係買飛。學識問價錢、講買幾多張，仲有問下有冇優惠。</div></a><a class="dcard" href="t19.html"><div class="dcard-top"><span class="dcard-day">第 19 課</span></div><div class="dcard-theme">🗾 請人幫手影相</div><div class="dcard-scene">去到靚景點，梗係想影返張合照留念。學識有禮貌咁請路人幫手影相。</div></a><a class="dcard" href="t20.html"><div class="dcard-top"><span class="dcard-day">第 20 課</span></div><div class="dcard-theme">🗾 求助（唔見嘢＋警察）</div><div class="dcard-scene">出門在外，最驚唔見銀包同證件。學識點冷靜求助，搵警察幫手。</div></a><a class="dcard" href="t21.html"><div class="dcard-top"><span class="dcard-day">第 21 課</span></div><div class="dcard-theme">🗾 身體不適</div><div class="dcard-scene">去旅行最唔想病，但都要識講邊度唔舒服，同埋問邊度有藥房。</div></a><a class="dcard" href="t22.html"><div class="dcard-top"><span class="dcard-day">第 22 課</span></div><div class="dcard-theme">🗾 溫泉禮儀</div><div class="dcard-scene">去日本點可以唔浸溫泉？落水之前，先學識基本禮儀，唔好失禮人。</div></a><a class="dcard" href="t23.html"><div class="dcard-top"><span class="dcard-day">第 23 課</span></div><div class="dcard-theme">🗾 計程車</div><div class="dcard-scene">拖住大喼或者去偏遠景點，搭的士最方便。學識講目的地同問大概幾錢。</div></a><a class="dcard" href="t24.html"><div class="dcard-top"><span class="dcard-day">第 24 課</span></div><div class="dcard-theme">🗾 道別＋感謝</div><div class="dcard-scene">旅程去到尾聲，同幫過你嘅人講聲多謝，留個好印象。</div></a><a class="dcard" href="t25.html"><div class="dcard-top"><span class="dcard-day">第 25 課</span></div><div class="dcard-theme">🗾 總複習</div><div class="dcard-scene">最後一課，將學過嘅句子串成一日：朝早退房、日頭去景點、晏晝食飯、夜晚返酒店，一次過溫習。</div></a>
+  </div>
+</main>
+<footer>Pison自編・旅遊日語 25 課</footer>
+<script>
+var currentAudio=null, currentEl=null;
+var playRate=1;
+try{ var saved=parseFloat(localStorage.getItem('n5n4_rate')); if(saved>0) playRate=saved; }catch(e){}
+function setRate(r){
+  playRate=r;
+  try{ localStorage.setItem('n5n4_rate',String(r)); }catch(e){}
+  var btns=document.querySelectorAll('.rate-btn');
+  for(var i=0;i<btns.length;i++){ btns[i].classList.toggle('active', parseFloat(btns[i].dataset.rate)===r); }
+  stopAll();
+}
+function stopAll(){
+  try{ if('speechSynthesis' in window) speechSynthesis.cancel(); }catch(e){}
+  if(currentAudio){ try{ currentAudio.pause(); }catch(e){} currentAudio=null; }
+  if(currentEl){ currentEl.classList.remove('speaking'); currentEl=null; }
+}
+/* 日文語音選擇：後備朗讀一定要用日文聲，唔可以靜靜跌去英文聲 */
+var jaVoice=null;
+function loadJaVoice(){
+  try{
+    var vs=speechSynthesis.getVoices()||[];
+    var i, lg;
+    for(i=0;i<vs.length;i++){ lg=String(vs[i].lang||'').toLowerCase(); if(lg.indexOf('ja')===0){ jaVoice=vs[i]; return; } }
+    for(i=0;i<vs.length;i++){ if(/kyoko|otoya|japan/i.test(String(vs[i].name||''))){ jaVoice=vs[i]; return; } }
+  }catch(e){}
+}
+try{ if('speechSynthesis' in window){ loadJaVoice(); speechSynthesis.onvoiceschanged=loadJaVoice; } }catch(e){}
+function speakFallback(el){
+  try{
+    if(!('speechSynthesis' in window)){alert('你個瀏覽器唔支援語音朗讀');return;}
+    var t=(el.dataset.speak||el.textContent||'').replace(/\s+/g,' ').trim();
+    if(!t) return;
+    try{ speechSynthesis.cancel(); }catch(e){}
+    var startSpeak=function(){
+      var u=new SpeechSynthesisUtterance(t);
+      u.lang='ja-JP'; u.rate=0.85;
+      if(jaVoice){ u.voice=jaVoice; }
+      currentEl=el; el.classList.add('speaking');
+      var done=function(){ el.classList.remove('speaking'); if(currentEl===el) currentEl=null; };
+      u.onend=done; u.onerror=done;
+      speechSynthesis.speak(u);
+    };
+    var restoreHandler=function(){ try{ speechSynthesis.onvoiceschanged=loadJaVoice; }catch(e){} };
+    loadJaVoice();
+    if(jaVoice){ startSpeak(); return; }
+    /* iOS 嘅 voices 係異步載入，等一等；等極都冇日文聲就唔讀（唔好用英文聲亂讀） */
+    var settled=false;
+    var noVoice=function(){
+      if(settled) return; settled=true; restoreHandler();
+      alert('錄音載入唔到，部機又搵唔到日文語音——請檢查網絡之後再撳一次');
+    };
+    var timer=setTimeout(function(){
+      if(settled) return;
+      loadJaVoice();
+      settled=true; restoreHandler();
+      if(jaVoice){ startSpeak(); } else { noVoice(); }
+    },1500);
+    try{
+      speechSynthesis.onvoiceschanged=function(){
+        if(settled) return;
+        loadJaVoice();
+        settled=true; clearTimeout(timer); restoreHandler();
+        if(jaVoice){ startSpeak(); } else { noVoice(); }
+      };
+    }catch(e){ clearTimeout(timer); noVoice(); }
+  }catch(e){}
+}
+function speak(el){
+  try{
+    if(currentEl===el){ stopAll(); return; }
+    stopAll();
+    var au=el.dataset.audio;
+    if(au){
+      var fellBack=false;
+      var doFallback=function(){ if(fellBack) return; fellBack=true; stopAll(); speakFallback(el); };
+      var a=new Audio(au);
+      try{ a.playbackRate=playRate; }catch(e){}
+      currentAudio=a; currentEl=el; el.classList.add('speaking');
+      a.onended=function(){ stopAll(); };
+      a.onerror=doFallback;
+      var p=a.play();
+      if(p&&p.catch){ p.catch(doFallback); }
+      return;
+    }
+    speakFallback(el);
+  }catch(e){}
+}
+try{ setRate(playRate); }catch(e){}
+</script>
+</body>
+</html>
