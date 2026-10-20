@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#6366f1">
+<title>Day 20 ｜ 日語 N4</title>
+<style>
+:root {
+  --bg:#f4f5fb; --card:#ffffff; --text:#1e2235; --muted:#8b90a7;
+  --primary:#6366f1; --primary-soft:#eef0ff; --radius:16px;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,"PingFang TC","Noto Sans TC","Hiragino Sans",sans-serif; background:var(--bg); color:var(--text); line-height:1.8; }
+nav { position:sticky; top:0; z-index:20; background:rgba(99,102,241,.92); backdrop-filter:blur(12px); color:#fff; padding:.85rem 1rem; display:flex; justify-content:space-between; align-items:center; }
+nav .title { font-weight:800; font-size:.98rem; }
+nav a { color:#fff; text-decoration:none; font-size:.82rem; background:rgba(255,255,255,.18); padding:.4rem .85rem; border-radius:99px; }
+.hero { background:linear-gradient(140deg,#6366f1,#8b5cf6); color:#fff; padding:1.6rem 1.2rem 1.4rem; border-radius:0 0 26px 26px; }
+.hero .day-label { font-size:.8rem; opacity:.85; letter-spacing:1px; }
+.hero h1 { font-size:1.5rem; font-weight:800; margin:.2rem 0; }
+.hero .theme { font-size:.8rem; opacity:.9; margin-top:.3rem; }
+main { max-width:600px; margin:0 auto; padding:1.1rem 1rem 4rem; }
+h2 { font-size:1.02rem; margin:1.6rem 0 .7rem; color:var(--primary); font-weight:800; display:flex; align-items:center; gap:.45rem; }
+h2::before { content:""; width:4px; height:1.05em; background:linear-gradient(180deg,#6366f1,#a855f7); border-radius:4px; }
+h3 { font-size:.95rem; margin:1.1rem 0 .45rem; color:#3f4664; }
+p { margin:.5rem 0; font-size:.92rem; }
+ul { margin:.4rem 0 .4rem 1.25rem; }
+li { margin:.3rem 0; font-size:.9rem; }
+hr { border:none; border-top:1.5px dashed #e3e6f2; margin:1.3rem 0; }
+.table-wrap { overflow-x:auto; margin:.8rem 0; border-radius:12px; box-shadow:0 0 0 1px #e8eaf5; }
+table { border-collapse:collapse; width:100%; font-size:.83rem; background:#fff; border-radius:12px; overflow:hidden; }
+th, td { padding:.5rem .7rem; text-align:left; border-bottom:1px solid #eef0f7; }
+th { background:var(--primary-soft); color:#4338ca; font-size:.8rem; }
+tr:last-child td { border-bottom:none; }
+code { background:var(--primary-soft); color:#4338ca; padding:.12rem .4rem; border-radius:6px; font-size:.88em; }
+strong { color:#2f3560; }
+.num-item { display:flex; gap:.65rem; padding:.55rem .7rem; border-radius:12px; margin:.3rem 0; background:#fafbfe; }
+.num { flex-shrink:0; width:26px; height:26px; border-radius:50%; background:var(--primary-soft); color:var(--primary); font-weight:800; font-size:.78rem; display:flex; align-items:center; justify-content:center; margin-top:.15rem; }
+.num-body { font-size:.9rem; }
+.jp { cursor:pointer; border-bottom:1.5px dotted #a5b4fc; transition:background .15s; }
+.jp:active, .jp.speaking { background:var(--primary-soft); border-bottom-color:var(--primary); }
+.tts-hint { font-size:.72rem; color:#5b6072; background:var(--primary-soft); border-radius:10px; padding:.45rem .8rem; margin:0 0 1rem; }
+.back { display:block; text-align:center; background:var(--primary); color:#fff; text-decoration:none; padding:.85rem; border-radius:14px; font-weight:700; font-size:.9rem; margin-top:1.4rem; }
+</style>
+</head>
+<body>
+<nav><span class="title">🇯🇵 N4 ｜ Day 20</span><a href="index.html">目錄</a></nav>
+<div class="hero">
+  <div class="day-label">DAY 20 / 182 ｜ 2026-10-20</div>
+  <h1>今日研讀內容</h1>
+  <div class="theme"></div>
+</div>
+<main>
+<div class="tts-hint">🔊 撳任何日文（虛線底線）都會即時讀出，再撳一下停止</div>
+<p>📅 <strong>今日進度：第 20 日 / 182</strong>｜Phase 1：N5 總鞏固 + N4 門檻（<strong>N5 單字總複習・第 2 日：數字量詞</strong>）</p>
+<p>尋日時間表單字食晒未？今日進入第 5 週第二波：<strong>數字量詞（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">本・枚・匹・冊・台・</span>杯…）</strong>。呢啲係 N5 單字複習嘅重灾区 — N4 閱讀同聽解幾乎日日出「二枚」「三冊」呢類組合，搞錯量詞會連題目都睇錯。量詞唔使死背定義，記住「<strong>邊類嘢用邊個量詞</strong>」就夠。</p>
+<hr>
+<h3>📖 單字（12 個）｜主題：數量詞</h3>
+<div class="num-item"><span class="num">1</span><div class="num-body"><strong>一つ（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ひとつ</span>）</strong> — 一個。例：<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">りんごを一つください。</span></strong></div></div>
+<div class="num-item"><span class="num">2</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="二人">二人<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ふたり</span>）</small></span><strong> — 兩個人。例：</strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">二人で映画を見ました。</span>**</div></div>
+<div class="num-item"><span class="num">3</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="本">本<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ほん</span>）</small></span><strong> — 長條物量詞（筆／傘／瓶）。例：</strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">ペンを三本買いました。</span>**</div></div>
+<div class="num-item"><span class="num">4</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="枚">枚<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">まい</span>）</small></span><strong> — 薄扁平物量詞（紙／票／碟）。例：</strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">切手を十枚買います。</span>**</div></div>
+<div class="num-item"><span class="num">5</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="匹">匹<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ひき</span>）</small></span><strong> — 小動物量詞（貓／狗／魚）。例：</strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">猫が二匹います。</span>**</div></div>
+<div class="num-item"><span class="num">6</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="冊">冊<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">さつ</span>）</small></span><strong> — 書籍量詞。例：</strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">雑誌を一冊読みました。</span>**</div></div>
+<div class="num-item"><span class="num">7</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="台">台<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">だい</span>）</small></span><strong> — 機械／車量詞。例：</strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">車が二台止まっています。</span>**</div></div>
+<div class="num-item"><span class="num">8</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="杯">杯<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">はい</span>）</small></span><strong> — 杯／碗量詞。例：</strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">コーヒーを一杯飲みました。</span>**</div></div>
+<div class="num-item"><span class="num">9</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="名">名<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">めい</span>）</small></span><strong> — 人數（正式講法）。例：</strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">参加者は二十名です。</span>**</div></div>
+<div class="num-item"><span class="num">10</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="回">回<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">かい</span>）</small></span><strong> — 次、回數。例：</strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">年二回富士山へ行きます。</span>**</div></div>
+<div class="num-item"><span class="num">11</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="円">円<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">えん</span>）</small></span><strong> — 日圓。例：</strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">この本は千二百円でした。</span>**</div></div>
+<div class="num-item"><span class="num">12</span><div class="num-body"><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">ページ</span></strong> — 頁。例：<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">十ページ読みました。</span></strong></div></div>
+<p>💡 記法三兄弟：<strong>本</strong>（細而長）・<strong>枚</strong>（薄而平）・<strong>台</strong>（有腳有機械感）。動物用<strong>匹</strong>，人正式場合用<strong>名</strong>。發音變化留意：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="一本">一本<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">いっぽん</span>）</small></span>、<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="六匹">六匹<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ろっぴき</span>）</small></span>、<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="一杯">一杯<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">いっぱい</span>）</small></span>都有促音變化；<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="十枚">十枚<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">じゅうまい</span>）</small></span>唔變，要逐個記住。</p>
+<hr>
+<h3>✍️ 文法（1 點）：數量詞係「副詞」— 放喺動詞前面，唔使助詞</h3>
+<p><strong>結構</strong>：～を ＋ <strong>數量詞</strong> ＋ 動詞（數量詞後面<strong>唔加 を に が</strong>）</p>
+<ul>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">りんごを三つ食べました。</span></strong>（食咗三個蘋果）✅</li>
+<li>~~<span class="jp" onclick="speak(this)" title="🔊 撳我讀">りんごを三つを食べました</span>~~ ❌（多咗一個 を）</li>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">お茶を二杯ください。</span></strong>（唔該兩杯茶）</li>
+<li>量詞亦可以放句尾：<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">学生が二人来ました。</span></strong>／<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">来ました、学生が</span>二人。</strong></li>
+</ul>
+<p><strong>✏️ 造句練習</strong>：用「<strong>雑誌</strong>」＋「<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">買います</span></strong>」＋一個合適嘅量詞造一句。（答案喺文末）</p>
+<hr>
+<h3>🈴 漢字（7 個）｜量詞漢字</h3>
+<div class="num-item"><span class="num">1</span><div class="num-body"><strong>本</strong> — 音讀 <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">ホン</span></strong>／訓讀 <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">もと</span></strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="三本">三本<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">さんぼん</span>）</small></span>、<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="本棚">本棚<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ほんだな</span>）</small></span>、<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="日本">日本<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">にほん</span>）</small></span></div></div>
+<div class="num-item"><span class="num">2</span><div class="num-body"><strong>枚</strong> — 音讀 <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">マイ</span></strong>（無常用訓讀）：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="一枚">一枚<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">いちまい</span>）</small></span>、<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="切手十枚">切手十枚<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">きってじゅうまい</span>）</small></span></div></div>
+<div class="num-item"><span class="num">3</span><div class="num-body"><strong>匹</strong> — 音讀 <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">ヒツ</span></strong>／訓讀 <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">ひき</span></strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="二匹">二匹<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">にひき</span>）</small></span>、<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="六匹">六匹<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ろっぴき</span>）</small></span></div></div>
+<div class="num-item"><span class="num">4</span><div class="num-body"><strong>冊</strong> — 音讀 <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">サツ</span></strong>（無常用訓讀）：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="一冊">一冊<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">いっさつ</span>）</small></span>、<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="雑誌三冊">雑誌三冊<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ざっしさんさつ</span>）</small></span></div></div>
+<div class="num-item"><span class="num">5</span><div class="num-body"><strong>台</strong> — 音讀 <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">ダイ</span></strong>／訓讀 <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">たい</span></strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="一台">一台<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">いちだい</span>）</small></span>、<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="舞台">舞台<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ぶたい</span>）</small></span></div></div>
+<div class="num-item"><span class="num">6</span><div class="num-body"><strong>杯</strong> — 音讀 <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">ハイ</span></strong>／訓讀（酒杯）<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">さかずき</span></strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="一杯">一杯<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">いっぱい</span>）</small></span>、<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="乾杯">乾杯<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">かんぱい</span>）</small></span></div></div>
+<div class="num-item"><span class="num">7</span><div class="num-body"><strong>回</strong> — 音讀 <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">カイ</span></strong>／訓讀 <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">まわる</span></strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="一回">一回<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">いっかい</span>）</small></span>、回る（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">まわる</span>）、<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="回数">回数<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">かいすう</span>）</small></span></div></div>
+<p>📝 記法：<strong>本</strong> 做量詞會變音 — <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="一本">一本<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">いっぽん</span>）</small></span>、<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="三本">三本<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">さんぼん</span>）</small></span>。同一個字解「原來」時讀 <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">もと</span></strong>（本の店 = 老字號店），唔好撈亂。</p>
+<hr>
+<h3>👂 聽讀任務（約 20 分鐘）</h3>
+<p><strong>短文朗讀</strong>（今日量詞全部喺入面）：</p>
+<p>&gt; <span class="jp" onclick="speak(this)" title="🔊 撳我讀">昨日、山田さんと二人でスーパーへ行きました。りんごを三つと、牛乳を一本買いました。それから、本屋で新しい雑誌を二冊買いました。家に帰ると、祖母の家に猫が四匹いました。晩ご飯は、祖母が作ってくれた手作りの味噌汁を二杯飲みました。</span></p>
+<div class="num-item"><span class="num">1</span><div class="num-body">出聲讀 <strong>3 次</strong>（第 3 次唔好望住任何翻譯）</div></div>
+<div class="num-item"><span class="num">2</span><div class="num-body">答下面 2 條理解題</div></div>
+<div class="num-item"><span class="num">3</span><div class="num-body">✏️ 寫作：用「量詞 ＋ を ＋ <span class="jp" onclick="speak(this)" title="🔊 撳我讀">買いました」</span>句式寫 3 句以上自己去買嘢嘅經過</div></div>
+<p><strong>理解題</strong>：</p>
+<ul>
+<li><strong>Q1</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">山田さんとスーパーへ何人で行きましたか。</span></li>
+<li><strong>Q2</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">雑誌を何冊買いましたか。</span></li>
+</ul>
+<hr>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p><strong>📥 答案</strong></p>
+<ul>
+<li><strong>造句練習</strong>：例 — <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">雑誌を一冊買います。</span></strong>／<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">新しい雑誌を二冊買いました。</span></strong>（「雑誌」用 <strong>冊</strong> 就啱）</li>
+<li><strong>Q1</strong>：<strong>二人</strong>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">山田さんと二人で行きました</span>）</li>
+<li><strong>Q2</strong>：<strong>二冊</strong></li>
+<li><strong>寫作例</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">私はスーパーでりんごを二つと牛乳を一本買いました。コンビニでお茶を三本も買いました。全部で千五百円でした。</span></li>
+</ul>
+<p>今日貼士：量詞唔使助詞呢個特點係<strong>助詞題恩物</strong> — N4 <span class="jp" onclick="speak(this)" title="🔊 撳我讀">常出「りんごを三つ</span>（　）<span class="jp" onclick="speak(this)" title="🔊 撳我讀">食べました」</span>，正解多數係<strong>唔填任何助詞</strong>（或者位置移動後唔用 を）。數量詞唔係名詞，所以唔使 を／に／が 揞住。聽日 Day 21 繼續 N5 單字總複習，主題係<strong>場所・位置詞（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">上・下・中・</span>隣）＋<span class="jp" onclick="speak(this)" title="🔊 撳我讀">「〜てください」</span>依賴句型</strong>，<span class="jp" onclick="speak(this)" title="🔊 撳我讀">聽日見！がんばってください</span> 💪</p>
+<a class="back" href="index.html">← 返回目錄</a>
+</main>
+<script>
+var _jaVoice=null;
+function pickVoice(){
+  var vs=speechSynthesis.getVoices();
+  if(!vs.length)return null;
+  var ja=vs.filter(function(v){return /^ja(-|_)JP/i.test(v.lang)||v.lang==='ja';});
+  if(!ja.length)return null;
+  // Preference order: local enhanced/premium voices first, then known-good names
+  function score(v){
+    var s=0, n=v.name.toLowerCase();
+    if(v.localService)s+=40;
+    if(/premium|enhanced|elite|neural/.test(n))s+=50;
+    if(/o-ren|oren/.test(n))s+=30;
+    if(/kyoko/.test(n))s+=25;
+    if(/google/.test(n))s+=20;   // Chrome's Google Japanese voice is quite natural
+    if(/siri/.test(n))s+=15;
+    return s;
+  }
+  ja.sort(function(a,b){return score(b)-score(a);});
+  return ja[0];
+}
+speechSynthesis.onvoiceschanged=function(){_jaVoice=pickVoice();};
+function speak(el){
+  try{
+    var t=(el.dataset.speak||el.textContent||'').replace(/\s+/g,' ').trim();
+    if(!('speechSynthesis' in window)){alert('你個瀏覽器唔支援語音朗讀');return;}
+    if(!_jaVoice)_jaVoice=pickVoice();
+    var u=new SpeechSynthesisUtterance(t);
+    u.lang='ja-JP';
+    if(_jaVoice)u.voice=_jaVoice;
+    u.rate=0.85; u.pitch=1.0;
+    speechSynthesis.cancel();
+    speechSynthesis.speak(u);
+    el.classList.add('speaking');
+    u.onend=function(){el.classList.remove('speaking');};
+  }catch(e){}
+}
+</script>
+</body>
+</html>
