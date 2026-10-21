@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#c9403b">
+<title>Day 14 ｜ N5→N4 九十二日課程</title>
+<style>
+:root{
+  --bg:#faf7f2; --card:#ffffff; --text:#2b2620; --muted:#97907f;
+  --primary:#c9403b; --primary-soft:#fdeeee; --primary-deep:#a93229;
+  --radius:18px;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{font-family:-apple-system,"PingFang TC","Noto Sans TC","Hiragino Sans",sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+header{background:linear-gradient(140deg,#c9403b 0%,#d9534a 55%,#e07a3f 100%);color:#fff;padding:2.2rem 1.2rem 1.6rem;border-radius:0 0 28px 28px}
+.header-row{display:flex;justify-content:space-between;align-items:center}
+header h1{font-size:1.45rem;font-weight:800;letter-spacing:.5px}
+header .sub{opacity:.88;font-size:.82rem;margin-top:.3rem}
+.ring{width:74px;height:74px;border-radius:50%;background:conic-gradient(#fff calc(var(--p)*1%),rgba(255,255,255,.25) 0);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ring-in{width:58px;height:58px;border-radius:50%;background:#b23a34;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.ring-in b{font-size:1.05rem}.ring-in span{font-size:.55rem;opacity:.8}
+.stats{display:flex;gap:.6rem;margin-top:1.1rem}
+.stat{flex:1;background:rgba(255,255,255,.16);backdrop-filter:blur(6px);border-radius:14px;padding:.6rem .8rem}
+.stat b{font-size:1.15rem;display:block}.stat span{font-size:.68rem;opacity:.85}
+main{max-width:600px;margin:0 auto;padding:1rem .9rem 5rem}
+.sec-title{font-size:1rem;font-weight:800;margin:1.4rem 0 .7rem;display:flex;align-items:center;gap:.45rem}
+.sec-title .dot{width:9px;height:9px;border-radius:50%;background:var(--primary)}
+.card{background:var(--card);border-radius:var(--radius);padding:1rem 1.05rem;margin-bottom:.85rem;box-shadow:0 1px 3px rgba(43,38,32,.06),0 4px 14px rgba(43,38,32,.05)}
+.jp{cursor:pointer;border-bottom:1.5px dotted #d98a85;transition:background .15s;border-radius:4px;padding:0 1px}
+.jp:active,.jp.speaking{background:var(--primary-soft)}
+.jp.speaking{border-bottom:2px solid var(--primary)}
+.rate-ctl{position:sticky;top:0;z-index:50;display:flex;gap:.4rem;align-items:center;justify-content:center;
+  background:rgba(255,255,255,.94);padding:.45rem;border-radius:0 0 14px 14px;
+  box-shadow:0 2px 12px rgba(0,0,0,.06);font-size:.82rem;color:var(--muted);margin:0 -.5rem .6rem}
+.rate-ctl .rate-btn{border:1px solid #e8ddd2;background:#fff;color:var(--muted);border-radius:999px;
+  padding:.28rem .8rem;font-size:.82rem;cursor:pointer}
+.rate-ctl .rate-btn.active{background:var(--primary);border-color:var(--primary);color:#fff;font-weight:700}
+.reading{color:var(--muted);font-size:.85em}
+.vocab-num{display:inline-flex;width:1.7rem;height:1.7rem;border-radius:50%;background:var(--primary-soft);color:var(--primary-deep);font-weight:800;font-size:.85rem;align-items:center;justify-content:center;margin-right:.5rem}
+.vocab-zh{color:var(--primary-deep);font-weight:700}
+.vocab-ex{margin:.35rem 0 0 2.2rem;font-size:.92rem;color:#5b544a}
+.pattern{background:#2b2620;color:#f5e9d8;border-radius:12px;padding:.7rem .9rem;font-size:.95rem;margin:.5rem 0;font-family:inherit}
+.g-title{font-weight:800;font-size:1.02rem;color:var(--primary-deep)}
+.g-explain{margin:.4rem 0}
+.g-ex{margin:.3rem 0 .3rem 1rem}
+.practice{background:var(--primary-soft);border-radius:12px;padding:.7rem .9rem;margin-top:.6rem;font-size:.92rem}
+.practice b{color:var(--primary-deep)}
+.practice .ans{color:var(--muted);font-size:.85rem;margin-top:.25rem}
+.kanji-row{display:flex;gap:.8rem;align-items:baseline;padding:.45rem 0;border-bottom:1px dashed #e8e0d2}
+.kanji-row:last-child{border-bottom:none}
+.kanji-ch{font-size:1.5rem;font-weight:800;min-width:2.2rem;text-align:center}
+.kanji-rd{font-size:.82rem;color:var(--muted)}
+.kanji-wd{font-size:.9rem}
+.task{background:var(--card);border-radius:var(--radius);padding:1rem 1.05rem;margin-bottom:.85rem;box-shadow:0 1px 3px rgba(43,38,32,.06)}
+.task b{color:var(--primary-deep)}
+.nav{display:flex;justify-content:space-between;gap:.7rem;margin-top:1.4rem}
+.nav a{flex:1;text-align:center;background:var(--card);border-radius:14px;padding:.8rem;text-decoration:none;color:var(--primary-deep);font-weight:700;box-shadow:0 1px 3px rgba(43,38,32,.08)}
+.nav a.disabled{opacity:.35;pointer-events:none}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
+@media(min-width:480px){.grid{grid-template-columns:1fr 1fr 1fr}}
+.dcard{background:var(--card);border-radius:var(--radius);padding:.95rem 1rem;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(43,38,32,.06),0 4px 14px rgba(43,38,32,.05);transition:transform .12s;display:block}
+.dcard:active{transform:scale(.96)}
+.dcard-top{display:flex;justify-content:space-between;align-items:baseline}
+.dcard-day{font-weight:800;font-size:1.05rem;color:var(--primary)}
+.dcard-wd{font-size:.75rem;color:var(--muted)}
+.dcard-date{font-size:.72rem;color:var(--muted);margin-top:.15rem}
+.dcard-theme{font-size:.76rem;color:#5b544a;margin-top:.35rem;line-height:1.35}
+.chip{display:inline-block;font-size:.64rem;padding:.18rem .55rem;border-radius:99px;margin-top:.5rem;font-weight:600;background:var(--primary-soft);color:var(--primary-deep)}
+footer{text-align:center;padding:1.5rem;color:var(--muted);font-size:.72rem}
+.back{display:inline-block;color:#fff;opacity:.9;text-decoration:none;font-size:.85rem;margin-bottom:.6rem}
+.day-meta{opacity:.88;font-size:.82rem;margin-top:.3rem}
+h2.lesson-h{font-size:1.25rem;font-weight:800;margin-bottom:.2rem}
+</style>
+</head>
+<body>
+<header>
+  <a class="back" href="index.html">← 目錄</a>
+  <div class="header-row">
+    <div>
+      <h1>📘 Day 14 / 92</h1>
+      <div class="day-meta">2026-10-21（三）｜N5期・Week 2</div>
+    </div>
+  </div>
+  <div class="sub" style="margin-top:.5rem;font-size:.95rem;font-weight:700">Week 2 週測驗</div>
+</header>
+<main>
+  <div class="rate-ctl">🔊 語速
+    <button class="rate-btn" data-rate="0.7" onclick="setRate(0.7)">0.7x 慢</button>
+    <button class="rate-btn" data-rate="1" onclick="setRate(1)">1.0x 標準</button>
+    <button class="rate-btn" data-rate="1.25" onclick="setRate(1.25)">1.25x 快</button>
+  </div>
+  <div class="card">🔊 撳任何 <span class="jp" onclick="speak(this)" data-speak="日文">日文</span>（虛線底線）即播真人錄音，再撳一下停止</div>
+  <div class="card">一個星期學咗助詞家族：が、を、に、で、へ、と、も、から、まで。今日測驗即係將佢哋排排坐睇清楚——邊個位置唔準，今日補返。唔駛急，慢慢嚟。</div>
+  <div class="sec-title"><span class="dot"></span>📝 測驗（Week 2 週測驗）</div><div class="card"><b>Q1. 「だれが来ましたか。」（邊個嚟咗？）答：___来ました。</b><div>（A）私は</div><div>（B）私が</div><div>（C）私を</div><div>（D）私に</div><div class="ans" style="color:var(--muted);font-size:.85rem;margin-top:.3rem">答案：（B）私が。——「だれ」係疑問詞，答句嘅主語（新信息）用「が」，唔用「は」。</div></div>
+<div class="card"><b>Q2. 「私は毎朝ごはん___食べます。」（我每朝食早餐。）應選：</b><div>（A）を</div><div>（B）に</div><div>（C）で</div><div>（D）が</div><div class="ans" style="color:var(--muted);font-size:.85rem;margin-top:.3rem">答案：（A）を。——「食べます」嘅對象（食乜）用「を」。</div></div>
+<div class="card"><b>Q3. 「橋___渡ります。」（過橋。）應選：</b><div>（A）を</div><div>（B）に</div><div>（C）で</div><div>（D）へ</div><div class="ans" style="color:var(--muted);font-size:.85rem;margin-top:.3rem">答案：（A）を。——經過嘅場所（橋）用「を」，「橋を渡る」係固定配搭。</div></div>
+<div class="card"><b>Q4. 「私は七時___学校へ行きます。」（我七點去學校。）應選：</b><div>（A）に</div><div>（B）で</div><div>（C）を</div><div>（D）が</div><div class="ans" style="color:var(--muted);font-size:.85rem;margin-top:.3rem">答案：（A）に。——具體時間（七時）後面加「に」；「何時」等模糊時間就唔加。</div></div>
+<div class="card"><b>Q5. 「公園___犬がいます。」（公園有狗。）應選：</b><div>（A）に</div><div>（B）で</div><div>（C）へ</div><div>（D）を</div><div class="ans" style="color:var(--muted);font-size:.85rem;margin-top:.3rem">答案：（A）に。——生物存在句式係「場所に＋がいます」；動作發生嘅場所先用「で」。</div></div>
+<div class="card"><b>Q6. 「私は喫茶店___新聞を読みます。」（我喺咖啡店睇報紙。）應選：</b><div>（A）に</div><div>（B）で</div><div>（C）へ</div><div>（D）と</div><div class="ans" style="color:var(--muted);font-size:.85rem;margin-top:.3rem">答案：（B）で。——做動作（讀報）嘅場所用「で」；「に」係存在，唔啱。</div></div>
+<div class="card"><b>Q7. 「私はバス___会社へ行きます。」（我坐巴士去公司。）應選：</b><div>（A）に</div><div>（B）で</div><div>（C）を</div><div>（D）が</div><div class="ans" style="color:var(--muted);font-size:.85rem;margin-top:.3rem">答案：（B）で。——交通工具＝去目的地嘅手段，用「で」；目的地「会社へ」用「へ」。</div></div>
+<div class="card"><b>Q8. 「私は友だち___映画館へ行きました。」（我同朋友去咗戲院。）應選：</b><div>（A）と</div><div>（B）を</div><div>（C）に</div><div>（D）へ</div><div class="ans" style="color:var(--muted);font-size:.85rem;margin-top:.3rem">答案：（A）と。——一齊做動作嘅拍檔（朋友）用「と」；目的地已經有「映画館へ」講方向。</div></div>
+<div class="card"><b>Q9. 「私は学生です。田中さん___学生です。」（田中都係學生。）應選：</b><div>（A）も</div><div>（B）に</div><div>（C）が</div><div>（D）を</div><div class="ans" style="color:var(--muted);font-size:.85rem;margin-top:.3rem">答案：（A）も。——兩個人都係學生（同樣狀態）用「も」＝「也」。</div></div>
+<div class="card"><b>Q10. 「授業は九時___十二時___です。」（堂課由九點到十二點。）應選：</b><div>（A）から・まで</div><div>（B）に・で</div><div>（C）と・まで</div><div>（D）から・に</div><div class="ans" style="color:var(--muted);font-size:.85rem;margin-top:.3rem">答案：（A）から・まで。——起點「から」＋終點「まで」係固定配搭，講時間／距離範圍。</div></div>
+<div class="card"><b>造句 1：</b>提示：わたし／電車／学校／行く——組句（我坐電車去學校。）<div class="ans" style="color:var(--muted);font-size:.85rem;margin-top:.3rem">參考：わたしは電車で学校へ行きます。——「わたしは」主題，交通手段「電車で」，方向「学校へ」。</div></div>
+<div class="card"><b>造句 2：</b>提示：昨日／友だち／図書館／本／読む——組句（昨日同朋友喺圖書館睇書。）<div class="ans" style="color:var(--muted);font-size:.85rem;margin-top:.3rem">參考：昨日友だちと図書館で本を読みました。——拍檔「友だちと」，動作場所「図書館で」，對象「本を」。</div></div>
+<div class="card"><b>造句 3：</b>提示：わたし／七時／家／帰る——組句（我七點返屋企。）<div class="ans" style="color:var(--muted);font-size:.85rem;margin-top:.3rem">參考：わたしは七時に家へ帰ります。——具體時間「七時に」，方向「家へ」。</div></div>
+<div class="card"><b>造句 4：</b>提示：私／毎朝／田中／公園／走る——組句（我每朝同田中喺公園跑步。）<div class="ans" style="color:var(--muted);font-size:.85rem;margin-top:.3rem">參考：私は毎朝田中さんと公園で走ります。——拍檔「田中さんと」，動作場所「公園で」。</div></div>
+<div class="card"><b>造句 5：</b>提示：わたし／銀行／午前九時／午後三時／働く——組句（我喺銀行由上午九點做到下午三點。）<div class="ans" style="color:var(--muted);font-size:.85rem;margin-top:.3rem">參考：わたしは銀行で午前九時から午後三時まで働きます。——動作場所「銀行で」，時間範圍「〜から〜まで」。</div></div><div class="sec-title"><span class="dot"></span>👂 聽讀任務</div><div class="task"><b>讀：</b>將10條選擇題嘅日文句逐句大聲讀一次，錯咗嘅嗰題讀5次；5句造句參考答案各自讀3次。</div><div class="task"><b>聽：</b>YouTube 搜尋「日文助詞 使い方 練習」，揀一條助詞解說片，聽到佢講你做錯題目嗰個助詞為止；或者重播 Week 2 任何一堂嘅單字例句錄音跟讀。</div><div class="sec-title"><span class="dot"></span>🔁 複習</div><div class="card">Week 2 總點：①疑問詞答句＋新信息主語：が ②動作對象／經過場所：を ③具體時間／目的地／生物存在：に ④動作場所／交通手段：で ⑤方向：へ（＝に）／拍檔：と ⑥同樣：も ⑦範圍：から〜まで。聽日進入 Week 3：動詞三組分類＋ます形・て形——日文文法嘅心臟。</div>
+  <div class="card">💪 助詞係日文嘅骨架——兩個星期由零行到今日，呢副骨架你已經摸到形。測驗照到嘅鬆位，下週動詞變化會再將佢哋練實，繼續！</div>
+  <div class="nav"><a href="day13.html">← Day 13</a><a href="index.html">目錄</a><a class="disabled">聽日見 →</a></div>
+</main>
+<footer>每晚 21:00 自動更新 ｜ Pison自編課程</footer>
+<script>
+var currentAudio=null, currentEl=null;
+var playRate=1;
+try{ var saved=parseFloat(localStorage.getItem('n5n4_rate')); if(saved>0) playRate=saved; }catch(e){}
+function setRate(r){
+  playRate=r;
+  try{ localStorage.setItem('n5n4_rate',String(r)); }catch(e){}
+  var btns=document.querySelectorAll('.rate-btn');
+  for(var i=0;i<btns.length;i++){ btns[i].classList.toggle('active', parseFloat(btns[i].dataset.rate)===r); }
+  stopAll();
+}
+function stopAll(){
+  try{ if('speechSynthesis' in window) speechSynthesis.cancel(); }catch(e){}
+  if(currentAudio){ try{ currentAudio.pause(); }catch(e){} currentAudio=null; }
+  if(currentEl){ currentEl.classList.remove('speaking'); currentEl=null; }
+}
+/* 日文語音選擇：後備朗讀一定要用日文聲，唔可以靜靜跌去英文聲 */
+var jaVoice=null;
+function loadJaVoice(){
+  try{
+    var vs=speechSynthesis.getVoices()||[];
+    var i, lg;
+    for(i=0;i<vs.length;i++){ lg=String(vs[i].lang||'').toLowerCase(); if(lg.indexOf('ja')===0){ jaVoice=vs[i]; return; } }
+    for(i=0;i<vs.length;i++){ if(/kyoko|otoya|japan/i.test(String(vs[i].name||''))){ jaVoice=vs[i]; return; } }
+  }catch(e){}
+}
+try{ if('speechSynthesis' in window){ loadJaVoice(); speechSynthesis.onvoiceschanged=loadJaVoice; } }catch(e){}
+function speakFallback(el){
+  try{
+    if(!('speechSynthesis' in window)){alert('你個瀏覽器唔支援語音朗讀');return;}
+    var t=(el.dataset.speak||el.textContent||'').replace(/\s+/g,' ').trim();
+    if(!t) return;
+    try{ speechSynthesis.cancel(); }catch(e){}
+    var startSpeak=function(){
+      var u=new SpeechSynthesisUtterance(t);
+      u.lang='ja-JP'; u.rate=0.85;
+      if(jaVoice){ u.voice=jaVoice; }
+      currentEl=el; el.classList.add('speaking');
+      var done=function(){ el.classList.remove('speaking'); if(currentEl===el) currentEl=null; };
+      u.onend=done; u.onerror=done;
+      speechSynthesis.speak(u);
+    };
+    var restoreHandler=function(){ try{ speechSynthesis.onvoiceschanged=loadJaVoice; }catch(e){} };
+    loadJaVoice();
+    if(jaVoice){ startSpeak(); return; }
+    /* iOS 嘅 voices 係異步載入，等一等；等極都冇日文聲就唔讀（唔好用英文聲亂讀） */
+    var settled=false;
+    var noVoice=function(){
+      if(settled) return; settled=true; restoreHandler();
+      alert('錄音載入唔到，部機又搵唔到日文語音——請檢查網絡之後再撳一次');
+    };
+    var timer=setTimeout(function(){
+      if(settled) return;
+      loadJaVoice();
+      settled=true; restoreHandler();
+      if(jaVoice){ startSpeak(); } else { noVoice(); }
+    },1500);
+    try{
+      speechSynthesis.onvoiceschanged=function(){
+        if(settled) return;
+        loadJaVoice();
+        settled=true; clearTimeout(timer); restoreHandler();
+        if(jaVoice){ startSpeak(); } else { noVoice(); }
+      };
+    }catch(e){ clearTimeout(timer); noVoice(); }
+  }catch(e){}
+}
+function speak(el){
+  try{
+    if(currentEl===el){ stopAll(); return; }
+    stopAll();
+    var au=el.dataset.audio;
+    if(au){
+      var fellBack=false;
+      var doFallback=function(){ if(fellBack) return; fellBack=true; stopAll(); speakFallback(el); };
+      var a=new Audio(au);
+      try{ a.playbackRate=playRate; }catch(e){}
+      currentAudio=a; currentEl=el; el.classList.add('speaking');
+      a.onended=function(){ stopAll(); };
+      a.onerror=doFallback;
+      var p=a.play();
+      if(p&&p.catch){ p.catch(doFallback); }
+      return;
+    }
+    speakFallback(el);
+  }catch(e){}
+}
+try{ setRate(playRate); }catch(e){}
+</script>
+</body>
+</html>
