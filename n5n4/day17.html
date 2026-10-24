@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#c9403b">
+<title>Day 17 ｜ N5→N4 九十二日課程</title>
+<style>
+:root{
+  --bg:#faf7f2; --card:#ffffff; --text:#2b2620; --muted:#97907f;
+  --primary:#c9403b; --primary-soft:#fdeeee; --primary-deep:#a93229;
+  --radius:18px;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{font-family:-apple-system,"PingFang TC","Noto Sans TC","Hiragino Sans",sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+header{background:linear-gradient(140deg,#c9403b 0%,#d9534a 55%,#e07a3f 100%);color:#fff;padding:2.2rem 1.2rem 1.6rem;border-radius:0 0 28px 28px}
+.header-row{display:flex;justify-content:space-between;align-items:center}
+header h1{font-size:1.45rem;font-weight:800;letter-spacing:.5px}
+header .sub{opacity:.88;font-size:.82rem;margin-top:.3rem}
+.ring{width:74px;height:74px;border-radius:50%;background:conic-gradient(#fff calc(var(--p)*1%),rgba(255,255,255,.25) 0);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ring-in{width:58px;height:58px;border-radius:50%;background:#b23a34;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.ring-in b{font-size:1.05rem}.ring-in span{font-size:.55rem;opacity:.8}
+.stats{display:flex;gap:.6rem;margin-top:1.1rem}
+.stat{flex:1;background:rgba(255,255,255,.16);backdrop-filter:blur(6px);border-radius:14px;padding:.6rem .8rem}
+.stat b{font-size:1.15rem;display:block}.stat span{font-size:.68rem;opacity:.85}
+main{max-width:600px;margin:0 auto;padding:1rem .9rem 5rem}
+.sec-title{font-size:1rem;font-weight:800;margin:1.4rem 0 .7rem;display:flex;align-items:center;gap:.45rem}
+.sec-title .dot{width:9px;height:9px;border-radius:50%;background:var(--primary)}
+.card{background:var(--card);border-radius:var(--radius);padding:1rem 1.05rem;margin-bottom:.85rem;box-shadow:0 1px 3px rgba(43,38,32,.06),0 4px 14px rgba(43,38,32,.05)}
+.jp{cursor:pointer;border-bottom:1.5px dotted #d98a85;transition:background .15s;border-radius:4px;padding:0 1px}
+.jp:active,.jp.speaking{background:var(--primary-soft)}
+.jp.speaking{border-bottom:2px solid var(--primary)}
+.rate-ctl{position:sticky;top:0;z-index:50;display:flex;gap:.4rem;align-items:center;justify-content:center;
+  background:rgba(255,255,255,.94);padding:.45rem;border-radius:0 0 14px 14px;
+  box-shadow:0 2px 12px rgba(0,0,0,.06);font-size:.82rem;color:var(--muted);margin:0 -.5rem .6rem}
+.rate-ctl .rate-btn{border:1px solid #e8ddd2;background:#fff;color:var(--muted);border-radius:999px;
+  padding:.28rem .8rem;font-size:.82rem;cursor:pointer}
+.rate-ctl .rate-btn.active{background:var(--primary);border-color:var(--primary);color:#fff;font-weight:700}
+.reading{color:var(--muted);font-size:.85em}
+.vocab-num{display:inline-flex;width:1.7rem;height:1.7rem;border-radius:50%;background:var(--primary-soft);color:var(--primary-deep);font-weight:800;font-size:.85rem;align-items:center;justify-content:center;margin-right:.5rem}
+.vocab-zh{color:var(--primary-deep);font-weight:700}
+.vocab-ex{margin:.35rem 0 0 2.2rem;font-size:.92rem;color:#5b544a}
+.pattern{background:#2b2620;color:#f5e9d8;border-radius:12px;padding:.7rem .9rem;font-size:.95rem;margin:.5rem 0;font-family:inherit}
+.g-title{font-weight:800;font-size:1.02rem;color:var(--primary-deep)}
+.g-explain{margin:.4rem 0}
+.g-ex{margin:.3rem 0 .3rem 1rem}
+.practice{background:var(--primary-soft);border-radius:12px;padding:.7rem .9rem;margin-top:.6rem;font-size:.92rem}
+.practice b{color:var(--primary-deep)}
+.practice .ans{color:var(--muted);font-size:.85rem;margin-top:.25rem}
+.kanji-row{display:flex;gap:.8rem;align-items:baseline;padding:.45rem 0;border-bottom:1px dashed #e8e0d2}
+.kanji-row:last-child{border-bottom:none}
+.kanji-ch{font-size:1.5rem;font-weight:800;min-width:2.2rem;text-align:center}
+.kanji-rd{font-size:.82rem;color:var(--muted)}
+.kanji-wd{font-size:.9rem}
+.task{background:var(--card);border-radius:var(--radius);padding:1rem 1.05rem;margin-bottom:.85rem;box-shadow:0 1px 3px rgba(43,38,32,.06)}
+.task b{color:var(--primary-deep)}
+.nav{display:flex;justify-content:space-between;gap:.7rem;margin-top:1.4rem}
+.nav a{flex:1;text-align:center;background:var(--card);border-radius:14px;padding:.8rem;text-decoration:none;color:var(--primary-deep);font-weight:700;box-shadow:0 1px 3px rgba(43,38,32,.08)}
+.nav a.disabled{opacity:.35;pointer-events:none}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
+@media(min-width:480px){.grid{grid-template-columns:1fr 1fr 1fr}}
+.dcard{background:var(--card);border-radius:var(--radius);padding:.95rem 1rem;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(43,38,32,.06),0 4px 14px rgba(43,38,32,.05);transition:transform .12s;display:block}
+.dcard:active{transform:scale(.96)}
+.dcard-top{display:flex;justify-content:space-between;align-items:baseline}
+.dcard-day{font-weight:800;font-size:1.05rem;color:var(--primary)}
+.dcard-wd{font-size:.75rem;color:var(--muted)}
+.dcard-date{font-size:.72rem;color:var(--muted);margin-top:.15rem}
+.dcard-theme{font-size:.76rem;color:#5b544a;margin-top:.35rem;line-height:1.35}
+.chip{display:inline-block;font-size:.64rem;padding:.18rem .55rem;border-radius:99px;margin-top:.5rem;font-weight:600;background:var(--primary-soft);color:var(--primary-deep)}
+footer{text-align:center;padding:1.5rem;color:var(--muted);font-size:.72rem}
+.back{display:inline-block;color:#fff;opacity:.9;text-decoration:none;font-size:.85rem;margin-bottom:.6rem}
+.day-meta{opacity:.88;font-size:.82rem;margin-top:.3rem}
+h2.lesson-h{font-size:1.25rem;font-weight:800;margin-bottom:.2rem}
+</style>
+</head>
+<body>
+<header>
+  <a class="back" href="index.html">← 目錄</a>
+  <div class="header-row">
+    <div>
+      <h1>📘 Day 17 / 92</h1>
+      <div class="day-meta">2026-10-24（六）｜N5期・Week 3</div>
+    </div>
+  </div>
+  <div class="sub" style="margin-top:.5rem;font-size:.95rem;font-weight:700">て形變化（一組動詞）</div>
+</header>
+<main>
+  <div class="rate-ctl">🔊 語速
+    <button class="rate-btn" data-rate="0.7" onclick="setRate(0.7)">0.7x 慢</button>
+    <button class="rate-btn" data-rate="1" onclick="setRate(1)">1.0x 標準</button>
+    <button class="rate-btn" data-rate="1.25" onclick="setRate(1.25)">1.25x 快</button>
+  </div>
+  <div class="card">🔊 撳任何 <span class="jp" onclick="speak(this)" data-speak="日文">日文</span>（虛線底線）即播真人錄音，再撳一下停止</div>
+  <div class="card">學識ます形之後，今日挑戰動詞變化第一個大關：一組動詞嘅て形。背熟五個音便口訣，今日 12 個動詞就全部變到出嚟。</div>
+  <div class="sec-title"><span class="dot"></span>📖 單字（12個）</div><div class="card"><span class="vocab-num">1</span><span class="jp" data-speak="書く" data-audio="audio/day17/w01.mp3" onclick="speak(this)" title="🔊 撳我讀出">書く</span><span class="reading">（かく）</span> <span class="vocab-zh">— 寫</span><div class="vocab-ex">例：<span class="jp" data-speak="手紙を書いて、送ります。" data-audio="audio/day17/s01.mp3" onclick="speak(this)" title="🔊 撳我讀出">手紙を書いて、送ります。</span><br>（寫信，然後寄出。）</div></div>
+<div class="card"><span class="vocab-num">2</span><span class="jp" data-speak="読む" data-audio="audio/day17/w02.mp3" onclick="speak(this)" title="🔊 撳我讀出">読む</span><span class="reading">（よむ）</span> <span class="vocab-zh">— 讀；睇（書）</span><div class="vocab-ex">例：<span class="jp" data-speak="本を読んで、寝ます。" data-audio="audio/day17/s02.mp3" onclick="speak(this)" title="🔊 撳我讀出">本を読んで、寝ます。</span><br>（睇完書，然後瞓覺。）</div></div>
+<div class="card"><span class="vocab-num">3</span><span class="jp" data-speak="買う" data-audio="audio/day17/w03.mp3" onclick="speak(this)" title="🔊 撳我讀出">買う</span><span class="reading">（かう）</span> <span class="vocab-zh">— 買</span><div class="vocab-ex">例：<span class="jp" data-speak="パンを買って、食べます。" data-audio="audio/day17/s03.mp3" onclick="speak(this)" title="🔊 撳我讀出">パンを買って、食べます。</span><br>（買麵包，然後食咗佢。）</div></div>
+<div class="card"><span class="vocab-num">4</span><span class="jp" data-speak="会う" data-audio="audio/day17/w04.mp3" onclick="speak(this)" title="🔊 撳我讀出">会う</span><span class="reading">（あう）</span> <span class="vocab-zh">— 見面；相遇</span><div class="vocab-ex">例：<span class="jp" data-speak="友だちに会って、話します。" data-audio="audio/day17/s04.mp3" onclick="speak(this)" title="🔊 撳我讀出">友だちに会って、話します。</span><br>（見到朋友，然後傾偈。）</div></div>
+<div class="card"><span class="vocab-num">5</span><span class="jp" data-speak="話す" data-audio="audio/day17/w05.mp3" onclick="speak(this)" title="🔊 撳我讀出">話す</span><span class="reading">（はなす）</span> <span class="vocab-zh">— 講話；傾偈</span><div class="vocab-ex">例：<span class="jp" data-speak="母と話して、休みます。" data-audio="audio/day17/s05.mp3" onclick="speak(this)" title="🔊 撳我讀出">母と話して、休みます。</span><br>（同媽媽傾完偈，然後休息。）</div></div>
+<div class="card"><span class="vocab-num">6</span><span class="jp" data-speak="聞く" data-audio="audio/day17/w06.mp3" onclick="speak(this)" title="🔊 撳我讀出">聞く</span><span class="reading">（きく）</span> <span class="vocab-zh">— 聽</span><div class="vocab-ex">例：<span class="jp" data-speak="音楽を聞いて、寝ます。" data-audio="audio/day17/s06.mp3" onclick="speak(this)" title="🔊 撳我讀出">音楽を聞いて、寝ます。</span><br>（聽完音樂，然後瞓覺。）</div></div>
+<div class="card"><span class="vocab-num">7</span><span class="jp" data-speak="泳ぐ" data-audio="audio/day17/w07.mp3" onclick="speak(this)" title="🔊 撳我讀出">泳ぐ</span><span class="reading">（およぐ）</span> <span class="vocab-zh">— 游水</span><div class="vocab-ex">例：<span class="jp" data-speak="プールで泳いで、休みます。" data-audio="audio/day17/s07.mp3" onclick="speak(this)" title="🔊 撳我讀出">プールで泳いで、休みます。</span><br>（喺泳池游完水，然後休息。）</div></div>
+<div class="card"><span class="vocab-num">8</span><span class="jp" data-speak="遊ぶ" data-audio="audio/day17/w08.mp3" onclick="speak(this)" title="🔊 撳我讀出">遊ぶ</span><span class="reading">（あそぶ）</span> <span class="vocab-zh">— 玩</span><div class="vocab-ex">例：<span class="jp" data-speak="公園で遊んで、帰ります。" data-audio="audio/day17/s08.mp3" onclick="speak(this)" title="🔊 撳我讀出">公園で遊んで、帰ります。</span><br>（喺公園玩完，然後返屋企。）</div></div>
+<div class="card"><span class="vocab-num">9</span><span class="jp" data-speak="飲む" data-audio="audio/day17/w09.mp3" onclick="speak(this)" title="🔊 撳我讀出">飲む</span><span class="reading">（のむ）</span> <span class="vocab-zh">— 飲</span><div class="vocab-ex">例：<span class="jp" data-speak="コーヒーを飲んで、働きます。" data-audio="audio/day17/s09.mp3" onclick="speak(this)" title="🔊 撳我讀出">コーヒーを飲んで、働きます。</span><br>（飲完咖啡，然後返工。）</div></div>
+<div class="card"><span class="vocab-num">10</span><span class="jp" data-speak="歌う" data-audio="audio/day17/w10.mp3" onclick="speak(this)" title="🔊 撳我讀出">歌う</span><span class="reading">（うたう）</span> <span class="vocab-zh">— 唱歌</span><div class="vocab-ex">例：<span class="jp" data-speak="カラオケで歌って、帰ります。" data-audio="audio/day17/s10.mp3" onclick="speak(this)" title="🔊 撳我讀出">カラオケで歌って、帰ります。</span><br>（喺卡拉 OK 唱完歌，然後返屋企。）</div></div>
+<div class="card"><span class="vocab-num">11</span><span class="jp" data-speak="立つ" data-audio="audio/day17/w11.mp3" onclick="speak(this)" title="🔊 撳我讀出">立つ</span><span class="reading">（たつ）</span> <span class="vocab-zh">— 企；站立</span><div class="vocab-ex">例：<span class="jp" data-speak="電車で立って、本を読みます。" data-audio="audio/day17/s11.mp3" onclick="speak(this)" title="🔊 撳我讀出">電車で立って、本を読みます。</span><br>（喺電車企住睇書。）</div></div>
+<div class="card"><span class="vocab-num">12</span><span class="jp" data-speak="待つ" data-audio="audio/day17/w12.mp3" onclick="speak(this)" title="🔊 撳我讀出">待つ</span><span class="reading">（まつ）</span> <span class="vocab-zh">— 等；等待</span><div class="vocab-ex">例：<span class="jp" data-speak="駅で友だちを待って、映画を見ます。" data-audio="audio/day17/s12.mp3" onclick="speak(this)" title="🔊 撳我讀出">駅で友だちを待って、映画を見ます。</span><br>（喺車站等朋友，然後一齊睇電影。）</div></div><div class="sec-title"><span class="dot"></span>✍️ 文法（2點）</div><div class="card"><div class="g-title">一組動詞て形變化（音便）</div><div class="pattern">接續：一組動詞て形：う・つ・る→って／く→いて／ぐ→いで／す→して／ぶ・む・ぬ→んで（行く→行って例外）</div><div class="g-explain">一組動詞嘅て形要睇辭書形最後一個假名（音便變化）：う・つ・る→って（買う→買って、立つ→立って、会う→会って）；く→いて（書く→書いて、聞く→聞いて）；ぐ→いで（泳ぐ→泳いで）；す→して（話す→話して）；ぶ・む・ぬ→んで（遊ぶ→遊んで、飲む→飲んで、読む→読んで）。唯一例外：行く→行って（唔係行いて！）。</div><div class="g-ex">例：<span class="jp" data-speak="手紙を書いて、送ります。" data-audio="audio/day17/g1e1.mp3" onclick="speak(this)" title="🔊 撳我讀出">手紙を書いて、送ります。</span><br>（寫信，然後寄出。）</div><div class="g-ex">例：<span class="jp" data-speak="プールで泳いで、帰ります。" data-audio="audio/day17/g1e2.mp3" onclick="speak(this)" title="🔊 撳我讀出">プールで泳いで、帰ります。</span><br>（喺泳池游完水，然後返屋企。）</div><div class="practice"><b>✏️ 造句練習：</b>將「話す」變成て形。<div class="ans">參考答案：話して——す→して。</div></div></div>
+<div class="card"><div class="g-title">〜て、〜ます（動作順序）</div><div class="pattern">接續：動詞1て形 ＋ 動詞2ます形（先 A、再 B）</div><div class="g-explain">將第一個動詞變成て形，後面接第二個動詞（ます形），就表示「先做 A、再做 B」嘅順序。注意：て形本身唔表示時態，時態由最後一個動詞決定（行きます＝而家／將來，行きました＝過去）。</div><div class="g-ex">例：<span class="jp" data-speak="朝ご飯を食べて、学校に行きます。" data-audio="audio/day17/g2e1.mp3" onclick="speak(this)" title="🔊 撳我讀出">朝ご飯を食べて、学校に行きます。</span><br>（食完早餐，然後返學。）</div><div class="g-ex">例：<span class="jp" data-speak="映画を見て、帰ります。" data-audio="audio/day17/g2e2.mp3" onclick="speak(this)" title="🔊 撳我讀出">映画を見て、帰ります。</span><br>（睇完電影，然後返屋企。）</div><div class="practice"><b>✏️ 造句練習：</b>用「買って」寫一句「先買、再食」嘅句子。<div class="ans">參考答案：（例）パンを買って、食べます。</div></div></div><div class="sec-title"><span class="dot"></span>🈴 漢字</div><div class="card"><div class="kanji-row"><span class="kanji-ch"><span class="jp" data-speak="帰" onclick="speak(this)" title="🔊 撳我讀出">帰</span></span><span class="kanji-rd">音：き／訓：かえる</span><span class="kanji-wd">帰る（かえる）、帰国（きこく）</span></div>
+<div class="kanji-row"><span class="kanji-ch"><span class="jp" data-speak="立" onclick="speak(this)" title="🔊 撳我讀出">立</span></span><span class="kanji-rd">音：りつ／訓：たつ</span><span class="kanji-wd">立つ（たつ）、起立（きりつ）</span></div>
+<div class="kanji-row"><span class="kanji-ch"><span class="jp" data-speak="待" onclick="speak(this)" title="🔊 撳我讀出">待</span></span><span class="kanji-rd">音：たい／訓：まつ</span><span class="kanji-wd">待つ（まつ）、期待（きたい）</span></div></div><div class="sec-title"><span class="dot"></span>👂 聽讀任務</div><div class="task"><b>讀：</b>12 個一組動詞由辭書形→て形大聲讀 3 次（例：書く→書いて、読む→読んで），再用其中 4 個寫「先做 A、再做 B」嘅句子（〜て、〜ます）。</div><div class="task"><b>聽：</b>YouTube 搜尋「て形 変化 練習」，揀一條跟讀練習片，重點跟「って・んで」嘅促音同撥音節奏；聽完再重播今日真人錄音，對照辭書形同て形。</div>
+  <div class="card">💪 て形係動詞變化第一個大關——背熟「って・いて・いで・して・んで」五個音便口訣，成組動詞就一次過通晒！聽日學二・三組嘅て形，你會發現規律仲簡單。</div>
+  <div class="nav"><a href="day16.html">← Day 16</a><a href="index.html">目錄</a><a class="disabled">聽日見 →</a></div>
+</main>
+<footer>每晚 21:00 自動更新 ｜ Pison自編課程</footer>
+<script>
+var currentAudio=null, currentEl=null;
+var playRate=1;
+try{ var saved=parseFloat(localStorage.getItem('n5n4_rate')); if(saved>0) playRate=saved; }catch(e){}
+function setRate(r){
+  playRate=r;
+  try{ localStorage.setItem('n5n4_rate',String(r)); }catch(e){}
+  var btns=document.querySelectorAll('.rate-btn');
+  for(var i=0;i<btns.length;i++){ btns[i].classList.toggle('active', parseFloat(btns[i].dataset.rate)===r); }
+  stopAll();
+}
+function stopAll(){
+  try{ if('speechSynthesis' in window) speechSynthesis.cancel(); }catch(e){}
+  if(currentAudio){ try{ currentAudio.pause(); }catch(e){} currentAudio=null; }
+  if(currentEl){ currentEl.classList.remove('speaking'); currentEl=null; }
+}
+/* 日文語音選擇：後備朗讀一定要用日文聲，唔可以靜靜跌去英文聲 */
+var jaVoice=null;
+function loadJaVoice(){
+  try{
+    var vs=speechSynthesis.getVoices()||[];
+    var i, lg;
+    for(i=0;i<vs.length;i++){ lg=String(vs[i].lang||'').toLowerCase(); if(lg.indexOf('ja')===0){ jaVoice=vs[i]; return; } }
+    for(i=0;i<vs.length;i++){ if(/kyoko|otoya|japan/i.test(String(vs[i].name||''))){ jaVoice=vs[i]; return; } }
+  }catch(e){}
+}
+try{ if('speechSynthesis' in window){ loadJaVoice(); speechSynthesis.onvoiceschanged=loadJaVoice; } }catch(e){}
+function speakFallback(el){
+  try{
+    if(!('speechSynthesis' in window)){alert('你個瀏覽器唔支援語音朗讀');return;}
+    var t=(el.dataset.speak||el.textContent||'').replace(/\s+/g,' ').trim();
+    if(!t) return;
+    try{ speechSynthesis.cancel(); }catch(e){}
+    var startSpeak=function(){
+      var u=new SpeechSynthesisUtterance(t);
+      u.lang='ja-JP'; u.rate=0.85;
+      if(jaVoice){ u.voice=jaVoice; }
+      currentEl=el; el.classList.add('speaking');
+      var done=function(){ el.classList.remove('speaking'); if(currentEl===el) currentEl=null; };
+      u.onend=done; u.onerror=done;
+      speechSynthesis.speak(u);
+    };
+    var restoreHandler=function(){ try{ speechSynthesis.onvoiceschanged=loadJaVoice; }catch(e){} };
+    loadJaVoice();
+    if(jaVoice){ startSpeak(); return; }
+    /* iOS 嘅 voices 係異步載入，等一等；等極都冇日文聲就唔讀（唔好用英文聲亂讀） */
+    var settled=false;
+    var noVoice=function(){
+      if(settled) return; settled=true; restoreHandler();
+      alert('錄音載入唔到，部機又搵唔到日文語音——請檢查網絡之後再撳一次');
+    };
+    var timer=setTimeout(function(){
+      if(settled) return;
+      loadJaVoice();
+      settled=true; restoreHandler();
+      if(jaVoice){ startSpeak(); } else { noVoice(); }
+    },1500);
+    try{
+      speechSynthesis.onvoiceschanged=function(){
+        if(settled) return;
+        loadJaVoice();
+        settled=true; clearTimeout(timer); restoreHandler();
+        if(jaVoice){ startSpeak(); } else { noVoice(); }
+      };
+    }catch(e){ clearTimeout(timer); noVoice(); }
+  }catch(e){}
+}
+function speak(el){
+  try{
+    if(currentEl===el){ stopAll(); return; }
+    stopAll();
+    var au=el.dataset.audio;
+    if(au){
+      var fellBack=false;
+      var doFallback=function(){ if(fellBack) return; fellBack=true; stopAll(); speakFallback(el); };
+      var a=new Audio(au);
+      try{ a.playbackRate=playRate; }catch(e){}
+      currentAudio=a; currentEl=el; el.classList.add('speaking');
+      a.onended=function(){ stopAll(); };
+      a.onerror=doFallback;
+      var p=a.play();
+      if(p&&p.catch){ p.catch(doFallback); }
+      return;
+    }
+    speakFallback(el);
+  }catch(e){}
+}
+try{ setRate(playRate); }catch(e){}
+</script>
+</body>
+</html>
