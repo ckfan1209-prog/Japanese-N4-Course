@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#c9403b">
+<title>Day 20 ｜ N5→N4 九十二日課程</title>
+<style>
+:root{
+  --bg:#faf7f2; --card:#ffffff; --text:#2b2620; --muted:#97907f;
+  --primary:#c9403b; --primary-soft:#fdeeee; --primary-deep:#a93229;
+  --radius:18px;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{font-family:-apple-system,"PingFang TC","Noto Sans TC","Hiragino Sans",sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+header{background:linear-gradient(140deg,#c9403b 0%,#d9534a 55%,#e07a3f 100%);color:#fff;padding:2.2rem 1.2rem 1.6rem;border-radius:0 0 28px 28px}
+.header-row{display:flex;justify-content:space-between;align-items:center}
+header h1{font-size:1.45rem;font-weight:800;letter-spacing:.5px}
+header .sub{opacity:.88;font-size:.82rem;margin-top:.3rem}
+.ring{width:74px;height:74px;border-radius:50%;background:conic-gradient(#fff calc(var(--p)*1%),rgba(255,255,255,.25) 0);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ring-in{width:58px;height:58px;border-radius:50%;background:#b23a34;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.ring-in b{font-size:1.05rem}.ring-in span{font-size:.55rem;opacity:.8}
+.stats{display:flex;gap:.6rem;margin-top:1.1rem}
+.stat{flex:1;background:rgba(255,255,255,.16);backdrop-filter:blur(6px);border-radius:14px;padding:.6rem .8rem}
+.stat b{font-size:1.15rem;display:block}.stat span{font-size:.68rem;opacity:.85}
+main{max-width:600px;margin:0 auto;padding:1rem .9rem 5rem}
+.sec-title{font-size:1rem;font-weight:800;margin:1.4rem 0 .7rem;display:flex;align-items:center;gap:.45rem}
+.sec-title .dot{width:9px;height:9px;border-radius:50%;background:var(--primary)}
+.card{background:var(--card);border-radius:var(--radius);padding:1rem 1.05rem;margin-bottom:.85rem;box-shadow:0 1px 3px rgba(43,38,32,.06),0 4px 14px rgba(43,38,32,.05)}
+.jp{cursor:pointer;border-bottom:1.5px dotted #d98a85;transition:background .15s;border-radius:4px;padding:0 1px}
+.jp:active,.jp.speaking{background:var(--primary-soft)}
+.jp.speaking{border-bottom:2px solid var(--primary)}
+.rate-ctl{position:sticky;top:0;z-index:50;display:flex;gap:.4rem;align-items:center;justify-content:center;
+  background:rgba(255,255,255,.94);padding:.45rem;border-radius:0 0 14px 14px;
+  box-shadow:0 2px 12px rgba(0,0,0,.06);font-size:.82rem;color:var(--muted);margin:0 -.5rem .6rem}
+.rate-ctl .rate-btn{border:1px solid #e8ddd2;background:#fff;color:var(--muted);border-radius:999px;
+  padding:.28rem .8rem;font-size:.82rem;cursor:pointer}
+.rate-ctl .rate-btn.active{background:var(--primary);border-color:var(--primary);color:#fff;font-weight:700}
+.reading{color:var(--muted);font-size:.85em}
+.vocab-num{display:inline-flex;width:1.7rem;height:1.7rem;border-radius:50%;background:var(--primary-soft);color:var(--primary-deep);font-weight:800;font-size:.85rem;align-items:center;justify-content:center;margin-right:.5rem}
+.vocab-zh{color:var(--primary-deep);font-weight:700}
+.vocab-ex{margin:.35rem 0 0 2.2rem;font-size:.92rem;color:#5b544a}
+.pattern{background:#2b2620;color:#f5e9d8;border-radius:12px;padding:.7rem .9rem;font-size:.95rem;margin:.5rem 0;font-family:inherit}
+.g-title{font-weight:800;font-size:1.02rem;color:var(--primary-deep)}
+.g-explain{margin:.4rem 0}
+.g-ex{margin:.3rem 0 .3rem 1rem}
+.practice{background:var(--primary-soft);border-radius:12px;padding:.7rem .9rem;margin-top:.6rem;font-size:.92rem}
+.practice b{color:var(--primary-deep)}
+.practice .ans{color:var(--muted);font-size:.85rem;margin-top:.25rem}
+.kanji-row{display:flex;gap:.8rem;align-items:baseline;padding:.45rem 0;border-bottom:1px dashed #e8e0d2}
+.kanji-row:last-child{border-bottom:none}
+.kanji-ch{font-size:1.5rem;font-weight:800;min-width:2.2rem;text-align:center}
+.kanji-rd{font-size:.82rem;color:var(--muted)}
+.kanji-wd{font-size:.9rem}
+.task{background:var(--card);border-radius:var(--radius);padding:1rem 1.05rem;margin-bottom:.85rem;box-shadow:0 1px 3px rgba(43,38,32,.06)}
+.task b{color:var(--primary-deep)}
+.nav{display:flex;justify-content:space-between;gap:.7rem;margin-top:1.4rem}
+.nav a{flex:1;text-align:center;background:var(--card);border-radius:14px;padding:.8rem;text-decoration:none;color:var(--primary-deep);font-weight:700;box-shadow:0 1px 3px rgba(43,38,32,.08)}
+.nav a.disabled{opacity:.35;pointer-events:none}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
+@media(min-width:480px){.grid{grid-template-columns:1fr 1fr 1fr}}
+.dcard{background:var(--card);border-radius:var(--radius);padding:.95rem 1rem;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(43,38,32,.06),0 4px 14px rgba(43,38,32,.05);transition:transform .12s;display:block}
+.dcard:active{transform:scale(.96)}
+.dcard-top{display:flex;justify-content:space-between;align-items:baseline}
+.dcard-day{font-weight:800;font-size:1.05rem;color:var(--primary)}
+.dcard-wd{font-size:.75rem;color:var(--muted)}
+.dcard-date{font-size:.72rem;color:var(--muted);margin-top:.15rem}
+.dcard-theme{font-size:.76rem;color:#5b544a;margin-top:.35rem;line-height:1.35}
+.chip{display:inline-block;font-size:.64rem;padding:.18rem .55rem;border-radius:99px;margin-top:.5rem;font-weight:600;background:var(--primary-soft);color:var(--primary-deep)}
+footer{text-align:center;padding:1.5rem;color:var(--muted);font-size:.72rem}
+.back{display:inline-block;color:#fff;opacity:.9;text-decoration:none;font-size:.85rem;margin-bottom:.6rem}
+.day-meta{opacity:.88;font-size:.82rem;margin-top:.3rem}
+h2.lesson-h{font-size:1.25rem;font-weight:800;margin-bottom:.2rem}
+</style>
+</head>
+<body>
+<header>
+  <a class="back" href="index.html">← 目錄</a>
+  <div class="header-row">
+    <div>
+      <h1>📘 Day 20 / 92</h1>
+      <div class="day-meta">2026-10-27（二）｜N5期・Week 3</div>
+    </div>
+  </div>
+  <div class="sub" style="margin-top:.5rem;font-size:.95rem;font-weight:700">〜ています（進行・狀態）</div>
+</header>
+<main>
+  <div class="rate-ctl">🔊 語速
+    <button class="rate-btn" data-rate="0.7" onclick="setRate(0.7)">0.7x 慢</button>
+    <button class="rate-btn" data-rate="1" onclick="setRate(1)">1.0x 標準</button>
+    <button class="rate-btn" data-rate="1.25" onclick="setRate(1.25)">1.25x 快</button>
+  </div>
+  <div class="card">🔊 撳任何 <span class="jp" onclick="speak(this)" data-speak="日文">日文</span>（虛線底線）即播真人錄音，再撳一下停止</div>
+  <div class="card">學識て形之後，今日學最常用嘅「〜ています」：講緊做緊嘅事，同埋已經完成、持續緊嘅狀態。兩個用法一次過分清楚，講嘢即刻生動好多。</div>
+  <div class="sec-title"><span class="dot"></span>📖 單字（12個）</div><div class="card"><span class="vocab-num">1</span><span class="jp" data-speak="住む" data-audio="audio/day20/w01.mp3" onclick="speak(this)" title="🔊 撳我讀出">住む</span><span class="reading">（すむ）</span> <span class="vocab-zh">— 住</span><div class="vocab-ex">例：<span class="jp" data-speak="東京に住んでいます。" data-audio="audio/day20/s01.mp3" onclick="speak(this)" title="🔊 撳我讀出">東京に住んでいます。</span><br>（我住喺東京。）</div></div>
+<div class="card"><span class="vocab-num">2</span><span class="jp" data-speak="知る" data-audio="audio/day20/w02.mp3" onclick="speak(this)" title="🔊 撳我讀出">知る</span><span class="reading">（しる）</span> <span class="vocab-zh">— 知道</span><div class="vocab-ex">例：<span class="jp" data-speak="この人を知っていますか。" data-audio="audio/day20/s02.mp3" onclick="speak(this)" title="🔊 撳我讀出">この人を知っていますか。</span><br>（你識唔識呢個人？）</div></div>
+<div class="card"><span class="vocab-num">3</span><span class="jp" data-speak="着る" data-audio="audio/day20/w03.mp3" onclick="speak(this)" title="🔊 撳我讀出">着る</span><span class="reading">（きる）</span> <span class="vocab-zh">— 穿</span><div class="vocab-ex">例：<span class="jp" data-speak="今、赤いシャツを着ています。" data-audio="audio/day20/s03.mp3" onclick="speak(this)" title="🔊 撳我讀出">今、赤いシャツを着ています。</span><br>（而家着緊紅色恤衫。）</div></div>
+<div class="card"><span class="vocab-num">4</span><span class="jp" data-speak="脱ぐ" data-audio="audio/day20/w04.mp3" onclick="speak(this)" title="🔊 撳我讀出">脱ぐ</span><span class="reading">（ぬぐ）</span> <span class="vocab-zh">— 脫</span><div class="vocab-ex">例：<span class="jp" data-speak="家に入る前に、くつを脱ぎます。" data-audio="audio/day20/s04.mp3" onclick="speak(this)" title="🔊 撳我讀出">家に入る前に、くつを脱ぎます。</span><br>（入屋之前除鞋。）</div></div>
+<div class="card"><span class="vocab-num">5</span><span class="jp" data-speak="作る" data-audio="audio/day20/w05.mp3" onclick="speak(this)" title="🔊 撳我讀出">作る</span><span class="reading">（つくる）</span> <span class="vocab-zh">— 做／製造</span><div class="vocab-ex">例：<span class="jp" data-speak="母はケーキを作っています。" data-audio="audio/day20/s05.mp3" onclick="speak(this)" title="🔊 撳我讀出">母はケーキを作っています。</span><br>（阿媽整緊蛋糕。）</div></div>
+<div class="card"><span class="vocab-num">6</span><span class="jp" data-speak="考える" data-audio="audio/day20/w06.mp3" onclick="speak(this)" title="🔊 撳我讀出">考える</span><span class="reading">（かんがえる）</span> <span class="vocab-zh">— 想／思考</span><div class="vocab-ex">例：<span class="jp" data-speak="問題を考えています。" data-audio="audio/day20/s06.mp3" onclick="speak(this)" title="🔊 撳我讀出">問題を考えています。</span><br>（諗緊個問題。）</div></div>
+<div class="card"><span class="vocab-num">7</span><span class="jp" data-speak="降る" data-audio="audio/day20/w07.mp3" onclick="speak(this)" title="🔊 撳我讀出">降る</span><span class="reading">（ふる）</span> <span class="vocab-zh">— 落（雨／雪）</span><div class="vocab-ex">例：<span class="jp" data-speak="今、雨が降っています。" data-audio="audio/day20/s07.mp3" onclick="speak(this)" title="🔊 撳我讀出">今、雨が降っています。</span><br>（而家落緊雨。）</div></div>
+<div class="card"><span class="vocab-num">8</span><span class="jp" data-speak="晴れる" data-audio="audio/day20/w08.mp3" onclick="speak(this)" title="🔊 撳我讀出">晴れる</span><span class="reading">（はれる）</span> <span class="vocab-zh">— 天晴</span><div class="vocab-ex">例：<span class="jp" data-speak="今日は晴れています。" data-audio="audio/day20/s08.mp3" onclick="speak(this)" title="🔊 撳我讀出">今日は晴れています。</span><br>（今日天晴。）</div></div>
+<div class="card"><span class="vocab-num">9</span><span class="jp" data-speak="曇る" data-audio="audio/day20/w09.mp3" onclick="speak(this)" title="🔊 撳我讀出">曇る</span><span class="reading">（くもる）</span> <span class="vocab-zh">— 多雲</span><div class="vocab-ex">例：<span class="jp" data-speak="空が曇っています。" data-audio="audio/day20/s09.mp3" onclick="speak(this)" title="🔊 撳我讀出">空が曇っています。</span><br>（天陰緊。）</div></div>
+<div class="card"><span class="vocab-num">10</span><span class="jp" data-speak="料理する" data-audio="audio/day20/w10.mp3" onclick="speak(this)" title="🔊 撳我讀出">料理する</span><span class="reading">（りょうりする）</span> <span class="vocab-zh">— 煮飯</span><div class="vocab-ex">例：<span class="jp" data-speak="父は料理をしています。" data-audio="audio/day20/s10.mp3" onclick="speak(this)" title="🔊 撳我讀出">父は料理をしています。</span><br>（爸爸煮緊飯。）</div></div>
+<div class="card"><span class="vocab-num">11</span><span class="jp" data-speak="片付ける" data-audio="audio/day20/w11.mp3" onclick="speak(this)" title="🔊 撳我讀出">片付ける</span><span class="reading">（かたづける）</span> <span class="vocab-zh">— 收拾</span><div class="vocab-ex">例：<span class="jp" data-speak="部屋を片付けています。" data-audio="audio/day20/s11.mp3" onclick="speak(this)" title="🔊 撳我讀出">部屋を片付けています。</span><br>（執緊房。）</div></div>
+<div class="card"><span class="vocab-num">12</span><span class="jp" data-speak="探す" data-audio="audio/day20/w12.mp3" onclick="speak(this)" title="🔊 撳我讀出">探す</span><span class="reading">（さがす）</span> <span class="vocab-zh">— 找</span><div class="vocab-ex">例：<span class="jp" data-speak="かばんを探しています。" data-audio="audio/day20/s12.mp3" onclick="speak(this)" title="🔊 撳我讀出">かばんを探しています。</span><br>（搵緊個袋。）</div></div><div class="sec-title"><span class="dot"></span>✍️ 文法（2點）</div><div class="card"><div class="g-title">〜ています（進行：正在⋯⋯）</div><div class="pattern">接續：動詞て形 ＋ います（正在⋯⋯）</div><div class="g-explain">想講「而家做緊某件事」，就將動詞變成て形再加「います」。「〜ています」係進行時，答「今、何をしていますか」就用呢個句型。留意：て形後面嘅「います」係「いる（在）」嘅ます形，主語係人或者動物先用「います」，嘢就用「あります」。</div><div class="g-ex">例：<span class="jp" data-speak="今、ごはんを食べています。" data-audio="audio/day20/g1e1.mp3" onclick="speak(this)" title="🔊 撳我讀出">今、ごはんを食べています。</span><br>（而家食緊飯。）</div><div class="g-ex">例：<span class="jp" data-speak="雨が降っています。" data-audio="audio/day20/g1e2.mp3" onclick="speak(this)" title="🔊 撳我讀出">雨が降っています。</span><br>（落緊雨。）</div><div class="practice"><b>✏️ 造句練習：</b>用「読む」寫一句：我而家睇緊書。<div class="ans">參考答案：（例）今、本を読んでいます。</div></div></div>
+<div class="card"><div class="g-title">〜ています（狀態・習慣）</div><div class="pattern">接續：動詞て形 ＋ います（狀態／習慣）</div><div class="g-explain">「〜ています」除咗講進行緊嘅動作，仲可以講兩種持續嘅狀態：第一，動作完成後留低嘅狀態（住んでいます＝住喺度、結婚しています＝已婚）；第二，習慣性、反覆做嘅動作（毎日走っています＝每日都有跑步）。分清楚「而家做緊」定係「長期狀態」，睇吓句入面有冇「今」或者「毎日」就知。</div><div class="g-ex">例：<span class="jp" data-speak="東京に住んでいます。" data-audio="audio/day20/g2e1.mp3" onclick="speak(this)" title="🔊 撳我讀出">東京に住んでいます。</span><br>（我住喺東京。）</div><div class="g-ex">例：<span class="jp" data-speak="毎日、日本語を勉強しています。" data-audio="audio/day20/g2e2.mp3" onclick="speak(this)" title="🔊 撳我讀出">毎日、日本語を勉強しています。</span><br>（每日都有學日文。）</div><div class="practice"><b>✏️ 造句練習：</b>用「働く」寫一句：我喺銀行返工。<div class="ans">參考答案：（例）銀行で働いています。</div></div></div><div class="sec-title"><span class="dot"></span>🈴 漢字</div><div class="card"><div class="kanji-row"><span class="kanji-ch"><span class="jp" data-speak="知" onclick="speak(this)" title="🔊 撳我讀出">知</span></span><span class="kanji-rd">音：ち／訓：しる</span><span class="kanji-wd">知る（しる）、知識（ちしき）</span></div>
+<div class="kanji-row"><span class="kanji-ch"><span class="jp" data-speak="住" onclick="speak(this)" title="🔊 撳我讀出">住</span></span><span class="kanji-rd">音：じゅう／訓：すむ</span><span class="kanji-wd">住む（すむ）、住所（じゅうしょ）</span></div>
+<div class="kanji-row"><span class="kanji-ch"><span class="jp" data-speak="開" onclick="speak(this)" title="🔊 撳我讀出">開</span></span><span class="kanji-rd">音：かい／訓：あく・あける</span><span class="kanji-wd">開く（あく）、開始（かいし）</span></div></div><div class="sec-title"><span class="dot"></span>👂 聽讀任務</div><div class="task"><b>讀：</b>12 個動詞由辭書形→て形→「〜ています」大聲讀 3 次（例：住む→住んで→住んでいます），再用其中 4 個寫「而家做緊⋯⋯」（今〜ています）同「長期狀態」（住んでいます／毎日〜ています）各一句。</div><div class="task"><b>聽：</b>YouTube 搜尋「ています 文法 進行 状態」，揀一條跟讀練習片，聽住例句逐句跟讀，留意進行同狀態兩種用法嘅語境分別；聽完再重播今日真人錄音，對照て形尾音。</div>
+  <div class="card">💪 「〜ています」一學識，講嘢即刻生動晒——聽日係 Week 3 測驗日，記得溫返 D15–D20 嘅動詞變化，準時見！</div>
+  <div class="nav"><a href="day19.html">← Day 19</a><a href="index.html">目錄</a><a class="disabled">聽日見 →</a></div>
+</main>
+<footer>每晚 21:00 自動更新 ｜ Pison自編課程</footer>
+<script>
+var currentAudio=null, currentEl=null;
+var playRate=1;
+try{ var saved=parseFloat(localStorage.getItem('n5n4_rate')); if(saved>0) playRate=saved; }catch(e){}
+function setRate(r){
+  playRate=r;
+  try{ localStorage.setItem('n5n4_rate',String(r)); }catch(e){}
+  var btns=document.querySelectorAll('.rate-btn');
+  for(var i=0;i<btns.length;i++){ btns[i].classList.toggle('active', parseFloat(btns[i].dataset.rate)===r); }
+  stopAll();
+}
+function stopAll(){
+  try{ if('speechSynthesis' in window) speechSynthesis.cancel(); }catch(e){}
+  if(currentAudio){ try{ currentAudio.pause(); }catch(e){} currentAudio=null; }
+  if(currentEl){ currentEl.classList.remove('speaking'); currentEl=null; }
+}
+/* 日文語音選擇：後備朗讀一定要用日文聲，唔可以靜靜跌去英文聲 */
+var jaVoice=null;
+function loadJaVoice(){
+  try{
+    var vs=speechSynthesis.getVoices()||[];
+    var i, lg;
+    for(i=0;i<vs.length;i++){ lg=String(vs[i].lang||'').toLowerCase(); if(lg.indexOf('ja')===0){ jaVoice=vs[i]; return; } }
+    for(i=0;i<vs.length;i++){ if(/kyoko|otoya|japan/i.test(String(vs[i].name||''))){ jaVoice=vs[i]; return; } }
+  }catch(e){}
+}
+try{ if('speechSynthesis' in window){ loadJaVoice(); speechSynthesis.onvoiceschanged=loadJaVoice; } }catch(e){}
+function speakFallback(el){
+  try{
+    if(!('speechSynthesis' in window)){alert('你個瀏覽器唔支援語音朗讀');return;}
+    var t=(el.dataset.speak||el.textContent||'').replace(/\s+/g,' ').trim();
+    if(!t) return;
+    try{ speechSynthesis.cancel(); }catch(e){}
+    var startSpeak=function(){
+      var u=new SpeechSynthesisUtterance(t);
+      u.lang='ja-JP'; u.rate=0.85;
+      if(jaVoice){ u.voice=jaVoice; }
+      currentEl=el; el.classList.add('speaking');
+      var done=function(){ el.classList.remove('speaking'); if(currentEl===el) currentEl=null; };
+      u.onend=done; u.onerror=done;
+      speechSynthesis.speak(u);
+    };
+    var restoreHandler=function(){ try{ speechSynthesis.onvoiceschanged=loadJaVoice; }catch(e){} };
+    loadJaVoice();
+    if(jaVoice){ startSpeak(); return; }
+    /* iOS 嘅 voices 係異步載入，等一等；等極都冇日文聲就唔讀（唔好用英文聲亂讀） */
+    var settled=false;
+    var noVoice=function(){
+      if(settled) return; settled=true; restoreHandler();
+      alert('錄音載入唔到，部機又搵唔到日文語音——請檢查網絡之後再撳一次');
+    };
+    var timer=setTimeout(function(){
+      if(settled) return;
+      loadJaVoice();
+      settled=true; restoreHandler();
+      if(jaVoice){ startSpeak(); } else { noVoice(); }
+    },1500);
+    try{
+      speechSynthesis.onvoiceschanged=function(){
+        if(settled) return;
+        loadJaVoice();
+        settled=true; clearTimeout(timer); restoreHandler();
+        if(jaVoice){ startSpeak(); } else { noVoice(); }
+      };
+    }catch(e){ clearTimeout(timer); noVoice(); }
+  }catch(e){}
+}
+function speak(el){
+  try{
+    if(currentEl===el){ stopAll(); return; }
+    stopAll();
+    var au=el.dataset.audio;
+    if(au){
+      var fellBack=false;
+      var doFallback=function(){ if(fellBack) return; fellBack=true; stopAll(); speakFallback(el); };
+      var a=new Audio(au);
+      try{ a.playbackRate=playRate; }catch(e){}
+      currentAudio=a; currentEl=el; el.classList.add('speaking');
+      a.onended=function(){ stopAll(); };
+      a.onerror=doFallback;
+      var p=a.play();
+      if(p&&p.catch){ p.catch(doFallback); }
+      return;
+    }
+    speakFallback(el);
+  }catch(e){}
+}
+try{ setRate(playRate); }catch(e){}
+</script>
+</body>
+</html>
