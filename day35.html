@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#6366f1">
+<title>Day 35 ｜ 日語 N4</title>
+<style>
+:root {
+  --bg:#f4f5fb; --card:#ffffff; --text:#1e2235; --muted:#8b90a7;
+  --primary:#6366f1; --primary-soft:#eef0ff; --radius:16px;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,"PingFang TC","Noto Sans TC","Hiragino Sans",sans-serif; background:var(--bg); color:var(--text); line-height:1.8; }
+nav { position:sticky; top:0; z-index:20; background:rgba(99,102,241,.92); backdrop-filter:blur(12px); color:#fff; padding:.85rem 1rem; display:flex; justify-content:space-between; align-items:center; }
+nav .title { font-weight:800; font-size:.98rem; }
+nav a { color:#fff; text-decoration:none; font-size:.82rem; background:rgba(255,255,255,.18); padding:.4rem .85rem; border-radius:99px; }
+.hero { background:linear-gradient(140deg,#6366f1,#8b5cf6); color:#fff; padding:1.6rem 1.2rem 1.4rem; border-radius:0 0 26px 26px; }
+.hero .day-label { font-size:.8rem; opacity:.85; letter-spacing:1px; }
+.hero h1 { font-size:1.5rem; font-weight:800; margin:.2rem 0; }
+.hero .theme { font-size:.8rem; opacity:.9; margin-top:.3rem; }
+main { max-width:600px; margin:0 auto; padding:1.1rem 1rem 4rem; }
+h2 { font-size:1.02rem; margin:1.6rem 0 .7rem; color:var(--primary); font-weight:800; display:flex; align-items:center; gap:.45rem; }
+h2::before { content:""; width:4px; height:1.05em; background:linear-gradient(180deg,#6366f1,#a855f7); border-radius:4px; }
+h3 { font-size:.95rem; margin:1.1rem 0 .45rem; color:#3f4664; }
+p { margin:.5rem 0; font-size:.92rem; }
+ul { margin:.4rem 0 .4rem 1.25rem; }
+li { margin:.3rem 0; font-size:.9rem; }
+hr { border:none; border-top:1.5px dashed #e3e6f2; margin:1.3rem 0; }
+.table-wrap { overflow-x:auto; margin:.8rem 0; border-radius:12px; box-shadow:0 0 0 1px #e8eaf5; }
+table { border-collapse:collapse; width:100%; font-size:.83rem; background:#fff; border-radius:12px; overflow:hidden; }
+th, td { padding:.5rem .7rem; text-align:left; border-bottom:1px solid #eef0f7; }
+th { background:var(--primary-soft); color:#4338ca; font-size:.8rem; }
+tr:last-child td { border-bottom:none; }
+code { background:var(--primary-soft); color:#4338ca; padding:.12rem .4rem; border-radius:6px; font-size:.88em; }
+strong { color:#2f3560; }
+.num-item { display:flex; gap:.65rem; padding:.55rem .7rem; border-radius:12px; margin:.3rem 0; background:#fafbfe; }
+.num { flex-shrink:0; width:26px; height:26px; border-radius:50%; background:var(--primary-soft); color:var(--primary); font-weight:800; font-size:.78rem; display:flex; align-items:center; justify-content:center; margin-top:.15rem; }
+.num-body { font-size:.9rem; }
+.jp { cursor:pointer; border-bottom:1.5px dotted #a5b4fc; transition:background .15s; }
+.jp:active, .jp.speaking { background:var(--primary-soft); border-bottom-color:var(--primary); }
+.tts-hint { font-size:.72rem; color:#5b6072; background:var(--primary-soft); border-radius:10px; padding:.45rem .8rem; margin:0 0 1rem; }
+.back { display:block; text-align:center; background:var(--primary); color:#fff; text-decoration:none; padding:.85rem; border-radius:14px; font-weight:700; font-size:.9rem; margin-top:1.4rem; }
+</style>
+</head>
+<body>
+<nav><span class="title">🇯🇵 N4 ｜ Day 35</span><a href="index.html">目錄</a></nav>
+<div class="hero">
+  <div class="day-label">DAY 35 / 182 ｜ 2026-11-04</div>
+  <h1>今日研讀內容</h1>
+  <div class="theme">**週三：N5 弱點突破（三）動詞「辭書形 ＋ まえに」（之前）與「た形 ＋ あとで」（之後）**</div>
+</div>
+<main>
+<div class="tts-hint">🔊 撳任何日文（虛線底線）都會即時讀出，再撳一下停止</div>
+<p>📅 <strong>今日進度：第 35 日 / 182</strong>｜Phase 1：N5 總鞏固 + N4 門檻｜<strong>週三：N5 弱點突破（三）動詞「辭書形 ＋ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/000_1d824cd0aa89.mp3">まえに」</span>（之前）與「た形 ＋ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/001_3417431f8cf7.mp3">あとで」</span>（之後）</strong></p>
+<p>話咁快嚟到 Week 6 <span class="jp" onclick="speak(this)" title="🔊 撳我讀">嘅第三日！尋日我哋掌握咗辭書形嘅基本能力句型「〜ことができる」同興趣表達「趣味は〜ことです」。</span></p>
+<p>今日（星期三）我哋要徹底搞掂日語日常對話入面最容易混淆嘅一對「時間先後順序」句型——<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/002_78422b2e6513.mp3">「〜まえに</span>（做某事之前）」</strong> 同埋 <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/003_e17191f2c551.mp3">「〜あとで</span>（做完某事之後）」</strong>！</p>
+<p>好多初學者喺考試同對話嗰陣，最容易將「辭書形」定「た形」配錯。今日我哋一次過釐清佢哋嘅邏輯關係，等你可以精準表達自己一日行程嘅先後次序！</p>
+<hr>
+<h3>📖 單字：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/004_b642375a8021.mp3">日常生活・飲食・</span>出門作息（12 個）</h3>
+<div class="num-item"><span class="num">1</span><div class="num-body"><strong>洗う（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/105_528ce595aa5a.mp3">あらう</span>）</strong> — 洗／清洗（五段動詞）。例句：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/000_1d824cd0aa89.mp3">ご飯を食べるまえに、</span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="手" data-audio="audio/day35/005_3c7d183f1b71.mp3">手<small>（て）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="を洗" data-audio="audio/day35/006_d96561075f09.mp3">を洗<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">あら</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/008_27dadad784cb.mp3">います。</span>（食飯之前，要洗手。）</div></div>
+<div class="num-item"><span class="num">2</span><div class="num-body"><strong>磨く（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">みがく</span>）</strong> — 刷／磨（五段動詞，刷牙）。例句：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="寝" data-audio="audio/day35/009_85d8adbc12cf.mp3">寝<small>（ね）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/000_1d824cd0aa89.mp3">るまえに、</span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="歯" data-audio="audio/day35/010_b49bf7df4280.mp3">歯<small>（は）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="を磨" data-audio="audio/day35/011_47928322444e.mp3">を磨<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">みが</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/013_aa7493e446ed.mp3">きます。</span>（瞓覺之前，要刷牙。）</div></div>
+<div class="num-item"><span class="num">3</span><div class="num-body"><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/017_1ca256655752.mp3">出かける</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">でかける</span>）</strong> — 出門／外出（一段動詞）。例句：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="出" data-audio="audio/day35/014_58f021061002.mp3">出<small>（で）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/000_1d824cd0aa89.mp3">かけるまえに、</span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="電気" data-audio="audio/day35/015_d425695fcc26.mp3">電気<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">でんき</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="を消" data-audio="audio/day35/016_aa4d946d0650.mp3">を消<small>（け）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/019_6537b367a0b4.mp3">します。</span>（出門之前，會熄燈。）</div></div>
+<div class="num-item"><span class="num">4</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="散歩" data-audio="audio/day35/020_ad3c450419bf.mp3">散歩<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">さんぽ</span>）</small></span>** — 散步。例句：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/001_3417431f8cf7.mp3">朝ご飯を食べたあとで、</span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="公園" data-audio="audio/day35/021_c572b7eb7faf.mp3">公園<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">こうえん</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="を散歩" data-audio="audio/day35/020_ad3c450419bf.mp3">を散歩<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">さんぽ</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/019_6537b367a0b4.mp3">します。</span>（食完早餐之後，去公園散步。）</div></div>
+<div class="num-item"><span class="num">5</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="運転" data-audio="audio/day35/023_3f81f6337f02.mp3">運転<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">うんてん</span>）</small></span>** — 駕駛／揸車。例句：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="お酒" data-audio="audio/day35/024_811ba9ddbf8b.mp3">お酒<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">さけ</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="を飲" data-audio="audio/day35/025_c7b3793e12f1.mp3">を飲<small>（の）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/001_3417431f8cf7.mp3">んだあとで、</span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="車" data-audio="audio/day35/026_ae9290a5afea.mp3">車<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">くるま</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="を運転" data-audio="audio/day35/023_3f81f6337f02.mp3">を運転<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">うんてん</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/028_b81f309d3700.mp3">してはいけません。</span>（飲咗酒之後，絕對唔可以揸車。）</div></div>
+<div class="num-item"><span class="num">6</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="会議" data-audio="audio/day35/029_af28aaa0dc0b.mp3">会議<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">かいぎ</span>）</small></span>** — 會議／開會。例句：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="会議" data-audio="audio/day35/029_af28aaa0dc0b.mp3">会議<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">かいぎ</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/000_1d824cd0aa89.mp3">のまえに、</span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="資料" data-audio="audio/day35/030_d47e416e2d1d.mp3">資料<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">しりょう</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/032_442df896de97.mp3">をコピーします。</span>（開會之前，會影印資料。）</div></div>
+<div class="num-item"><span class="num">7</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="食事" data-audio="audio/day35/033_04ae06c55343.mp3">食事<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">しょくじ</span>）</small></span>** — 用餐／食飯。例句：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="食事" data-audio="audio/day35/033_04ae06c55343.mp3">食事<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">しょくじ</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/034_9fe95f29c99a.mp3">のあとで、コーヒーを飲みます。</span>（食完飯之後，飲杯咖啡。）</div></div>
+<div class="num-item"><span class="num">8</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="水泳" data-audio="audio/day35/035_45b131cde9fb.mp3">水泳<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">すいえい</span>）</small></span>** — 游泳。例句：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="水泳" data-audio="audio/day35/035_45b131cde9fb.mp3">水泳<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">すいえい</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/000_1d824cd0aa89.mp3">のまえに、</span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="準備運動" data-audio="audio/day35/036_dc8daf73149e.mp3">準備運動<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">じゅんびうんどう</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/038_45825da80a37.mp3">をします。</span>（游水之前，做準備運動。）</div></div>
+<div class="num-item"><span class="num">9</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="旅行" data-audio="audio/day35/039_87483408cfa6.mp3">旅行<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">りょこう</span>）</small></span>** — 旅行。例句：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="旅行" data-audio="audio/day35/039_87483408cfa6.mp3">旅行<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">りょこう</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/000_1d824cd0aa89.mp3">のまえに、</span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="ホテルを予約" data-audio="audio/day35/041_c8e5593105fe.mp3"><span class="jp" onclick="speak(this)" title="🔊 撳我讀">ホテルを</span>予約<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">よやく</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/019_6537b367a0b4.mp3">します。</span>（去旅行之前，會預約酒店。）</div></div>
+<div class="num-item"><span class="num">10</span><div class="num-body"><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/043_fa5f3f1ce970.mp3">シャワー</span></strong> — 淋浴／沖涼。例句：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/001_3417431f8cf7.mp3">ジョギングをしたあとで、</span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="シャワーを浴" data-audio="audio/day35/043_fa5f3f1ce970.mp3"><span class="jp" onclick="speak(this)" title="🔊 撳我讀">シャワーを</span>浴<small>（あ）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/045_b1cbd9f791f4.mp3">びます。</span>（慢跑完之後，沖個涼。）</div></div>
+<div class="num-item"><span class="num">11</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="日記" data-audio="audio/day35/046_570fd594db13.mp3">日記<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">にっき</span>）</small></span>** — 日記。例句：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="毎晩" data-audio="audio/day35/047_054d5bf932dc.mp3">毎晩<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">まいばん</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/000_1d824cd0aa89.mp3">寝るまえに、</span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="日本語で日記" data-audio="audio/day35/046_570fd594db13.mp3">日本語で日記<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">にっき</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/049_b8aed456d00e.mp3">を書きます。</span>（每晚瞓覺之前，都會用日文寫日記。）</div></div>
+<div class="num-item"><span class="num">12</span><div class="num-body"><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/052_01cc377ec8e5.mp3">始まる</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/116_be74394a64bb.mp3">はじまる</span>）</strong> — 開始（自動詞，五段動詞）。例句：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="映画" data-audio="audio/day35/050_a08a27db9091.mp3">映画<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">えいが</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="が始" data-audio="audio/day35/051_0a520e8b1676.mp3">が始<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">はじ</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/053_f5d72abf42be.mp3">まるまえに、トイレへ行きます。</span>（戲開場之前，去個洗手間先。）</div></div>
+<hr>
+<h3>✍️ 文法：時間先後順序表達（辭書形 ＋ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/000_1d824cd0aa89.mp3">まえに</span> vs た形 ＋ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/001_3417431f8cf7.mp3">あとで</span>）</h3>
+<h4>考點 1：動詞辭書形 ＋ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/000_1d824cd0aa89.mp3">まえに</span> ／ 名詞 ＋ の ＋ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/000_1d824cd0aa89.mp3">まえに</span>（在…之前）</h4>
+<p>表示在進行某個動作或事情<strong>之前</strong>，先做另一件事。</p>
+<p>⚠️ <strong>核心關鍵</strong>：無論後半句係過去式定將來式，<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/000_1d824cd0aa89.mp3">「まえに」</span>前面嘅動詞<strong>必定要用辭書形（原形）</strong>！因為喺做動作 A 之前，動作 A 喺當下仲未發生。</p>
+<ul>
+<li><strong>接續方式</strong>：</li>
+</ul>
+<div class="num-item"><span class="num">1</span><div class="num-body"><strong>動詞辭書形 ＋ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/000_1d824cd0aa89.mp3">まえに</span></strong></div></div>
+<ul>
+<li>寝る ＋ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/000_1d824cd0aa89.mp3">まえに</span> → <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/054_c088f2c5dcb1.mp3">寝るまえに</span></strong>（瞓覺之前）</li>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/055_2558c329eb35.mp3">日本へ行く</span> ＋ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/000_1d824cd0aa89.mp3">まえに</span> → <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/056_1049313cee42.mp3">日本へ行くまえに</span></strong>（去日本之前）</li>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/057_0e3e309b0bfd.mp3">食べる</span> ＋ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/000_1d824cd0aa89.mp3">まえに</span> → <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/058_7fd7dd23e4e3.mp3">食べるまえに</span></strong>（食嘢之前）</li>
+</ul>
+<div class="num-item"><span class="num">2</span><div class="num-body"><strong>動作性名詞 ＋ の ＋ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/000_1d824cd0aa89.mp3">まえに</span></strong></div></div>
+<ul>
+<li>会議（名詞）＋ の ＋ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/000_1d824cd0aa89.mp3">まえに</span> → <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/059_351a621bcced.mp3">会議のまえに</span></strong>（開會之前）</li>
+<li>食事（名詞）＋ の ＋ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/000_1d824cd0aa89.mp3">まえに</span> → <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/060_70c222aae3e6.mp3">食事のまえに</span></strong>（用餐之前）</li>
+</ul>
+<div class="num-item"><span class="num">3</span><div class="num-body"><strong>時間數量詞 ＋ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/000_1d824cd0aa89.mp3">まえに</span></strong>（表示「在…時間之前」）</div></div>
+<ul>
+<li>30<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="分" data-audio="audio/day35/061_daf783c8cdf9.mp3">分<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">さんじゅっぷん</span>）</small></span>＋ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/000_1d824cd0aa89.mp3">まえに</span> → <strong>30<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/062_4ab50b4805d7.mp3">分まえに</span></strong>（30 分鐘前，直接接續，不加「の」）</li>
+<li>2<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="年" data-audio="audio/day35/063_465260fe80b0.mp3">年<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">にねん</span>）</small></span>＋ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/000_1d824cd0aa89.mp3">まえに</span> → <strong>2<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/064_02ded80821b6.mp3">年まえに</span></strong>（兩年前）</li>
+<li><strong>實戰例句</strong>：</li>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/065_93810b94dbae.mp3">日本へ行くまえに、日本語を勉強しました。</span>（去日本之前，學咗日文。）</li>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/000_1d824cd0aa89.mp3">ご飯を食べるまえに、「いただきます」</span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="と言" data-audio="audio/day35/066_098a366cd139.mp3">と言<small>（い）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/008_27dadad784cb.mp3">います。</span>（食飯之前，<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/068_f1a6e5d508a5.mp3">會講一聲「いただきます」。</span>）</li>
+<li>彼は1<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="時間まえに帰" data-audio="audio/day35/070_6dc25f763581.mp3"><span class="jp" onclick="speak(this)" title="🔊 撳我讀">時間まえに</span>帰<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">かえ</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/071_162ee7382452.mp3">りました。</span>（佢喺 1 個鐘頭前已經返咗屋企。）</li>
+</ul>
+<hr>
+<h4>考點 2：動詞た形 ＋ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/001_3417431f8cf7.mp3">あとで</span> ／ 名詞 ＋ の ＋ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/001_3417431f8cf7.mp3">あとで</span>（在…之後）</h4>
+<p>表示在某個動作或事情完成<strong>之後</strong>，再做另一件事。</p>
+<p>⚠️ <strong>核心關鍵</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/000_1d824cd0aa89.mp3">同「まえに」</span>剛好相反，<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/001_3417431f8cf7.mp3">「あとで」</span>前面嘅動作係「已經完成」，所以動詞<strong>必定要用た形（過去形）</strong>！</p>
+<ul>
+<li><strong>接續方式</strong>：</li>
+</ul>
+<div class="num-item"><span class="num">1</span><div class="num-body"><strong>動詞た形 ＋ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/001_3417431f8cf7.mp3">あとで</span></strong></div></div>
+<ul>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/073_d7444faeaa67.mp3">食べた</span> ＋ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/001_3417431f8cf7.mp3">あとで</span> → <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/074_57f0c62ee591.mp3">食べたあとで</span></strong>（食完之後）</li>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/075_1d26fa5d2af4.mp3">終わった</span> ＋ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/001_3417431f8cf7.mp3">あとで</span> → <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/076_4647bba14670.mp3">終わったあとで</span></strong>（結束之後）</li>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/077_01f6939c0fb0.mp3">運動した</span> ＋ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/001_3417431f8cf7.mp3">あとで</span> → <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/078_6ba1a3ae501a.mp3">運動したあとで</span></strong>（做完運動之後）</li>
+</ul>
+<div class="num-item"><span class="num">2</span><div class="num-body"><strong>動作性名詞 ＋ の ＋ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/001_3417431f8cf7.mp3">あとで</span></strong></div></div>
+<ul>
+<li>仕事 ＋ の ＋ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/001_3417431f8cf7.mp3">あとで</span> → <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/079_db8188cf1983.mp3">仕事のあとで</span></strong>（放工之後／工作之後）</li>
+<li>授業 ＋ の ＋ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/001_3417431f8cf7.mp3">あとで</span> → <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/080_fa12484af58b.mp3">授業のあとで</span></strong>（落堂之後）</li>
+<li><strong>實戰例句</strong>：</li>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/081_a2784dcd3a66.mp3">仕事が終わったあとで、飲みに行きませんか。</span>（收工之後，要唔要一齊去飲杯嘢呀？）</li>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="新しい靴" data-audio="audio/day35/084_11813e4a9356.mp3"><span class="jp" onclick="speak(this)" title="🔊 撳我讀">新しい</span>靴<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">くつ</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="を買" data-audio="audio/day35/083_ce3ecb85a67b.mp3">を買<small>（か）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/085_9e6ae7fe98ed.mp3">ったあとで、カフェで休みました。</span>（買咗新鞋之後，喺咖啡廳休息咗一陣。）</li>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/001_3417431f8cf7.mp3">映画のあとで、</span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="晩" data-audio="audio/day35/086_ce32d370d750.mp3">晩<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ばん</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/088_ac9b672e0323.mp3">ご飯を食べましょう。</span>（睇完戲之後，一齊食晚飯啦。）</li>
+</ul>
+<hr>
+<p>💡 <strong>對比記憶口訣（超重要，考試必考）</strong>：</p>
+<ul>
+<li><strong>做 A 之前做 B</strong>：A（<strong>辭書形</strong>）＋ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/089_b1fea6864887.mp3">まえに、</span>B（例如：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/090_41c0577f5037.mp3">寝るまえに、本を読みます</span>）</li>
+<li><strong>做完 A 之後做 B</strong>：A（<strong>た形</strong>）＋ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/091_ca2108a5edae.mp3">あとで、</span>B（例如：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/092_0a41784163b3.mp3">本を読んだあとで、寝ます</span>）</li>
+<li><strong>て形先後順序</strong>：A（<strong>て形</strong>）<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/093_8bb73c7713b9.mp3">から、</span>B（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/094_73783ed54c26.mp3">本を読んでから、寝ます</span> — 食完／睇完之後隨即接著做）</li>
+</ul>
+<hr>
+<p><strong>✏️ 造句練習（一條）</strong>：</p>
+<p>請將括號入面嘅動詞變成適當形態填入空格（答案喺文末）：</p>
+<p>「<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="薬" data-audio="audio/day35/095_b0af76f50181.mp3">薬<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">くすり</span>）</small></span>を（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/098_2d823312e52c.mp3">飲みます</span> → ＿＿＿＿＿＿＿＿）<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/089_b1fea6864887.mp3">まえに、</span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="説明書" data-audio="audio/day35/096_0a927c3d95be.mp3">説明書<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">せつめいしょ</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="をよく読" data-audio="audio/day35/100_9314ca0ef6ce.mp3"><span class="jp" onclick="speak(this)" title="🔊 撳我讀">をよく</span>読<small>（よ）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/101_46d90345468d.mp3">んでください。」</span></p>
+<p>（喺食藥之前，請詳細閱讀說明書。）</p>
+<hr>
+<h3>🈴 漢字（6 個）</h3>
+<div class="num-item"><span class="num">1</span><div class="num-body"><strong>洗</strong> — 音讀 <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/104_29aa01259980.mp3">セン、</span>訓讀 <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/105_528ce595aa5a.mp3">あら</span>（う）。例詞：洗う（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/105_528ce595aa5a.mp3">あらう</span>）、<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="洗濯" data-audio="audio/day35/102_1e22b2531738.mp3">洗濯<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">せんたく</span>）</small></span>、<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="洗面所" data-audio="audio/day35/103_0a58267cf4df.mp3">洗面所<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">せんめんじょ</span>）</small></span></div></div>
+<div class="num-item"><span class="num">2</span><div class="num-body"><strong>前</strong> — 音讀 <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/109_59b790dbb600.mp3">ゼン、</span>訓讀 <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/000_1d824cd0aa89.mp3">まえ。</span>例詞：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="前" data-audio="audio/day35/106_d8cbd0465734.mp3">前<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">まえ</span>）</small></span>、<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="午前" data-audio="audio/day35/107_bb3b79ba2e16.mp3">午前<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ごぜん</span>）</small></span>、<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="名前" data-audio="audio/day35/108_5b9e23e23e40.mp3">名前<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">なまえ</span>）</small></span></div></div>
+<div class="num-item"><span class="num">3</span><div class="num-body"><strong>後</strong> — 音讀 <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/113_c85428065a7a.mp3">ゴ・コウ、</span>訓讀 <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/114_bc271c86a6af.mp3">あと・うし</span>（ろ）。例詞：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="後" data-audio="audio/day35/111_8fe061b0c1a6.mp3">後<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">あと</span>）</small></span>、<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="午後" data-audio="audio/day35/112_b5cc30a84639.mp3">午後<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ごご</span>）</small></span>、後ろ（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">うしろ</span>）</div></div>
+<div class="num-item"><span class="num">4</span><div class="num-body"><strong>始</strong> — 音讀 シ、訓讀 <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/116_be74394a64bb.mp3">はじ</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/052_01cc377ec8e5.mp3">まる</span>）<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/117_69c457f096e4.mp3">・はじ</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/118_8cafa5bcc5cd.mp3">める</span>）。例詞：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/052_01cc377ec8e5.mp3">始まる</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/116_be74394a64bb.mp3">はじまる</span>）<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/118_8cafa5bcc5cd.mp3">、始める</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/116_be74394a64bb.mp3">はじめる</span>）、<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="開始" data-audio="audio/day35/115_74d863c4f21f.mp3">開始<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">かいし</span>）</small></span></div></div>
+<div class="num-item"><span class="num">5</span><div class="num-body"><strong>終</strong> — 音讀 <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/120_ca6a263f2930.mp3">シュウ、</span>訓讀 お（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/122_67b83f67c3ee.mp3">わる</span>）<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/121_a2ed332cfc2a.mp3">・お</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">える</span>）。例詞：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/122_67b83f67c3ee.mp3">終わる</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">おわる</span>）、<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="終電" data-audio="audio/day35/119_470a39fea615.mp3">終電<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">しゅうでん</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/123_d7e59ccf5207.mp3">、終わり</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">おわり</span>）</div></div>
+<div class="num-item"><span class="num">6</span><div class="num-body"><strong>出</strong> — 音讀 <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/125_dce8ef619c8a.mp3">シュツ、</span>訓讀 で（る）<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/126_53ca32d489df.mp3">・だ</span>（す）。例詞：出る（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">でる</span>）<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/127_66ce9aae5b56.mp3">、出かける</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">でかける</span>）、<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="出口" data-audio="audio/day35/124_551ce9c9fe6c.mp3">出口<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">でぐち</span>）</small></span></div></div>
+<hr>
+<h3>👂 聽讀任務（辦公室日常與下班約會篇・約 15 分鐘）</h3>
+<p>情境：健太同小野同事喺辦公室傾今日嘅工作同放工安排。</p>
+<p>&gt; <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="健太" data-audio="audio/day35/128_1876ab680ec2.mp3">健太<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">けんた</span>）</small></span>**：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="小野" data-audio="audio/day35/129_23cdc3bbea15.mp3">小野<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">おの</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/131_dc3df1677b9e.mp3">さん、</span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="今日の午後の予定" data-audio="audio/day35/111_8fe061b0c1a6.mp3"><span class="jp" onclick="speak(this)" title="🔊 撳我讀">今日の午後の</span>予定<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">よてい</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/132_8f8d85d40eef.mp3">はどうなっていますか。</span></p>
+<p>&gt; <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="小野" data-audio="audio/day35/129_23cdc3bbea15.mp3">小野<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">おの</span>）</small></span>**：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="午後二時から大事" data-audio="audio/day35/135_96ec72c20948.mp3"><span class="jp" onclick="speak(this)" title="🔊 撳我讀">午後二時から</span>大事<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">だいじ</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/029_af28aaa0dc0b.mp3">な会議がありますよ。健太さん、</span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="会議のまえに資料を準備" data-audio="audio/day35/000_1d824cd0aa89.mp3"><span class="jp" onclick="speak(this)" title="🔊 撳我讀">会議のまえに資料を</span>準備<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">じゅんび</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/137_894b6be6275f.mp3">しましたか。</span></p>
+<p>&gt; <strong>健太</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/000_1d824cd0aa89.mp3">はい、もうコピーしました。会議が始まるまえに、</span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="部長" data-audio="audio/day35/138_4c85610e16f5.mp3">部長<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ぶちょう</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="に渡" data-audio="audio/day35/139_58495cd3936d.mp3">に渡<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">わた</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/019_6537b367a0b4.mp3">します。</span></p>
+<p>&gt; <strong>小野</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/141_cd57f3d472fb.mp3">よかったですね。あ、仕事が終わったあとで、一緒に駅前のレストランへ行きませんか。新しい店がオープンしましたよ。</span></p>
+<p>&gt; <strong>健太</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/144_ca952ce100af.mp3">いいですね！でも、</span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="行くまえに銀行" data-audio="audio/day35/154_78df254f67a2.mp3"><span class="jp" onclick="speak(this)" title="🔊 撳我讀">行くまえに</span>銀行<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ぎんこう</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/145_528d3c4aeea6.mp3">へ行ってもいいですか。</span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="お金を下" data-audio="audio/day35/145_528d3c4aeea6.mp3"><span class="jp" onclick="speak(this)" title="🔊 撳我讀">お金を</span>下<small>（お）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/146_14d150712cf0.mp3">ろさなければなりませんから。</span></p>
+<p>&gt; <strong>小野</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/148_9279be8a6e34.mp3">もちろんですよ。じゃ、</span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="会社のロビーで待" data-audio="audio/day35/148_9279be8a6e34.mp3"><span class="jp" onclick="speak(this)" title="🔊 撳我讀">会社のロビーで</span>待<small>（ま）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/149_d82177aa529d.mp3">っていますね。</span></p>
+<p><strong>廣東話對譯</strong>：</p>
+<ul>
+<li>健太：小野小姐，今日下晝有咩日程安排呀？</li>
+<li>小野：下晝兩點有個好重要嘅會議呀。健太先生，開會之前你準備好資料未呀？</li>
+<li>健太：準備好喇，已經影印咗。喺會議開始之前，我會交畀部長。</li>
+<li>小野：咁太好喇。呀，放工之後，要唔要一齊去車站前面嗰間餐廳呀？新開咗一間舖頭喎。</li>
+<li>健太：好呀！不過，去之前我可唔可以去一去銀行先呀？因為我要提款撳錢呀。</li>
+<li>小野：梗係得啦！噉我喺公司大堂等妳啦。</li>
+</ul>
+<p><strong>耳仔聽力要點（跟讀重點）</strong>：</p>
+<ul>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/059_351a621bcced.mp3">会議のまえに</span></strong>：名詞＋の＋<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/000_1d824cd0aa89.mp3">まえに</span>（開會前）。</li>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/150_1975c191660f.mp3">会議が始まるまえに</span></strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/151_2b2ab9972efc.mp3">動詞辭書形「始まる」</span>＋<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/000_1d824cd0aa89.mp3">まえに</span>（動作未發生前）。</li>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/152_d1d0f924340f.mp3">仕事が終わったあとで</span></strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/153_63708c3109b0.mp3">動詞た形「終わった」</span>＋<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/001_3417431f8cf7.mp3">あとで</span>（動作完成之後）。</li>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/154_78df254f67a2.mp3">行くまえに</span></strong>：動詞辭書形「行く」＋<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/000_1d824cd0aa89.mp3">まえに</span>（出發前）。</li>
+</ul>
+<p><strong>閱讀理解小問題</strong>：</p>
+<p><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/155_f7e1020df625.mp3">健太さんはレストランへ行くまえに、何をしなければなりませんか。</span></p>
+<div class="num-item"><span class="num">1</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/156_40d2e642d0ff.mp3">部長に会議の資料を渡さなければなりません。</span></div></div>
+<div class="num-item"><span class="num">2</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/157_ecc2b4b538e0.mp3">銀行へ行ってお金を下ろさなければなりません。</span></div></div>
+<div class="num-item"><span class="num">3</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/158_8374067846af.mp3">新しいレストランを予約しなければなりません。</span></div></div>
+<hr>
+<h3>📥 答案與解析</h3>
+<ul>
+<li><strong>造句練習答案</strong>：<strong>飲む</strong>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/159_a6ff06e59bc1.mp3">飲むまえに</span>）</li>
+<li><strong>解析</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/002_78422b2e6513.mp3">「〜まえに」</span>前面連接動詞時，規定必須使用動詞辭書形（原形）<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/025_c7b3793e12f1.mp3">。「飲みます」</span>嘅辭書形係五段動詞「<strong>飲む</strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/161_aa7814fa88bc.mp3">」。因此完整句子係「薬を飲むまえに、説明書をよく読んでください」。</span></li>
+<li><strong>閱讀理解答案</strong>：<strong>2（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/162_cc7990c626e6.mp3">銀行へ行ってお金を下ろさなければなりません</span>）</strong></li>
+<li><strong>解析</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/163_bba31852d5f4.mp3">對話入面健太講「でも、行くまえに銀行へ行ってもいいですか。お金を下ろさなければなりませんから」</span>，因此去餐廳之前佢要先去銀行提款。正確答案係 2。</li>
+</ul>
+<hr>
+<p>📋 <strong>今日學習小結</strong>：</p>
+<p>今日我哋釐清咗日文時間先後順序嘅黃金規則：<strong>「辭書形 ＋ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/000_1d824cd0aa89.mp3">まえに</span>（做前）」</strong> vs <strong>「た形 ＋ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/001_3417431f8cf7.mp3">あとで</span>（做後）」</strong>！只要記住「事情未做用原形，做完之後用た形」，考試就絕唔會失分。請大聲朗讀今日對話 3 遍，聽日我哋會進入動詞變化另一座高峰——動詞「た形」嘅全面變化規則與經驗句型（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day35/164_57a08c4c59ca.mp3">〜たことがある</span>）！</p>
+<hr>
+<a class="back" href="index.html">← 返回目錄</a>
+</main>
+<script>
+var _audio=null, _last=null;
+function speak(el){
+  try{
+    var mp3=el.dataset.audio;
+    if(mp3){
+      if(_audio && _last===el && !_audio.paused){_audio.pause();_audio.currentTime=0;el.classList.remove('speaking');return;}
+      if(_audio){_audio.pause();}
+      _audio=new Audio(mp3);_last=el;
+      el.classList.add('speaking');
+      _audio.onended=function(){el.classList.remove('speaking');};
+      _audio.play();
+      return;
+    }
+    var t=(el.dataset.speak||el.textContent||'').replace(/\s+/g,' ').trim();
+    if(!('speechSynthesis' in window))return;
+    var u=new SpeechSynthesisUtterance(t);u.lang='ja-JP';u.rate=0.85;
+    speechSynthesis.cancel();speechSynthesis.speak(u);
+    el.classList.add('speaking');
+    u.onend=function(){el.classList.remove('speaking');};
+  }catch(e){}
+}
+</script>
+</body>
+</html>
