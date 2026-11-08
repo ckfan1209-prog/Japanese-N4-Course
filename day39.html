@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#6366f1">
+<title>Day 39 ｜ 日語 N4</title>
+<style>
+:root {
+  --bg:#f4f5fb; --card:#ffffff; --text:#1e2235; --muted:#8b90a7;
+  --primary:#6366f1; --primary-soft:#eef0ff; --radius:16px;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,"PingFang TC","Noto Sans TC","Hiragino Sans",sans-serif; background:var(--bg); color:var(--text); line-height:1.8; }
+nav { position:sticky; top:0; z-index:20; background:rgba(99,102,241,.92); backdrop-filter:blur(12px); color:#fff; padding:.85rem 1rem; display:flex; justify-content:space-between; align-items:center; }
+nav .title { font-weight:800; font-size:.98rem; }
+nav a { color:#fff; text-decoration:none; font-size:.82rem; background:rgba(255,255,255,.18); padding:.4rem .85rem; border-radius:99px; }
+.hero { background:linear-gradient(140deg,#6366f1,#8b5cf6); color:#fff; padding:1.6rem 1.2rem 1.4rem; border-radius:0 0 26px 26px; }
+.hero .day-label { font-size:.8rem; opacity:.85; letter-spacing:1px; }
+.hero h1 { font-size:1.5rem; font-weight:800; margin:.2rem 0; }
+.hero .theme { font-size:.8rem; opacity:.9; margin-top:.3rem; }
+main { max-width:600px; margin:0 auto; padding:1.1rem 1rem 4rem; }
+h2 { font-size:1.02rem; margin:1.6rem 0 .7rem; color:var(--primary); font-weight:800; display:flex; align-items:center; gap:.45rem; }
+h2::before { content:""; width:4px; height:1.05em; background:linear-gradient(180deg,#6366f1,#a855f7); border-radius:4px; }
+h3 { font-size:.95rem; margin:1.1rem 0 .45rem; color:#3f4664; }
+p { margin:.5rem 0; font-size:.92rem; }
+ul { margin:.4rem 0 .4rem 1.25rem; }
+li { margin:.3rem 0; font-size:.9rem; }
+hr { border:none; border-top:1.5px dashed #e3e6f2; margin:1.3rem 0; }
+.table-wrap { overflow-x:auto; margin:.8rem 0; border-radius:12px; box-shadow:0 0 0 1px #e8eaf5; }
+table { border-collapse:collapse; width:100%; font-size:.83rem; background:#fff; border-radius:12px; overflow:hidden; }
+th, td { padding:.5rem .7rem; text-align:left; border-bottom:1px solid #eef0f7; }
+th { background:var(--primary-soft); color:#4338ca; font-size:.8rem; }
+tr:last-child td { border-bottom:none; }
+code { background:var(--primary-soft); color:#4338ca; padding:.12rem .4rem; border-radius:6px; font-size:.88em; }
+strong { color:#2f3560; }
+.num-item { display:flex; gap:.65rem; padding:.55rem .7rem; border-radius:12px; margin:.3rem 0; background:#fafbfe; }
+.num { flex-shrink:0; width:26px; height:26px; border-radius:50%; background:var(--primary-soft); color:var(--primary); font-weight:800; font-size:.78rem; display:flex; align-items:center; justify-content:center; margin-top:.15rem; }
+.num-body { font-size:.9rem; }
+.jp { cursor:pointer; border-bottom:1.5px dotted #a5b4fc; transition:background .15s; }
+.jp:active, .jp.speaking { background:var(--primary-soft); border-bottom-color:var(--primary); }
+.tts-hint { font-size:.72rem; color:#5b6072; background:var(--primary-soft); border-radius:10px; padding:.45rem .8rem; margin:0 0 1rem; }
+.back { display:block; text-align:center; background:var(--primary); color:#fff; text-decoration:none; padding:.85rem; border-radius:14px; font-weight:700; font-size:.9rem; margin-top:1.4rem; }
+</style>
+</head>
+<body>
+<nav><span class="title">🇯🇵 N4 ｜ Day 39</span><a href="index.html">目錄</a></nav>
+<div class="hero">
+  <div class="day-label">DAY 39 / 182 ｜ 2026-11-08</div>
+  <h1>📝 週末總複習 + 測驗</h1>
+  <div class="theme">**週日聽力特訓日：日常生活實戰聽解＋シャドーイング**</div>
+</div>
+<main>
+<div class="tts-hint">🔊 撳任何日文（虛線底線）都會即時讀出，再撳一下停止</div>
+<p>📅 <strong>今日進度：第 39 日 / 182</strong>｜Phase 1：N5 總鞏固 + N4 門檻｜<strong>週日聽力特訓日：日常生活實戰聽解＋<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/000_850767526222.mp3">シャドーイング</span></strong></p>
+<p>尋日（Day 38）我哋完成咗 Week 6 嘅總複習同 5 條小測驗，全面鞏固咗動詞三大普通形（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/001_60ed329bc5e0.mp3">ない形、辭書形、た</span>形）同埋高頻實戰句型。</p>
+<p>今日星期日照慣例「只動耳、不動筆」，唔學新語法，亦唔背新單字！我哋進行<strong>輕量聽力特訓</strong>，重點訓練對動詞普通形句尾變化嘅聽覺反應（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/018_78422b2e6513.mp3">例如聽到「〜なければ」即刻反應係必須、「〜まえに」與「〜あとで」嘅時態區別、「〜たことがある」</span>嘅經驗表達）。放鬆心情，將今個禮拜嘅重點句型「由眼入耳」，聽完早啲休息，為聽日開始嘅 Week 7「可能形與條件形（Phase 2 正式開展）」養精蓄銳！</p>
+<hr>
+<h3>👂 Part 1｜<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/000_850767526222.mp3">シャドーイング</span>（跟讀）特訓（約 15 分鐘）</h3>
+<p>下面 5 句精選咗 Week 6 嘅 5 大高頻核心句型。請去課程網站點擊句子聽真人發音（Keita 老師語音），跟住呢三個步驟練習：</p>
+<div class="num-item"><span class="num">1</span><div class="num-body"><strong>純粹聽 1 次</strong>：唔好望字，聽語調高低同停頓位。</div></div>
+<div class="num-item"><span class="num">2</span><div class="num-body"><strong>望住字朗讀 1 次</strong>：睇住漢字同假名讀出聲。</div></div>
+<div class="num-item"><span class="num">3</span><div class="num-body"><strong>同步跟讀（Shadowing）2 次</strong>：一邊聽、慢半拍同步出聲跟住讀！</div></div>
+<div class="num-item"><span class="num">1</span><div class="num-body"><strong>義務（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/002_c86e96322266.mp3">〜なければなりません</span>）</strong>：<br><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="熱" data-audio="audio/day39/003_3d77c509e34e.mp3">熱<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ねつ</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/007_2f5e0339602d.mp3">がありますから、</span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="今日" data-audio="audio/day39/004_296304f1e5d0.mp3">今日<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">きょう</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="は病院" data-audio="audio/day39/005_b5d2826d8958.mp3">は病院<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">びょういん</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="へ行" data-audio="audio/day39/006_2d5aef4f2443.mp3">へ行<small>（い）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/008_66e9df412b94.mp3">かなければなりません。</span>**<br>（因為發燒，今日一定要去睇醫生。）</div></div>
+<p><em>💡 聽力要點：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/009_b12eb2cc37b9.mp3">留意「行かなければ</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">いかなければ</span>）」節奏連貫流暢，<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/010_ab3f8b618a11.mp3">後面「なりません」</span>語調平穩，整體表達義務與必須。</em></p>
+<div class="num-item"><span class="num">2</span><div class="num-body"><strong>不必（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/011_df05769d29d1.mp3">〜なくてもいいです</span>）</strong>：<br><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="明日は休" data-audio="audio/day39/012_51147c21528d.mp3">明日は休<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">やす</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/015_584c754e88f0.mp3">みですから、</span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="早" data-audio="audio/day39/013_d6cb15b9a680.mp3">早<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">はや</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="く起" data-audio="audio/day39/014_308fdfa05b71.mp3">く起<small>（お）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/016_8faaa033de6d.mp3">きなくてもいいです。</span>**<br>（聽日放假，所以唔使咁早起身。）</div></div>
+<p><em>💡 聽力要點：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/017_6dd4e3924b19.mp3">「起きなくても」接「いいです」</span>，<span class="jp" onclick="speak(this)" title="🔊 撳我讀">聽嗰陣捉住「なくても」</span>呢個否定放鬆嘅語氣，表示毫無負擔。</em></p>
+<div class="num-item"><span class="num">3</span><div class="num-body"><strong>前後時間關係（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/018_78422b2e6513.mp3">〜まえに</span> vs <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/019_e17191f2c551.mp3">〜あとで</span>）</strong>：<br><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="晩ご飯を食" data-audio="audio/day39/023_68c2fa1bcd7d.mp3"><span class="jp" onclick="speak(this)" title="🔊 撳我讀">晩ご飯を</span>食<small>（た）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/024_3d53688a97ae.mp3">べたあとで、</span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="薬" data-audio="audio/day39/021_b0af76f50181.mp3">薬<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">くすり</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="を飲" data-audio="audio/day39/022_c7b3793e12f1.mp3">を飲<small>（の）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/025_58bd646cd308.mp3">みます。</span>**<br>（食完晚飯之後，我會食藥。）</div></div>
+<p><em>💡 聽力要點：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/020_24bbbad0a65a.mp3">注意「食べた」係た</span>形過去完成音，<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/027_465f9e7f337a.mp3">緊接「あとで」</span>，<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/028_ca5af992fada.mp3">同原形辭書形接「まえに」</span>做出鮮明對比。</em></p>
+<div class="num-item"><span class="num">4</span><div class="num-body"><strong>人生經驗（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/029_57a08c4c59ca.mp3">〜たことがある</span>）</strong>：<br><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="日本" data-audio="audio/day39/030_4dbed2e65745.mp3">日本<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">にほん</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="の温泉" data-audio="audio/day39/031_00cc0137ff85.mp3">の温泉<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">おんせん</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="に入" data-audio="audio/day39/032_4e6a4b2813d9.mp3">に入<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">はい</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/033_a35b1881f449.mp3">ったことがありますか。</span>**<br>（你有冇浸過日本嘅溫泉？）</div></div>
+<p><em>💡 聽力要點：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/034_d48451c4c30f.mp3">「入った」為促音便「はいった」</span>，<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/035_95675bfc8082.mp3">「〜たことがありますか</span>⤴」句尾微微上揚，親切詢問對方過去嘅體驗。</em></p>
+<div class="num-item"><span class="num">5</span><div class="num-body"><strong>動作列舉與狀態轉變（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/036_66e865e04191.mp3">〜たり〜たりする</span> ＋ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/037_d0143d4af80d.mp3">〜くなる</span>）</strong>：<br><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="昨日" data-audio="audio/day39/038_23c9bc4d87ec.mp3">昨日<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">きのう</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="は本を読" data-audio="audio/day39/043_5e78fa18f44f.mp3"><span class="jp" onclick="speak(this)" title="🔊 撳我讀">は本を</span>読<small>（よ）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="んだり音楽" data-audio="audio/day39/044_0a97c2181233.mp3"><span class="jp" onclick="speak(this)" title="🔊 撳我讀">んだり</span>音楽<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">おんがく</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="を聴" data-audio="audio/day39/041_63a53042ed1e.mp3">を聴<small>（き）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/045_849eb9dd434a.mp3">いたりして、</span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="楽" data-audio="audio/day39/042_51b63dabf10b.mp3">楽<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">たの</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/046_af5940d85276.mp3">しくなりました。</span>**<br>（尋日我睇下書、聽下歌，心情變得好開心。）</div></div>
+<p><em>💡 聽力要點：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/039_cfc27dd6a09e.mp3">聽解時留意「読んだり」「聴いたり」</span>嘅列舉節奏，<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/042_51b63dabf10b.mp3">以及形容詞詞尾「楽しくなりました」</span>表達狀態變化。</em></p>
+<hr>
+<h3>🎧 Part 2｜情境聽解對話（先聽、後睇、再對譯）</h3>
+<p>情境：鈴木小姐同佐藤先生喺辦公室傾週末活動同埋出差嘅準備。</p>
+<p>&gt; <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="鈴木" data-audio="audio/day39/048_fc998674af8b.mp3">鈴木<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">すずき</span>）</small></span>**：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="佐藤" data-audio="audio/day39/049_8b058ad30e57.mp3">佐藤<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">さとう</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/051_eebf8f537ab0.mp3">さん、</span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="週末" data-audio="audio/day39/050_0b8b39852a77.mp3">週末<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">しゅうまつ</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/052_3ce585ad658d.mp3">はどうでしたか。</span></p>
+<p>&gt; <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="佐藤" data-audio="audio/day39/049_8b058ad30e57.mp3">佐藤<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">さとう</span>）</small></span>**：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="土曜日" data-audio="audio/day39/053_1035252b5b96.mp3">土曜日<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">どようび</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="は部屋" data-audio="audio/day39/054_b5f2e164110e.mp3">は部屋<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">へや</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="の掃除" data-audio="audio/day39/055_421921332acc.mp3">の掃除<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">そうじ</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/059_85b9c6bc50db.mp3">をしたり、</span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="買" data-audio="audio/day39/056_ce3ecb85a67b.mp3">買<small>（か）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="い物" data-audio="audio/day39/057_7d8e2314e809.mp3">い物<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">もの</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="に行" data-audio="audio/day39/006_2d5aef4f2443.mp3">に行<small>（い）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/060_8a4ce62ef2a6.mp3">ったりしました。</span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="日曜日は家" data-audio="audio/day39/058_a6cdd2a00bc8.mp3">日曜日は家<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">いえ</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/061_28e686a8a82a.mp3">でゆっくり休みましたよ。鈴木さんはどこかへ行きましたか。</span></p>
+<p>&gt; <strong>鈴木</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/034_d48451c4c30f.mp3">はい、</span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="友達" data-audio="audio/day39/062_216125769340.mp3">友達<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ともだち</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="と京都" data-audio="audio/day39/063_cda9a889e9b5.mp3">と京都<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">きょうと</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/065_7c69d65004c7.mp3">へ行きました。佐藤さんは京都へ行ったことがありますか。</span></p>
+<p>&gt; <strong>佐藤</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/070_8f57f2f31367.mp3">いいえ、</span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="一度" data-audio="audio/day39/066_637a14ef33ac.mp3">一度<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">いちど</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/006_2d5aef4f2443.mp3">も行ったことがありません。いいですね。ところで、</span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="明日" data-audio="audio/day39/067_2a7733d625c0.mp3">明日<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">あした</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="の出張" data-audio="audio/day39/068_075f70ada8d1.mp3">の出張<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">しゅっちょう</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="の準備" data-audio="audio/day39/069_8985c9da2ddd.mp3">の準備<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">じゅんび</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/072_ae5c2d42d428.mp3">はもう終わりましたか。</span></p>
+<p>&gt; <strong>鈴木</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/079_e6db7d9e7be3.mp3">いいえ、まだです。</span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="会議" data-audio="audio/day39/073_af28aaa0dc0b.mp3">会議<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">かいぎ</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="の資料" data-audio="audio/day39/074_d47e416e2d1d.mp3">の資料<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">しりょう</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="を作" data-audio="audio/day39/075_4cde0dec60ad.mp3">を作<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">つく</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/080_37ba356f53fb.mp3">らなければなりません。でも、</span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="新幹線" data-audio="audio/day39/076_1aefe07267d6.mp3">新幹線<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">しんかんせん</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="の切符" data-audio="audio/day39/077_11d0b073cb1e.mp3">の切符<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">きっぷ</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="はもう買" data-audio="audio/day39/081_da1daf5f9ecb.mp3"><span class="jp" onclick="speak(this)" title="🔊 撳我讀">はもう</span>買<small>（か）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/082_0595de495f20.mp3">いましたから、</span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="心配" data-audio="audio/day39/078_e8efc2a3d653.mp3">心配<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">しんぱい</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/083_63c76203f729.mp3">しなくてもいいですよ。</span></p>
+<p>&gt; <strong>佐藤</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/006_2d5aef4f2443.mp3">そうですか。出張へ行く前に、</span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="スケジュールをもう一度" data-audio="audio/day39/085_a5cd92e0eda0.mp3"><span class="jp" onclick="speak(this)" title="🔊 撳我讀">スケジュールをもう</span>一度<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">いちど</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="確認" data-audio="audio/day39/084_30749e25d5bb.mp3">確認<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">かくにん</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/086_6eb631a27b31.mp3">したほうがいいですね。</span></p>
+<p>&gt; <strong>鈴木</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/087_30c1d550e37f.mp3">はい、資料を作ったあとで、確認します！</span></p>
+<p><strong>廣東話對譯</strong>：</p>
+<ul>
+<li>鈴木：佐藤先生，你週末過成點呀？</li>
+<li>佐藤：星期六我打掃下間房、去買下嘢。星期日就喺屋企好好休息。鈴木小姐你有冇去邊度呀？</li>
+<li>鈴木：有呀，我同朋友去咗京都。佐藤先生你去過京都未呀？</li>
+<li>佐藤：未呀，一次都未去過。真係好呢。順便問下，聽日出差嘅準備搞掂未呀？</li>
+<li>鈴木：未呀，仲未。我一定要整好會議資料先。不過新幹線車飛已經買咗，所以唔使擔心喇。</li>
+<li>佐藤：係噉呀。出發出差之前，最好再確認一次日程表喎。</li>
+<li>鈴木：好，整完資料之後，我會確認㗎喇！</li>
+</ul>
+<p><strong>耳仔聽力要點（聽解技巧拆解）</strong>：</p>
+<ul>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/088_4a40ccbff436.mp3">「〜たり〜たりしました」</span></strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/006_2d5aef4f2443.mp3">佐藤用「掃除をしたり、買い物に行ったりしました」</span>列舉星期六嘅行程。</li>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/089_0c325180e25f.mp3">「〜たことがありますか」與「一度も〜たことがありません」</span></strong>：鈴木詢問人生經歷，佐藤表示「一次都未去過」。</li>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/002_c86e96322266.mp3">「〜なければなりません」</span>vs<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/090_d2529bf02251.mp3">「〜なくてもいい」</span></strong>：鈴木對比兩件事——<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/091_a97b3a49af2b.mp3">「資料を作らなければなりません」</span>（資料必須整）<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/092_62d147b10852.mp3">與「心配しなくてもいい」</span>（唔使擔心）。</li>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/018_78422b2e6513.mp3">「〜まえに」與「〜あとで」</span>之對照</strong>：佐藤提醒出發之前（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/094_c0aad0031475.mp3">行く前に</span>），鈴木回答做完資料之後（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/095_70dbe64a84fa.mp3">作ったあとで</span>）。</li>
+</ul>
+<hr>
+<h3>🧠 Part 3｜聽力實戰小挑戰（3 題｜文末附答案）</h3>
+<p>唔好睇答案住！請遮住文字，或者先用耳朵仔細聽網站音檔，嘗試聽出以下 3 個問題嘅答案：</p>
+<p><strong>① 題目一（經驗判斷）</strong></p>
+<p><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/096_f07788091e94.mp3">佐藤さんは京都へ行ったことがありますか。</span></p>
+<div class="num-item"><span class="num">1</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/097_507693ae0718.mp3">はい、何度も行ったことがあります。</span></div></div>
+<div class="num-item"><span class="num">2</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/098_7fa68cb579c7.mp3">はい、友達と一度だけ行きました。</span></div></div>
+<div class="num-item"><span class="num">3</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/099_5407d23d40f9.mp3">いいえ、一度も行ったことがありません。</span></div></div>
+<p><strong>② 題目二（義務與細節判斷）</strong></p>
+<p><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/100_883a339ce1e0.mp3">鈴木さんはこれから何をしなければなりませんか。</span></p>
+<div class="num-item"><span class="num">1</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/101_1e4d76e48637.mp3">会議の資料を作らなければなりません。</span></div></div>
+<div class="num-item"><span class="num">2</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/102_aa0dcfe12961.mp3">新幹線の切符を買わなければなりません。</span></div></div>
+<div class="num-item"><span class="num">3</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/103_7ead4fa2efa9.mp3">部屋の掃除をしなければなりません。</span></div></div>
+<p><strong>③ 題目三（順序判斷）</strong></p>
+<p><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/104_5a17d5b97619.mp3">鈴木さんはいつ出張のスケジュールを確認しますか。</span></p>
+<div class="num-item"><span class="num">1</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/105_fd5765385647.mp3">今すぐ確認します。</span></div></div>
+<div class="num-item"><span class="num">2</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/106_aa7d1ac8621c.mp3">会議の資料を作ったあとで確認します。</span></div></div>
+<div class="num-item"><span class="num">3</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/107_b632bec9b5bb.mp3">出張から帰ったあとで確認します。</span></div></div>
+<hr>
+<h3>📥 答案與解析</h3>
+<ul>
+<li><strong>① 正確答案：3（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/108_914c9d408c26.mp3">いいえ、一度も行ったことがありません</span>）</strong></li>
+<li><strong>聽力陷阱解析</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/109_baa19b36534d.mp3">鈴木問佐藤「京都へ行ったことがありますか」</span>，<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/110_ee6bdb4a7ecf.mp3">佐藤清楚回答「いいえ、一度も行ったことがありません」</span>，表示從未去過，故選 3。</li>
+<li><strong>② 正確答案：1（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/111_12555977ba26.mp3">会議の資料を作らなければなりません</span>）</strong></li>
+<li><strong>聽力陷阱解析</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/112_46fdb6f63f36.mp3">鈴木提到「新幹線の切符はもう買いました」</span>（車票已經買咗），因此不需要再買；<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/113_ea8c31748e64.mp3">而「部屋の掃除」是佐藤星期六做的事。鈴木明確說「会議の資料を作らなければなりません」</span>，故選 1。</li>
+<li><strong>③ 正確答案：2（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/114_7f822e54d9a6.mp3">会議の資料を作ったあとで確認します</span>）</strong></li>
+<li><strong>聽力陷阱解析</strong>：佐藤提醒出發前要確認日程，<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/115_1078fa016a6d.mp3">鈴木回答「資料を作ったあとで、確認します」</span>（整完資料之後確認），精準考核「た形 ＋ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/019_e17191f2c551.mp3">あとで」</span>的順序理解，故選 2。</li>
+</ul>
+<hr>
+<p>📋 <strong>今日聽力小結</strong>：</p>
+<p>今日嘅特訓將 Week 6 動詞普通形（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/117_7c603f77ddb3.mp3">ない形・辭書形・た</span>形）嘅核心用法全數融入實際對話。聽力嘅關鍵在於捉住動詞詞尾嘅瞬間變化，分清「做緊、做咗、未做、要做、唔使做」！</p>
+<p>聽日（星期一）我哋將正式邁入 <strong>Phase 2（Day 43–91）：N4 文法核心</strong>！第一站我哋會挑戰動詞四大變形之一嘅<strong>「可能形」（表達能力與潛能）</strong>。今晚好好放鬆休息，<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day39/118_96d018df4cc7.mp3">お疲れ様でした！</span>😴</p>
+<a class="back" href="index.html">← 返回目錄</a>
+</main>
+<script>
+var _audio=null, _last=null;
+function speak(el){
+  try{
+    var mp3=el.dataset.audio;
+    if(mp3){
+      if(_audio && _last===el && !_audio.paused){_audio.pause();_audio.currentTime=0;el.classList.remove('speaking');return;}
+      if(_audio){_audio.pause();}
+      _audio=new Audio(mp3);_last=el;
+      el.classList.add('speaking');
+      _audio.onended=function(){el.classList.remove('speaking');};
+      _audio.play();
+      return;
+    }
+    var t=(el.dataset.speak||el.textContent||'').replace(/\s+/g,' ').trim();
+    if(!('speechSynthesis' in window))return;
+    var u=new SpeechSynthesisUtterance(t);u.lang='ja-JP';u.rate=0.85;
+    speechSynthesis.cancel();speechSynthesis.speak(u);
+    el.classList.add('speaking');
+    u.onend=function(){el.classList.remove('speaking');};
+  }catch(e){}
+}
+</script>
+</body>
+</html>
