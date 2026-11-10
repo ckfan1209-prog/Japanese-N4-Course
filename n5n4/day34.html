@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#c9403b">
+<title>Day 34 ｜ N5→N4 九十二日課程</title>
+<style>
+:root{
+  --bg:#faf7f2; --card:#ffffff; --text:#2b2620; --muted:#97907f;
+  --primary:#c9403b; --primary-soft:#fdeeee; --primary-deep:#a93229;
+  --radius:18px;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{font-family:-apple-system,"PingFang TC","Noto Sans TC","Hiragino Sans",sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+header{background:linear-gradient(140deg,#c9403b 0%,#d9534a 55%,#e07a3f 100%);color:#fff;padding:2.2rem 1.2rem 1.6rem;border-radius:0 0 28px 28px}
+.header-row{display:flex;justify-content:space-between;align-items:center}
+header h1{font-size:1.45rem;font-weight:800;letter-spacing:.5px}
+header .sub{opacity:.88;font-size:.82rem;margin-top:.3rem}
+.ring{width:74px;height:74px;border-radius:50%;background:conic-gradient(#fff calc(var(--p)*1%),rgba(255,255,255,.25) 0);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ring-in{width:58px;height:58px;border-radius:50%;background:#b23a34;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.ring-in b{font-size:1.05rem}.ring-in span{font-size:.55rem;opacity:.8}
+.stats{display:flex;gap:.6rem;margin-top:1.1rem}
+.stat{flex:1;background:rgba(255,255,255,.16);backdrop-filter:blur(6px);border-radius:14px;padding:.6rem .8rem}
+.stat b{font-size:1.15rem;display:block}.stat span{font-size:.68rem;opacity:.85}
+main{max-width:600px;margin:0 auto;padding:1rem .9rem 5rem}
+.sec-title{font-size:1rem;font-weight:800;margin:1.4rem 0 .7rem;display:flex;align-items:center;gap:.45rem}
+.sec-title .dot{width:9px;height:9px;border-radius:50%;background:var(--primary)}
+.card{background:var(--card);border-radius:var(--radius);padding:1rem 1.05rem;margin-bottom:.85rem;box-shadow:0 1px 3px rgba(43,38,32,.06),0 4px 14px rgba(43,38,32,.05)}
+.jp{cursor:pointer;border-bottom:1.5px dotted #d98a85;transition:background .15s;border-radius:4px;padding:0 1px}
+.jp:active,.jp.speaking{background:var(--primary-soft)}
+.jp.speaking{border-bottom:2px solid var(--primary)}
+.rate-ctl{position:sticky;top:0;z-index:50;display:flex;gap:.4rem;align-items:center;justify-content:center;
+  background:rgba(255,255,255,.94);padding:.45rem;border-radius:0 0 14px 14px;
+  box-shadow:0 2px 12px rgba(0,0,0,.06);font-size:.82rem;color:var(--muted);margin:0 -.5rem .6rem}
+.rate-ctl .rate-btn{border:1px solid #e8ddd2;background:#fff;color:var(--muted);border-radius:999px;
+  padding:.28rem .8rem;font-size:.82rem;cursor:pointer}
+.rate-ctl .rate-btn.active{background:var(--primary);border-color:var(--primary);color:#fff;font-weight:700}
+.reading{color:var(--muted);font-size:.85em}
+.vocab-num{display:inline-flex;width:1.7rem;height:1.7rem;border-radius:50%;background:var(--primary-soft);color:var(--primary-deep);font-weight:800;font-size:.85rem;align-items:center;justify-content:center;margin-right:.5rem}
+.vocab-zh{color:var(--primary-deep);font-weight:700}
+.vocab-ex{margin:.35rem 0 0 2.2rem;font-size:.92rem;color:#5b544a}
+.pattern{background:#2b2620;color:#f5e9d8;border-radius:12px;padding:.7rem .9rem;font-size:.95rem;margin:.5rem 0;font-family:inherit}
+.g-title{font-weight:800;font-size:1.02rem;color:var(--primary-deep)}
+.g-explain{margin:.4rem 0}
+.g-ex{margin:.3rem 0 .3rem 1rem}
+.practice{background:var(--primary-soft);border-radius:12px;padding:.7rem .9rem;margin-top:.6rem;font-size:.92rem}
+.practice b{color:var(--primary-deep)}
+.practice .ans{color:var(--muted);font-size:.85rem;margin-top:.25rem}
+.kanji-row{display:flex;gap:.8rem;align-items:baseline;padding:.45rem 0;border-bottom:1px dashed #e8e0d2}
+.kanji-row:last-child{border-bottom:none}
+.kanji-ch{font-size:1.5rem;font-weight:800;min-width:2.2rem;text-align:center}
+.kanji-rd{font-size:.82rem;color:var(--muted)}
+.kanji-wd{font-size:.9rem}
+.task{background:var(--card);border-radius:var(--radius);padding:1rem 1.05rem;margin-bottom:.85rem;box-shadow:0 1px 3px rgba(43,38,32,.06)}
+.task b{color:var(--primary-deep)}
+.nav{display:flex;justify-content:space-between;gap:.7rem;margin-top:1.4rem}
+.nav a{flex:1;text-align:center;background:var(--card);border-radius:14px;padding:.8rem;text-decoration:none;color:var(--primary-deep);font-weight:700;box-shadow:0 1px 3px rgba(43,38,32,.08)}
+.nav a.disabled{opacity:.35;pointer-events:none}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
+@media(min-width:480px){.grid{grid-template-columns:1fr 1fr 1fr}}
+.dcard{background:var(--card);border-radius:var(--radius);padding:.95rem 1rem;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(43,38,32,.06),0 4px 14px rgba(43,38,32,.05);transition:transform .12s;display:block}
+.dcard:active{transform:scale(.96)}
+.dcard-top{display:flex;justify-content:space-between;align-items:baseline}
+.dcard-day{font-weight:800;font-size:1.05rem;color:var(--primary)}
+.dcard-wd{font-size:.75rem;color:var(--muted)}
+.dcard-date{font-size:.72rem;color:var(--muted);margin-top:.15rem}
+.dcard-theme{font-size:.76rem;color:#5b544a;margin-top:.35rem;line-height:1.35}
+.chip{display:inline-block;font-size:.64rem;padding:.18rem .55rem;border-radius:99px;margin-top:.5rem;font-weight:600;background:var(--primary-soft);color:var(--primary-deep)}
+footer{text-align:center;padding:1.5rem;color:var(--muted);font-size:.72rem}
+.back{display:inline-block;color:#fff;opacity:.9;text-decoration:none;font-size:.85rem;margin-bottom:.6rem}
+.day-meta{opacity:.88;font-size:.82rem;margin-top:.3rem}
+h2.lesson-h{font-size:1.25rem;font-weight:800;margin-bottom:.2rem}
+</style>
+</head>
+<body>
+<header>
+  <a class="back" href="index.html">← 目錄</a>
+  <div class="header-row">
+    <div>
+      <h1>📘 Day 34 / 92</h1>
+      <div class="day-meta">2026-11-10（二）｜N5期・Week 5</div>
+    </div>
+  </div>
+  <div class="sub" style="margin-top:.5rem;font-size:.95rem;font-weight:700">程度副詞（とても・あまり〜ない…）</div>
+</header>
+<main>
+  <div class="rate-ctl">🔊 語速
+    <button class="rate-btn" data-rate="0.7" onclick="setRate(0.7)">0.7x 慢</button>
+    <button class="rate-btn" data-rate="1" onclick="setRate(1)">1.0x 標準</button>
+    <button class="rate-btn" data-rate="1.25" onclick="setRate(1.25)">1.25x 快</button>
+  </div>
+  <div class="card">🔊 撳任何 <span class="jp" onclick="speak(this)" data-speak="日文">日文</span>（虛線底線）即播真人錄音，再撳一下停止</div>
+  <div class="card">尋日學識比較邊樣更好，今日學點樣講「有幾多」——好熱、好眼瞓、唔係好有趣。程度副詞令形容詞更精準。</div>
+  <div class="sec-title"><span class="dot"></span>📖 單字（12個）</div><div class="card"><span class="vocab-num">1</span><span class="jp" data-speak="涼しい" data-audio="audio/day34/w01.mp3" onclick="speak(this)" title="🔊 撳我讀出">涼しい</span><span class="reading">（すずしい）</span> <span class="vocab-zh">— 涼爽</span><div class="vocab-ex">例：<span class="jp" data-speak="今日はとても涼しいです。" data-audio="audio/day34/s01.mp3" onclick="speak(this)" title="🔊 撳我讀出">今日はとても涼しいです。</span><br>（今日好涼爽。）</div></div>
+<div class="card"><span class="vocab-num">2</span><span class="jp" data-speak="痛い" data-audio="audio/day34/w02.mp3" onclick="speak(this)" title="🔊 撳我讀出">痛い</span><span class="reading">（いたい）</span> <span class="vocab-zh">— 痛</span><div class="vocab-ex">例：<span class="jp" data-speak="足がとても痛いです。" data-audio="audio/day34/s02.mp3" onclick="speak(this)" title="🔊 撳我讀出">足がとても痛いです。</span><br>（隻腳好痛。）</div></div>
+<div class="card"><span class="vocab-num">3</span><span class="jp" data-speak="眠い" data-audio="audio/day34/w03.mp3" onclick="speak(this)" title="🔊 撳我讀出">眠い</span><span class="reading">（ねむい）</span> <span class="vocab-zh">— 眼瞓</span><div class="vocab-ex">例：<span class="jp" data-speak="私はとても眠いです。" data-audio="audio/day34/s03.mp3" onclick="speak(this)" title="🔊 撳我讀出">私はとても眠いです。</span><br>（我好眼瞓。）</div></div>
+<div class="card"><span class="vocab-num">4</span><span class="jp" data-speak="悲しい" data-audio="audio/day34/w04.mp3" onclick="speak(this)" title="🔊 撳我讀出">悲しい</span><span class="reading">（かなしい）</span> <span class="vocab-zh">— 傷心</span><div class="vocab-ex">例：<span class="jp" data-speak="その話はとても悲しいです。" data-audio="audio/day34/s04.mp3" onclick="speak(this)" title="🔊 撳我讀出">その話はとても悲しいです。</span><br>（嗰個故事好傷心。）</div></div>
+<div class="card"><span class="vocab-num">5</span><span class="jp" data-speak="美しい" data-audio="audio/day34/w05.mp3" onclick="speak(this)" title="🔊 撳我讀出">美しい</span><span class="reading">（うつくしい）</span> <span class="vocab-zh">— 美麗</span><div class="vocab-ex">例：<span class="jp" data-speak="この景色はとても美しいです。" data-audio="audio/day34/s05.mp3" onclick="speak(this)" title="🔊 撳我讀出">この景色はとても美しいです。</span><br>（呢個景色好靚。）</div></div>
+<div class="card"><span class="vocab-num">6</span><span class="jp" data-speak="汚い" data-audio="audio/day34/w06.mp3" onclick="speak(this)" title="🔊 撳我讀出">汚い</span><span class="reading">（きたない）</span> <span class="vocab-zh">— 污糟</span><div class="vocab-ex">例：<span class="jp" data-speak="この部屋はとても汚いです。" data-audio="audio/day34/s06.mp3" onclick="speak(this)" title="🔊 撳我讀出">この部屋はとても汚いです。</span><br>（呢間房好污糟。）</div></div>
+<div class="card"><span class="vocab-num">7</span><span class="jp" data-speak="臭い" data-audio="audio/day34/w07.mp3" onclick="speak(this)" title="🔊 撳我讀出">臭い</span><span class="reading">（くさい）</span> <span class="vocab-zh">— 臭</span><div class="vocab-ex">例：<span class="jp" data-speak="この魚はちょっと臭いです。" data-audio="audio/day34/s07.mp3" onclick="speak(this)" title="🔊 撳我讀出">この魚はちょっと臭いです。</span><br>（呢條魚有啲臭。）</div></div>
+<div class="card"><span class="vocab-num">8</span><span class="jp" data-speak="正しい" data-audio="audio/day34/w08.mp3" onclick="speak(this)" title="🔊 撳我讀出">正しい</span><span class="reading">（ただしい）</span> <span class="vocab-zh">— 正確</span><div class="vocab-ex">例：<span class="jp" data-speak="この答えは正しいです。" data-audio="audio/day34/s08.mp3" onclick="speak(this)" title="🔊 撳我讀出">この答えは正しいです。</span><br>（呢個答案係正確嘅。）</div></div>
+<div class="card"><span class="vocab-num">9</span><span class="jp" data-speak="偉い" data-audio="audio/day34/w09.mp3" onclick="speak(this)" title="🔊 撳我讀出">偉い</span><span class="reading">（えらい）</span> <span class="vocab-zh">— 了不起</span><div class="vocab-ex">例：<span class="jp" data-speak="田中さんはとても偉いです。" data-audio="audio/day34/s09.mp3" onclick="speak(this)" title="🔊 撳我讀出">田中さんはとても偉いです。</span><br>（田中先生好叻。）</div></div>
+<div class="card"><span class="vocab-num">10</span><span class="jp" data-speak="恥ずかしい" data-audio="audio/day34/w10.mp3" onclick="speak(this)" title="🔊 撳我讀出">恥ずかしい</span><span class="reading">（はずかしい）</span> <span class="vocab-zh">— 怕醜</span><div class="vocab-ex">例：<span class="jp" data-speak="私はちょっと恥ずかしいです。" data-audio="audio/day34/s10.mp3" onclick="speak(this)" title="🔊 撳我讀出">私はちょっと恥ずかしいです。</span><br>（我有啲怕醜。）</div></div>
+<div class="card"><span class="vocab-num">11</span><span class="jp" data-speak="うるさい" data-audio="audio/day34/w11.mp3" onclick="speak(this)" title="🔊 撳我讀出">うるさい</span><span class="reading">（うるさい）</span> <span class="vocab-zh">— 嘈</span><div class="vocab-ex">例：<span class="jp" data-speak="この町はとてもうるさいです。" data-audio="audio/day34/s11.mp3" onclick="speak(this)" title="🔊 撳我讀出">この町はとてもうるさいです。</span><br>（呢個城鎮好嘈。）</div></div>
+<div class="card"><span class="vocab-num">12</span><span class="jp" data-speak="危ない" data-audio="audio/day34/w12.mp3" onclick="speak(this)" title="🔊 撳我讀出">危ない</span><span class="reading">（あぶない）</span> <span class="vocab-zh">— 危險</span><div class="vocab-ex">例：<span class="jp" data-speak="この道はとても危ないです。" data-audio="audio/day34/s12.mp3" onclick="speak(this)" title="🔊 撳我讀出">この道はとても危ないです。</span><br>（呢條路好危險。）</div></div><div class="sec-title"><span class="dot"></span>✍️ 文法（2點）</div><div class="card"><div class="g-title">とても・すごく・ちょっと（程度副詞＋肯定：很…／有啲…）</div><div class="pattern">接續：とても／すごく／ちょっと ＋ 形容詞です</div><div class="g-explain">程度副詞放喺形容詞前面，講程度有幾多。「とても」＝很、非常；「すごく」係口語，意思同とても差唔多但語氣更強；「ちょっと」＝有啲、少少。注意：「とても」只可以配肯定句，唔可以配否定句（否定要用「あまり〜ない」，見下一點）。</div><div class="g-ex">例：<span class="jp" data-speak="今日はとても暑いです。" data-audio="audio/day34/g1e1.mp3" onclick="speak(this)" title="🔊 撳我讀出">今日はとても暑いです。</span><br>（今日好熱。）</div><div class="g-ex">例：<span class="jp" data-speak="この映画はすごくおもしろいです。" data-audio="audio/day34/g1e2.mp3" onclick="speak(this)" title="🔊 撳我讀出">この映画はすごくおもしろいです。</span><br>（呢套電影非常有趣。）</div><div class="practice"><b>✏️ 造句練習：</b>用「とても」造句：講今日好熱。<div class="ans">參考答案：（例）今日はとても暑いです。</div></div></div>
+<div class="card"><div class="g-title">あまり〜ない・全然〜ない（程度副詞＋否定：唔係好…／完全唔…）</div><div class="pattern">接續：あまり／全然 ＋ 形容詞（ない形）です</div><div class="g-explain">「あまり」同「全然」一定要配否定形。「あまり〜ない」＝唔係好…（程度低）；「全然〜ない」＝完全唔…、一點都唔…（程度係零）。兩個都唔可以配肯定句，唔可以講「あまりおもしろいです」。</div><div class="g-ex">例：<span class="jp" data-speak="この本はあまりおもしろくないです。" data-audio="audio/day34/g2e1.mp3" onclick="speak(this)" title="🔊 撳我讀出">この本はあまりおもしろくないです。</span><br>（呢本書唔係好有趣。）</div><div class="g-ex">例：<span class="jp" data-speak="私は全然眠くないです。" data-audio="audio/day34/g2e2.mp3" onclick="speak(this)" title="🔊 撳我讀出">私は全然眠くないです。</span><br>（我完全唔眼瞓。）</div><div class="practice"><b>✏️ 造句練習：</b>用「あまり〜ない」造句：講呢本書唔係好有趣。<div class="ans">參考答案：（例）この本はあまりおもしろくないです。</div></div></div><div class="sec-title"><span class="dot"></span>🈴 漢字</div><div class="card"><div class="kanji-row"><span class="kanji-ch"><span class="jp" data-speak="中" onclick="speak(this)" title="🔊 撳我讀出">中</span></span><span class="kanji-rd">音：ちゅう／訓：なか</span><span class="kanji-wd">中国（ちゅうごく）、中心（ちゅうしん）</span></div>
+<div class="kanji-row"><span class="kanji-ch"><span class="jp" data-speak="新" onclick="speak(this)" title="🔊 撳我讀出">新</span></span><span class="kanji-rd">音：しん／訓：あたら</span><span class="kanji-wd">新聞（しんぶん）、新年（しんねん）</span></div>
+<div class="kanji-row"><span class="kanji-ch"><span class="jp" data-speak="安" onclick="speak(this)" title="🔊 撳我讀出">安</span></span><span class="kanji-rd">音：あん／訓：やす</span><span class="kanji-wd">安心（あんしん）、安全（あんぜん）</span></div></div><div class="sec-title"><span class="dot"></span>👂 聽讀任務</div><div class="task"><b>讀：</b>12 個單字各大聲讀 3 次，再用「とても＋形容詞です」寫 3 句（例如：今日はとても暑いです）、用「あまり〜ないです」寫 3 句（例如：この本はあまりおもしろくないです）。</div><div class="task"><b>聽：</b>YouTube 搜尋「日本語 とても あまり 全然」，聽講解同例句，聽到能夠分辨肯定同否定嘅程度副詞為止。</div>
+  <div class="card">💪 識得講程度，形容就可以準確好多——聽日係 Week 5 週測驗，溫習返形容詞同比較，一齊攞滿分！</div>
+  <div class="nav"><a href="day33.html">← Day 33</a><a href="index.html">目錄</a><a class="disabled">聽日見 →</a></div>
+</main>
+<footer>每晚 21:00 自動更新 ｜ Pison自編課程</footer>
+<script>
+var currentAudio=null, currentEl=null;
+var playRate=1;
+try{ var saved=parseFloat(localStorage.getItem('n5n4_rate')); if(saved>0) playRate=saved; }catch(e){}
+function setRate(r){
+  playRate=r;
+  try{ localStorage.setItem('n5n4_rate',String(r)); }catch(e){}
+  var btns=document.querySelectorAll('.rate-btn');
+  for(var i=0;i<btns.length;i++){ btns[i].classList.toggle('active', parseFloat(btns[i].dataset.rate)===r); }
+  stopAll();
+}
+function stopAll(){
+  try{ if('speechSynthesis' in window) speechSynthesis.cancel(); }catch(e){}
+  if(currentAudio){ try{ currentAudio.pause(); }catch(e){} currentAudio=null; }
+  if(currentEl){ currentEl.classList.remove('speaking'); currentEl=null; }
+}
+/* 日文語音選擇：後備朗讀一定要用日文聲，唔可以靜靜跌去英文聲 */
+var jaVoice=null;
+function loadJaVoice(){
+  try{
+    var vs=speechSynthesis.getVoices()||[];
+    var i, lg;
+    for(i=0;i<vs.length;i++){ lg=String(vs[i].lang||'').toLowerCase(); if(lg.indexOf('ja')===0){ jaVoice=vs[i]; return; } }
+    for(i=0;i<vs.length;i++){ if(/kyoko|otoya|japan/i.test(String(vs[i].name||''))){ jaVoice=vs[i]; return; } }
+  }catch(e){}
+}
+try{ if('speechSynthesis' in window){ loadJaVoice(); speechSynthesis.onvoiceschanged=loadJaVoice; } }catch(e){}
+function speakFallback(el){
+  try{
+    if(!('speechSynthesis' in window)){alert('你個瀏覽器唔支援語音朗讀');return;}
+    var t=(el.dataset.speak||el.textContent||'').replace(/\s+/g,' ').trim();
+    if(!t) return;
+    try{ speechSynthesis.cancel(); }catch(e){}
+    var startSpeak=function(){
+      var u=new SpeechSynthesisUtterance(t);
+      u.lang='ja-JP'; u.rate=0.85;
+      if(jaVoice){ u.voice=jaVoice; }
+      currentEl=el; el.classList.add('speaking');
+      var done=function(){ el.classList.remove('speaking'); if(currentEl===el) currentEl=null; };
+      u.onend=done; u.onerror=done;
+      speechSynthesis.speak(u);
+    };
+    var restoreHandler=function(){ try{ speechSynthesis.onvoiceschanged=loadJaVoice; }catch(e){} };
+    loadJaVoice();
+    if(jaVoice){ startSpeak(); return; }
+    /* iOS 嘅 voices 係異步載入，等一等；等極都冇日文聲就唔讀（唔好用英文聲亂讀） */
+    var settled=false;
+    var noVoice=function(){
+      if(settled) return; settled=true; restoreHandler();
+      alert('錄音載入唔到，部機又搵唔到日文語音——請檢查網絡之後再撳一次');
+    };
+    var timer=setTimeout(function(){
+      if(settled) return;
+      loadJaVoice();
+      settled=true; restoreHandler();
+      if(jaVoice){ startSpeak(); } else { noVoice(); }
+    },1500);
+    try{
+      speechSynthesis.onvoiceschanged=function(){
+        if(settled) return;
+        loadJaVoice();
+        settled=true; clearTimeout(timer); restoreHandler();
+        if(jaVoice){ startSpeak(); } else { noVoice(); }
+      };
+    }catch(e){ clearTimeout(timer); noVoice(); }
+  }catch(e){}
+}
+function speak(el){
+  try{
+    if(currentEl===el){ stopAll(); return; }
+    stopAll();
+    var au=el.dataset.audio;
+    if(au){
+      var fellBack=false;
+      var doFallback=function(){ if(fellBack) return; fellBack=true; stopAll(); speakFallback(el); };
+      var a=new Audio(au);
+      try{ a.playbackRate=playRate; }catch(e){}
+      currentAudio=a; currentEl=el; el.classList.add('speaking');
+      a.onended=function(){ stopAll(); };
+      a.onerror=doFallback;
+      var p=a.play();
+      if(p&&p.catch){ p.catch(doFallback); }
+      return;
+    }
+    speakFallback(el);
+  }catch(e){}
+}
+try{ setRate(playRate); }catch(e){}
+</script>
+</body>
+</html>
