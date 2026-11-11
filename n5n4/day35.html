@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#c9403b">
+<title>Day 35 ｜ N5→N4 九十二日課程</title>
+<style>
+:root{
+  --bg:#faf7f2; --card:#ffffff; --text:#2b2620; --muted:#97907f;
+  --primary:#c9403b; --primary-soft:#fdeeee; --primary-deep:#a93229;
+  --radius:18px;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{font-family:-apple-system,"PingFang TC","Noto Sans TC","Hiragino Sans",sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+header{background:linear-gradient(140deg,#c9403b 0%,#d9534a 55%,#e07a3f 100%);color:#fff;padding:2.2rem 1.2rem 1.6rem;border-radius:0 0 28px 28px}
+.header-row{display:flex;justify-content:space-between;align-items:center}
+header h1{font-size:1.45rem;font-weight:800;letter-spacing:.5px}
+header .sub{opacity:.88;font-size:.82rem;margin-top:.3rem}
+.ring{width:74px;height:74px;border-radius:50%;background:conic-gradient(#fff calc(var(--p)*1%),rgba(255,255,255,.25) 0);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ring-in{width:58px;height:58px;border-radius:50%;background:#b23a34;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.ring-in b{font-size:1.05rem}.ring-in span{font-size:.55rem;opacity:.8}
+.stats{display:flex;gap:.6rem;margin-top:1.1rem}
+.stat{flex:1;background:rgba(255,255,255,.16);backdrop-filter:blur(6px);border-radius:14px;padding:.6rem .8rem}
+.stat b{font-size:1.15rem;display:block}.stat span{font-size:.68rem;opacity:.85}
+main{max-width:600px;margin:0 auto;padding:1rem .9rem 5rem}
+.sec-title{font-size:1rem;font-weight:800;margin:1.4rem 0 .7rem;display:flex;align-items:center;gap:.45rem}
+.sec-title .dot{width:9px;height:9px;border-radius:50%;background:var(--primary)}
+.card{background:var(--card);border-radius:var(--radius);padding:1rem 1.05rem;margin-bottom:.85rem;box-shadow:0 1px 3px rgba(43,38,32,.06),0 4px 14px rgba(43,38,32,.05)}
+.jp{cursor:pointer;border-bottom:1.5px dotted #d98a85;transition:background .15s;border-radius:4px;padding:0 1px}
+.jp:active,.jp.speaking{background:var(--primary-soft)}
+.jp.speaking{border-bottom:2px solid var(--primary)}
+.rate-ctl{position:sticky;top:0;z-index:50;display:flex;gap:.4rem;align-items:center;justify-content:center;
+  background:rgba(255,255,255,.94);padding:.45rem;border-radius:0 0 14px 14px;
+  box-shadow:0 2px 12px rgba(0,0,0,.06);font-size:.82rem;color:var(--muted);margin:0 -.5rem .6rem}
+.rate-ctl .rate-btn{border:1px solid #e8ddd2;background:#fff;color:var(--muted);border-radius:999px;
+  padding:.28rem .8rem;font-size:.82rem;cursor:pointer}
+.rate-ctl .rate-btn.active{background:var(--primary);border-color:var(--primary);color:#fff;font-weight:700}
+.reading{color:var(--muted);font-size:.85em}
+.vocab-num{display:inline-flex;width:1.7rem;height:1.7rem;border-radius:50%;background:var(--primary-soft);color:var(--primary-deep);font-weight:800;font-size:.85rem;align-items:center;justify-content:center;margin-right:.5rem}
+.vocab-zh{color:var(--primary-deep);font-weight:700}
+.vocab-ex{margin:.35rem 0 0 2.2rem;font-size:.92rem;color:#5b544a}
+.pattern{background:#2b2620;color:#f5e9d8;border-radius:12px;padding:.7rem .9rem;font-size:.95rem;margin:.5rem 0;font-family:inherit}
+.g-title{font-weight:800;font-size:1.02rem;color:var(--primary-deep)}
+.g-explain{margin:.4rem 0}
+.g-ex{margin:.3rem 0 .3rem 1rem}
+.practice{background:var(--primary-soft);border-radius:12px;padding:.7rem .9rem;margin-top:.6rem;font-size:.92rem}
+.practice b{color:var(--primary-deep)}
+.practice .ans{color:var(--muted);font-size:.85rem;margin-top:.25rem}
+.kanji-row{display:flex;gap:.8rem;align-items:baseline;padding:.45rem 0;border-bottom:1px dashed #e8e0d2}
+.kanji-row:last-child{border-bottom:none}
+.kanji-ch{font-size:1.5rem;font-weight:800;min-width:2.2rem;text-align:center}
+.kanji-rd{font-size:.82rem;color:var(--muted)}
+.kanji-wd{font-size:.9rem}
+.task{background:var(--card);border-radius:var(--radius);padding:1rem 1.05rem;margin-bottom:.85rem;box-shadow:0 1px 3px rgba(43,38,32,.06)}
+.task b{color:var(--primary-deep)}
+.nav{display:flex;justify-content:space-between;gap:.7rem;margin-top:1.4rem}
+.nav a{flex:1;text-align:center;background:var(--card);border-radius:14px;padding:.8rem;text-decoration:none;color:var(--primary-deep);font-weight:700;box-shadow:0 1px 3px rgba(43,38,32,.08)}
+.nav a.disabled{opacity:.35;pointer-events:none}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
+@media(min-width:480px){.grid{grid-template-columns:1fr 1fr 1fr}}
+.dcard{background:var(--card);border-radius:var(--radius);padding:.95rem 1rem;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(43,38,32,.06),0 4px 14px rgba(43,38,32,.05);transition:transform .12s;display:block}
+.dcard:active{transform:scale(.96)}
+.dcard-top{display:flex;justify-content:space-between;align-items:baseline}
+.dcard-day{font-weight:800;font-size:1.05rem;color:var(--primary)}
+.dcard-wd{font-size:.75rem;color:var(--muted)}
+.dcard-date{font-size:.72rem;color:var(--muted);margin-top:.15rem}
+.dcard-theme{font-size:.76rem;color:#5b544a;margin-top:.35rem;line-height:1.35}
+.chip{display:inline-block;font-size:.64rem;padding:.18rem .55rem;border-radius:99px;margin-top:.5rem;font-weight:600;background:var(--primary-soft);color:var(--primary-deep)}
+footer{text-align:center;padding:1.5rem;color:var(--muted);font-size:.72rem}
+.back{display:inline-block;color:#fff;opacity:.9;text-decoration:none;font-size:.85rem;margin-bottom:.6rem}
+.day-meta{opacity:.88;font-size:.82rem;margin-top:.3rem}
+h2.lesson-h{font-size:1.25rem;font-weight:800;margin-bottom:.2rem}
+</style>
+</head>
+<body>
+<header>
+  <a class="back" href="index.html">← 目錄</a>
+  <div class="header-row">
+    <div>
+      <h1>📘 Day 35 / 92</h1>
+      <div class="day-meta">2026-11-11（三）｜N5期・Week 5</div>
+    </div>
+  </div>
+  <div class="sub" style="margin-top:.5rem;font-size:.95rem;font-weight:700">Week 5 週測驗</div>
+</header>
+<main>
+  <div class="rate-ctl">🔊 語速
+    <button class="rate-btn" data-rate="0.7" onclick="setRate(0.7)">0.7x 慢</button>
+    <button class="rate-btn" data-rate="1" onclick="setRate(1)">1.0x 標準</button>
+    <button class="rate-btn" data-rate="1.25" onclick="setRate(1.25)">1.25x 快</button>
+  </div>
+  <div class="card">🔊 撳任何 <span class="jp" onclick="speak(this)" data-speak="日文">日文</span>（虛線底線）即播真人錄音，再撳一下停止</div>
+  <div class="card">一個星期學咗形容詞全套：い形容詞同な形容詞嘅肯定否定、過去式、〜くて・〜で中頓、〜くする・〜にする、比較（〜より・〜のほうが・〜いちばん），仲有程度副詞（とても・あまり〜ない・全然〜ない）。今日測驗即係將佢哋排排坐睇清楚——邊個變化唔熟，今日補返。唔駛急，慢慢嚟。</div>
+  <div class="sec-title"><span class="dot"></span>📝 測驗（Week 5 週測驗）</div><div class="card"><b>Q1. 「あの映画は___です。」（嗰套電影唔有趣。）應選：</b><div>（A）おもしろくない</div><div>（B）おもしろいくない</div><div>（C）おもしろくなかった</div><div>（D）おもしろくないでした</div><div class="ans" style="color:var(--muted);font-size:.85rem;margin-top:.3rem">答案：（A）おもしろくない。——い形容詞否定：去い加くない。「おもしろいくない」唔係正確變化，「おもしろくなかった」係過去式，「おもしろくないでした」係錯誤組合。</div></div>
+<div class="card"><b>Q2. 「この町は静か___です。」（呢個城鎮唔寧靜。）應選：</b><div>（A）ではありません</div><div>（B）くないです</div><div>（C）じゃないありません</div><div>（D）くありません</div><div class="ans" style="color:var(--muted);font-size:.85rem;margin-top:.3rem">答案：（A）ではありません。——な形容詞否定：な形容詞＋ではありません（口語：じゃないです）。「くないです」只適用い形容詞，「じゃないありません」係錯誤組合。</div></div>
+<div class="card"><b>Q3. 「昨日はとても___です。」（尋日好凍。）應選：</b><div>（A）寒かった</div><div>（B）寒いでした</div><div>（C）寒くない</div><div>（D）寒く</div><div class="ans" style="color:var(--muted);font-size:.85rem;margin-top:.3rem">答案：（A）寒かった。——い形容詞過去式：去い加かった。「寒いでした」係錯誤組合，「寒くない」係現在否定，「寒く」唔可以獨立做述語。</div></div>
+<div class="card"><b>Q4. 「昨日は暇___。」（尋日得閒。）應選：</b><div>（A）でした</div><div>（B）です</div><div>（C）でしたくない</div><div>（D）じゃないでした</div><div class="ans" style="color:var(--muted);font-size:.85rem;margin-top:.3rem">答案：（A）でした。——な形容詞過去式：な形容詞＋でした。「です」係現在，「でしたくない」唔存在，「じゃないでした」係錯誤組合。</div></div>
+<div class="card"><b>Q5. 「この部屋は広くて、___です。」（呢間房又闊又光猛。）應選：</b><div>（A）明るい</div><div>（B）明るく</div><div>（C）明るくないでした</div><div>（D）明るいく</div><div class="ans" style="color:var(--muted);font-size:.85rem;margin-top:.3rem">答案：（A）明るい。——中頓：い形容詞去い加くて連接兩個形容詞，後面接原形形容詞。「明るく」唔可以獨立做述語，「明るくないでした」係錯誤組合。</div></div>
+<div class="card"><b>Q6. 「部屋を___します。」（我要令間房光猛啲。）應選：</b><div>（A）明るく</div><div>（B）明るい</div><div>（C）明るくて</div><div>（D）明るいく</div><div class="ans" style="color:var(--muted);font-size:.85rem;margin-top:.3rem">答案：（A）明るく。——使某樣嘢變成某狀態：い形容詞去い加く＋する。「明るい」係原形，唔可以直接接します；「明るくて」係中頓，唔講變化。</div></div>
+<div class="card"><b>Q7. 「電車___バスのほうが安いです。」（比起電車，巴士更加平。）應選：</b><div>（A）ほど</div><div>（B）より</div><div>（C）いちばん</div><div>（D）あまり</div><div class="ans" style="color:var(--muted);font-size:.85rem;margin-top:.3rem">答案：（B）より。——比較：AよりBのほうが〜＝比起A，B更加〜。「ほど」係程度，「いちばん」係最，「あまり」要配否定，意思唔啱。</div></div>
+<div class="card"><b>Q8. 「日本で___高い山は富士山です。」（日本最高嘅山係富士山。）應選：</b><div>（A）いちばん</div><div>（B）より</div><div>（C）とても</div><div>（D）あまり</div><div class="ans" style="color:var(--muted);font-size:.85rem;margin-top:.3rem">答案：（A）いちばん。——最高級：〜でいちばん＋形容詞＝喺…之中最…。「より」係比較，「とても」係程度，「あまり」要配否定。</div></div>
+<div class="card"><b>Q9. 「このケーキはとても___です。」（呢個蛋糕非常好食。）應選：</b><div>（A）おいしい</div><div>（B）おいしくない</div><div>（C）おいしかった</div><div>（D）おいしく</div><div class="ans" style="color:var(--muted);font-size:.85rem;margin-top:.3rem">答案：（A）おいしい。——程度副詞「とても」只可以配肯定句。「おいしくない」係否定，「おいしかった」係過去式，「おいしく」唔可以獨立做述語。</div></div>
+<div class="card"><b>Q10. 「この料理はあまり___です。」（呢味餸唔係好好食。）應選：</b><div>（A）おいしくない</div><div>（B）おいしい</div><div>（C）おいしかった</div><div>（D）おいしく</div><div class="ans" style="color:var(--muted);font-size:.85rem;margin-top:.3rem">答案：（A）おいしくない。——程度副詞「あまり」一定要配否定形：あまり〜ない＝唔係好…。「おいしい」係肯定，唔可以配あまり；「おいしかった」係過去肯定，一樣唔得。</div></div>
+<div class="card"><b>造句 1：</b>提示：昨日／映画／とても／おもしろい——組句（尋日套電影非常有趣。）<div class="ans" style="color:var(--muted);font-size:.85rem;margin-top:.3rem">參考：昨日の映画はとてもおもしろかったです。——程度副詞「とても」配い形容詞過去式「おもしろかった」。</div></div>
+<div class="card"><b>造句 2：</b>提示：東京／大阪／より／大きい——組句（東京比大阪大。）<div class="ans" style="color:var(--muted);font-size:.85rem;margin-top:.3rem">參考：東京は大阪より大きいです。——比較「AよりBのほうが」嘅簡化形：AよりBは〜。</div></div>
+<div class="card"><b>造句 3：</b>提示：静か／町／好き——組句（我鍾意寧靜嘅城鎮。）<div class="ans" style="color:var(--muted);font-size:.85rem;margin-top:.3rem">參考：私は静かな町が好きです。——な形容詞修飾名詞：な形容詞＋な＋名詞。</div></div>
+<div class="card"><b>造句 4：</b>提示：部屋／きれい／する——組句（我要執靚間房。）<div class="ans" style="color:var(--muted);font-size:.85rem;margin-top:.3rem">參考：部屋をきれいにします。——な形容詞＋にする：令某樣嘢變成某狀態。</div></div>
+<div class="card"><b>造句 5：</b>提示：本／あまり／高い——組句（呢本書唔係好貴。）<div class="ans" style="color:var(--muted);font-size:.85rem;margin-top:.3rem">參考：この本はあまり高くないです。——程度副詞「あまり」配い形容詞否定「高くない」。</div></div><div class="sec-title"><span class="dot"></span>👂 聽讀任務</div><div class="task"><b>讀：</b>將10條選擇題嘅日文句逐句大聲讀一次，錯咗嘅嗰題讀5次；5句造句參考答案各自讀3次。</div><div class="task"><b>聽：</b>YouTube 搜尋「日本語 形容詞 比較 とても あまり 練習」，揀一條形容詞・比較練習片，聽到佢講你做錯題目嗰個文法為止；或者重播 Week 5 任何一堂嘅單字例句錄音跟讀。</div><div class="sec-title"><span class="dot"></span>🔁 複習</div><div class="card">Week 5 總點：①い形容詞：肯定（〜いです）、否定（〜くないです）、過去（〜かったです）、過去否定（〜くなかったです） ②な形容詞：肯定（〜です）、否定（〜ではありません）、過去（〜でした）、修飾名詞（〜な＋名詞） ③中頓：い形容詞〜くて、な形容詞〜で ④使變化：い形容詞〜くする、な形容詞〜にする ⑤比較：AよりBのほうが〜、〜でいちばん〜 ⑥程度副詞：とても・すごく・ちょっと配肯定，あまり・全然配否定。聽日進入 Week 6：存在（います・あります）、授受（あげます・もらいます・くれます）、希望（〜たいです・〜ほしいです）、理由（〜から・〜ので）。</div>
+  <div class="card">💪 五個星期，N5形容詞全章行完——い形容詞、な形容詞、過去式、中頓、比較、程度副詞，全部入晒袋。測驗照到嘅鬆位唔使驚，聽日開始Week 6，存在、授受、希望、理由一樣會日日用返形容詞，越用越熟，繼續！</div>
+  <div class="nav"><a href="day34.html">← Day 34</a><a href="index.html">目錄</a><a class="disabled">聽日見 →</a></div>
+</main>
+<footer>每晚 21:00 自動更新 ｜ Pison自編課程</footer>
+<script>
+var currentAudio=null, currentEl=null;
+var playRate=1;
+try{ var saved=parseFloat(localStorage.getItem('n5n4_rate')); if(saved>0) playRate=saved; }catch(e){}
+function setRate(r){
+  playRate=r;
+  try{ localStorage.setItem('n5n4_rate',String(r)); }catch(e){}
+  var btns=document.querySelectorAll('.rate-btn');
+  for(var i=0;i<btns.length;i++){ btns[i].classList.toggle('active', parseFloat(btns[i].dataset.rate)===r); }
+  stopAll();
+}
+function stopAll(){
+  try{ if('speechSynthesis' in window) speechSynthesis.cancel(); }catch(e){}
+  if(currentAudio){ try{ currentAudio.pause(); }catch(e){} currentAudio=null; }
+  if(currentEl){ currentEl.classList.remove('speaking'); currentEl=null; }
+}
+/* 日文語音選擇：後備朗讀一定要用日文聲，唔可以靜靜跌去英文聲 */
+var jaVoice=null;
+function loadJaVoice(){
+  try{
+    var vs=speechSynthesis.getVoices()||[];
+    var i, lg;
+    for(i=0;i<vs.length;i++){ lg=String(vs[i].lang||'').toLowerCase(); if(lg.indexOf('ja')===0){ jaVoice=vs[i]; return; } }
+    for(i=0;i<vs.length;i++){ if(/kyoko|otoya|japan/i.test(String(vs[i].name||''))){ jaVoice=vs[i]; return; } }
+  }catch(e){}
+}
+try{ if('speechSynthesis' in window){ loadJaVoice(); speechSynthesis.onvoiceschanged=loadJaVoice; } }catch(e){}
+function speakFallback(el){
+  try{
+    if(!('speechSynthesis' in window)){alert('你個瀏覽器唔支援語音朗讀');return;}
+    var t=(el.dataset.speak||el.textContent||'').replace(/\s+/g,' ').trim();
+    if(!t) return;
+    try{ speechSynthesis.cancel(); }catch(e){}
+    var startSpeak=function(){
+      var u=new SpeechSynthesisUtterance(t);
+      u.lang='ja-JP'; u.rate=0.85;
+      if(jaVoice){ u.voice=jaVoice; }
+      currentEl=el; el.classList.add('speaking');
+      var done=function(){ el.classList.remove('speaking'); if(currentEl===el) currentEl=null; };
+      u.onend=done; u.onerror=done;
+      speechSynthesis.speak(u);
+    };
+    var restoreHandler=function(){ try{ speechSynthesis.onvoiceschanged=loadJaVoice; }catch(e){} };
+    loadJaVoice();
+    if(jaVoice){ startSpeak(); return; }
+    /* iOS 嘅 voices 係異步載入，等一等；等極都冇日文聲就唔讀（唔好用英文聲亂讀） */
+    var settled=false;
+    var noVoice=function(){
+      if(settled) return; settled=true; restoreHandler();
+      alert('錄音載入唔到，部機又搵唔到日文語音——請檢查網絡之後再撳一次');
+    };
+    var timer=setTimeout(function(){
+      if(settled) return;
+      loadJaVoice();
+      settled=true; restoreHandler();
+      if(jaVoice){ startSpeak(); } else { noVoice(); }
+    },1500);
+    try{
+      speechSynthesis.onvoiceschanged=function(){
+        if(settled) return;
+        loadJaVoice();
+        settled=true; clearTimeout(timer); restoreHandler();
+        if(jaVoice){ startSpeak(); } else { noVoice(); }
+      };
+    }catch(e){ clearTimeout(timer); noVoice(); }
+  }catch(e){}
+}
+function speak(el){
+  try{
+    if(currentEl===el){ stopAll(); return; }
+    stopAll();
+    var au=el.dataset.audio;
+    if(au){
+      var fellBack=false;
+      var doFallback=function(){ if(fellBack) return; fellBack=true; stopAll(); speakFallback(el); };
+      var a=new Audio(au);
+      try{ a.playbackRate=playRate; }catch(e){}
+      currentAudio=a; currentEl=el; el.classList.add('speaking');
+      a.onended=function(){ stopAll(); };
+      a.onerror=doFallback;
+      var p=a.play();
+      if(p&&p.catch){ p.catch(doFallback); }
+      return;
+    }
+    speakFallback(el);
+  }catch(e){}
+}
+try{ setRate(playRate); }catch(e){}
+</script>
+</body>
+</html>
