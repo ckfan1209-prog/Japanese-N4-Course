@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#6366f1">
+<title>Day 43 ｜ 日語 N4</title>
+<style>
+:root {
+  --bg:#f4f5fb; --card:#ffffff; --text:#1e2235; --muted:#8b90a7;
+  --primary:#6366f1; --primary-soft:#eef0ff; --radius:16px;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,"PingFang TC","Noto Sans TC","Hiragino Sans",sans-serif; background:var(--bg); color:var(--text); line-height:1.8; }
+nav { position:sticky; top:0; z-index:20; background:rgba(99,102,241,.92); backdrop-filter:blur(12px); color:#fff; padding:.85rem 1rem; display:flex; justify-content:space-between; align-items:center; }
+nav .title { font-weight:800; font-size:.98rem; }
+nav a { color:#fff; text-decoration:none; font-size:.82rem; background:rgba(255,255,255,.18); padding:.4rem .85rem; border-radius:99px; }
+.hero { background:linear-gradient(140deg,#6366f1,#8b5cf6); color:#fff; padding:1.6rem 1.2rem 1.4rem; border-radius:0 0 26px 26px; }
+.hero .day-label { font-size:.8rem; opacity:.85; letter-spacing:1px; }
+.hero h1 { font-size:1.5rem; font-weight:800; margin:.2rem 0; }
+.hero .theme { font-size:.8rem; opacity:.9; margin-top:.3rem; }
+main { max-width:600px; margin:0 auto; padding:1.1rem 1rem 4rem; }
+h2 { font-size:1.02rem; margin:1.6rem 0 .7rem; color:var(--primary); font-weight:800; display:flex; align-items:center; gap:.45rem; }
+h2::before { content:""; width:4px; height:1.05em; background:linear-gradient(180deg,#6366f1,#a855f7); border-radius:4px; }
+h3 { font-size:.95rem; margin:1.1rem 0 .45rem; color:#3f4664; }
+p { margin:.5rem 0; font-size:.92rem; }
+ul { margin:.4rem 0 .4rem 1.25rem; }
+li { margin:.3rem 0; font-size:.9rem; }
+hr { border:none; border-top:1.5px dashed #e3e6f2; margin:1.3rem 0; }
+.table-wrap { overflow-x:auto; margin:.8rem 0; border-radius:12px; box-shadow:0 0 0 1px #e8eaf5; }
+table { border-collapse:collapse; width:100%; font-size:.83rem; background:#fff; border-radius:12px; overflow:hidden; }
+th, td { padding:.5rem .7rem; text-align:left; border-bottom:1px solid #eef0f7; }
+th { background:var(--primary-soft); color:#4338ca; font-size:.8rem; }
+tr:last-child td { border-bottom:none; }
+code { background:var(--primary-soft); color:#4338ca; padding:.12rem .4rem; border-radius:6px; font-size:.88em; }
+strong { color:#2f3560; }
+.num-item { display:flex; gap:.65rem; padding:.55rem .7rem; border-radius:12px; margin:.3rem 0; background:#fafbfe; }
+.num { flex-shrink:0; width:26px; height:26px; border-radius:50%; background:var(--primary-soft); color:var(--primary); font-weight:800; font-size:.78rem; display:flex; align-items:center; justify-content:center; margin-top:.15rem; }
+.num-body { font-size:.9rem; }
+.jp { cursor:pointer; border-bottom:1.5px dotted #a5b4fc; transition:background .15s; }
+.jp:active, .jp.speaking { background:var(--primary-soft); border-bottom-color:var(--primary); }
+.tts-hint { font-size:.72rem; color:#5b6072; background:var(--primary-soft); border-radius:10px; padding:.45rem .8rem; margin:0 0 1rem; }
+.back { display:block; text-align:center; background:var(--primary); color:#fff; text-decoration:none; padding:.85rem; border-radius:14px; font-weight:700; font-size:.9rem; margin-top:1.4rem; }
+</style>
+</head>
+<body>
+<nav><span class="title">🇯🇵 N4 ｜ Day 43</span><a href="index.html">目錄</a></nav>
+<div class="hero">
+  <div class="day-label">DAY 43 / 182 ｜ 2026-11-12</div>
+  <h1>今日研讀內容</h1>
+  <div class="theme">**週四：踏入 N4 核心！動詞「可能形」變形法則與助詞變化（〜ができる → 〜動詞可能形）**</div>
+</div>
+<main>
+<div class="tts-hint">🔊 撳任何日文（虛線底線）都會即時讀出，再撳一下停止</div>
+<p>📅 <strong>今日進度：第 43 日 / 182</strong>｜Phase 2：N4 文法核心前半｜<strong>週四：踏入 N4 核心！動詞「可能形」變形法則與助詞變化（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/000_5f66cda746c9.mp3">〜ができる</span> → 〜動詞可能形）</strong></p>
+<p>大家夜晚好！今日係 2026-10-01 開課以嚟嘅<strong>第 43 日</strong>。</p>
+<p>尋日我哋齊心合力圓滿完成咗 Phase 1 嘅全部基礎修煉，今日我哋正式昂首邁入 <strong>Phase 2（Day 43–91：N4 文法核心前半）</strong>！🎉</p>
+<p>喺 Phase 2 嘅首兩週（第 7–8 週），我哋嘅首要任務係攻克日語表達能力嘅兩大基石——<strong>「可能形」</strong> 同埋 <strong>「<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="條件形" data-audio="audio/day43/001_a9c71ce4bad9.mp3">條件形<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">と・ば・たら・なら</span>）</small></span>」</strong>。</p>
+<p>今日作為 Phase 2 嘅第一課，我哋即刻要學日常生活同 JLPT 考試最核心、最實用嘅——<strong>動詞「可能形」（表達能力、可以做某事）</strong>！</p>
+<hr>
+<h3>✅ 昨日造句答案（Day 42 造句練習回顧）</h3>
+<ul>
+<li><strong>題目</strong>：「<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="明日の試験" data-audio="audio/day43/002_86fa61e73495.mp3">明日の試験<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">しけん</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/003_267e38ecd5ce.mp3">のために、今晩は早く</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/004_3b84860d7f2c.mp3">寝ます</span> → ＿＿＿＿＿＿＿＿）<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/005_606ee69008d6.mp3">ほうがいいです。」</span></li>
+<li><strong>正解</strong>：<strong>寝た</strong></li>
+<li><strong>完整句子</strong>：<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/006_13d9aa6a4845.mp3">明日の試験のために、今晩は早く寝たほうがいいです。</span></strong></li>
+<li><strong>廣東話解釋</strong>：為咗聽日嘅考試，今晚最好早啲瞓。</li>
+<li><em>💡 解析</em>：</li>
+</ul>
+<p>給予對方具體嘅忠告或建議「最好做某事」時，日語文法必須使用「<strong>動詞た形 ＋ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/007_960895e9238f.mp3">ほうがいいです</span></strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/004_3b84860d7f2c.mp3">」。「寝ます」</span>係二類動詞（一段動詞），<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/009_e48e8a4724f4.mp3">其た形直接去「ます」加「た」</span>，<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/010_29abf447c441.mp3">即係「寝た」。如果用辭書形「寝るほうがいいです」</span>，語氣上會變成客觀比較或教訓口吻，而非親切給予建議嘅最佳表達。</p>
+<hr>
+<h3>📖 單字：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/011_5b98cf59fc68.mp3">能力・生活・</span>活動（12 個）</h3>
+<div class="num-item"><span class="num">1</span><div class="num-body"><strong>泳ぐ（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/101_6e927b5eea9c.mp3">およぐ</span>）</strong> — 游水（一類動詞・自動詞）。例句：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="夏休" data-audio="audio/day43/012_80c4bda62a3a.mp3">夏休<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">なつやす</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="みに海" data-audio="audio/day43/014_b21c56dc468f.mp3"><span class="jp" onclick="speak(this)" title="🔊 撳我讀">みに</span>海<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">うみ</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/015_bd51622ea32a.mp3">で泳ぎたいです。</span>（暑假想去海邊游水。）</div></div>
+<div class="num-item"><span class="num">2</span><div class="num-body"><strong>話す（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">はなす</span>）</strong> — 說話／講（一類動詞・他動詞）。例句：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="日本語" data-audio="audio/day43/016_00110af8b439.mp3">日本語<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">にほんご</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/017_d24355302305.mp3">で上手に話せるようになりたいです。</span>（想變得能夠用日文流利咁傾偈。）</div></div>
+<div class="num-item"><span class="num">3</span><div class="num-body"><strong>弾く（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ひく</span>）</strong> — 彈奏（樂器）（一類動詞・他動詞）。例句：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="子供" data-audio="audio/day43/018_3f89eb1ba21d.mp3">子供<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">こども</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/019_2f2d204dcad4.mp3">の時からピアノを弾いています。</span>（由細個開始就彈開鋼琴。）</div></div>
+<div class="num-item"><span class="num">4</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="運転" data-audio="audio/day43/020_3f81f6337f02.mp3">運転<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">うんてん</span>）</small></span>** — 駕駛／揸車（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/023_1c9713ebc1d8.mp3">名詞・サ</span>変）。例句：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="週末" data-audio="audio/day43/021_0b8b39852a77.mp3">週末<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">しゅうまつ</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="は車" data-audio="audio/day43/022_ae9290a5afea.mp3">は車<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">くるま</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/024_09a808e4e431.mp3">を運転して旅行に行きます。</span>（週末揸車去旅行。）</div></div>
+<div class="num-item"><span class="num">5</span><div class="num-body"><strong>直す（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">なおす</span>）</strong> — 修理／修改（一類動詞・他動詞）。例句：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="壊" data-audio="audio/day43/025_d52d4a757838.mp3">壊<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">こわ</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="れた時計" data-audio="audio/day43/027_96d0bf788f7e.mp3"><span class="jp" onclick="speak(this)" title="🔊 撳我讀">れた</span>時計<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">とけい</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/028_10557adbc26f.mp3">を直すことができますか。</span>（你可以修理整得好壞咗嘅手錶嗎？）</div></div>
+<div class="num-item"><span class="num">6</span><div class="num-body"><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/031_0a49f1e34a42.mp3">集める</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">あつめる</span>）</strong> — 收集／聚集（二類動詞・他動詞）。例句：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="世界" data-audio="audio/day43/029_c086b3008aca.mp3">世界<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">せかい</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="の切手" data-audio="audio/day43/030_37d747f600ff.mp3">の切手<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">きって</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/032_ad0d44f1f888.mp3">を集めています。</span>（正在收集世界各地嘅郵票。）</div></div>
+<div class="num-item"><span class="num">7</span><div class="num-body"><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/035_e720775ac764.mp3">捨てる</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/120_c9f80c3f7bf6.mp3">すてる</span>）</strong> — 丟棄／扔掉（二類動詞・他動詞）。例句：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="燃" data-audio="audio/day43/033_c6da9faf5ab3.mp3">燃<small>（も）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="えるゴミは月曜日" data-audio="audio/day43/036_26ef7e0775ed.mp3"><span class="jp" onclick="speak(this)" title="🔊 撳我讀">えるゴミは</span>月曜日<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">げつようび</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/037_f3a627a211f4.mp3">に捨ててください。</span>（可燃垃圾請喺星期一扔。）</div></div>
+<div class="num-item"><span class="num">8</span><div class="num-body"><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/040_b08589d0e364.mp3">換える</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/127_733a8fed7fb6.mp3">かえる</span>）</strong> — 更換／兌換（二類動詞・他動詞）。例句：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="空港" data-audio="audio/day43/038_8d611e08de82.mp3">空港<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">くうこう</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="でお金を円" data-audio="audio/day43/041_ccfaec892413.mp3"><span class="jp" onclick="speak(this)" title="🔊 撳我讀">でお金を</span>円<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">えん</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/042_85639a00169e.mp3">に換えます。</span>（喺機場將錢兌換成日元。）</div></div>
+<div class="num-item"><span class="num">9</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="予約" data-audio="audio/day43/043_437d1cf0b469.mp3">予約<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">よやく</span>）</small></span>** — 預約／預訂（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/023_1c9713ebc1d8.mp3">名詞・サ</span>変）。例句：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="人気" data-audio="audio/day43/044_234000af54be.mp3">人気<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">にんき</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/045_66fb2a70bf1e.mp3">のレストランを事前に予約しました。</span>（預先book咗好受歡迎嘅餐廳。）</div></div>
+<div class="num-item"><span class="num">10</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="見学" data-audio="audio/day43/046_29a7eb861858.mp3">見学<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">けんがく</span>）</small></span>** — 參觀學習／實地考察（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/023_1c9713ebc1d8.mp3">名詞・サ</span>変）。例句：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="来週" data-audio="audio/day43/047_0361c982d367.mp3">来週<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">らいしゅう</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="自動車" data-audio="audio/day43/048_73c9da0dae0c.mp3">自動車<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">じどうしゃ</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="の工場" data-audio="audio/day43/049_a6456a91e592.mp3">の工場<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">こうじょう</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/050_e73fbe24c47d.mp3">を見学します。</span>（下星期去汽車工廠參觀見學。）</div></div>
+<div class="num-item"><span class="num">11</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="現金" data-audio="audio/day43/051_11b5c8a0ca7b.mp3">現金<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">げんきん</span>）</small></span>** — 現金（名詞）。例句：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="この店" data-audio="audio/day43/053_472783f4866d.mp3"><span class="jp" onclick="speak(this)" title="🔊 撳我讀">この</span>店<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">みせ</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/054_7a19db422a65.mp3">では現金しか使えません。</span>（呢間舖頭只可以用現金。）</div></div>
+<div class="num-item"><span class="num">12</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="国際" data-audio="audio/day43/055_808072465127.mp3">国際<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">こくさい</span>）</small></span>** — 國際（名詞）。例句：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="国際空港" data-audio="audio/day43/056_1d7d578332e0.mp3">国際空港<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">こくさいくうこう</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="まで電車" data-audio="audio/day43/059_fde8b251a50a.mp3"><span class="jp" onclick="speak(this)" title="🔊 撳我讀">まで</span>電車<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">でんしゃ</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="で一時間" data-audio="audio/day43/058_28b3fdb293d8.mp3">で一時間<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">いちじかん</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/060_85e9fbadf98b.mp3">かかります。</span>（搭電車去國際機場要一個鐘。）</div></div>
+<hr>
+<h3>✍️ 文法：動詞可能形變形法則與助詞轉換規則</h3>
+<p>在 N5 中，如果要表達「能夠做某事」或「有某項能力」，我哋一般用「<strong>［動詞辭書形］＋ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/061_93a61bea600d.mp3">ことができます</span></strong>」（例如：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/062_fa19356bdb2b.mp3">日本語を話すことができます</span>）。</p>
+<p>進入 N4 之後，日本人喺日常對話入面更常用、更自然嘅表達方式，就係直接將動詞轉化為<strong>「可能形（可能動詞）」</strong>！</p>
+<h4>1. 動詞可能形嘅三大類變形法則</h4>
+<p>可能形嘅變形規則非常嚴謹整齊，大家只要跟隨五十音段落即可輕鬆搞掂：</p>
+<ul>
+<li><strong>一類動詞（五段動詞）</strong>：</li>
+<li><strong>法則</strong>：將語尾由「<strong>う段</strong>」音轉為對應嘅「<strong>え段</strong>」音，再接「<strong>る</strong>」！</li>
+<li>書く（kaku）→ 書<strong>け</strong>る（kakeru・識寫/寫得出）</li>
+<li>泳ぐ（oyogu）→ 泳<strong>げ</strong>る（oyogeru・識游水）</li>
+<li>話す（hanasu）→ 話<strong>せ</strong>る（hanaseru・識講）</li>
+<li>待つ（matsu）→ 待<strong>て</strong>る（materu・等得到）</li>
+<li>死ぬ（shinu）→ 死<strong>ね</strong>る（shineru・死得成）</li>
+<li>呼ぶ（yobu）→ 呼<strong>べ</strong>る（yoberu・叫得到）</li>
+<li>飲む（nomu）→ 飲<strong>め</strong>る（nomeru・飲得到）</li>
+<li>取る（toru）→ 取<strong>れ</strong>る（toreru・攞得到）</li>
+<li>買う（kau）→ 買<strong>え</strong>る（kaeru・買得到）</li>
+</ul>
+<ul>
+<li><strong>二類動詞（一段動詞）</strong>：</li>
+<li><strong>法則</strong>：直接去掉語尾「<strong>る</strong>」，加上「<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/063_6ad5f702376e.mp3">られる</span></strong>」！</li>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/064_0e3e309b0bfd.mp3">食べる</span>（taberu）→ 食べ<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/063_6ad5f702376e.mp3">られる</span></strong>（taberareru・食得到）</li>
+<li>見る（miru）→ 見<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/063_6ad5f702376e.mp3">られる</span></strong>（mirareru・睇得到）</li>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/065_a25fb9f66385.mp3">起きる</span>（okiru）→ 起き<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/063_6ad5f702376e.mp3">られる</span></strong>（okirareru・起得身）</li>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/066_e4ee5a4c33a5.mp3">覚える</span>（oboeru）→ 覚え<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/063_6ad5f702376e.mp3">られる</span></strong>（oboerareru・記得到）</li>
+<li><em>💡 溫馨提示</em>：現代日本年輕人日常口語中經常會省略「ら」（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/067_5d46928a86a6.mp3">稱為「ら抜き</span>言葉」），<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/063_6ad5f702376e.mp3">例如將「食べられる」講成「食べれる」。</span>但在 JLPT N4 考試與標準正規文法中，必須嚴格使用「<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/063_6ad5f702376e.mp3">られる</span></strong>」！</li>
+</ul>
+<ul>
+<li><strong>三類動詞（不規則動詞）</strong>：</li>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/069_fdb567ffcf4f.mp3">する</span>（サ変）</strong> → <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/070_7a70f6e05875.mp3">できる</span></strong>（極度高頻！例：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/071_021dfb4793b5.mp3">勉強できる、運転できる</span>）</li>
+<li><strong>来る（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/072_1bf1923bd733.mp3">くる・カ</span>変）</strong> → <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/073_55372d8d95c8.mp3">来られる</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/063_6ad5f702376e.mp3">こられる</span>）</strong>（⚠️ 注意讀音！「く」變成「<strong>こ</strong>」，唔係「き」！）</li>
+</ul>
+<p>📌 <strong>重要文法性質</strong>：</p>
+<p><strong>所有動詞一旦變為可能形之後，<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/074_0fd19640a298.mp3">語尾全部係「〜える</span>／<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/075_7fa33cfdad6b.mp3">〜られる」</span>，文法上一律視為「二類動詞（一段動詞）」！</strong></p>
+<p>所以後續變形極之簡單：</p>
+<ul>
+<li>敬體（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/077_22ea9a64d0ba.mp3">ます</span>形）：去「る」＋ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/077_22ea9a64d0ba.mp3">ます</span>（例：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/078_3fb9c01967a7.mp3">話せる</span> → <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/079_bfa8473c58a0.mp3">話せます、食べられる</span> → <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/080_03485203c80d.mp3">食べられます、できる</span> → <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/081_0f9c874ce67f.mp3">できます</span>）</li>
+<li>否定形（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/083_e2bb27f0a7f0.mp3">ない</span>形）：去「る」＋ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/083_e2bb27f0a7f0.mp3">ない</span>（例：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/084_54dacb0cc814.mp3">話せない、食べられない、できない</span>）</li>
+<li>過去形（た形）：去「る」＋ た（例：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/085_85449985b48b.mp3">話せた、食べられた、できた</span>）</li>
+</ul>
+<hr>
+<h4>2. 可能動詞的句型與助詞轉換（を → が）</h4>
+<p>當一個動詞轉化為可能形後，它由原本表示「主動施加的動作」轉變為表示「能力、可能存在的狀態」。因此：</p>
+<ul>
+<li><strong>核心助詞變化</strong>：原本及物動詞所帶的賓語助詞「<strong>を</strong>」，在變成可能形時，<strong>原則上通常轉變為「が」</strong>！</li>
+<li>例 1：</li>
+<li>普通敘述：日本語<strong>を</strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/086_b34e8cf94976.mp3">話します。</span>（講日文）</li>
+<li>可能表達：日本語<strong>が</strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/087_b7885a33c7bd.mp3">話せます。</span>（識講日文／能夠講日文）</li>
+<li>例 2：</li>
+<li>普通敘述：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="刺身" data-audio="audio/day43/088_4470fe93c3ac.mp3">刺身<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">さしみ</span>）</small></span><strong>を</strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/089_b240e804a8fe.mp3">食べます。</span>（食刺身）</li>
+<li>可能表達：刺身<strong>が</strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/090_14952f89d250.mp3">食べられます。</span>（食到刺身／可以食刺身）</li>
+<li>例 3：</li>
+<li>普通敘述：車<strong>を</strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/091_c7da4a8bdcdb.mp3">運転します。</span>（揸車）</li>
+<li>可能表達：車の運転<strong>が</strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/092_a1352ed66dcf.mp3">できます。</span>（識得揸車）</li>
+</ul>
+<ul>
+<li><strong>對比用法「は」</strong>：</li>
+</ul>
+<p>如果要表達「識做 A，但唔識做 B」嘅對比語感，助詞可以用「<strong>は</strong>」：</p>
+<ul>
+<li>例句：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="英語" data-audio="audio/day43/093_d33b89482ee7.mp3">英語<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">えいご</span>）</small></span><strong>は</strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/077_22ea9a64d0ba.mp3">話せますが、</span>日本語<strong>は</strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/095_bd29f87b34bb.mp3">話せません。</span>（英文我就識講，但日文就唔識講喇。）</li>
+</ul>
+<hr>
+<p><strong>✏️ 造句練習（一條）</strong>：</p>
+<p>請將括號內的動詞改為適當形態完成句子（答案在明日推送公佈）：</p>
+<p><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/096_ac1f9e073193.mp3">「すみません、この漢字の読み方が難しくて、私には</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/097_acdf5c2b89d3.mp3">読みます</span> → ＿＿＿＿＿＿＿＿）<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/098_5a7c50eb349c.mp3">せん。」</span></p>
+<p>（唔好意思，呢個漢字嘅讀音太難，我讀唔出／識唔到讀。）</p>
+<hr>
+<h3>🈴 漢字：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/011_5b98cf59fc68.mp3">能力・生活・</span>動作（6 個）</h3>
+<div class="num-item"><span class="num">1</span><div class="num-body"><strong>泳</strong> — 音讀 <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/100_889fbc068eec.mp3">エイ、</span>訓讀 <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/101_6e927b5eea9c.mp3">およ</span>（ぐ）。例詞：水泳（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/102_a1b6d1898e65.mp3">すいえい・</span>游泳）、泳ぐ（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/101_6e927b5eea9c.mp3">およぐ・</span>游水）</div></div>
+<div class="num-item"><span class="num">2</span><div class="num-body"><strong>運</strong> — 音讀 <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/104_802b34b78d97.mp3">ウン、</span>訓讀 <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/105_0e543adcac6b.mp3">はこ</span>（ぶ）。例詞：運転（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/106_9e58a6e3043a.mp3">うんてん・</span>駕駛）、運動（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/107_33743c523acc.mp3">うんどう・</span>運動）、運ぶ（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/105_0e543adcac6b.mp3">はこぶ・</span>搬運）、幸運（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/109_9325d7e41d5b.mp3">こううん・</span>好運）</div></div>
+<div class="num-item"><span class="num">3</span><div class="num-body"><strong>転</strong> — 音讀 <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/110_11250c82608e.mp3">テン、</span>訓讀 <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/111_6586df25012f.mp3">ころ</span>（ぶ）<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/112_f2032bb1b550.mp3">・ころ</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">がる</span>）。例詞：自転車（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/113_68c52e65c939.mp3">じてんしゃ・</span>單車）、転ぶ（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/111_6586df25012f.mp3">ころぶ・</span>跌倒）、回転（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/115_0df559fa478b.mp3">かいてん・</span>旋轉）</div></div>
+<div class="num-item"><span class="num">4</span><div class="num-body"><strong>具</strong> — 音讀 グ。例詞：道具（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/116_988cb6e655c2.mp3">どうぐ・</span>工具/道具）、家具（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/117_3b09d9c1403f.mp3">かぐ・</span>傢俬）、具合（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/118_5efe903e52b7.mp3">ぐあい・</span>健康/情況狀況）</div></div>
+<div class="num-item"><span class="num">5</span><div class="num-body"><strong>捨</strong> — 音讀 <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/119_376d8b50154c.mp3">シャ、</span>訓讀 す（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/035_e720775ac764.mp3">てる</span>）。例詞：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/035_e720775ac764.mp3">捨てる</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/120_c9f80c3f7bf6.mp3">すてる・</span>丟棄/扔掉）、四捨五入（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/121_3c4a61ee528f.mp3">ししゃごにゅう・</span>四捨五入）</div></div>
+<div class="num-item"><span class="num">6</span><div class="num-body"><strong>換</strong> — 音讀 <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/122_2bbd844adb2d.mp3">カン、</span>訓讀 か（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/036_26ef7e0775ed.mp3">える</span>）<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/123_ae69a849f3cb.mp3">・か</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">わる</span>）。例詞：交換（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/124_9f7da66dd812.mp3">こうかん・</span>交換）、換気（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/125_beccab9e711b.mp3">かんき・</span>通風換氣）<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/126_ed3bad8b0656.mp3">、乗り換える</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/127_733a8fed7fb6.mp3">のりかえる・</span>轉車）</div></div>
+<hr>
+<h3>👂 聽讀任務（國際交流室對話・約 15 分鐘）</h3>
+<p>情境：喺大學嘅國際交流室，<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="健太" data-audio="audio/day43/128_1876ab680ec2.mp3">健太<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">けんた</span>）</small></span>同嚟自海外嘅留學生王（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/130_954bc73a6e80.mp3">ワン</span>）同學正在傾偈，互相了解對方嘅語言能力、技能同興趣愛好。</p>
+<p>&gt; <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="健太" data-audio="audio/day43/128_1876ab680ec2.mp3">健太<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">けんた</span>）</small></span>**：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/129_328bbf28cbdf.mp3">ワンさんは、日本語が本当に上手ですね。日本の漢字もたくさん書けますか。</span></p>
+<p>&gt; <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/130_954bc73a6e80.mp3">ワン</span></strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/131_8337be2d474f.mp3">いいえ、日常会話は少し話せますが、漢字はまだあまり書けません。でも、ひらがなとカタカナは全部読めますよ。</span></p>
+<p>&gt; <strong>健太</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/132_93519068c22e.mp3">全部読めるだけでも十分すごいですよ！ワンさんは英語も話せますか。</span></p>
+<p>&gt; <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/130_954bc73a6e80.mp3">ワン</span></strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/133_90575dbacfe2.mp3">はい、高校の時にアメリカに留学したので、英語は問題なく話せます。健太さんは何か楽器が弾けますか。</span></p>
+<p>&gt; <strong>健太</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/134_3aa1d6fe894f.mp3">私は子供の時から習っているので、ピアノが少し弾けます。でも、ギターは全然弾けません。ワンさんは車の運転ができますか。</span></p>
+<p>&gt; <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/130_954bc73a6e80.mp3">ワン</span></strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/133_90575dbacfe2.mp3">はい、</span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="自分の国で運転免許" data-audio="audio/day43/136_cef8f4d9235a.mp3"><span class="jp" onclick="speak(this)" title="🔊 撳我讀">自分の国で</span>運転免許<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">めんきょ</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/137_5e5e3a8d6011.mp3">を取りましたから、運転できますよ。でも、日本の道は狭いので、まだ怖くて運転できません。</span></p>
+<p>&gt; <strong>健太</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/138_5127f892584c.mp3">確かに日本の道は狭いですね。今度みんなでレンタカーを借りてドライブに行きましょう。私が運転しますから大丈夫ですよ！</span></p>
+<p>&gt; <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/130_954bc73a6e80.mp3">ワン</span></strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/139_443dc72ea98a.mp3">本当ですか！ありがとうございます。とても楽しみにしています。</span></p>
+<p><strong>廣東話對譯</strong>：</p>
+<ul>
+<li>健太：王同學，你嘅日文真係好叻喎。日本嘅漢字你都識寫好多嗎？</li>
+<li>王：唔係呀，日常對話就識講少少，但漢字仲係唔係好識寫。不過，平假名同片假名我就全部都讀得出㗎。</li>
+<li>健太：淨係全部讀得出都已經好犀利啦！王同學你都識講英文嗎？</li>
+<li>王：係呀，因為高中嗰陣去過美國留學，所以英文可以毫無問題咁講到。健太你識唔識彈咩樂器呀？</li>
+<li>健太：因為我由細個開始學，所以識彈少少鋼琴。不過結他就完全唔識彈喇。王同學你識唔識揸車？</li>
+<li>王：識呀，因為喺自己國家考咗駕照，所以識得揸車㗎。不過日本啲路好窄，而家仲好驚唔敢揸。</li>
+<li>健太：確實日本啲路真係幾窄。下次我哋一齊租架車去自駕遊啦。我嚟揸車，無問題㗎！</li>
+<li>王：真係㗎！多謝你呀。真係好期待呀！</li>
+</ul>
+<p><strong>耳仔聽力要點（聽解技巧拆解）</strong>：</p>
+<ul>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/140_e73f6aa39525.mp3">「漢字もたくさん書けますか」</span></strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/141_75ad3b04f0a4.mp3">一類動詞「書く」變可能形「書ける」</span>，<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/142_f6368cc9cade.mp3">接敬體「書けますか」</span>，意思係「識唔識寫？」。</li>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/143_c25bde8b5b3e.mp3">「全部読めますよ」</span></strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/144_62aedebc8a52.mp3">一類動詞「読む」變可能形「読める」</span>，<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/145_8fcb833dd90a.mp3">接「読めます」。</span></li>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/146_5a89c0c5b865.mp3">「英語は問題なく話せます」</span></strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/147_80c8be1d0641.mp3">一類動詞「話す」變可能形「話せる」</span>；<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/133_90575dbacfe2.mp3">「問題なく」</span>係副詞用法表示「毫無問題地」。</li>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/149_960f64c0af71.mp3">「楽器が弾けますか」</span></strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/150_4aff584452d4.mp3">一類動詞「弾く」變可能形「弾ける」</span>；<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/151_5586a54c2c6f.mp3">受詞助詞由「を」轉變為「が」！</span></li>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/152_785d029beee9.mp3">「運転ができますか</span>／<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/153_3053025ef25c.mp3">運転できますよ」</span></strong>：名詞「運転」＋ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/154_eafbf300f84d.mp3">ができます</span>，或者 <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/155_ba74f2c4d7e5.mp3">サ変動詞「運転する」變「運転できる」。</span></li>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/156_04e60737e320.mp3">「怖くて運転できません」</span></strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/157_56f2db7c1077.mp3">形容詞「怖い」て形「怖くて」</span>表原因，<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/158_2ecf0172fe34.mp3">後接可能形否定「運転できません</span>（害怕得不敢/無法開車）」。</li>
+</ul>
+<hr>
+<p>📋 <strong>今日學習小結</strong>：</p>
+<p>今日我哋正式昂首踏入 <strong>Phase 2（Day 43–91：N4 文法核心前半）</strong>！</p>
+<p>重點掌握咗：</p>
+<div class="num-item"><span class="num">1</span><div class="num-body"><strong>動詞可能形變形法則</strong>：一類轉「え段＋<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/159_7f99f7637c1b.mp3">る」、二類去「る</span>＋<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/160_b0d88439c923.mp3">られる」、する變「できる」、くる變「こられる」。</span></div></div>
+<div class="num-item"><span class="num">2</span><div class="num-body"><strong>所有可能動詞一律視為二類動詞</strong>，<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/161_097728c4a69d.mp3">接ます</span>／<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/083_e2bb27f0a7f0.mp3">ない</span>／た非常規律。</div></div>
+<div class="num-item"><span class="num">3</span><div class="num-body"><strong>助詞轉換</strong>：原本動詞嘅對象「を」，轉可能動詞時原則上改為「<strong>が</strong>」。<br>聽日（Day 44，星期五）我哋會進一步探討<strong>「可能動詞在生活場景中的高級辨析（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/162_399c826cae7a.mp3">見える</span> vs <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/163_5bd0dbc8c422.mp3">見られる、聞こえる</span> vs <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/164_b37b55dd0191.mp3">聞ける</span> 的微妙分別）」</strong>！大家繼續加油，<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day43/165_46fbb6c2b9eb.mp3">聽日見！お疲れ様でした！</span>✨</div></div>
+<a class="back" href="index.html">← 返回目錄</a>
+</main>
+<script>
+var _audio=null, _last=null;
+function speak(el){
+  try{
+    var mp3=el.dataset.audio;
+    if(mp3){
+      if(_audio && _last===el && !_audio.paused){_audio.pause();_audio.currentTime=0;el.classList.remove('speaking');return;}
+      if(_audio){_audio.pause();}
+      _audio=new Audio(mp3);_last=el;
+      el.classList.add('speaking');
+      _audio.onended=function(){el.classList.remove('speaking');};
+      _audio.play();
+      return;
+    }
+    var t=(el.dataset.speak||el.textContent||'').replace(/\s+/g,' ').trim();
+    if(!('speechSynthesis' in window))return;
+    var u=new SpeechSynthesisUtterance(t);u.lang='ja-JP';u.rate=0.85;
+    speechSynthesis.cancel();speechSynthesis.speak(u);
+    el.classList.add('speaking');
+    u.onend=function(){el.classList.remove('speaking');};
+  }catch(e){}
+}
+</script>
+</body>
+</html>
