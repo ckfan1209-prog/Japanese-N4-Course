@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#6366f1">
+<title>Day 48 ｜ 日語 N4</title>
+<style>
+:root {
+  --bg:#f4f5fb; --card:#ffffff; --text:#1e2235; --muted:#8b90a7;
+  --primary:#6366f1; --primary-soft:#eef0ff; --radius:16px;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,"PingFang TC","Noto Sans TC","Hiragino Sans",sans-serif; background:var(--bg); color:var(--text); line-height:1.8; }
+nav { position:sticky; top:0; z-index:20; background:rgba(99,102,241,.92); backdrop-filter:blur(12px); color:#fff; padding:.85rem 1rem; display:flex; justify-content:space-between; align-items:center; }
+nav .title { font-weight:800; font-size:.98rem; }
+nav a { color:#fff; text-decoration:none; font-size:.82rem; background:rgba(255,255,255,.18); padding:.4rem .85rem; border-radius:99px; }
+.hero { background:linear-gradient(140deg,#6366f1,#8b5cf6); color:#fff; padding:1.6rem 1.2rem 1.4rem; border-radius:0 0 26px 26px; }
+.hero .day-label { font-size:.8rem; opacity:.85; letter-spacing:1px; }
+.hero h1 { font-size:1.5rem; font-weight:800; margin:.2rem 0; }
+.hero .theme { font-size:.8rem; opacity:.9; margin-top:.3rem; }
+main { max-width:600px; margin:0 auto; padding:1.1rem 1rem 4rem; }
+h2 { font-size:1.02rem; margin:1.6rem 0 .7rem; color:var(--primary); font-weight:800; display:flex; align-items:center; gap:.45rem; }
+h2::before { content:""; width:4px; height:1.05em; background:linear-gradient(180deg,#6366f1,#a855f7); border-radius:4px; }
+h3 { font-size:.95rem; margin:1.1rem 0 .45rem; color:#3f4664; }
+p { margin:.5rem 0; font-size:.92rem; }
+ul { margin:.4rem 0 .4rem 1.25rem; }
+li { margin:.3rem 0; font-size:.9rem; }
+hr { border:none; border-top:1.5px dashed #e3e6f2; margin:1.3rem 0; }
+.table-wrap { overflow-x:auto; margin:.8rem 0; border-radius:12px; box-shadow:0 0 0 1px #e8eaf5; }
+table { border-collapse:collapse; width:100%; font-size:.83rem; background:#fff; border-radius:12px; overflow:hidden; }
+th, td { padding:.5rem .7rem; text-align:left; border-bottom:1px solid #eef0f7; }
+th { background:var(--primary-soft); color:#4338ca; font-size:.8rem; }
+tr:last-child td { border-bottom:none; }
+code { background:var(--primary-soft); color:#4338ca; padding:.12rem .4rem; border-radius:6px; font-size:.88em; }
+strong { color:#2f3560; }
+.num-item { display:flex; gap:.65rem; padding:.55rem .7rem; border-radius:12px; margin:.3rem 0; background:#fafbfe; }
+.num { flex-shrink:0; width:26px; height:26px; border-radius:50%; background:var(--primary-soft); color:var(--primary); font-weight:800; font-size:.78rem; display:flex; align-items:center; justify-content:center; margin-top:.15rem; }
+.num-body { font-size:.9rem; }
+.jp { cursor:pointer; border-bottom:1.5px dotted #a5b4fc; transition:background .15s; }
+.jp:active, .jp.speaking { background:var(--primary-soft); border-bottom-color:var(--primary); }
+.tts-hint { font-size:.72rem; color:#5b6072; background:var(--primary-soft); border-radius:10px; padding:.45rem .8rem; margin:0 0 1rem; }
+.back { display:block; text-align:center; background:var(--primary); color:#fff; text-decoration:none; padding:.85rem; border-radius:14px; font-weight:700; font-size:.9rem; margin-top:1.4rem; }
+</style>
+</head>
+<body>
+<nav><span class="title">🇯🇵 N4 ｜ Day 48</span><a href="index.html">目錄</a></nav>
+<div class="hero">
+  <div class="day-label">DAY 48 / 182 ｜ 2026-11-17</div>
+  <h1>今日研讀內容</h1>
+  <div class="theme">**週二：條件形（「たら」完了・假定 vs 「なら」承接話題）**</div>
+</div>
+<main>
+<div class="tts-hint">🔊 撳任何日文（虛線底線）都會即時讀出，再撳一下停止</div>
+<p>📅 <strong>今日進度：第 48 日 / 182</strong>｜Phase 2：N4 文法核心前半｜<strong>週二：條件形（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/000_e1a1c7793f7a.mp3">「たら」完了・</span>假定 vs <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/003_11f72191193e.mp3">「なら」</span>承接話題）</strong></p>
+<p>大家夜晚好！今日係開課以嚟嘅<strong>第 48 日</strong>（星期二）。</p>
+<p>昨日搞清咗「と」（必然）同「ば」（假定），今日補齊另外兩兄弟：<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/002_345c9764e68c.mp3">「たら」</span></strong>同<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/003_11f72191193e.mp3">「なら」</span></strong>。呢兩個係日本人日常講嘢出現率最高嘅條件形——「と／ば」寫文章多，<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/002_345c9764e68c.mp3">「たら</span>／<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/003_11f72191193e.mp3">なら」</span>講嘢多。學完今日，你就擁有完整嘅四件套。</p>
+<hr>
+<h3>✅ 上回造句答案（Day 47）</h3>
+<ul>
+<li><strong>題目</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/005_8a810ff0937d.mp3">「この道をまっすぐ</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/006_1c50a01efe6d.mp3">行きます</span> → ＿＿＿＿＿＿）と、<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="大きな交差点" data-audio="audio/day48/007_21879383e826.mp3"><span class="jp" onclick="speak(this)" title="🔊 撳我讀">大きな</span>交差点<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">こうさてん</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/008_20cf4a46df23.mp3">があります。」</span></li>
+<li><strong>正解</strong>：<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/009_4af3cb43bdd7.mp3">行くと</span></strong>（寫 <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/010_b74fefb8c6eb.mp3">行きますと</span></strong> 都正確，禮貌體 ＋ と 亦可以用）</li>
+<li><strong>完整句子</strong>：<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/011_25afbbe6bb7f.mp3">この道をまっすぐ行くと、大きな交差点があります。</span></strong></li>
+<li><strong>廣東話解釋</strong>：沿呢條路直行，就會有一個大十字路口。</li>
+<li><em>💡 解析</em>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/012_24c8d2b6b5eb.mp3">後面係「あります」</span>——純粹陳述「行到就會見到」嘅必然結果，唔係邀請、唔係請求，所以用「と」最自然。呢句係典型<strong>指路句型</strong>，記住個語感：「順住行落去，自然就會見到」。</li>
+</ul>
+<hr>
+<h3>📖 單字：出行・安排（12 個）</h3>
+<div class="num-item"><span class="num">1</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="出発" data-audio="audio/day48/013_387b76daf589.mp3">出発<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">しゅっぱつ</span>）</small></span><strong> — 出發（名詞／サ変）。例句：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/014_3cdfbc84d3e3.mp3">明日は朝六時に</span>出発</strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/015_cf10ee8dd919.mp3">したら</span>**<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/016_37ebad0ce006.mp3">、昼ごろ着きます。</span>（聽日朝早六點出發嘅話，中午左右會到。）</div></div>
+<div class="num-item"><span class="num">2</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="到着" data-audio="audio/day48/017_c72170d5d525.mp3">到着<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">とうちゃく</span>）</small></span>** — 抵達（名詞／サ変）。例句：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/018_1466e6e65811.mp3">飛行機の到着が遅れています。</span>（飛機延誤咗。）</div></div>
+<div class="num-item"><span class="num">3</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="予約" data-audio="audio/day48/019_437d1cf0b469.mp3">予約<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">よやく</span>）</small></span><strong> — 預約／訂位（名詞／サ変）。例句：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/020_2fbe13cc1fca.mp3">ホテルを</span>予約</strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/021_88cc7ba05e5d.mp3">するなら</span>**<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/022_c01885ca8583.mp3">、早いほうがいいですよ。</span>（如果訂酒店，早啲訂好啲。）</div></div>
+<div class="num-item"><span class="num">4</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="準備" data-audio="audio/day48/023_8985c9da2ddd.mp3">準備<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">じゅんび</span>）</small></span>** — 準備（名詞／サ変）。例句：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/024_c0fe6bcf3d60.mp3">旅行の準備がまだ終わっていません。</span>（旅行嘅準備仲未搞完。）</div></div>
+<div class="num-item"><span class="num">5</span><div class="num-body"><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/025_4a0e472249f3.mp3">忘れる</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/114_aab25586ceae.mp3">わすれる</span>）</strong> — 忘記（二類動詞）。例句：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/026_86d2f5b1996f.mp3">傘を電車に忘れてしまいました。</span>（我把遮漏咗喺電車度。）</div></div>
+<div class="num-item"><span class="num">6</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="間に合う" data-audio="audio/day48/027_28940f5774de.mp3"><span class="jp" onclick="speak(this)" title="🔊 撳我讀">間に合う</span><small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">まにあう</span>）</small></span>** — 趕得上／來得及（一類動詞）。例句：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/028_54b243500c29.mp3">今出れば、九時の電車に間に合います。</span>（而家出發就趕得切九點班車。）</div></div>
+<div class="num-item"><span class="num">7</span><div class="num-body"><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/029_89aa88ff4200.mp3">遅れる</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">おくれる</span>）</strong> — 遲到／延誤（二類動詞・自動詞）。例句：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/030_d31b6d423105.mp3">事故で電車が二十分遅れました。</span>（因為事故，電車遲咗二十分鐘。）</div></div>
+<div class="num-item"><span class="num">8</span><div class="num-body"><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/031_089bf366583c.mp3">迎える</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">むかえる</span>）</strong> — 迎接（二類動詞）。例句：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/032_a4387c1d5a04.mp3">空港まで友だちを迎えに行きます。</span>（我去機場接朋友。）</div></div>
+<div class="num-item"><span class="num">9</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="案内する" data-audio="audio/day48/033_dd68bc81b6ec.mp3"><span class="jp" onclick="speak(this)" title="🔊 撳我讀">案内する</span><small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">あんないする</span>）</small></span>** — 引路／帶遊（サ変動詞）。例句：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/034_2d10bd7760af.mp3">京都なら、私が案内しますよ。</span>（京都嘅話，我帶你遊。）</div></div>
+<div class="num-item"><span class="num">10</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="相談する" data-audio="audio/day48/035_fcf02add4373.mp3"><span class="jp" onclick="speak(this)" title="🔊 撳我讀">相談する</span><small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">そうだんする</span>）</small></span><strong> — 商量（サ変動詞）。例句：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/036_862e92f62739.mp3">決める前に、家族と</span>相談</strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/015_cf10ee8dd919.mp3">したら</span>**<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/037_8ee68e267729.mp3">どうですか。</span>（決定之前，同屋企人商量下好唔好？）</div></div>
+<div class="num-item"><span class="num">11</span><div class="num-body"><strong>急ぐ（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/119_3b5f7fc0da6c.mp3">いそぐ</span>）</strong> — 趕／急（一類動詞）。例句：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/038_ca22031a89b0.mp3">時間がないので、急ぎましょう。</span>（冇時間喇，快啲啦。）</div></div>
+<div class="num-item"><span class="num">12</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="荷物" data-audio="audio/day48/039_3df82f2007f3.mp3">荷物<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">にもつ</span>）</small></span>** — 行李（名詞）。例句：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/040_b12faa06fd5a.mp3">荷物が重くて、自分で運べません。</span>（行李太重，自己搬唔到。）</div></div>
+<hr>
+<h3>✍️ 文法（2 點）</h3>
+<h4>【文法 1】～<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/002_345c9764e68c.mp3">たら</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/042_6dd0181b31a7.mp3">完了・假定・</span>發現）</h4>
+<p><strong>接續方式</strong>（記住：<strong>た形 ＋ ら</strong>）：</p>
+<ul>
+<li>動詞：た形 ＋ ら（行く→行っ<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/002_345c9764e68c.mp3">たら</span></strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/043_275be4fa043f.mp3">、食べる</span>→食べ<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/002_345c9764e68c.mp3">たら</span></strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/044_cd41492d5e03.mp3">、する</span>→し<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/002_345c9764e68c.mp3">たら</span></strong>、来る→来<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/002_345c9764e68c.mp3">たら</span></strong>）</li>
+<li>い形容詞：～<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/002_345c9764e68c.mp3">かったら</span>（安い→<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/046_fd37b45ff6c8.mp3">安かっ</span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/002_345c9764e68c.mp3">たら</span></strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/047_58707111d8b6.mp3">、いい</span>→<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/048_c76ba92db47b.mp3">よかっ</span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/002_345c9764e68c.mp3">たら</span></strong>）</li>
+<li>な形容詞／名詞：～<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/002_345c9764e68c.mp3">だったら</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/050_6b8b8d30f608.mp3">静かだっ</span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/002_345c9764e68c.mp3">たら</span></strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/051_c82d74432080.mp3">、学生だっ</span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/002_345c9764e68c.mp3">たら</span></strong>）</li>
+<li>否定：～<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/002_345c9764e68c.mp3">なかったら</span>／～<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/002_345c9764e68c.mp3">じゃなかったら</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/054_4025d2269b25.mp3">降らなかっ</span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/002_345c9764e68c.mp3">たら</span></strong>）</li>
+</ul>
+<p><strong>四種用法</strong>：</p>
+<div class="num-item"><span class="num">1</span><div class="num-body"><strong>假定「如果…」</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/055_6c71caf35c6f.mp3">雨が降っ</span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/002_345c9764e68c.mp3">たら</span></strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/056_467f040ab437.mp3">、試合は中止にします。</span>（如果落雨，比賽就取消。）</div></div>
+<div class="num-item"><span class="num">2</span><div class="num-body"><strong>完了・先後「…之後」</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/057_67186a4033f2.mp3">駅に着い</span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/002_345c9764e68c.mp3">たら</span></strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/058_b2a576a142dc.mp3">、電話してください。</span>（到咗車站之後，請打電話俾我。）</div></div>
+<div class="num-item"><span class="num">3</span><div class="num-body"><strong>契機・發現「一…就發現」</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/059_ea12021f57bb.mp3">窓を開け</span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/002_345c9764e68c.mp3">たら</span></strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/060_aa831d2483ff.mp3">、雪が降っていました。</span>（一開窗，就發現落緊雪。）</div></div>
+<div class="num-item"><span class="num">4</span><div class="num-body"><strong>反事實「如果當時…」</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/061_bdd1de64376e.mp3">もっと勉強し</span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/002_345c9764e68c.mp3">たら</span></strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/062_fcf23d3fdfda.mp3">、合格できたのに。</span>（如果當時再努力啲，就合格到啦。）</div></div>
+<p><strong>⚠️ 注意</strong>：</p>
+<ul>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/002_345c9764e68c.mp3">「たら」</span>係四兄弟入面<strong>最萬能、最口語</strong>嘅一個，後面<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/064_28ba1ebd5821.mp3">可以接意志・請求・</span>過去式</strong>，唔肯定用邊個嘅時候，<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/002_345c9764e68c.mp3">口語用「たら」</span>通常唔會錯。</li>
+<li>同「と」嘅分別：「と」講<strong>必然／恆常</strong>（每次都係咁），<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/002_345c9764e68c.mp3">「たら」</span>講<strong>一次過嘅個別情況</strong>。</li>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/066_15d026fab1b1.mp3">春になる</span><strong>と</strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/067_0d6831f9a296.mp3">、桜が咲きます。</span>（每年都係咁 → と）</li>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/068_8a8e2b1f977c.mp3">春になっ</span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/002_345c9764e68c.mp3">たら</span></strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/069_387ed4d60e92.mp3">、花見に行きましょう。</span>（今次呢件事 → <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/002_345c9764e68c.mp3">たら</span>）</li>
+</ul>
+<hr>
+<h4>【文法 2】～<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/003_11f72191193e.mp3">なら</span>（承接話題・給建議）</h4>
+<p><strong>接續方式</strong>：</p>
+<ul>
+<li>名詞 ＋ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/003_11f72191193e.mp3">なら</span>（学生<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/003_11f72191193e.mp3">なら</span></strong>、雨<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/003_11f72191193e.mp3">なら</span></strong>、京都<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/003_11f72191193e.mp3">なら</span></strong>）</li>
+<li>な形容詞語幹 ＋ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/003_11f72191193e.mp3">なら</span>（静か<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/003_11f72191193e.mp3">なら</span></strong>、元気<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/003_11f72191193e.mp3">なら</span></strong>）</li>
+<li>動詞／い形容詞普通形 ＋ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/003_11f72191193e.mp3">なら</span>（行く<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/003_11f72191193e.mp3">なら</span></strong>、安い<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/003_11f72191193e.mp3">なら</span></strong>）</li>
+<li>禮貌形：～<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/071_21258e0995f2.mp3">のなら</span></strong>／～<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/072_0ba494cffec8.mp3">んなら</span></strong>（行く<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/071_21258e0995f2.mp3">のなら</span></strong>）</li>
+</ul>
+<p><strong>用法</strong>：<strong>承接對方啱啱講嘅事</strong>，再俾判斷、建議。「講到…嘅話／既然係咁」。</p>
+<p><strong>例句</strong>：</p>
+<ul>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/073_4ddb04b40174.mp3">京都へ行く</span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/003_11f72191193e.mp3">なら</span></strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/074_3b7c903703eb.mp3">、秋がいいですよ。</span>（如果去京都，秋天最好。）</li>
+<li>温泉<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/003_11f72191193e.mp3">なら</span></strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/075_b0065e73f3e7.mp3">、箱根がおすすめです。</span>（講到溫泉，推薦箱根。）</li>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/076_b3c0ff97929c.mp3">パソコンを買う</span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/003_11f72191193e.mp3">なら</span></strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/077_cc736477cde2.mp3">、あの店が安いです。</span>（如果買電腦，嗰間鋪平啲。）</li>
+<li>嫌<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/003_11f72191193e.mp3">なら</span></strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/078_b4e938a9459d.mp3">、やめてもいいですよ。</span>（如果唔鍾意，唔做都得。）</li>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/079_d4d57674402c.mp3">わからない</span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/071_21258e0995f2.mp3">のなら</span></strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/080_6b33979b7b76.mp3">、先生に聞いたほうがいいです。</span>（如果唔明，最好問老師。）</li>
+</ul>
+<p><strong>⚠️ 三個關鍵分別</strong>（呢點考試最愛考）：</p>
+<div class="num-item"><span class="num">1</span><div class="num-body"><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/003_11f72191193e.mp3">なら</span> 唔講先後順序</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/081_2558c329eb35.mp3">「日本へ行く</span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/003_11f72191193e.mp3">なら</span></strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/082_0681b3416f12.mp3">、新幹線が便利です」</span>——唔係「去完日本之後」，而係「講到去日本呢件事」。<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/002_345c9764e68c.mp3">たら</span></strong> 才有「A 完之後 B」嘅先後感。</div></div>
+<div class="num-item"><span class="num">2</span><div class="num-body"><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/003_11f72191193e.mp3">なら</span> 後面唔接必然結果／機械反應</strong>：✗ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/083_e2d072c51bef.mp3">このボタンを押す</span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/003_11f72191193e.mp3">なら</span></strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/084_1bad529a6716.mp3">、お湯が出ます。</span>→ ✓ 押す<strong>と</strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/084_1bad529a6716.mp3">、お湯が出ます。</span></div></div>
+<div class="num-item"><span class="num">3</span><div class="num-body"><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/003_11f72191193e.mp3">なら</span> 好主觀</strong>，通常後面係說話人嘅<strong>意見、建議、判斷</strong>（～<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/022_c01885ca8583.mp3">がいい</span>／～<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/058_b2a576a142dc.mp3">てください</span>／～<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/022_c01885ca8583.mp3">ほうがいい</span>）。</div></div>
+<p><strong>💡 四兄弟一句總結</strong>：</p>
+<ul>
+<li><strong>と</strong>：一…就…（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/088_1c6af240cc2b.mp3">必然・機械・</span>指路），後唔接意志。</li>
+<li><strong>ば</strong>：如果…（假定），後可接意志；有「～ば～<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/089_bcc5ff923e83.mp3">ほど」。</span></li>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/002_345c9764e68c.mp3">たら</span></strong>：最萬能，假定＋完了＋發現＋反事實，口語首選。</li>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/003_11f72191193e.mp3">なら</span></strong>：講到…嘅話（承接話題）＋建議判斷，唔講先後。</li>
+</ul>
+<hr>
+<p><strong>✏️ 造句練習（一條）</strong>：</p>
+<p>請用括號內動詞嘅正確形式填空（答案在明日推送公佈）：</p>
+<p><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/090_5d43f151b310.mp3">「もし明日、雨が</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/091_6006afd0ace7.mp3">降ります</span> → ＿＿＿＿＿＿）<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/092_92a813a0fde4.mp3">ら、ハイキングは中止にしましょう。」</span></p>
+<p>（如果聽日落雨，行山就取消啦。）</p>
+<p>&gt; 提示：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/093_132b69fbd820.mp3">呢句係「もし</span>…」假定句，後面接「～<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/038_ca22031a89b0.mp3">ましょう」</span>（意志）。動詞要變咩形先加「ら」？</p>
+<hr>
+<h3>🈴 漢字：出行・動作（7 個）</h3>
+<div class="num-item"><span class="num">1</span><div class="num-body"><strong>旅</strong> — 音讀 <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/095_52a40322e16d.mp3">リョ、</span>訓讀 <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/096_d4dc6f898500.mp3">たび。</span>例詞：旅行（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/097_946a2f17495a.mp3">りょこう・</span>旅行）、旅（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/098_815a2ac4d92e.mp3">たび・</span>旅程）、一人旅（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/099_ae82e96ce5fd.mp3">ひとりたび・</span>獨遊）</div></div>
+<div class="num-item"><span class="num">2</span><div class="num-body"><strong>出</strong> — 音讀 <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/100_dce8ef619c8a.mp3">シュツ、</span>訓讀 で（る）／だ（す）。例詞：出発（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/101_91a06dd42b0b.mp3">しゅっぱつ・</span>出發）、出口（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/102_06366d8fbc94.mp3">でぐち・</span>出口）<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/103_6eb866f5e7a2.mp3">、思い出す</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/104_36d5c4c0152a.mp3">おもいだす・</span>想起）</div></div>
+<div class="num-item"><span class="num">3</span><div class="num-body"><strong>着</strong> — 音讀 <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/105_0962d55e3921.mp3">チャク、</span>訓讀 き（る）／つ（く）。例詞：到着（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/106_fda08a827ac8.mp3">とうちゃく・</span>抵達）、着く（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/107_08f8275937e8.mp3">つく・</span>到達）、上着（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/108_bb3feb4d2494.mp3">うわぎ・</span>外套）</div></div>
+<div class="num-item"><span class="num">4</span><div class="num-body"><strong>約</strong> — 音讀 <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/109_7c61d5bf1c35.mp3">ヤク。</span>例詞：予約（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/110_f757f01c38a3.mp3">よやく・</span>預約）、約束（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/111_8c8c1f8b793b.mp3">やくそく・</span>約定）、契約（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/112_2ffd3b44c4b6.mp3">けいやく・</span>合約）</div></div>
+<div class="num-item"><span class="num">5</span><div class="num-body"><strong>忘</strong> — 音讀 <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/113_c5356d75bc57.mp3">ボウ、</span>訓讀 <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/114_aab25586ceae.mp3">わす</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/025_4a0e472249f3.mp3">れる</span>）。例詞：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/025_4a0e472249f3.mp3">忘れる</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/114_aab25586ceae.mp3">わすれる・</span>忘記）、忘れ物（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/114_aab25586ceae.mp3">わすれもの・</span>失物）、忘年会（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/117_32675b18285a.mp3">ぼうねんかい・</span>年末聚餐）</div></div>
+<div class="num-item"><span class="num">6</span><div class="num-body"><strong>急</strong> — 音讀 <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/118_d0f1d8396aa3.mp3">キュウ、</span>訓讀 <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/119_3b5f7fc0da6c.mp3">いそ</span>（ぐ）。例詞：急ぐ（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/119_3b5f7fc0da6c.mp3">いそぐ・</span>趕）、急行（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/121_a5affdc91dee.mp3">きゅうこう・</span>快車）、急に（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/122_573c60ecced5.mp3">きゅうに・</span>突然）</div></div>
+<div class="num-item"><span class="num">7</span><div class="num-body"><strong>荷</strong> — 音讀 カ、訓讀 に。例詞：荷物（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/123_0683de2251c7.mp3">にもつ・</span>行李）、入荷（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/124_b2ff43d92325.mp3">にゅうか・</span>到貨）、荷造り（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/125_3125774edf4e.mp3">にづくり・</span>打包）</div></div>
+<hr>
+<h3>👂 聽讀任務：大阪・京都行程（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/002_345c9764e68c.mp3">たら</span>／<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/003_11f72191193e.mp3">なら</span> 實戰）</h3>
+<p><strong>短文（先讀一次，再聽音檔）</strong>：</p>
+<p>&gt; <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/081_2558c329eb35.mp3">日本へ行く</span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/003_11f72191193e.mp3">なら</span></strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/126_11d36ec6cd86.mp3">、春がおすすめです。桜がきれいですから。でも、週末になっ</span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/002_345c9764e68c.mp3">たら</span></strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/127_28e3645ed845.mp3">、どこも人が多いです。もし安いチケットが見つかっ</span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/002_345c9764e68c.mp3">たら</span></strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/128_700ac59e831e.mp3">、すぐ予約したほうがいいですよ。</span></p>
+<p><strong>廣東話對譯</strong>：如果去日本，春天最推薦，因為櫻花好靚。不過一到週末，周圍都好多人。如果搵到平機票，最好即刻訂。</p>
+<p><strong>會話（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/129_1929f461c457.mp3">王さん・田中さん</span>）</strong>：</p>
+<p>&gt; <strong>王</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/130_529bd5369455.mp3">田中さん、来月、大阪へ行く</span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/003_11f72191193e.mp3">なら</span></strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/131_580f2672ee79.mp3">、何を見たほうがいいですか。</span></p>
+<p>&gt; <strong>田中</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/133_cb5667d3acef.mp3">そうですね。大阪へ行く</span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/003_11f72191193e.mp3">なら</span></strong>、<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="やっぱり大阪城" data-audio="audio/day48/134_ca3133499fc4.mp3"><span class="jp" onclick="speak(this)" title="🔊 撳我讀">やっぱり</span>大阪城<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">おおさかじょう</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/135_59fe09d498d1.mp3">ですね。でも、時間が</span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/136_dc57de80c1b2.mp3">あったら</span></strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/137_c23f2fdb5b5b.mp3">、京都も寄ってみてください。</span></p>
+<p>&gt; <strong>王</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/138_19b268d59571.mp3">京都までは遠いですか。</span></p>
+<p>&gt; <strong>田中</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/139_430618b88a87.mp3">いいえ。新幹線に</span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/140_ce2d6efa8611.mp3">乗ったら</span></strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/141_d9b5b3555b74.mp3">、十五分ぐらいですよ。</span></p>
+<p>&gt; <strong>王</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/142_142e1e201671.mp3">じゃ、大阪に</span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/143_b1eda8f1d008.mp3">着いたら</span></strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/144_c6d0f3ef43ce.mp3">、すぐ京都へ行きます。</span></p>
+<p>&gt; <strong>田中</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/146_a011b81741fe.mp3">あまり無理を</span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/015_cf10ee8dd919.mp3">したら</span></strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/147_fc2ce5556314.mp3">、疲れますよ。</span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="一泊" data-audio="audio/day48/145_e7c45fe91d37.mp3">一泊<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">いっぱく</span>）</small></span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/015_cf10ee8dd919.mp3">したら</span></strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/148_46dbfbe1cd44.mp3">、ゆっくり回れますから。</span></p>
+<p>&gt; <strong>王</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/149_55f927355d36.mp3">なるほど。じゃ、大阪に泊まる</span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/003_11f72191193e.mp3">なら</span></strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/150_c583bd534b3a.mp3">、どの辺りが便利ですか。</span></p>
+<p>&gt; <strong>田中</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="梅田" data-audio="audio/day48/151_1752285b804a.mp3">梅田<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">うめだ</span>）</small></span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/003_11f72191193e.mp3">なら</span></strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/152_a22df5eefb3c.mp3">、駅も近いし、買い物も便利ですよ。</span></p>
+<p><strong>廣東話對譯</strong>：</p>
+<ul>
+<li>王：田中先生，我下個月去大阪嘅話，應該睇啲乜嘢好？</li>
+<li>田中：唔……去大阪嘅話，始終都係大阪城啦。不過如果有時間，京都都去埋睇下啦。</li>
+<li>王：去到京都遠唔遠？</li>
+<li>田中：唔遠。搭上新幹線之後，大約十五分鐘。</li>
+<li>王：咁我到咗大阪之後，即刻去京都。</li>
+<li>田中：太勉強嘅話會攰喎。住一晚之後，就可以慢慢行。</li>
+<li>王：原來如此。咁如果住大阪，邊一區方便？</li>
+<li>田中：梅田嘅話，車站又近，買嘢又方便。</li>
+</ul>
+<p><strong>聽解要點（拆解 <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/002_345c9764e68c.mp3">たら</span>／<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/003_11f72191193e.mp3">なら</span>）</strong>：</p>
+<ul>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/153_2233a945292a.mp3">「大阪へ行くなら、大阪城ですね」</span></strong>：承接對方話題 → 建議，用<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/003_11f72191193e.mp3">なら</span></strong>。</li>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/154_d5075dcde314.mp3">「時間があったら、京都も寄ってみてください」</span></strong>：假定＋後面係請求 → <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/002_345c9764e68c.mp3">たら</span></strong>（ば 都得，但口語多用 <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/002_345c9764e68c.mp3">たら</span>）。</li>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/155_1dcc9f2534b8.mp3">「新幹線に乗ったら、十五分ぐらいです」</span></strong>：<strong>完了用法</strong>——「搭上之後」，唔係「如果搭」。</li>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/156_9f2fb4c4294d.mp3">「大阪に着いたら、すぐ京都へ行きます」</span></strong>：同樣係完了・先後順序。</li>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/157_dc3d62e4962f.mp3">「一泊したら、ゆっくり回れます」</span></strong>：完了＋可能形（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/158_89d8744f1bb3.mp3">回れる</span>），同 Day 46 嘅可能形接軌。</li>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/159_741329bb1812.mp3">「梅田なら、駅も近いし</span>…」</strong>：講到某個地方 → 評價，典型<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/003_11f72191193e.mp3">なら</span></strong>用法。</li>
+</ul>
+<p><strong>朗讀任務</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/160_ed3c93ab1ec2.mp3">將上面會話由「田中さん」</span>第二句（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/161_fbc761d670ba.mp3">そうですね</span>…）開始，大聲讀三次，特別留意「乗っ<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/002_345c9764e68c.mp3">たら</span></strong>」「着い<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/002_345c9764e68c.mp3">たら</span></strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/162_60ed6a1540f5.mp3">」「泊まる</span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/003_11f72191193e.mp3">なら</span></strong>」嘅接續。</p>
+<hr>
+<p>📋 <strong>今日學習小結</strong>：</p>
+<div class="num-item"><span class="num">1</span><div class="num-body"><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/002_345c9764e68c.mp3">たら</span></strong>＝た形＋ら：假定、完了、發現、反事實，最萬能、最口語。</div></div>
+<div class="num-item"><span class="num">2</span><div class="num-body"><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/003_11f72191193e.mp3">なら</span></strong>＝名詞／普通形＋<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/003_11f72191193e.mp3">なら</span>：承接話題＋建議判斷，<strong>唔講先後順序</strong>，後面唔接機械必然結果。</div></div>
+<div class="num-item"><span class="num">3</span><div class="num-body">揀邊個？<strong>必然／機械／指路 → と</strong>；<strong>假定＋意志 → ば／<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/002_345c9764e68c.mp3">たら</span></strong>；<strong>講到…嘅話 → <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/003_11f72191193e.mp3">なら</span></strong>；<strong>唔肯定 → <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day48/002_345c9764e68c.mp3">たら</span></strong>。</div></div>
+<p>聽日（Day 49，星期三）會做<strong>條件形四兄弟總結＋易錯題</strong>：集中練「同一句應該揀邊個」嘅判斷題，呢類題目 N4 每次考試都出。星期六（Day 52）總複習會補回可能形＋<span class="jp" onclick="speak(this)" title="🔊 撳我讀">感官動詞嘅測驗。お疲れ様でした！</span>✨</p>
+<a class="back" href="index.html">← 返回目錄</a>
+</main>
+<script>
+var _audio=null, _last=null;
+function speak(el){
+  try{
+    var mp3=el.dataset.audio;
+    if(mp3){
+      if(_audio && _last===el && !_audio.paused){_audio.pause();_audio.currentTime=0;el.classList.remove('speaking');return;}
+      if(_audio){_audio.pause();}
+      _audio=new Audio(mp3);_last=el;
+      el.classList.add('speaking');
+      _audio.onended=function(){el.classList.remove('speaking');};
+      _audio.play();
+      return;
+    }
+    var t=(el.dataset.speak||el.textContent||'').replace(/\s+/g,' ').trim();
+    if(!('speechSynthesis' in window))return;
+    var u=new SpeechSynthesisUtterance(t);u.lang='ja-JP';u.rate=0.85;
+    speechSynthesis.cancel();speechSynthesis.speak(u);
+    el.classList.add('speaking');
+    u.onend=function(){el.classList.remove('speaking');};
+  }catch(e){}
+}
+</script>
+</body>
+</html>
