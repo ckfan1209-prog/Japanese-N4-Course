@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#6366f1">
+<title>Day 52 ｜ 日語 N4</title>
+<style>
+:root {
+  --bg:#f4f5fb; --card:#ffffff; --text:#1e2235; --muted:#8b90a7;
+  --primary:#6366f1; --primary-soft:#eef0ff; --radius:16px;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,"PingFang TC","Noto Sans TC","Hiragino Sans",sans-serif; background:var(--bg); color:var(--text); line-height:1.8; }
+nav { position:sticky; top:0; z-index:20; background:rgba(99,102,241,.92); backdrop-filter:blur(12px); color:#fff; padding:.85rem 1rem; display:flex; justify-content:space-between; align-items:center; }
+nav .title { font-weight:800; font-size:.98rem; }
+nav a { color:#fff; text-decoration:none; font-size:.82rem; background:rgba(255,255,255,.18); padding:.4rem .85rem; border-radius:99px; }
+.hero { background:linear-gradient(140deg,#6366f1,#8b5cf6); color:#fff; padding:1.6rem 1.2rem 1.4rem; border-radius:0 0 26px 26px; }
+.hero .day-label { font-size:.8rem; opacity:.85; letter-spacing:1px; }
+.hero h1 { font-size:1.5rem; font-weight:800; margin:.2rem 0; }
+.hero .theme { font-size:.8rem; opacity:.9; margin-top:.3rem; }
+main { max-width:600px; margin:0 auto; padding:1.1rem 1rem 4rem; }
+h2 { font-size:1.02rem; margin:1.6rem 0 .7rem; color:var(--primary); font-weight:800; display:flex; align-items:center; gap:.45rem; }
+h2::before { content:""; width:4px; height:1.05em; background:linear-gradient(180deg,#6366f1,#a855f7); border-radius:4px; }
+h3 { font-size:.95rem; margin:1.1rem 0 .45rem; color:#3f4664; }
+p { margin:.5rem 0; font-size:.92rem; }
+ul { margin:.4rem 0 .4rem 1.25rem; }
+li { margin:.3rem 0; font-size:.9rem; }
+hr { border:none; border-top:1.5px dashed #e3e6f2; margin:1.3rem 0; }
+.table-wrap { overflow-x:auto; margin:.8rem 0; border-radius:12px; box-shadow:0 0 0 1px #e8eaf5; }
+table { border-collapse:collapse; width:100%; font-size:.83rem; background:#fff; border-radius:12px; overflow:hidden; }
+th, td { padding:.5rem .7rem; text-align:left; border-bottom:1px solid #eef0f7; }
+th { background:var(--primary-soft); color:#4338ca; font-size:.8rem; }
+tr:last-child td { border-bottom:none; }
+code { background:var(--primary-soft); color:#4338ca; padding:.12rem .4rem; border-radius:6px; font-size:.88em; }
+strong { color:#2f3560; }
+.num-item { display:flex; gap:.65rem; padding:.55rem .7rem; border-radius:12px; margin:.3rem 0; background:#fafbfe; }
+.num { flex-shrink:0; width:26px; height:26px; border-radius:50%; background:var(--primary-soft); color:var(--primary); font-weight:800; font-size:.78rem; display:flex; align-items:center; justify-content:center; margin-top:.15rem; }
+.num-body { font-size:.9rem; }
+.jp { cursor:pointer; border-bottom:1.5px dotted #a5b4fc; transition:background .15s; }
+.jp:active, .jp.speaking { background:var(--primary-soft); border-bottom-color:var(--primary); }
+.tts-hint { font-size:.72rem; color:#5b6072; background:var(--primary-soft); border-radius:10px; padding:.45rem .8rem; margin:0 0 1rem; }
+.back { display:block; text-align:center; background:var(--primary); color:#fff; text-decoration:none; padding:.85rem; border-radius:14px; font-weight:700; font-size:.9rem; margin-top:1.4rem; }
+</style>
+</head>
+<body>
+<nav><span class="title">🇯🇵 N4 ｜ Day 52</span><a href="index.html">目錄</a></nav>
+<div class="hero">
+  <div class="day-label">DAY 52 / 182 ｜ 2026-11-21</div>
+  <h1>📝 週末總複習 + 測驗</h1>
+  <div class="theme">**週六總複習：第 8 週（條件形四兄弟 × 授受表現三兄弟）＋ 5 條小測驗**</div>
+</div>
+<main>
+<div class="tts-hint">🔊 撳任何日文（虛線底線）都會即時讀出，再撳一下停止</div>
+<p>📅 <strong>今日進度：第 52 日 / 182</strong>｜Phase 2：N4 文法核心前半｜<strong>週六總複習：第 8 週（條件形四兄弟 × 授受表現三兄弟）＋ 5 條小測驗</strong></p>
+<p>大家夜晚好！今日係<strong>第 52 日</strong>（星期六）。</p>
+<p>呢個星期我哋做咗兩件大事：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="條件形四兄弟" data-audio="audio/day52/011_345c9764e68c.mp3">條件形四兄弟<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">と・ば・たら・なら</span>）</small></span>收尾，同埋<strong>授受表現由「物」升級到「動作」</strong>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/000_ff52576c5f91.mp3">あげる・くれる・もらう</span> → <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/001_9d7a2798700e.mp3">てあげる・てくれる・てもらう</span>）。</p>
+<p>呢兩組文法係 N4 讀解同聽解嘅「方向感」核心：條件形決定<strong>前後件關係</strong>，授受決定<strong>邊個幫邊個</strong>。今日唔學新嘢，專心將呢兩組鎖死，順便補返上星期六（Day 45）因系統故障漏咗嘅條件形複習。</p>
+<hr>
+<h3>✅ 昨日造句答案（Day 51）</h3>
+<ul>
+<li><strong>題目</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/002_efb6dc22208d.mp3">「私は道がよくわからなかったので、田中さんに駅まで案内して</span>（　　）。」1. <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/003_6b7119b3e478.mp3">あげた</span>　2. <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/004_3f18b8f67d89.mp3">くれた</span>　3. <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/005_06f445305983.mp3">もらった</span>　4. <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/006_1d6aaa2d0a9e.mp3">やった</span></li>
+<li><strong>正解</strong>：<strong>3. <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/005_06f445305983.mp3">もらった</span></strong></li>
+<li><strong>完整句子</strong>：<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/007_f0f325b4dce4.mp3">私は道がよくわからなかったので、田中さんに駅まで案内してもらった。</span></strong></li>
+<li><strong>廣東話解釋</strong>：我唔識路，所以請田中帶我去車站（我受咗田中帶路嘅恩惠）。</li>
+<li><em>💡 解析</em>：主語「私は」＝<strong>受惠者</strong>；<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/057_95184192b07d.mp3">做嘢嘅人「田中さん」</span>用 <strong>に</strong>。受惠者做主語 → <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/008_b3151b84deb9.mp3">てもらう</span></strong>。</li>
+<li><em>💡 點解唔用 <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/004_3f18b8f67d89.mp3">くれた</span></em>：用 <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/004_3f18b8f67d89.mp3">くれた</span> 要掉轉鏡頭——<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/009_7a925533812a.mp3">「田中さんが私を駅まで案内してくれた」。原句主語已經寫死「私は」</span>，所以只能配 <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/010_710929735b15.mp3">もらった。</span></li>
+<li><em>💡 點解唔用 <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/003_6b7119b3e478.mp3">あげた</span></em>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/003_6b7119b3e478.mp3">あげた</span>＝「我帶田中去車站」，同前半句「我唔識路」直接矛盾。</li>
+</ul>
+<hr>
+<h3>🗓️ 本週回顧（Day 47–51）</h3>
+<ul>
+<li><strong>Day 47（一）</strong>：條件形入門——<strong>と</strong>（必然・恒常）vs <strong>ば</strong>（假定）</li>
+<li><strong>Day 48（二）</strong>：<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/011_345c9764e68c.mp3">たら</span></strong>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/012_6dd0181b31a7.mp3">完了・假定・</span>發現）vs <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/013_11f72191193e.mp3">なら</span></strong>（承接話題・建議）</li>
+<li><strong>Day 49（三）</strong>：四兄弟總結＋易錯題（と <span class="jp" onclick="speak(this)" title="🔊 撳我讀">後面唔可以接意志・命令・</span>依賴）</li>
+<li><strong>Day 50（四）</strong>：授受表現入門——<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/000_ff52576c5f91.mp3">あげる・くれる・もらう</span></strong>（物）</li>
+<li><strong>Day 51（五）</strong>：授受表現②——<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/001_9d7a2798700e.mp3">てあげる・てくれる・てもらう</span></strong>（動作）</li>
+</ul>
+<hr>
+<h3>🔁 核心文法大盤點</h3>
+<h4>1️⃣ 條件形四兄弟——同一個「如果」，四種鏡頭</h4>
+<p><strong>と</strong>（辭書形／<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/014_4849003dba48.mp3">ない</span>形 ＋ と）→ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/015_f391dc36b0a3.mp3">必然・恒常・自然現象・機械操作・</span>路線</p>
+<ul>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/016_ace7f923a502.mp3">春になると、桜が咲きます。</span>（一到春天，櫻花就開。）</li>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/017_579270c967be.mp3">このボタンを押すと、お湯が出ます。</span>（撳呢個掣就會出熱水。）</li>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/018_ea6d24bc8359.mp3">まっすぐ行くと、駅が見えます。</span>（直行就會見到車站。）</li>
+<li>⚠️ <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">後件唔可以接意志・命令・</span>依賴</strong>：✗ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/019_3288ea4f0173.mp3">駅に着くと、電話してください</span> → ✓ <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/020_b1eda8f1d008.mp3">着いたら</span></strong></li>
+</ul>
+<p><strong>ば</strong>（假定形：u 段 → e 段 ＋ ば）→ 假定條件，語氣最書面</p>
+<ul>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/021_16cf269a1427.mp3">お金があれば、旅行に行きます。</span>（有錢就去旅行。）</li>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/022_c6ec1594a021.mp3">安ければ、買います。</span>（平就買。）</li>
+<li>變法：書く→<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/023_de43daceeb7b.mp3">書けば</span>／<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/024_0e3e309b0bfd.mp3">食べる</span>→<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/025_be2f8d652bea.mp3">食べれば</span>／<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/026_fdb567ffcf4f.mp3">する</span>→<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/027_cc63ad4b01b3.mp3">すれば</span>／来る→<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/028_1036b7bb7351.mp3">くれば</span>／安い→<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/029_752205ef2c0d.mp3">安ければ</span>／<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/030_903f5b1a2813.mp3">静かなら</span>（ば）</li>
+</ul>
+<p><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/011_345c9764e68c.mp3">たら</span></strong>（た形 ＋ ら）→ 完成之後／假定／發現</p>
+<ul>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/031_f767f3acc83f.mp3">家に着いたら、すぐ電話してください。</span>（到屋企即刻打電話。）</li>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/032_7fa3741cd63d.mp3">雨が降ったら、試合は中止です。</span>（落雨就取消比賽。）</li>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/033_7c3998ad2054.mp3">窓を開けたら、雪が降っていた。</span>（一開窗，原來落緊雪——<strong>發現用法</strong>）</li>
+</ul>
+<p><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/013_11f72191193e.mp3">なら</span></strong>（名詞／普通形 ＋ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/013_11f72191193e.mp3">なら</span>）→ 承接對方話題，再給判斷／建議</p>
+<ul>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/034_8c7d4076c355.mp3">京都へ行くなら、春がいいですよ。</span>（去京都嘅話，春天最好。）</li>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/035_2bad4678d97b.mp3">パソコンなら、駅前の店が安いです。</span>（講到電腦，站前嗰間平啲。）</li>
+</ul>
+<p><strong>三秒判斷流程</strong>：</p>
+<div class="num-item"><span class="num">1</span><div class="num-body">後件係<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/036_9b0afaf8b61a.mp3">命令・依賴・</span>意志</strong>？→ 用 <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/011_345c9764e68c.mp3">たら</span></strong>（或 ば），<strong>唔用 と</strong>。</div></div>
+<div class="num-item"><span class="num">2</span><div class="num-body">講<strong>自然現象／機械／路線</strong>？→ <strong>と</strong>。</div></div>
+<div class="num-item"><span class="num">3</span><div class="num-body">對方啱啱講咗個話題，你想<strong>接住講</strong>？→ <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/013_11f72191193e.mp3">なら</span></strong>。</div></div>
+<div class="num-item"><span class="num">4</span><div class="num-body">強調「只要條件成立就一定…」嘅書面假定？→ <strong>ば</strong>。</div></div>
+<h4>2️⃣ 授受表現——兩層方向圖</h4>
+<p><strong>第一層：物（畀嘢）</strong></p>
+<ul>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/037_feb367cc5e9f.mp3">あげる</span></strong>：我／第三者 → 別人（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/038_ff07aacb098e.mp3">私は田中さんに本をあげた</span>）</li>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/039_a98f3e33a5a2.mp3">くれる</span></strong>：別人 → 我／我家人（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/040_6a021bacc866.mp3">田中さんは私に本をくれた</span>）</li>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/041_b893c8825703.mp3">もらう</span></strong>：我／別人<strong>收</strong>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/042_ccde7735c2c1.mp3">私は田中さんに本をもらった</span>）</li>
+</ul>
+<p><strong>第二層：動作（幫手）</strong></p>
+<ul>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/043_42ef5a90a7e6.mp3">てあげる</span></strong>：我／第三者<strong>幫</strong>別人做（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/044_14fec28c809c.mp3">私は田中さんに日本語を教えてあげた</span>）</li>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/045_1f5f5a58e368.mp3">てくれる</span></strong>：別人<strong>幫</strong>我／我家人做（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/046_7567a865c109.mp3">田中さんは私に日本語を教えてくれた</span>）</li>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/008_b3151b84deb9.mp3">てもらう</span></strong>：我<strong>受</strong>人恩惠（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/047_911f050ede94.mp3">私は田中さんに日本語を教えてもらった</span>）</li>
+<li>實用句：<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/048_85a346bfddca.mp3">〜てもらえますか</span></strong>＝「可以幫我…嗎？」（比 <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/049_4e2ac4ae1d92.mp3">〜てください</span> 婉轉）</li>
+</ul>
+<p><strong>鐵律</strong>：</p>
+<ul>
+<li>主語＝<strong>做嘢嘅人</strong> → <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/039_a98f3e33a5a2.mp3">くれる</span>（方向過嚟我）／<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/037_feb367cc5e9f.mp3">あげる</span>（方向出去）</li>
+<li>主語＝<strong>受惠嘅人</strong> → <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/041_b893c8825703.mp3">もらう</span>（做嘢嘅人用 に／<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/050_0dbdaf807f47.mp3">から</span>）</li>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/037_feb367cc5e9f.mp3">あげる</span> 系唔好對長輩／上級用</strong>（改用 <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/051_bd330aac0091.mp3">ていただく</span>，Phase 3 學）</li>
+</ul>
+<hr>
+<h3>⚠️ 本週高頻盲點速查（測驗前必睇）</h3>
+<div class="num-item"><span class="num">1</span><div class="num-body"><strong>と ＋ 依賴</strong>：✗ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/019_3288ea4f0173.mp3">駅に着くと、電話してください</span> → ✓ <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/020_b1eda8f1d008.mp3">着いたら</span></strong></div></div>
+<div class="num-item"><span class="num">2</span><div class="num-body"><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/013_11f72191193e.mp3">なら</span> 當「之後」用</strong>：✗ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/052_c971b17ea9c9.mp3">家に帰るなら、寝ます</span>（想講「返到屋企就瞓」）→ ✓ <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/053_64ee29c4131d.mp3">帰ったら</span></strong></div></div>
+<div class="num-item"><span class="num">3</span><div class="num-body"><strong>可能形助詞</strong>：✗ 日本語<strong>を</strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/054_6c9152f18104.mp3">話せます</span> → ✓ 日本語<strong>が</strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/054_6c9152f18104.mp3">話せます</span></div></div>
+<div class="num-item"><span class="num">4</span><div class="num-body"><strong>受惠者係我用 <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/043_42ef5a90a7e6.mp3">てあげる</span></strong>：✗ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/055_1f65b48c2a4d.mp3">田中さんは私に教えてあげました</span> → ✓ <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/056_6111781d0a52.mp3">教えてくれました</span></strong></div></div>
+<div class="num-item"><span class="num">5</span><div class="num-body"><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/008_b3151b84deb9.mp3">てもらう</span> 助詞</strong>：✗ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/057_95184192b07d.mp3">田中さん</span><strong>を</strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/058_22b0f92ee709.mp3">教えてもらいました</span> → ✓ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/057_95184192b07d.mp3">田中さん</span><strong>に／<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/050_0dbdaf807f47.mp3">から</span></strong></div></div>
+<div class="num-item"><span class="num">6</span><div class="num-body"><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/039_a98f3e33a5a2.mp3">くれる</span> 主語寫成我</strong>：✗ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/059_7d3d057de2e8.mp3">私はあなたに教えてくれました</span> → ✓ <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/060_066d3cf887bc.mp3">教えてあげました</span></strong></div></div>
+<hr>
+<h3>🈴 本週漢字快閃（10 字．出聲讀）</h3>
+<div class="num-item"><span class="num">1</span><div class="num-body"><strong>天</strong> — <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/063_b69249523372.mp3">テン</span>／<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/064_59e7c7cc9df0.mp3">あめ・あま</span>｜<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="天気" data-audio="audio/day52/061_7203e7055934.mp3">天気<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">てんき</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="・雨天" data-audio="audio/day52/062_ae29628a4ace.mp3">・雨天<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">うてん</span>）</small></span></div></div>
+<div class="num-item"><span class="num">2</span><div class="num-body"><strong>気</strong> — <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/066_c575d0aec6ec.mp3">キ・ケ</span>｜<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="元気" data-audio="audio/day52/065_b41ff10402a0.mp3">元気<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">げんき</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="・気持ち" data-audio="audio/day52/067_c460ffab6e72.mp3"><span class="jp" onclick="speak(this)" title="🔊 撳我讀">・気持ち</span><small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">きもち</span>）</small></span></div></div>
+<div class="num-item"><span class="num">3</span><div class="num-body"><strong>風</strong> — <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/070_b2f49c49133c.mp3">フウ</span>／<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/071_7487e0d1445e.mp3">かぜ</span>｜<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="台風" data-audio="audio/day52/068_6f627769db6e.mp3">台風<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">たいふう</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="・風景" data-audio="audio/day52/069_baeb0eb348a9.mp3">・風景<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ふうけい</span>）</small></span></div></div>
+<div class="num-item"><span class="num">4</span><div class="num-body"><strong>続</strong> — <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/073_8160d083afda.mp3">ゾク</span>／<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/074_884099bd20cc.mp3">つづ</span>（く）｜<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="連続" data-audio="audio/day52/072_9c7614f1ca99.mp3">連続<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">れんぞく</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="・続ける" data-audio="audio/day52/075_98be99f4c71c.mp3"><span class="jp" onclick="speak(this)" title="🔊 撳我讀">・続ける</span><small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/074_884099bd20cc.mp3">つづける</span>）</small></span></div></div>
+<div class="num-item"><span class="num">5</span><div class="num-body"><strong>受</strong> — <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/076_b12eca41d3dd.mp3">ジュ</span>／う（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/075_98be99f4c71c.mp3">ける</span>）｜<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/077_f641076b105d.mp3">受ける</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">うける</span>）<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="・受け取る" data-audio="audio/day52/078_736b266d2054.mp3"><span class="jp" onclick="speak(this)" title="🔊 撳我讀">・受け取る</span><small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">うけとる</span>）</small></span></div></div>
+<div class="num-item"><span class="num">6</span><div class="num-body"><strong>授</strong> — <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/076_b12eca41d3dd.mp3">ジュ</span>／<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/080_2a57294c98f9.mp3">さず</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/075_98be99f4c71c.mp3">ける</span>）｜<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="授業" data-audio="audio/day52/079_b0aa1dc1b51b.mp3">授業<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">じゅぎょう</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="・授ける" data-audio="audio/day52/081_d30030a1dbfc.mp3"><span class="jp" onclick="speak(this)" title="🔊 撳我讀">・授ける</span><small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/080_2a57294c98f9.mp3">さずける</span>）</small></span></div></div>
+<div class="num-item"><span class="num">7</span><div class="num-body"><strong>貸</strong> — <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/083_e50452d3d492.mp3">タイ</span>／か（す）｜貸す（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">かす</span>）<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="・賃貸" data-audio="audio/day52/082_8071191799c3.mp3">・賃貸<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ちんたい</span>）</small></span></div></div>
+<div class="num-item"><span class="num">8</span><div class="num-body"><strong>返</strong> — <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/085_00d41752f62c.mp3">ヘン</span>／<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/086_c5b7143f4981.mp3">かえ</span>（す）｜返す（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/086_c5b7143f4981.mp3">かえす</span>）<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="・返事" data-audio="audio/day52/084_e2df0f013606.mp3">・返事<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">へんじ</span>）</small></span></div></div>
+<div class="num-item"><span class="num">9</span><div class="num-body"><strong>説</strong> — <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/089_c8af82fd4866.mp3">セツ</span>／と（く）｜<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="説明" data-audio="audio/day52/087_d59c7687b28f.mp3">説明<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">せつめい</span>）</small></span><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="・小説" data-audio="audio/day52/088_66ee9d310b32.mp3">・小説<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">しょうせつ</span>）</small></span></div></div>
+<div class="num-item"><span class="num">10</span><div class="num-body"><strong>迎</strong> — <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/091_6509e0271f25.mp3">ゲイ</span>／<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/092_87dbe15ada4d.mp3">むか</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/093_089bf366583c.mp3">える</span>）｜<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/093_089bf366583c.mp3">迎える</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/086_c5b7143f4981.mp3">むかえる</span>）<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="・歓迎" data-audio="audio/day52/090_8bf393d4c22b.mp3">・歓迎<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">かんげい</span>）</small></span></div></div>
+<p>&gt; 💡 <strong>受</strong> 同 <strong>授</strong> 都讀 <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/076_b12eca41d3dd.mp3">ジュ</span>：<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/077_f641076b105d.mp3">受ける</span>＝收</strong>、<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/094_c562ecb47bdb.mp3">授ける</span>＝授</strong>。記法：「受」係雙手接住。</p>
+<hr>
+<h3>📝 本週小測驗（5 題｜答案在文末）</h3>
+<p>⏱ 限時 5 分鐘，唔好翻上去睇。</p>
+<p><strong>Q1（可能形）</strong></p>
+<p><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/095_13ce9fc1e7c0.mp3">「田中さんは中国語が</span>（　　）。」</p>
+<p>選項：1. <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/096_f47baf3c6a80.mp3">話します</span>　2. <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/054_6c9152f18104.mp3">話せます</span>　3. <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/097_0aafd022ecc8.mp3">話させます</span>　4. <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/098_85d6fa32d796.mp3">話されます</span></p>
+<p><strong>Q2（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/013_11f72191193e.mp3">なら</span>）</strong></p>
+<p>「A：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/099_50f41f72d97a.mp3">日本でいちばんきれいな町はどこですか。</span> B：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/099_50f41f72d97a.mp3">きれいな</span>町（　　）<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/101_72e596405a84.mp3">、京都がおすすめです。」</span></p>
+<p>選項：1. <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/013_11f72191193e.mp3">なら</span>　2. と　3. ば　4. <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/011_345c9764e68c.mp3">たら</span></p>
+<p><strong>Q3（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/011_345c9764e68c.mp3">たら</span>）</strong></p>
+<p>「家に（　　）<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/102_d822b519a7d9.mp3">、すぐに電話してください。」</span></p>
+<p>選項：1. <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/103_0c8c1d0ecef9.mp3">着くと</span>　2. <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/020_b1eda8f1d008.mp3">着いたら</span>　3. <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/104_2a35767cc060.mp3">着くなら</span>　4. <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/105_105b08496fc1.mp3">着きながら</span></p>
+<p><strong>Q4（授受・物）</strong></p>
+<p><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/106_e0b89769a6b4.mp3">「これは先生が私に</span>（　　）<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/107_5e6217d33572.mp3">辞書です。とても役に立っています。」</span></p>
+<p>選項：1. <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/003_6b7119b3e478.mp3">あげた</span>　2. <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/004_3f18b8f67d89.mp3">くれた</span>　3. <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/005_06f445305983.mp3">もらった</span>　4. <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/108_caf9df5015bd.mp3">いただいた</span></p>
+<p><strong>Q5（授受・動作）</strong></p>
+<p><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/109_65729c552ac6.mp3">「私が漢字を間違えたので、田中さんが直して</span>（　　）。」</p>
+<p>選項：1. <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/110_446bbfb5bb56.mp3">あげました</span>　2. <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/111_c33ab138b34e.mp3">くれました</span>　3. <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/112_91b3ecf7fc60.mp3">もらいました</span>　4. <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/113_c213b57cf6b1.mp3">やりました</span></p>
+<hr>
+<h3>👂 聽讀複習：一分鐘短文（條件形＋授受混合）</h3>
+<p>&gt; <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/004_3f18b8f67d89.mp3">明日は友だちの結婚式です。朝、天気がよければ、自転車で行きます。雨が降ったら、駅までバスで行って、電車に乗ります。会場に着いたら、まず受付で名前を書きます。スピーチをするなら、短いほうがいいと聞きました。友だちがスピーチの練習を手伝ってくれたので、もう大丈夫です。式が終わったら、みんなで写真を撮ってもらいます。</span></p>
+<p><strong>廣東話對譯</strong>：聽日係朋友嘅婚禮。朝早如果天氣好，我會踩單車去。如果落雨，就搭巴士去車站再轉電車。到咗會場，首先喺接待處寫名。聽講如果要致辭，短啲會好啲。朋友幫我練咗致辭，所以而家冇問題。儀式完咗之後，我會請大家幫我哋影相。</p>
+<p><strong>聽解要點</strong>：</p>
+<ul>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/115_da2c57012e9c.mp3">よければ</span></strong>：形容詞 <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/116_f8b138e6bc57.mp3">いい</span> → <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/115_da2c57012e9c.mp3">よければ</span>（ば 形・假定）</li>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/117_cc4388de3fc3.mp3">降ったら</span>／<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/020_b1eda8f1d008.mp3">着いたら</span>／<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/118_404667fb2c80.mp3">終わったら</span></strong>：三個 <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/011_345c9764e68c.mp3">たら</span> 都係「完成之後」</li>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/119_88cc7ba05e5d.mp3">するなら</span></strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/120_8d0e353f848a.mp3">承接「スピーチ」</span>呢個話題，再給判斷</li>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/121_0122c4f2e9b4.mp3">手伝ってくれた</span></strong>：朋友幫我 → <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/045_1f5f5a58e368.mp3">てくれる</span></li>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/122_6474a6f3a2b4.mp3">撮ってもらいます</span></strong>：我請人幫我影 → <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/008_b3151b84deb9.mp3">てもらう</span></li>
+</ul>
+<p><strong>朗讀任務</strong>：大聲讀兩次。每次見到 <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/011_345c9764e68c.mp3">たら</span>／<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/013_11f72191193e.mp3">なら</span>／ば，用手指比方向：<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/011_345c9764e68c.mp3">たら</span>＝向前</strong>（做完先）／<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/013_11f72191193e.mp3">なら</span>＝接住</strong>（承接話題）／<strong>ば＝鎖</strong>（條件鎖死）。</p>
+<hr>
+<h3>📥 答案與解析</h3>
+<p><strong>Q1 → 2. <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/054_6c9152f18104.mp3">話せます</span></strong></p>
+<ul>
+<li>可能形：話す（一類）→ 話<strong>せ</strong>る → <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/054_6c9152f18104.mp3">話せます。</span>可能形前面用 <strong>が</strong>（中国語<strong>が</strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/054_6c9152f18104.mp3">話せます</span>）。</li>
+<li>✗ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/097_0aafd022ecc8.mp3">話させます</span>＝使役（「讓…講」）；✗ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/098_85d6fa32d796.mp3">話されます</span>＝被動（「被講」）。</li>
+</ul>
+<p><strong>Q2 → 1. <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/013_11f72191193e.mp3">なら</span></strong></p>
+<ul>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/124_18237a975b6d.mp3">對方啱啱講「きれいな</span>町」，用 <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/013_11f72191193e.mp3">なら</span></strong> 承接話題再給建議：「講到靚嘅城鎮，推介京都」。</li>
+<li>✗ と 後面唔可以接建議；✗ ば／<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/011_345c9764e68c.mp3">たら</span> 喺呢個語境會變成「如果係靚城鎮」，意思扭曲。</li>
+</ul>
+<p><strong>Q3 → 2. <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/020_b1eda8f1d008.mp3">着いたら</span></strong></p>
+<ul>
+<li>後件係<strong>依賴</strong>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/125_f79bdbbd5c81.mp3">電話してください</span>），所以唔可以用 <strong>と</strong>；<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/011_345c9764e68c.mp3">たら</span></strong>＝「到咗之後」。</li>
+<li>✗ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/103_0c8c1d0ecef9.mp3">着くと</span>＋依賴＝文法錯；✗ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/104_2a35767cc060.mp3">着くなら</span>＝承接話題；✗ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/105_105b08496fc1.mp3">着きながら</span>＝同時進行。</li>
+</ul>
+<p><strong>Q4 → 2. <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/004_3f18b8f67d89.mp3">くれた</span></strong></p>
+<ul>
+<li>主語「先生が」＝給予者，接受者「私に」＝我 → <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/039_a98f3e33a5a2.mp3">くれる</span></strong>。</li>
+<li>✗ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/003_6b7119b3e478.mp3">あげた</span>＝我畀老師，方向反；✗ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/005_06f445305983.mp3">もらった</span> 要換主語（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/126_6eb2044ad00a.mp3">私が先生にもらった</span>）；✗ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/108_caf9df5015bd.mp3">いただいた</span> 係謙讓語，主語一定要係「我」。</li>
+</ul>
+<p><strong>Q5 → 2. <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/111_c33ab138b34e.mp3">くれました</span></strong></p>
+<ul>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/127_4ae99b6338d5.mp3">主語「田中さんが」</span>＝做嘢嘅人，受惠＝我 → <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/045_1f5f5a58e368.mp3">てくれる</span></strong>。</li>
+<li>✗ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/110_446bbfb5bb56.mp3">あげました</span>＝我幫田中改，意思反；✗ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/112_91b3ecf7fc60.mp3">もらいました</span> <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/128_5d2d115d471b.mp3">要寫「私が田中さんに直してもらった」</span>；✗ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/113_c213b57cf6b1.mp3">やりました</span>＝我幫（下輩／動植物）做。</li>
+</ul>
+<p><strong>得分參考</strong>：5/5＝本週通關；4/5＝重睇「盲點速查」第 3–6 條；3/5 以下＝明日聽力日之後，將 Day 47–51 嘅例句再抄一次。</p>
+<hr>
+<h3>📋 本週小結</h3>
+<div class="num-item"><span class="num">1</span><div class="num-body"><strong>と</strong>＝必然／恒常，後件<strong>唔可以</strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/129_ea467f8cb0ed.mp3">係命令・依賴・</span>意志。</div></div>
+<div class="num-item"><span class="num">2</span><div class="num-body"><strong>ば</strong>＝假定形＋ば，最書面嘅「只要…就」。</div></div>
+<div class="num-item"><span class="num">3</span><div class="num-body"><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/011_345c9764e68c.mp3">たら</span></strong>＝完成之後／發現，後件最自由（命令、依賴、意志都得）。</div></div>
+<div class="num-item"><span class="num">4</span><div class="num-body"><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/013_11f72191193e.mp3">なら</span></strong>＝接住對方話題再判斷，<strong>唔</strong>表示時間順序。</div></div>
+<div class="num-item"><span class="num">5</span><div class="num-body">授受鐵律：<strong>主語做嘢 → <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/039_a98f3e33a5a2.mp3">くれる</span>／<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/037_feb367cc5e9f.mp3">あげる</span>；主語受惠 → <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/041_b893c8825703.mp3">もらう</span></strong>。</div></div>
+<div class="num-item"><span class="num">6</span><div class="num-body"><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/037_feb367cc5e9f.mp3">あげる</span> 系唔好對長輩用</strong>，Phase 3 會換成 <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/051_bd330aac0091.mp3">ていただく</span>／<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/130_4991c93e798b.mp3">てくださる。</span></div></div>
+<p><strong>明日（Day 53，星期日）</strong>：輕量<strong>聽力特訓日</strong>——用一段生活對話練「條件形＋授受」嘅即時判斷，冇新文法，20 分鐘搞掂。今日臨睡前用三分鐘，將四兄弟同三兄弟喺心入面各唸一次，明日就會順。</p>
+<p><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day52/131_96d018df4cc7.mp3">お疲れ様でした！</span>✨</p>
+<a class="back" href="index.html">← 返回目錄</a>
+</main>
+<script>
+var _audio=null, _last=null;
+function speak(el){
+  try{
+    var mp3=el.dataset.audio;
+    if(mp3){
+      if(_audio && _last===el && !_audio.paused){_audio.pause();_audio.currentTime=0;el.classList.remove('speaking');return;}
+      if(_audio){_audio.pause();}
+      _audio=new Audio(mp3);_last=el;
+      el.classList.add('speaking');
+      _audio.onended=function(){el.classList.remove('speaking');};
+      _audio.play();
+      return;
+    }
+    var t=(el.dataset.speak||el.textContent||'').replace(/\s+/g,' ').trim();
+    if(!('speechSynthesis' in window))return;
+    var u=new SpeechSynthesisUtterance(t);u.lang='ja-JP';u.rate=0.85;
+    speechSynthesis.cancel();speechSynthesis.speak(u);
+    el.classList.add('speaking');
+    u.onend=function(){el.classList.remove('speaking');};
+  }catch(e){}
+}
+</script>
+</body>
+</html>
