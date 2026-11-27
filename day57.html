@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#6366f1">
+<title>Day 57 ｜ 日語 N4</title>
+<style>
+:root {
+  --bg:#f4f5fb; --card:#ffffff; --text:#1e2235; --muted:#8b90a7;
+  --primary:#6366f1; --primary-soft:#eef0ff; --radius:16px;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,"PingFang TC","Noto Sans TC","Hiragino Sans",sans-serif; background:var(--bg); color:var(--text); line-height:1.8; }
+nav { position:sticky; top:0; z-index:20; background:rgba(99,102,241,.92); backdrop-filter:blur(12px); color:#fff; padding:.85rem 1rem; display:flex; justify-content:space-between; align-items:center; }
+nav .title { font-weight:800; font-size:.98rem; }
+nav a { color:#fff; text-decoration:none; font-size:.82rem; background:rgba(255,255,255,.18); padding:.4rem .85rem; border-radius:99px; }
+.hero { background:linear-gradient(140deg,#6366f1,#8b5cf6); color:#fff; padding:1.6rem 1.2rem 1.4rem; border-radius:0 0 26px 26px; }
+.hero .day-label { font-size:.8rem; opacity:.85; letter-spacing:1px; }
+.hero h1 { font-size:1.5rem; font-weight:800; margin:.2rem 0; }
+.hero .theme { font-size:.8rem; opacity:.9; margin-top:.3rem; }
+main { max-width:600px; margin:0 auto; padding:1.1rem 1rem 4rem; }
+h2 { font-size:1.02rem; margin:1.6rem 0 .7rem; color:var(--primary); font-weight:800; display:flex; align-items:center; gap:.45rem; }
+h2::before { content:""; width:4px; height:1.05em; background:linear-gradient(180deg,#6366f1,#a855f7); border-radius:4px; }
+h3 { font-size:.95rem; margin:1.1rem 0 .45rem; color:#3f4664; }
+p { margin:.5rem 0; font-size:.92rem; }
+ul { margin:.4rem 0 .4rem 1.25rem; }
+li { margin:.3rem 0; font-size:.9rem; }
+hr { border:none; border-top:1.5px dashed #e3e6f2; margin:1.3rem 0; }
+.table-wrap { overflow-x:auto; margin:.8rem 0; border-radius:12px; box-shadow:0 0 0 1px #e8eaf5; }
+table { border-collapse:collapse; width:100%; font-size:.83rem; background:#fff; border-radius:12px; overflow:hidden; }
+th, td { padding:.5rem .7rem; text-align:left; border-bottom:1px solid #eef0f7; }
+th { background:var(--primary-soft); color:#4338ca; font-size:.8rem; }
+tr:last-child td { border-bottom:none; }
+code { background:var(--primary-soft); color:#4338ca; padding:.12rem .4rem; border-radius:6px; font-size:.88em; }
+strong { color:#2f3560; }
+.num-item { display:flex; gap:.65rem; padding:.55rem .7rem; border-radius:12px; margin:.3rem 0; background:#fafbfe; }
+.num { flex-shrink:0; width:26px; height:26px; border-radius:50%; background:var(--primary-soft); color:var(--primary); font-weight:800; font-size:.78rem; display:flex; align-items:center; justify-content:center; margin-top:.15rem; }
+.num-body { font-size:.9rem; }
+.jp { cursor:pointer; border-bottom:1.5px dotted #a5b4fc; transition:background .15s; }
+.jp:active, .jp.speaking { background:var(--primary-soft); border-bottom-color:var(--primary); }
+.tts-hint { font-size:.72rem; color:#5b6072; background:var(--primary-soft); border-radius:10px; padding:.45rem .8rem; margin:0 0 1rem; }
+.back { display:block; text-align:center; background:var(--primary); color:#fff; text-decoration:none; padding:.85rem; border-radius:14px; font-weight:700; font-size:.9rem; margin-top:1.4rem; }
+</style>
+</head>
+<body>
+<nav><span class="title">🇯🇵 N4 ｜ Day 57</span><a href="index.html">目錄</a></nav>
+<div class="hero">
+  <div class="day-label">DAY 57 / 182 ｜ 2026-11-26</div>
+  <h1>今日研讀內容</h1>
+  <div class="theme">週四：謙讓語專用動詞總整理——参る・申す・いたす・拝見する・お目にかかる</div>
+</div>
+<main>
+<div class="tts-hint">🔊 撳任何日文（虛線底線）都會即時讀出，再撳一下停止</div>
+<h2>第 57 日 / 182｜Phase 2：N4 文法核心前半｜週四：謙讓語專用動詞總整理——<span class="jp" onclick="speak(this)" title="🔊 撳我讀">参る・申す・いたす・拝見する・お目にかかる</span></h2>
+<p>大家夜晚好；今日係<strong>第 57 日</strong>，星期四。</p>
+<p>前四日你已經識「お／<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ご〜になる」</span>「〜（ら）<span class="jp" onclick="speak(this)" title="🔊 撳我讀">れる」</span>呢兩張<strong>抬高對方</strong>的牌。但敬語係一對嘅：抬高對方嘅同時，仲要<strong>贬低自己</strong>。日文唔係隨便加個「お」就禮貌——有幾個動作，日本人<strong>一定</strong>用專用動詞，用錯就好似廣東話講「我食咗你」咁突兀。</p>
+<p>今日目標：把「我去、我講、我做、我睇、我見」五個動作，一次過換成職場版，並且分清一個關鍵分類——<strong>謙讓語 I 同 丁重語（謙讓語 II）</strong>。呢個分類好多教科書唔講，<span class="jp" onclick="speak(this)" title="🔊 撳我讀">但佢決定你講「伺います」定「参ります」。</span></p>
+<p>今日 60–90 分鐘：單字 12 個（商業往來名詞）→ 文法兩點 → 漢字 7 字 → 電話取次會話聽讀。</p>
+<hr>
+<h3>📖 單字 12 個（今日主題：商業往來、電話應對）</h3>
+<div class="num-item"><span class="num">1</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="上司">上司<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">じょうし</span>）</small></span><strong> — 上司。例句：</strong>上司**<span class="jp" onclick="speak(this)" title="🔊 撳我讀">に報告してから、ご連絡いたします。</span>（同上司報告完之後，我再聯絡你。）</div></div>
+<div class="num-item"><span class="num">2</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="取引先">取引先<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">とりひきさき</span>）</small></span><strong> — <span class="jp" onclick="speak(this)" title="🔊 撳我讀">客戶公司、生意夥伴。留意「ひき」唔係「ひ」。</span>例句：</strong>取引先**のABC<span class="jp" onclick="speak(this)" title="🔊 撳我讀">社を訪問します。</span>（去拜訪客戶 ABC 社。）</div></div>
+<div class="num-item"><span class="num">3</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="訪問">訪問<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ほうもん</span>）</small></span><strong> — 拜訪（名詞／サ変）。例句：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">明日の午後、御社を</span></strong>訪問**<span class="jp" onclick="speak(this)" title="🔊 撳我讀">する予定でございます。</span>（聽日下晝我計劃拜訪貴公司。）</div></div>
+<div class="num-item"><span class="num">4</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="都合">都合<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">つごう</span>）</small></span><strong> — 方便、時間上嘅情況。例句：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">明日のご</span></strong>都合**<span class="jp" onclick="speak(this)" title="🔊 撳我讀">はいかがでしょうか。</span>（聽日你方便嗎？）</div></div>
+<div class="num-item"><span class="num">5</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="確認">確認<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">かくにん</span>）</small></span><strong> — 確認（名詞／サ変）。例句：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">念のため、もう</span>一度</strong>確認**<span class="jp" onclick="speak(this)" title="🔊 撳我讀">させていただきます。</span>（為穩陣起見，我再確認一次。）</div></div>
+<div class="num-item"><span class="num">6</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="伝言">伝言<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">でんごん</span>）</small></span><strong> — 留言、口信。例句：ご</strong>伝言**<span class="jp" onclick="speak(this)" title="🔊 撳我讀">をお願いできますか。</span>（可以幫我留個口信嗎？）</div></div>
+<div class="num-item"><span class="num">7</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="受付">受付<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">うけつけ</span>）</small></span><strong> — 接待處、櫃檯；亦可指接待員。例句：一階の</strong>受付**<span class="jp" onclick="speak(this)" title="🔊 撳我讀">でお名前をお伝えください。</span>（請喺一樓接待處講低你嘅名。）</div></div>
+<div class="num-item"><span class="num">8</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="案内">案内<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">あんない</span>）</small></span><strong> — 帶路、引導、介紹（名詞／サ変）。例句：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">会議室へご</span></strong>案内**<span class="jp" onclick="speak(this)" title="🔊 撳我讀">いたします。</span>（我帶你去會議室。）</div></div>
+<div class="num-item"><span class="num">9</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="準備">準備<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">じゅんび</span>）</small></span><strong> — 準備（名詞／サ変）。例句：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">資料はすでに</span></strong>準備**<span class="jp" onclick="speak(this)" title="🔊 撳我讀">しております。</span>（資料我已經準備好。）</div></div>
+<div class="num-item"><span class="num">10</span><div class="num-body"><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">折り返し</span></strong> — 已於 Day 56 學過，今日複習用法：<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">折り返し</span></strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">お電話いたします。</span>（我轉頭馬上回電話。）→ 電話場景必備，記住同「伝言」一齊用。</div></div>
+<div class="num-item"><span class="num">11</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="恐れ入ります"><span class="jp" onclick="speak(this)" title="🔊 撳我讀">恐れ入ります</span><small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">おそれいります</span>）</small></span><strong> — 不好意思、勞煩你（固定客套語，<span class="jp" onclick="speak(this)" title="🔊 撳我讀">比「すみません」</span>正式得多）。例句：</strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">恐れ入ります</span>**<span class="jp" onclick="speak(this)" title="🔊 撳我讀">が、少々お待ちいただけますか。</span>（唔好意思，可以等一陣嗎？）</div></div>
+<div class="num-item"><span class="num">12</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="失礼します"><span class="jp" onclick="speak(this)" title="🔊 撳我讀">失礼します</span><small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">しつれいします</span>）</small></span><strong> — 打擾了／告辭（入房、離開、掛電話都用）。例句：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">では、</span></strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">失礼いたします</span>**。（咁我告辭了。）</div></div>
+<p>&gt; 💡 三個實用提醒：</p>
+<p>&gt; - 「<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">恐れ入りますが</span></strong>」係電話同接待的萬能開場，用嚟提出請求之前先降一格，<span class="jp" onclick="speak(this)" title="🔊 撳我讀">比直接講「〜してください」</span>軟好多。</p>
+<p>&gt; - 「<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">失礼いたします</span></strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">」係「失礼します」</span>的謙讓版，掛電話、離開房間、打斷對話都用得，係辦公室最常聽到的四個字。</p>
+<p>&gt; - 第 10 <span class="jp" onclick="speak(this)" title="🔊 撳我讀">項「折り返し」</span>今日唔算新字，但一定要同「伝言」一齊記：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">「ご伝言をお願いできますか」</span>＋<span class="jp" onclick="speak(this)" title="🔊 撳我讀">「折り返しお電話いたします」</span>＝完整一套電話流程。</p>
+<hr>
+<h3>✍️ 文法（今日 2 點 + 1 個補充）</h3>
+<h4>文法①　謙讓語專用動詞 5 個核心</h4>
+<p><strong>概念</strong>：呢批動詞<strong>唔使套公式</strong>，係整個字換掉。換咗之後，句子其餘部分照舊。</p>
+<div class="table-wrap"><table>
+<tr><th>普通形</th><th>謙讓語</th><th>意思</th></tr>
+<tr><td>行く／来る</td><td><strong>参る（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">まいる</span>）</strong></td><td>我去／我來</td></tr>
+<tr><td>言う</td><td><strong>申す（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">もうす</span>）</strong>／<span class="jp" onclick="speak(this)" title="🔊 撳我讀">申し上げる</span></td><td>我講</td></tr>
+<tr><td><span class="jp" onclick="speak(this)" title="🔊 撳我讀">する</span></td><td><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">いたす</span></strong></td><td>我做</td></tr>
+<tr><td>見る</td><td><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="拝見する"><span class="jp" onclick="speak(this)" title="🔊 撳我讀">拝見する</span><small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">はいけんする</span>）</small></span>**</td><td>我睇</td></tr>
+<tr><td>会う</td><td><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">お目にかかる</span></strong></td><td>我見（人）</td></tr>
+</table></div>
+<p><strong>接續同例句</strong>：</p>
+<ul>
+<li><strong>参る</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ます形「参ります」、て形「参りまして」。</span></li>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀">明日の三時に</span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">参ります</span></strong>。（我三點到。）</li>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀">私がそちらへ</span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">参ります</span></strong>。（我過去你嗰邊。）</li>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀">課長はただいま</span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">参ります</span></strong>。（課長而家過嚟。）← 注意：自己公司的人，即使係上司，對外都用謙讓語。</li>
+<li><strong>申す</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ます形「申します」。</span>自我介紹的固定句：</li>
+<li>ABC<span class="jp" onclick="speak(this)" title="🔊 撳我讀">社の佐藤と</span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">申します</span></strong>。（我係 ABC 社的佐藤。）</li>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀">その件は私から部長に</span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">申し上げます</span></strong>。（呢件事我同部長講。）← <span class="jp" onclick="speak(this)" title="🔊 撳我讀">「申し上げる」比「申す」</span>更鄭重，用於「對上位者講」。</li>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">いたす</span></strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">します</span> → <span class="jp" onclick="speak(this)" title="🔊 撳我讀">いたします。</span>書面、電話一律用：</li>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀">私がご</span>案内<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">いたします</span></strong>。（我帶你去。）</li>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀">折り返しお</span>電話<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">いたします</span></strong>。（我轉頭回電話。）</li>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀">日曜日は休業と</span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">いたしております</span></strong>。（星期日休息。）← <span class="jp" onclick="speak(this)" title="🔊 撳我讀">「〜としています」</span>的謙讓版。</li>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">拝見する</span></strong>：睇<strong>物件</strong>（文件、作品、郵件）。<strong>唔可以</strong>用嚟睇人。</li>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀">お送りいただいた資料を</span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">拝見しました</span></strong>。（你send嚟嘅資料我睇咗。）</li>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀">先ほどメールを</span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">拝見いたしました</span></strong>。（我啱啱睇咗你封 email。）</li>
+<li>✗ <span class="jp" onclick="speak(this)" title="🔊 撳我讀">先生を拝見しました</span>（錯，<span class="jp" onclick="speak(this)" title="🔊 撳我讀">人用「お目にかかる」</span>）。</li>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">お目にかかる</span></strong>：見<strong>人</strong>（上位者、客人）。</li>
+<li>一度<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">お目にかかりたい</span></strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">のですが。</span>（想同你見一次面。）</li>
+<li>先日は<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">お目にかかれて</span></strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">うれしかったです。</span>（上次見到你真係開心。）</li>
+</ul>
+<p><strong>⚠️ 三個必記規則</strong>：</p>
+<div class="num-item"><span class="num">1</span><div class="num-body"><strong>謙讓語只可以講自己一方</strong>。✗ <span class="jp" onclick="speak(this)" title="🔊 撳我讀">社長が参りました</span> → ○ <span class="jp" onclick="speak(this)" title="🔊 撳我讀">社長がいらっしゃいました</span>（對客人講自己社長到咗，其實兩講都有，但嚴格分：對<strong>外部</strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">講自己公司的人用謙讓語「社長の田中が参ります」</span>；單純抬高對方社長就要用尊敬語）。考試原則：<strong>主語係對方 → 尊敬語；主語係我方 → 謙讓語</strong>。</div></div>
+<div class="num-item"><span class="num">2</span><div class="num-body"><strong>呢批動詞前面唔可以再加 お／ご</strong>。✗ <span class="jp" onclick="speak(this)" title="🔊 撳我讀">お伺いする、</span>✗ <span class="jp" onclick="speak(this)" title="🔊 撳我讀">ご拝見する、</span>✗ <span class="jp" onclick="speak(this)" title="🔊 撳我讀">お参りする</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">「お参り」</span>係去神社參拜，另一個字，唔好混）。</div></div>
+<div class="num-item"><span class="num">3</span><div class="num-body"><strong>佢哋冇尊敬形</strong>。✗ <span class="jp" onclick="speak(this)" title="🔊 撳我讀">参られる、</span>✗ <span class="jp" onclick="speak(this)" title="🔊 撳我讀">申される、</span>✗ <span class="jp" onclick="speak(this)" title="🔊 撳我讀">いたされる</span> → 要抬高對方就換返尊敬語：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">いらっしゃる</span>／<span class="jp" onclick="speak(this)" title="🔊 撳我讀">おっしゃる</span>／<span class="jp" onclick="speak(this)" title="🔊 撳我讀">なさる。</span></div></div>
+<hr>
+<h4>文法②　謙讓語 I 定丁重語（謙讓語 II）？——一條問題分清</h4>
+<p>呢個分類係 N4 之後、N3 考試的分水嶺，但概念好簡單。</p>
+<ul>
+<li><strong>謙讓語 I</strong>：動作<strong>有明確對象</strong>，贬低自己嚟抬高<strong>對方</strong>。</li>
+</ul>
+<p>例：<strong>先生に</strong>伺う、<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">社長の資料を</span></strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">拝見する、</span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">お客様に</span></strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">申し上げる。</span></p>
+<ul>
+<li><strong>丁重語（謙讓語 II）</strong>：動作<strong>冇對象</strong>，只係對<strong>聽的人</strong>客氣，題材係「我」或「我方」。</li>
+</ul>
+<p>例：東京へ<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">参ります</span></strong>、私が<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">いたします</span></strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">、父は家に</span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">おります</span></strong>。</p>
+<p><strong>判斷方法一句：問「呢個動作係向住邊個做？」</strong></p>
+<ul>
+<li>答得出一個人 → 謙讓語 I（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">伺う、拝見する、お目にかかる、差し上げる、いただく、申し上げる</span>）</li>
+<li>答唔出，純粹係「我」做的事 → 丁重語（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">参る、申す、いたす、おる、存じる</span>）</li>
+</ul>
+<p><strong>實例對比（同一個「去」，兩個唔同字）</strong>：</p>
+<ul>
+<li>明日、<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">御社に伺います</span></strong>。（聽日去<strong>貴公司</strong>拜訪。）← 對象係御社 → 伺う</li>
+<li>明日、<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">大阪へ参ります</span></strong>。（聽日去大阪。）← 冇對象 → 参る</li>
+<li>✗ <span class="jp" onclick="speak(this)" title="🔊 撳我讀">明日、御社へ参ります</span>（文法冇錯，但唔夠到位；拜訪人用「伺う」最自然）</li>
+</ul>
+<p><strong>丁重語家庭必記四個</strong>：</p>
+<div class="num-item"><span class="num">1</span><div class="num-body"><strong>参る</strong>（行く／来る）</div></div>
+<div class="num-item"><span class="num">2</span><div class="num-body"><strong>申す</strong>（言う）</div></div>
+<div class="num-item"><span class="num">3</span><div class="num-body"><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">いたす</span></strong>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">する</span>）</div></div>
+<div class="num-item"><span class="num">4</span><div class="num-body"><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">おる</span></strong>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">いる</span>）→ 好實用：<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">〜ております</span></strong></div></div>
+<ul>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀">山本はただいま外出して</span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">おります</span></strong>。（山本而家外出咗。）</li>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀">資料は準備して</span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">おります</span></strong>。（資料已經準備好。）</li>
+<li>✗ <span class="jp" onclick="speak(this)" title="🔊 撳我讀">お客様は席を外しております</span>（錯！對方用尊敬語：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">お客様は席を外していらっしゃいます</span>）</li>
+</ul>
+<p><strong>「知る」的謙讓形</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">存じる</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ぞんじる</span>）</p>
+<ul>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀">その件は</span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">存じております</span></strong>。（呢件事我知道。）</li>
+<li>✗ <span class="jp" onclick="speak(this)" title="🔊 撳我讀">存じません</span>（唔知）→ 正式講「<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">存じておりません</span></strong>」或「<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">存じ上げません</span></strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">」。直接講「知りません」</span>對客人係失禮。</li>
+</ul>
+<hr>
+<h4>補充　二重敬語（今日最易失分）</h4>
+<p>謙讓語一樣會疊錯。以下五組係職場同考試最常見：</p>
+<ul>
+<li>✗ <span class="jp" onclick="speak(this)" title="🔊 撳我讀">お伺いいたします</span> → ○ <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">伺います</span></strong>（「伺う」本身已謙讓）</li>
+<li>✗ <span class="jp" onclick="speak(this)" title="🔊 撳我讀">ご拝見いたします</span> → ○ <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">拝見いたします</span></strong></li>
+<li>✗ <span class="jp" onclick="speak(this)" title="🔊 撳我讀">拝見させていただきます</span> → ○ <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">拝見します</span></strong>（「拝見」＋<span class="jp" onclick="speak(this)" title="🔊 撳我讀">「させていただく」</span>＝兩層）</li>
+<li>✗ <span class="jp" onclick="speak(this)" title="🔊 撳我讀">参られます</span>／<span class="jp" onclick="speak(this)" title="🔊 撳我讀">申されます</span> → ○ <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">いらっしゃいます</span>／<span class="jp" onclick="speak(this)" title="🔊 撳我讀">おっしゃいます</span></strong></li>
+<li>✗ <span class="jp" onclick="speak(this)" title="🔊 撳我讀">お目にかからせていただく</span> → ○ <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">お目にかかります</span></strong></li>
+</ul>
+<p>判斷方法同一條：<strong>見到專用謙讓動詞，就當佢已經「用咗一次」，唔好再加第二次。</strong></p>
+<hr>
+<h4>🖊 造句練習（3 題，答案喺文末）</h4>
+<p>把括號內的動詞改成<strong>謙讓語</strong>：</p>
+<div class="num-item"><span class="num">1</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀">先ほどの資料を</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">見ます</span>）。（我睇咗啱先份資料。）</div></div>
+<div class="num-item"><span class="num">2</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀">明日の三時に御社へ</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">行きます</span>）。（聽日三點我去貴公司拜訪。）</div></div>
+<div class="num-item"><span class="num">3</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀">その件は私から部長に</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">言います</span>）。（呢件事我同部長講。）</div></div>
+<hr>
+<h3>🈴 今日漢字 7 字</h3>
+<div class="num-item"><span class="num">1</span><div class="num-body"><strong>拝</strong> — 音讀 <span class="jp" onclick="speak(this)" title="🔊 撳我讀">ハイ。</span>例詞：拝見（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">はいけん・</span>拜讀）、拝借（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">はいしゃく・</span>借用）、拝啓（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">はいけい・</span>敬啟，書信開頭）。留意「拝」係「手＋拜」，用嚟表示「恭敬地做」。</div></div>
+<div class="num-item"><span class="num">2</span><div class="num-body"><strong>伺</strong> — 音讀 シ、訓讀 <span class="jp" onclick="speak(this)" title="🔊 撳我讀">うかが</span>（う）。例詞：伺う（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">うかがう・</span>拜訪／請教）、伺い（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">うかがい・</span>詢問）。「伺」＝人＋司，有「喺旁邊等候機會」之意。</div></div>
+<div class="num-item"><span class="num">3</span><div class="num-body"><strong>存</strong> — 音讀 <span class="jp" onclick="speak(this)" title="🔊 撳我讀">ゾン</span>／<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ソン。</span>例詞：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">存じる</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ぞんじる・</span>知道，謙讓）<span class="jp" onclick="speak(this)" title="🔊 撳我讀">、ご存じ</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ごぞんじ・</span>知道，尊敬）、保存（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ほぞん・</span>保存）。同一個漢字，<span class="jp" onclick="speak(this)" title="🔊 撳我讀">配上「ご」變尊敬、配上「存じる」</span>變謙讓——敬語嘅縮影。</div></div>
+<div class="num-item"><span class="num">4</span><div class="num-body"><strong>参</strong> — 音讀 <span class="jp" onclick="speak(this)" title="🔊 撳我讀">サン、</span>訓讀 <span class="jp" onclick="speak(this)" title="🔊 撳我讀">まい</span>（る）。例詞：参る（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">まいる・</span>去／來，謙讓）、参加（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">さんか・</span>參加）、参考（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">さんこう・</span>參考）、持参（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">じさん・</span>自備／帶同）。</div></div>
+<div class="num-item"><span class="num">5</span><div class="num-body"><strong>申</strong> — 音讀 <span class="jp" onclick="speak(this)" title="🔊 撳我讀">シン、</span>訓讀 <span class="jp" onclick="speak(this)" title="🔊 撳我讀">もう</span>（す）。例詞：申す（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">もうす・</span>講，謙讓）<span class="jp" onclick="speak(this)" title="🔊 撳我讀">、申し込み</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">もうしこみ・</span>報名／申請）、申請（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">しんせい・</span>申請）、申告（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">しんこく・</span>申報）。</div></div>
+<div class="num-item"><span class="num">6</span><div class="num-body"><strong>譲</strong> — 音讀 <span class="jp" onclick="speak(this)" title="🔊 撳我讀">ジョウ、</span>訓讀 <span class="jp" onclick="speak(this)" title="🔊 撳我讀">ゆず</span>（る）。例詞：謙譲（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">けんじょう・</span>謙讓）、譲る（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ゆずる・</span>讓出）、譲渡（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">じょうと・</span>轉讓）。「謙譲語」三個字入面就有呢個字，見到「譲」＝「退讓」。</div></div>
+<div class="num-item"><span class="num">7</span><div class="num-body"><strong>礼</strong> — 音讀 <span class="jp" onclick="speak(this)" title="🔊 撳我讀">レイ。</span>例詞：失礼（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">しつれい・</span>失禮）、礼儀（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">れいぎ・</span>禮貌）、お礼（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">おれい・</span>道謝）、礼状（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">れいじょう・</span>謝函）。</div></div>
+<p>&gt; 💡 <strong>申 vs 由</strong>：兩個字形近，「申」中間一豎穿頭到底（申請、申す）；「由」中間一豎唔穿頂（理由、自由）。寫 email 申請書時撈亂就好尷尬。另外「伺」同「同」都係口字框，但「伺」入面係「司」，唔係「一＋口」。</p>
+<hr>
+<h3>👂 聽讀任務：電話取次（取引先 ↔ 自社）</h3>
+<p>情境：ABC 社的佐藤打電話到櫻商事，想搵山本部長，但山本外出咗。</p>
+<p>&gt; <strong>田中</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">はい、</span>櫻商事 <span class="jp" onclick="speak(this)" title="🔊 撳我讀">営業部でございます。</span></p>
+<p>&gt; <strong>佐藤</strong>：ABC<span class="jp" onclick="speak(this)" title="🔊 撳我讀">社の佐藤と申します。いつもお世話になっております。</span></p>
+<p>&gt; <strong>田中</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">こちらこそ、お世話になっております。佐藤様でいらっしゃいますね。</span></p>
+<p>&gt; <strong>佐藤</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">恐れ入りますが、山本部長はいらっしゃいますか。</span></p>
+<p>&gt; <strong>田中</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">申し訳ございません。あいにく山本はただいま外出しておりまして。</span></p>
+<p>&gt; <strong>佐藤</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">そうですか。では、ご伝言をお願いできますか。</span></p>
+<p>&gt; <strong>田中</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">はい、伺います。どうぞ。</span></p>
+<p>&gt; <strong>佐藤</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">明日の打ち合わせの件ですが、三時から四時に変更していただきたいとお伝えください。</span></p>
+<p>&gt; <strong>田中</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">明日の打ち合わせを四時に、でございますね。承知いたしました。山本が戻りましたら、私から必ず申し上げます。</span></p>
+<p>&gt; <strong>佐藤</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">お手数をおかけします。では、失礼いたします。</span></p>
+<p>&gt; <strong>田中</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">失礼いたします。</span></p>
+<p><strong>廣東話對譯</strong>：</p>
+<ul>
+<li>田中：你好，呢度係櫻商事營業部。</li>
+<li>佐藤：我係 ABC 社的佐藤。一直多多關照。</li>
+<li>田中：我哋先係，多謝你關照。係佐藤先生是嗎？</li>
+<li>佐藤：唔好意思，請問山本部長喺唔喺？</li>
+<li>田中：真係抱歉。咁啱山本而家外出咗。</li>
+<li>佐藤：係咩。咁可以幫我留個口信嗎？</li>
+<li>田中：可以，你請講。</li>
+<li>佐藤：關於聽日開會嘅事，想請你同佢講，由三點改做四點。</li>
+<li>田中：聽日嘅會議改做四點，是嗎？明白。山本一返嚟，我親自同佢講。</li>
+<li>佐藤：麻煩你喇。咁我掛線喇。</li>
+<li>田中：好，再見。</li>
+</ul>
+<p><strong>耳仔要捉的 5 個敬語位</strong>：</p>
+<ul>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">「でございます」</span></strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">「です」</span>的丁重版，接電話報公司名一定用。</li>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">「と申します」</span></strong>：自己報名用謙讓；對方報名後，你確認要講「佐藤様で<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">いらっしゃいます</span></strong>ね」（尊敬）。</li>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">「外出しておりまして」</span></strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">〜ております</span>的連用中止形，用來講<strong>自己人</strong>的狀態，順便軟化拒絕。</li>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">「伺います」</span></strong>：呢度係「我聽你講」＝「聞く」的謙讓，<span class="jp" onclick="speak(this)" title="🔊 撳我讀">同「御社に伺う」</span>（拜訪）係同一個字、兩個意思，靠前文判斷。</li>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">「私から必ず申し上げます」</span></strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">「申し上げる」</span>＝對上位者講，<span class="jp" onclick="speak(this)" title="🔊 撳我讀">比「伝えます」</span>鄭重好多，係電話留言的收尾金句。</li>
+</ul>
+<p><strong>朗讀任務</strong>：大聲讀三次。每次見到動詞就問兩句：<strong>「邊個做？」「有冇對象？」</strong></p>
+<p>自己做＋有對象 → 伺う／<span class="jp" onclick="speak(this)" title="🔊 撳我讀">拝見する</span>／<span class="jp" onclick="speak(this)" title="🔊 撳我讀">お目にかかる</span>／<span class="jp" onclick="speak(this)" title="🔊 撳我讀">申し上げる</span></p>
+<p>自己做＋冇對象 → 参る／申す／<span class="jp" onclick="speak(this)" title="🔊 撳我讀">いたす</span>／<span class="jp" onclick="speak(this)" title="🔊 撳我讀">おる</span></p>
+<p>對方做 → <span class="jp" onclick="speak(this)" title="🔊 撳我讀">いらっしゃる</span>／<span class="jp" onclick="speak(this)" title="🔊 撳我讀">おっしゃる</span>／<span class="jp" onclick="speak(this)" title="🔊 撳我讀">なさる</span>／<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ご覧になる</span></p>
+<hr>
+<h3>🧠 聽讀理解 3 題（答案喺文末）</h3>
+<p><strong>① <span class="jp" onclick="speak(this)" title="🔊 撳我讀">打ち合わせは何時に変更になりましたか。</span></strong></p>
+<div class="num-item"><span class="num">1</span><div class="num-body">三時</div></div>
+<div class="num-item"><span class="num">2</span><div class="num-body">四時</div></div>
+<div class="num-item"><span class="num">3</span><div class="num-body">五時</div></div>
+<p><strong>② <span class="jp" onclick="speak(this)" title="🔊 撳我讀">山本は今どうしていますか。</span></strong></p>
+<div class="num-item"><span class="num">1</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀">会議中です</span></div></div>
+<div class="num-item"><span class="num">2</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀">外出しています</span></div></div>
+<div class="num-item"><span class="num">3</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀">出張しています</span></div></div>
+<p><strong>③ <span class="jp" onclick="speak(this)" title="🔊 撳我讀">田中は伝言をどうしますか。</span></strong></p>
+<div class="num-item"><span class="num">1</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀">メールで送ります</span></div></div>
+<div class="num-item"><span class="num">2</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀">山本が戻ったら自分から伝えます</span></div></div>
+<div class="num-item"><span class="num">3</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀">佐藤にもう一度電話させます</span></div></div>
+<hr>
+<h3>📥 答案與解析</h3>
+<h4>造句練習答案</h4>
+<p><strong>1. <span class="jp" onclick="speak(this)" title="🔊 撳我讀">先ほどの資料を</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">見ます</span>）。</strong></p>
+<p>→ <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">先ほどの資料を拝見しました。</span></strong></p>
+<ul>
+<li>「見る」＋物件 → <span class="jp" onclick="speak(this)" title="🔊 撳我讀">拝見する。過去式變喺「する」</span>身上：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">拝見しました。</span></li>
+<li>亦可更鄭重：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">拝見いたしました。</span>✗ <span class="jp" onclick="speak(this)" title="🔊 撳我讀">ご拝見しました、</span>✗ <span class="jp" onclick="speak(this)" title="🔊 撳我讀">拝見させていただきました</span>（二重）。</li>
+</ul>
+<p><strong>2. <span class="jp" onclick="speak(this)" title="🔊 撳我讀">明日の三時に御社へ</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">行きます</span>）。</strong></p>
+<p>→ <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">明日の三時に御社へ伺います。</span></strong></p>
+<ul>
+<li>去<strong>對方公司</strong>＝有對象 → <span class="jp" onclick="speak(this)" title="🔊 撳我讀">伺う。呢句用「参ります」</span>文法上冇錯，但唔夠到位。</li>
+<li>若果係去自己公司以外的地方、冇特定對象（例如「大阪へ」）<span class="jp" onclick="speak(this)" title="🔊 撳我讀">就用「参ります」。</span></li>
+</ul>
+<p><strong>3. <span class="jp" onclick="speak(this)" title="🔊 撳我讀">その件は私から部長に</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">言います</span>）。</strong></p>
+<p>→ <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">その件は私から部長に申し上げます。</span></strong></p>
+<ul>
+<li>「言う」→ 申す；對<strong>上位者</strong>講 → <span class="jp" onclick="speak(this)" title="🔊 撳我讀">申し上げる。</span></li>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀">對平輩或下屬就用「伝えます」「話します」</span>，唔需要謙讓到呢個程度。</li>
+</ul>
+<h4>聽讀理解答案</h4>
+<p><strong>① → 2（四時）</strong></p>
+<ul>
+<li>原話：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">「三時から四時に変更していただきたい」。</span><strong>三時係原來時間，四時係新時間</strong>——呢個係聽力題最愛設的陷阱：對話入面出現兩個數字，<span class="jp" onclick="speak(this)" title="🔊 撳我讀">要聽清楚邊個係「から」、邊個係「に」。</span></li>
+<li>✗ 1：三時係變更前。</li>
+<li>✗ 3：全篇冇五時。</li>
+</ul>
+<p><strong>② → 2（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">外出しています</span>）</strong></p>
+<ul>
+<li>原話：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">「山本はただいま外出しておりまして」。</span></li>
+<li>✗ 1：冇講開會。</li>
+<li>✗ 3：「出張」係常見商業字，但呢篇冇出現——小心「聽到熟字就當答案」。</li>
+</ul>
+<p><strong>③ → 2（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">山本が戻ったら自分から伝えます</span>）</strong></p>
+<ul>
+<li>原話：<span class="jp" onclick="speak(this)" title="🔊 撳我讀">「山本が戻りましたら、私から必ず申し上げます」。</span></li>
+<li>✗ 1：佐藤冇要求 email。</li>
+<li>✗ 3：係田中自己傳，唔係叫佐藤再打。</li>
+</ul>
+<hr>
+<h3>📋 今日小結</h3>
+<div class="num-item"><span class="num">1</span><div class="num-body"><strong>五個核心謙讓動詞</strong>：参る（去／來）、申す（講）<span class="jp" onclick="speak(this)" title="🔊 撳我讀">、いたす</span>（做）<span class="jp" onclick="speak(this)" title="🔊 撳我讀">、拝見する</span>（睇物件）<span class="jp" onclick="speak(this)" title="🔊 撳我讀">、お目にかかる</span>（見人）。</div></div>
+<div class="num-item"><span class="num">2</span><div class="num-body"><strong>謙讓語 I vs 丁重語</strong>：有對象 → 伺う／<span class="jp" onclick="speak(this)" title="🔊 撳我讀">拝見する</span>／<span class="jp" onclick="speak(this)" title="🔊 撳我讀">お目にかかる</span>／<span class="jp" onclick="speak(this)" title="🔊 撳我讀">申し上げる</span>；冇對象 → 参る／申す／<span class="jp" onclick="speak(this)" title="🔊 撳我讀">いたす</span>／<span class="jp" onclick="speak(this)" title="🔊 撳我讀">おる。</span></div></div>
+<div class="num-item"><span class="num">3</span><div class="num-body"><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">〜ております</span></strong> 係講自己人狀態的萬能形；但<strong>對方</strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀">要用「〜ていらっしゃいます」。</span></div></div>
+<div class="num-item"><span class="num">4</span><div class="num-body"><strong>知る</strong>：自己 → <span class="jp" onclick="speak(this)" title="🔊 撳我讀">存じております</span>／<span class="jp" onclick="speak(this)" title="🔊 撳我讀">存じておりません</span>；對方 → <span class="jp" onclick="speak(this)" title="🔊 撳我讀">ご存じです。</span></div></div>
+<div class="num-item"><span class="num">5</span><div class="num-body"><strong>二重敬語同一條規則</strong>：專用謙讓動詞已經「用咗一次」，唔好再加 お／ご／<span class="jp" onclick="speak(this)" title="🔊 撳我讀">させていただく</span>／<span class="jp" onclick="speak(this)" title="🔊 撳我讀">られる。</span></div></div>
+<div class="num-item"><span class="num">6</span><div class="num-body"><strong>內外之別</strong>（承 Day 56）：對外講自己公司的人，一路用謙讓語，唔加 お／ご。</div></div>
+<p><strong>明日（Day 58，星期五）</strong>：<strong>謙讓語句型「お／<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ご〜する」同「〜させていただく」</span></strong>——同今日的專用動詞分工，<span class="jp" onclick="speak(this)" title="🔊 撳我讀">同場加映「させていただく」</span>被人濫用的問題。</p>
+<p>今晚唔使背表，記住一句：<strong>「有對象就用伺う，冇對象就用参る；<span class="jp" onclick="speak(this)" title="🔊 撳我讀">自己人用おる</span>，<span class="jp" onclick="speak(this)" title="🔊 撳我讀">對方用人用いらっしゃる。」</span></strong> <span class="jp" onclick="speak(this)" title="🔊 撳我讀">お疲れ様でした！</span>😴</p>
+<a class="back" href="index.html">← 返回目錄</a>
+</main>
+<script>
+var _jaVoice=null;
+function pickVoice(){
+  var vs=speechSynthesis.getVoices();
+  if(!vs.length)return null;
+  var ja=vs.filter(function(v){return /^ja(-|_)JP/i.test(v.lang)||v.lang==='ja';});
+  if(!ja.length)return null;
+  // Preference order: local enhanced/premium voices first, then known-good names
+  function score(v){
+    var s=0, n=v.name.toLowerCase();
+    if(v.localService)s+=40;
+    if(/premium|enhanced|elite|neural/.test(n))s+=50;
+    if(/o-ren|oren/.test(n))s+=30;
+    if(/kyoko/.test(n))s+=25;
+    if(/google/.test(n))s+=20;   // Chrome's Google Japanese voice is quite natural
+    if(/siri/.test(n))s+=15;
+    return s;
+  }
+  ja.sort(function(a,b){return score(b)-score(a);});
+  return ja[0];
+}
+speechSynthesis.onvoiceschanged=function(){_jaVoice=pickVoice();};
+function speak(el){
+  try{
+    var t=(el.dataset.speak||el.textContent||'').replace(/\s+/g,' ').trim();
+    if(!('speechSynthesis' in window)){alert('你個瀏覽器唔支援語音朗讀');return;}
+    if(!_jaVoice)_jaVoice=pickVoice();
+    var u=new SpeechSynthesisUtterance(t);
+    u.lang='ja-JP';
+    if(_jaVoice)u.voice=_jaVoice;
+    u.rate=0.85; u.pitch=1.0;
+    speechSynthesis.cancel();
+    speechSynthesis.speak(u);
+    el.classList.add('speaking');
+    u.onend=function(){el.classList.remove('speaking');};
+  }catch(e){}
+}
+</script>
+</body>
+</html>

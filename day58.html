@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#6366f1">
+<title>Day 58 ｜ 日語 N4</title>
+<style>
+:root {
+  --bg:#f4f5fb; --card:#ffffff; --text:#1e2235; --muted:#8b90a7;
+  --primary:#6366f1; --primary-soft:#eef0ff; --radius:16px;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,"PingFang TC","Noto Sans TC","Hiragino Sans",sans-serif; background:var(--bg); color:var(--text); line-height:1.8; }
+nav { position:sticky; top:0; z-index:20; background:rgba(99,102,241,.92); backdrop-filter:blur(12px); color:#fff; padding:.85rem 1rem; display:flex; justify-content:space-between; align-items:center; }
+nav .title { font-weight:800; font-size:.98rem; }
+nav a { color:#fff; text-decoration:none; font-size:.82rem; background:rgba(255,255,255,.18); padding:.4rem .85rem; border-radius:99px; }
+.hero { background:linear-gradient(140deg,#6366f1,#8b5cf6); color:#fff; padding:1.6rem 1.2rem 1.4rem; border-radius:0 0 26px 26px; }
+.hero .day-label { font-size:.8rem; opacity:.85; letter-spacing:1px; }
+.hero h1 { font-size:1.5rem; font-weight:800; margin:.2rem 0; }
+.hero .theme { font-size:.8rem; opacity:.9; margin-top:.3rem; }
+main { max-width:600px; margin:0 auto; padding:1.1rem 1rem 4rem; }
+h2 { font-size:1.02rem; margin:1.6rem 0 .7rem; color:var(--primary); font-weight:800; display:flex; align-items:center; gap:.45rem; }
+h2::before { content:""; width:4px; height:1.05em; background:linear-gradient(180deg,#6366f1,#a855f7); border-radius:4px; }
+h3 { font-size:.95rem; margin:1.1rem 0 .45rem; color:#3f4664; }
+p { margin:.5rem 0; font-size:.92rem; }
+ul { margin:.4rem 0 .4rem 1.25rem; }
+li { margin:.3rem 0; font-size:.9rem; }
+hr { border:none; border-top:1.5px dashed #e3e6f2; margin:1.3rem 0; }
+.table-wrap { overflow-x:auto; margin:.8rem 0; border-radius:12px; box-shadow:0 0 0 1px #e8eaf5; }
+table { border-collapse:collapse; width:100%; font-size:.83rem; background:#fff; border-radius:12px; overflow:hidden; }
+th, td { padding:.5rem .7rem; text-align:left; border-bottom:1px solid #eef0f7; }
+th { background:var(--primary-soft); color:#4338ca; font-size:.8rem; }
+tr:last-child td { border-bottom:none; }
+code { background:var(--primary-soft); color:#4338ca; padding:.12rem .4rem; border-radius:6px; font-size:.88em; }
+strong { color:#2f3560; }
+.num-item { display:flex; gap:.65rem; padding:.55rem .7rem; border-radius:12px; margin:.3rem 0; background:#fafbfe; }
+.num { flex-shrink:0; width:26px; height:26px; border-radius:50%; background:var(--primary-soft); color:var(--primary); font-weight:800; font-size:.78rem; display:flex; align-items:center; justify-content:center; margin-top:.15rem; }
+.num-body { font-size:.9rem; }
+.jp { cursor:pointer; border-bottom:1.5px dotted #a5b4fc; transition:background .15s; }
+.jp:active, .jp.speaking { background:var(--primary-soft); border-bottom-color:var(--primary); }
+.tts-hint { font-size:.72rem; color:#5b6072; background:var(--primary-soft); border-radius:10px; padding:.45rem .8rem; margin:0 0 1rem; }
+.back { display:block; text-align:center; background:var(--primary); color:#fff; text-decoration:none; padding:.85rem; border-radius:14px; font-weight:700; font-size:.9rem; margin-top:1.4rem; }
+</style>
+</head>
+<body>
+<nav><span class="title">🇯🇵 N4 ｜ Day 58</span><a href="index.html">目錄</a></nav>
+<div class="hero">
+  <div class="day-label">DAY 58 / 182 ｜ 2026-11-27</div>
+  <h1>📝 週末總複習 + 測驗</h1>
+  <div class="theme">週五：謙讓語句型「お／ご〜する」同「〜させていただく」</div>
+</div>
+<main>
+<div class="tts-hint">🔊 撳任何日文（虛線底線）都會即時讀出，再撳一下停止</div>
+<h2>第 58 日 / 182｜Phase 2：N4 文法核心前半｜週五：謙讓語句型「お／<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/000_aa856d2592b3.mp3">ご〜する」同「〜させていただく」</span></h2>
+<p>大家夜晚好；今日係<strong>第 58 日</strong>，星期五。</p>
+<p>昨日你背咗五個「專用謙讓動詞」（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/001_17cc5b022fe3.mp3">参る、申す、いたす、拝見する、お目にかかる</span>）。但日本人日常講嘅謙讓語，九成都唔係靠呢五個字——而係靠<strong>兩個公式</strong>：</p>
+<p>&gt; <strong>お＋<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/002_e42ab8ce281b.mp3">和語動詞ます</span>形＋<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/003_fdb567ffcf4f.mp3">する</span></strong>　／　<strong>ご＋漢語名詞＋<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/003_fdb567ffcf4f.mp3">する</span></strong>　／　<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/004_ac2c168e7cd3.mp3">〜させていただく</span></strong></p>
+<p>呢兩個公式好使好用，但<strong>最容易用過龍</strong>。今日的目標唔止係「識用」，而係<strong>識分幾時唔應該用</strong>——<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/005_24dd39de7138.mp3">因為「ご説明させていただきます」</span>呢種疊兩層的講法，係香港人、台灣人、內地人學日文最常見的破綻，日本人一聽就知你係背書。</p>
+<p>今日 60–90 分鐘：單字 12 個（敬語商務語彙）→ 文法兩點 → 漢字 7 字 → 辦公室對話聽讀。</p>
+<hr>
+<h3>📖 單字 12 個（今日主題：敬語場合的商務語彙）</h3>
+<div class="num-item"><span class="num">1</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="説明" data-audio="audio/day58/006_d59c7687b28f.mp3">説明<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">せつめい</span>）</small></span><strong> — 說明（名詞／サ変）。例：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/007_e180e855b52e.mp3">資料の内容を</span></strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/008_001c8e8da926.mp3">ご説明いたします</span>**。（我同你說明一下資料內容。）</div></div>
+<div class="num-item"><span class="num">2</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="紹介" data-audio="audio/day58/009_a31d92b5be35.mp3">紹介<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">しょうかい</span>）</small></span><strong> — 介紹。例：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/010_c39c4cf020d2.mp3">弊社の新しい担当者を</span></strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/011_5bfd0ee48e08.mp3">ご紹介いたします</span>**。（我介紹本公司新嘅負責人。）</div></div>
+<div class="num-item"><span class="num">3</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="連絡" data-audio="audio/day58/012_9632493b0075.mp3">連絡<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">れんらく</span>）</small></span><strong> — 聯絡。例：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/013_5a0dcce62edd.mp3">詳しいことは後ほど</span></strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/014_d4bb47ddba6b.mp3">ご連絡いたします</span>**。（詳細嘅事我稍後聯絡你。）</div></div>
+<div class="num-item"><span class="num">4</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="相談" data-audio="audio/day58/015_20dcba798969.mp3">相談<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">そうだん</span>）</small></span><strong> — 商量、諮詢。例：少々</strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/016_65ed33fd035d.mp3">ご相談したい</span>**<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/017_3c58db0bba5a.mp3">ことがあるのですが。</span>（我有少少事想同你商量。）</div></div>
+<div class="num-item"><span class="num">5</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="報告" data-audio="audio/day58/018_e5ab98fd6666.mp3">報告<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">ほうこく</span>）</small></span><strong> — 報告。例：結果は明日</strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/019_bec8cabf2bdd.mp3">ご報告いたします</span>**。（結果我聽日向你報告。）</div></div>
+<div class="num-item"><span class="num">6</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="予約" data-audio="audio/day58/020_437d1cf0b469.mp3">予約<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">よやく</span>）</small></span><strong> — 預約（名詞／サ変）。例：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/021_396393e3c676.mp3">お席はもう</span></strong>ご予約**<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/022_e538dcb72e1c.mp3">いただいております。</span>（座位已經收到你嘅預約。）留意用「ご」，唔係「お予約」。</div></div>
+<div class="num-item"><span class="num">7</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="招待" data-audio="audio/day58/023_cecb2138b7a8.mp3">招待<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">しょうたい</span>）</small></span><strong> — 邀請。例：忘年会に</strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/024_e1058a0ae15c.mp3">ご招待いただき</span>**<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/025_d497a357d33a.mp3">、ありがとうございます。</span>（多謝你邀請我參加忘年會。）</div></div>
+<div class="num-item"><span class="num">8</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="検討" data-audio="audio/day58/026_f69c237a754a.mp3">検討<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">けんとう</span>）</small></span><strong> — 研究、考慮（商業用語，唔係中文「檢討錯誤」）。例：社内で</strong>ご検討**<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/027_caeefd38beb6.mp3">いただけますか。</span>（可否喺公司內部研究一下？）</div></div>
+<div class="num-item"><span class="num">9</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="承知" data-audio="audio/day58/028_97b6ab6e96ba.mp3">承知<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">しょうち</span>）</small></span><strong> — 明白、知悉（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/029_1958161a5053.mp3">「分かりました」</span>的鄭重版）。例：</strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/030_f240f2e0e14e.mp3">承知いたしました</span>**<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/031_24963542b26e.mp3">。そのように手配いたします。</span>（明白，我照咁安排。）</div></div>
+<div class="num-item"><span class="num">10</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="遠慮" data-audio="audio/day58/032_195a09233858.mp3">遠慮<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">えんりょ</span>）</small></span><strong> — 客氣、顧忌。例：</strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/033_24b4c1d6f222.mp3">ご遠慮なく</span>**<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/034_b426380b94a1.mp3">お申し付けください。</span>（請唔好客氣，即管吩咐。）</div></div>
+<div class="num-item"><span class="num">11</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="手数" data-audio="audio/day58/035_b7c7a72148ed.mp3">手数<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">てすう</span>）</small></span><strong> — 麻煩、勞力。例：</strong>お手数**<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/036_60e4f6dd3e4b.mp3">をおかけして申し訳ございません。</span>（麻煩到你，真係抱歉。）</div></div>
+<div class="num-item"><span class="num">12</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="早速" data-audio="audio/day58/037_0de1dd8fc9df.mp3">早速<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">さっそく</span>）</small></span><strong> — 馬上、即刻（副詞）。例：</strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/038_54b8c662de2f.mp3">早速ですが</span>**<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/039_cae252fd64d0.mp3">、本日の件でご連絡いたしました。</span>（事不宜遲，我係為今日件事聯絡你。）</div></div>
+<p>&gt; 💡 三個實用提醒：</p>
+<p>&gt; - <strong>「遠慮」係一個會反轉意思的字</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/033_24b4c1d6f222.mp3">「ご遠慮なく」</span>＝請唔好客氣；<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/040_89bb939af9c6.mp3">「ご遠慮ください」</span>＝請你唔好（委婉的禁止，<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/041_a1897f5d19ff.mp3">例如「館内での撮影はご遠慮ください」</span>）。同一個字，兩個相反效果，<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/042_9e14531cfc8c.mp3">靠前面的「なく」定後面的「ください」</span>判斷。</p>
+<p>&gt; - <strong>「検討」唔等於「檢討」</strong>：中文「檢討」帶認錯意味，<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/026_f69c237a754a.mp3">日文「検討」純粹係「研究、考慮」。所以「ご検討いただけますか」</span>係好禮貌的「請你考慮下」，唔係叫你寫悔過書。</p>
+<p>&gt; - <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/028_97b6ab6e96ba.mp3">「承知しました」比「分かりました」</span>高兩級</strong>；<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/045_4a016c4dcae8.mp3">再加「いたす」變「承知いたしました」</span>，係電話同 email 的標準回覆。留意：<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/028_97b6ab6e96ba.mp3">呢句唔可以對上司講「承知しました」</span>就算</strong>，<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/046_4709250e1060.mp3">一定要加「いたしました」。</span></p>
+<hr>
+<h3>✍️ 文法（今日 2 點 + 1 個補充）</h3>
+<h4>文法①　お／<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/047_1db813216d39.mp3">ご〜する</span>（謙讓語公式）</h4>
+<p><strong>概念</strong>：把「我為你做某事」包裝成謙讓語。<strong>和語動詞用「お」，漢語名詞（サ変）用「ご」。</strong></p>
+<p><strong>接續</strong>：</p>
+<div class="table-wrap"><table>
+<tr><th>類型</th><th>公式</th><th>例</th></tr>
+<tr><td>和語動詞（五段／一段）</td><td>お＋<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/002_e42ab8ce281b.mp3">ます</span>形（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/049_f3cb8e74d3a4.mp3">去ます</span>）＋<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/003_fdb567ffcf4f.mp3">する</span></td><td>待つ→<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/050_f097e727d8fb.mp3">お待ちする</span></strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/051_016c807bd9f7.mp3">、伝える</span>→<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/052_28400c80263d.mp3">お伝えする</span></strong>、送る→<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/053_2a06ec2500b5.mp3">お送りする</span></strong>、話す→<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/054_ba6d6f16cf2e.mp3">お話しする</span></strong>、持つ→<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/055_312bc14b2210.mp3">お持ちする</span></strong>、返す→<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/056_ddce6d400d30.mp3">お返しする</span></strong></td></tr>
+<tr><td>漢語名詞（サ変動詞語幹）</td><td>ご＋名詞＋<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/003_fdb567ffcf4f.mp3">する</span></td><td>説明→<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/057_05f934e906c5.mp3">ご説明する</span></strong>、案内→<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/058_e2ed95a3dc49.mp3">ご案内する</span></strong>、連絡→<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/059_76b028bd635f.mp3">ご連絡する</span></strong>、相談→<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/060_613126f406eb.mp3">ご相談する</span></strong>、報告→<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/061_a5fca5f30298.mp3">ご報告する</span></strong>、紹介→<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/062_6f8f6d28318d.mp3">ご紹介する</span></strong>、招待→<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/063_3ec9aedb9efa.mp3">ご招待する</span></strong>、検討→<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/064_b89a56dd45fd.mp3">ご検討する</span></strong></td></tr>
+</table></div>
+<p><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/003_fdb567ffcf4f.mp3">「する」可以換成「いたす」</span>變得更鄭重</strong>（呢個係正確的，唔算二重敬語）：</p>
+<ul>
+<li>ご説明<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/066_eed3cdb322f0.mp3">します</span></strong> → ご説明<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/067_81998374882a.mp3">いたします</span></strong>（商務標準）</li>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/068_d089b0f024b0.mp3">お伝え</span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/066_eed3cdb322f0.mp3">します</span></strong> → <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/068_d089b0f024b0.mp3">お伝え</span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/067_81998374882a.mp3">いたします</span></strong></li>
+<li>ご連絡<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/066_eed3cdb322f0.mp3">します</span></strong> → ご連絡<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/067_81998374882a.mp3">いたします</span></strong></li>
+</ul>
+<p><strong>例句</strong>：</p>
+<ul>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/069_1804958cb2c5.mp3">お荷物を</span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/070_7947631c2f9d.mp3">お持ちします</span></strong>。（我幫你拿行李。）</li>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/071_db7ccb0beace.mp3">駅まで</span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/072_5223d09cf0cf.mp3">お送りいたします</span></strong>。（我送你到車站。）</li>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/073_b2186847a723.mp3">その件は私から</span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/074_8627e89210a4.mp3">お伝えいたします</span></strong>。（呢件事我同佢講。）</li>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/075_452f59a38843.mp3">会議の資料を</span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/008_001c8e8da926.mp3">ご説明いたします</span></strong>。（我說明一下會議資料。）</li>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/076_d039fcae3dbf.mp3">折り返し</span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/014_d4bb47ddba6b.mp3">ご連絡いたします</span></strong>。（我轉頭回覆你。）</li>
+</ul>
+<p><strong>⚠️ 三條規則</strong>：</p>
+<div class="num-item"><span class="num">1</span><div class="num-body"><strong>只可以用喺「自己」的動作</strong>。✗ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/077_65b6b4a00d6b.mp3">先生がお話しします</span> → ○ 先生が<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/078_8af9e876320d.mp3">お話しになります</span></strong>（對方用尊敬語）。呢條同昨日「主語係我方 → 謙讓語；主語係對方 → 尊敬語」係同一條。</div></div>
+<div class="num-item"><span class="num">2</span><div class="num-body"><strong>唔好同專用謙讓動詞疊</strong>。✗ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/079_ddbae81cd254.mp3">お伺いする</span>（「伺う」本身已謙讓）→ ○ <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/080_f1ba11d1731a.mp3">伺います</span></strong>。✗ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/081_e51119831a40.mp3">ご覧する</span>（「ご覧」係尊敬語專用）→ 睇自己用<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/082_61ebbecd0cf7.mp3">拝見する</span></strong>。</div></div>
+<div class="num-item"><span class="num">3</span><div class="num-body"><strong>例外要記</strong>：有三個漢語名詞偏偏用「お」——<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/083_45619ebc3f32.mp3">お電話する</span></strong>、<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/084_ebfbde377128.mp3">お約束する</span></strong>、<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/085_0074948fbd80.mp3">お勉強する</span></strong>。✗ ご電話、✗ ご約束。呢三個係最常見的寫錯位。</div></div>
+<hr>
+<h4>文法②　<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/004_ac2c168e7cd3.mp3">〜させていただく</span>（請求許可型謙讓）</h4>
+<p><strong>接續</strong>：動詞<strong>使役形て形</strong> ＋ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/086_dbcf1b85bfb8.mp3">いただく</span></p>
+<div class="table-wrap"><table>
+<tr><th>動詞類型</th><th>使役形</th><th>＋<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/086_dbcf1b85bfb8.mp3">いただく</span></th></tr>
+<tr><td>五段</td><td>書く→<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/087_7664492a1e58.mp3">書かせる</span></td><td>書か<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/088_06e86243dd80.mp3">せていただく</span></strong></td></tr>
+<tr><td>五段</td><td>待つ→<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/089_03689299ac83.mp3">待たせる</span></td><td>待た<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/088_06e86243dd80.mp3">せていただく</span></strong></td></tr>
+<tr><td>一段</td><td><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/090_0e3e309b0bfd.mp3">食べる</span>→<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/091_a9f29094916e.mp3">食べさせる</span></td><td>食べ<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/092_4da6a79340c9.mp3">させていただく</span></strong></td></tr>
+<tr><td>一段</td><td>見る→<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/093_6bbe9598dd2d.mp3">見させる</span></td><td>見<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/092_4da6a79340c9.mp3">させていただく</span></strong></td></tr>
+<tr><td>サ変</td><td><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/003_fdb567ffcf4f.mp3">する</span>→<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/094_904b6b1eb550.mp3">させる</span></td><td><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/092_4da6a79340c9.mp3">させていただく</span></strong></td></tr>
+<tr><td>カ変</td><td>来る→<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/095_fd73b2a31ebe.mp3">来させる</span></td><td><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/096_46d47cf17556.mp3">来させていただく</span></strong></td></tr>
+</table></div>
+<p><strong>意思</strong>：<strong>「得到你批准／為咗你，我來做」</strong>——重點係「對方有份決定」。</p>
+<p><strong>例句</strong>：</p>
+<ul>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/097_5415795ca45d.mp3">こちらの椅子を</span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/098_cac6f5a07093.mp3">使わせていただいても</span></strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/099_254920d4c45d.mp3">よろしいでしょうか。</span>（可以用呢張椅嗎？）← 請求許可</li>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/100_8e4d8b089a4b.mp3">では、資料を</span>明日<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/101_1a10539a7e59.mp3">送らせていただきます</span></strong>。（咁我聽日把資料送過去。）← 對方受益</li>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/102_f18844e62727.mp3">少し早めに</span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/103_588f7ad315f8.mp3">失礼させていただきます</span></strong>。（我早少少告辭。）← 為自己方便而先走，所以要用呢個形</li>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/021_396393e3c676.mp3">もう</span>一度<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/105_e34b9d6e6879.mp3">お電話させていただきます</span></strong>。（我再打一次電話給你。）← 「お電話」＋<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/092_4da6a79340c9.mp3">「させていただく」</span>可以並用</li>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/107_674baccab8fa.mp3">私から</span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/108_3e31a3acd73e.mp3">説明させていただきます</span></strong>。（由我來說明。）← 正確</li>
+</ul>
+<p><strong>⚠️ 三個判斷點（今日最值錢的部分）</strong>：</p>
+<p><strong>① <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/109_3046bca26c05.mp3">幾時用「させていただく」</span>，幾時用「お／<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/110_cdb8a941c1fa.mp3">ご〜する」？</span></strong></p>
+<div class="table-wrap"><table>
+<tr><th>場景</th><th>講法</th><th>語感</th></tr>
+<tr><td>自己主動做，唔需要批准</td><td><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/111_b407506db78c.mp3">ご説明します</span></td><td>普通禮貌</td></tr>
+<tr><td>商務、書面、電話</td><td>ご説明<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/067_81998374882a.mp3">いたします</span></strong></td><td>最穩陣，九成場合用呢個</td></tr>
+<tr><td>對方批准／對方受益／自己佔便宜</td><td>説明<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/112_53c9c6d9b3d2.mp3">させていただきます</span></strong></td><td>謙讓＋感恩</td></tr>
+<tr><td>當場請求批准</td><td>説明<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/113_0adaa5867940.mp3">させていただけませんか</span></strong></td><td>最禮貌</td></tr>
+</table></div>
+<p><strong>② 唔需要許可的事，唔好用</strong>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/086_dbcf1b85bfb8.mp3">呢個就係「させていただく</span>過剩」）：</p>
+<ul>
+<li>✗ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/115_205d1117cc54.mp3">頑張らせていただきます</span> → ○ <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/116_ef8845205b26.mp3">頑張ります</span></strong>（冇人要批准你努力）</li>
+<li>✗ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/117_58e7bbd457bb.mp3">注意させていただきます</span> → ○ <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/118_b2920752f188.mp3">注意します</span></strong>／（叫人注意）<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/119_73cbd71e72ce.mp3">ご注意ください</span></strong></li>
+<li>✗ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/120_3770c2fd9010.mp3">参加させていただきます</span>（如果係自己報名參加，冇人批）→ ○ <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/121_05f8669606cc.mp3">参加します</span></strong>；<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/122_e122a4746ea0.mp3">但「参加させていただけますか」</span>＝請求批准，就正確</li>
+</ul>
+<p><strong>③ 唔可以同「お／ご」疊</strong>：</p>
+<ul>
+<li>✗ ご説明<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/112_53c9c6d9b3d2.mp3">させていただきます</span></strong> → ○ <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/008_001c8e8da926.mp3">ご説明いたします</span></strong> 或 <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/108_3e31a3acd73e.mp3">説明させていただきます</span></strong></li>
+<li>✗ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/123_b12a3ca301da.mp3">ご案内させていただきます</span> → ○ <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/124_3d2ce4656145.mp3">ご案内いたします</span></strong> 或 <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/125_6058308b03b5.mp3">案内させていただきます</span></strong></li>
+<li>✗ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/126_af6435d9f648.mp3">お送りさせていただきます</span> → ○ <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/072_5223d09cf0cf.mp3">お送りいたします</span></strong> 或 <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/101_1a10539a7e59.mp3">送らせていただきます</span></strong></li>
+</ul>
+<p>&gt; 一句記法：<strong>「お／<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/086_dbcf1b85bfb8.mp3">ご」同「させていただく」</span>係兩張牌，一手只可以出一張。</strong></p>
+<hr>
+<h4>補充　<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/004_ac2c168e7cd3.mp3">「〜ていただく」同「〜させていただく」</span>係一對鏡</h4>
+<ul>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/129_79e86de7ef5c.mp3">ご説明いただく</span></strong>（＝我<strong>收到</strong>你的說明）→ 主語係對方，你受益</li>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/130_1c346db5cab2.mp3">ご説明させていただく</span></strong>（＝我<strong>做出</strong>說明，經你批准）→ 主語係自己</li>
+</ul>
+<p>同一個「説明」，<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/131_c4125c306267.mp3">前面加「ご」後面配「いただく」</span>＝我聽你講；<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/132_58dde44bf1f0.mp3">配「させていただく」</span>＝你聽我講。考試最愛喺呢度玩主語陷阱。</p>
+<hr>
+<h4>🖊 造句練習（3 題，答案喺文末）</h4>
+<div class="num-item"><span class="num">1</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/133_1a7c497af953.mp3">資料は明日、私のほうから</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/134_1e0bcd096508.mp3">送ります</span>）。→ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/003_fdb567ffcf4f.mp3">改成「お〜する」</span>形，並用最鄭重的講法。</div></div>
+<div class="num-item"><span class="num">2</span><div class="num-body">會議室想用，要向上司請求批准。用「使う」＋<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/092_4da6a79340c9.mp3">「させていただく」</span>造句。</div></div>
+<div class="num-item"><span class="num">3</span><div class="num-body">改正下面句子：<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/137_3d07d9ee52a3.mp3">本日は私がご説明させていただきます。</span></strong></div></div>
+<hr>
+<h3>🈴 今日漢字 7 字</h3>
+<div class="num-item"><span class="num">1</span><div class="num-body"><strong>説</strong> — 音讀 <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/138_c8af82fd4866.mp3">セツ</span>／<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/139_eaace75f58c1.mp3">ゼイ、</span>訓讀 と（く）。例詞：説明（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/140_84b9392a5f9d.mp3">せつめい・</span>說明）、小説（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/141_ac2b36574239.mp3">しょうせつ・</span>小說）、演説（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/142_7e867136feaa.mp3">えんぜつ・</span>演講）、説得（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/143_efc008693ac2.mp3">せっとく・</span>說服）。留意「遊説」讀 <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/144_ab308a865469.mp3">ゆうぜい</span>，<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/145_4117cdf46a3c.mp3">係少數讀ゼイ</span>的字。</div></div>
+<div class="num-item"><span class="num">2</span><div class="num-body"><strong>紹</strong> — 音讀 <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/146_2e7753214d4d.mp3">ショウ。</span>例詞：紹介（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/147_b6a7cfca050c.mp3">しょうかい・</span>介紹）。幾乎只用喺「紹介」一詞，記住佢係「糸＋召」。</div></div>
+<div class="num-item"><span class="num">3</span><div class="num-body"><strong>介</strong> — 音讀 <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/148_54d73a974355.mp3">カイ。</span>例詞：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="紹介" data-audio="audio/day58/009_a31d92b5be35.mp3">紹介<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">しょうかい</span>）</small></span>、介護（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/149_e83eb488377b.mp3">かいご・</span>護理照顧）、魚介（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/150_57f8c6dbad3f.mp3">ぎょかい・</span>魚貝類）。「介」有「喺中間」之意——介紹就係喺兩人之間做橋樑。</div></div>
+<div class="num-item"><span class="num">4</span><div class="num-body"><strong>検</strong> — 音讀 <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/151_ce2c59604692.mp3">ケン。</span>例詞：検査（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/152_f79309c64a4f.mp3">けんさ・</span>檢查）、検討（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/153_bca077946ff8.mp3">けんとう・</span>研究考慮）、点検（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/154_706e3841b5ee.mp3">てんけん・</span>檢查保養）、検索（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/155_06e420e4963c.mp3">けんさく・</span>搜尋）。呢個係「檢」的日本新字體，唔好寫返繁體。</div></div>
+<div class="num-item"><span class="num">5</span><div class="num-body"><strong>討</strong> — 音讀 <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/156_93256e83a4a2.mp3">トウ、</span>訓讀 う（つ）。例詞：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-speak="検討" data-audio="audio/day58/026_f69c237a754a.mp3">検討<small>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">けんとう</span>）</small></span>、討論（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/157_6b973a1695d5.mp3">とうろん・</span>討論）、討つ（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/158_680e0a1daea5.mp3">うつ・</span>討伐）。留意中文「討」有「乞討」，日文冇呢個用法。</div></div>
+<div class="num-item"><span class="num">6</span><div class="num-body"><strong>承</strong> — 音讀 <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/146_2e7753214d4d.mp3">ショウ、</span>訓讀 <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/160_0486c4c0e336.mp3">うけたまわ</span>（る）。例詞：承知（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/161_a77604a9cf5a.mp3">しょうち・</span>明白）、承諾（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/162_46173477edef.mp3">しょうだく・</span>承諾）、承る（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/160_0486c4c0e336.mp3">うけたまわる・</span>聆聽／接受，謙讓語）<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/164_5ea71c3feb86.mp3">。「承る」係「聞く</span>／<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/165_84100b11eb78.mp3">受ける」</span>的謙讓形，N3 常用。</div></div>
+<div class="num-item"><span class="num">7</span><div class="num-body"><strong>遠</strong> — 音讀 <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/166_4f26b25ef06a.mp3">エン、</span>訓讀 <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/167_78c0f12cad58.mp3">とお</span>（い）。例詞：遠慮（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/168_dde5cc6f955b.mp3">えんりょ・</span>客氣／顧忌）、遠足（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/169_90299a3b8d90.mp3">えんそく・</span>遠足旅行）、遠距離（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/170_7eb025e643c3.mp3">えんきょり・</span>長距離）、遠い（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/167_78c0f12cad58.mp3">とおい・</span>遠）。</div></div>
+<p>&gt; 💡 <strong>「検」vs「険」vs「験」</strong>：三個字右邊一樣，左邊分別係「木」「阝」「馬」。檢查＝検（木），危險＝険（阝），考試＝験（馬）。JLPT 拼寫題會考呢組。</p>
+<hr>
+<h3>👂 聽讀任務：辦公室內部商量（部下 ↔ 課長）</h3>
+<p>情境：明日要去 ABC 社拜訪，新入社員的林向田中課長請示流程。</p>
+<p>&gt; <strong>林</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/172_6520b2154514.mp3">課長、今、少々よろしいでしょうか。</span></p>
+<p>&gt; <strong>田中</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/173_1a1df6df8076.mp3">ああ、どうぞ。</span></p>
+<p>&gt; <strong>林</strong>：明日のABC<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/174_028887f7f60d.mp3">社訪問の件で、ご相談したいことがあるんですが。</span></p>
+<p>&gt; <strong>田中</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/175_1b31b485965b.mp3">うん、何ですか。</span></p>
+<p>&gt; <strong>林</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/176_51d0147cfe62.mp3">資料を前もって先方にお送りしたほうがよろしいでしょうか。</span></p>
+<p>&gt; <strong>田中</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/177_200e16ea603d.mp3">そうですね。一度お送りしておいたほうが安心ですね。私からもご連絡しておきますよ。</span></p>
+<p>&gt; <strong>林</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/178_52ca2119c06d.mp3">ありがとうございます。では、資料は今日中に私のほうからお送りいたします。</span></p>
+<p>&gt; <strong>田中</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/179_5bf42eee3142.mp3">お願いします。</span>…<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/180_6ebef39a670e.mp3">あ、そうそう。明日は</span>ABC<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/181_e260dd459533.mp3">社の社長もいらっしゃるそうですよ。</span></p>
+<p>&gt; <strong>林</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/182_4c21171a8fe8.mp3">そうなんですか。では、名刺を多めに持って参ります。</span></p>
+<p>&gt; <strong>田中</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/183_367f0f1cec03.mp3">ええ。それと、最初の挨拶は林さんにお願いできますか。</span></p>
+<p>&gt; <strong>林</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/184_987f6a311972.mp3">承知いたしました。私がごあいさついたします。</span>…<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/185_31291a1339a6.mp3">あ、それから、会議室の件ですが、先方に確認させていただいてもよろしいでしょうか。</span></p>
+<p>&gt; <strong>田中</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/186_1ca8ba3b97d2.mp3">ええ、お願いします。三十分前には着いておいてくださいね。</span></p>
+<p>&gt; <strong>林</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/187_3743f4dc74d9.mp3">はい。九時半には</span>ABC<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/188_75b998fe86da.mp3">社の受付に伺います。</span></p>
+<p><strong>廣東話對譯</strong>：</p>
+<ul>
+<li>林：課長，而家方便嗎？</li>
+<li>田中：啊，請。</li>
+<li>林：關於聽日去 ABC 社拜訪嘅事，我有啲嘢想同你商量。</li>
+<li>田中：嗯，咩事？</li>
+<li>林：資料應唔應該預先送過去對方嗰邊？</li>
+<li>田中：係喎。先送一次過去會安心啲。我這邊都同佢哋聯絡一聲。</li>
+<li>林：多謝。咁資料我今日之內由我這邊送出去。</li>
+<li>田中：拜託你。……啊，係喎。聽日 ABC 社嘅社長都會出席喎。</li>
+<li>林：係咩。咁我帶多幾張名片過去。</li>
+<li>田中：嗯。另外，開頭嘅問候可以由你負責嗎？</li>
+<li>林：明白。我負責講開場。……啊，仲有，會議室嘅事，可以讓我同對方確認一下嗎？</li>
+<li>田中：好，拜託你。記住提早三十分鐘到。</li>
+<li>林：係。我九點半會到 ABC 社接待處。</li>
+</ul>
+<p><strong>耳仔要捉的 5 個敬語位</strong>：</p>
+<ul>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/189_6d9851c9a2c4.mp3">「ご相談したいことがあるんですが」</span></strong>：想商量＝自己動作＋對方受益 → <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/003_fdb567ffcf4f.mp3">ご相談する。加「んですが」</span>軟化，係辦公室請示的標準開場。</li>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/191_bdd2349783e4.mp3">「お送りしておいたほうが安心ですね」</span></strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/053_2a06ec2500b5.mp3">「お送りする」</span>＋<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/192_09c04e39f576.mp3">「〜ておく」</span>（預先做好）。留意呢度係<strong>自己一方</strong>的動作，所以用謙讓形冇問題。</li>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/193_1188b150b703.mp3">「いらっしゃるそうですよ」</span></strong>：社長出席＝<strong>對方</strong>的動作 → <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/194_5221bb4fde94.mp3">尊敬語。傳聞的「そうです」接常體「いらっしゃる」。</span></li>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/195_dff1bdebed72.mp3">「持って参ります」</span></strong>：拿＝自己去拿 → 謙讓「参る」。✗ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/196_51eb4b07ce5d.mp3">持っていらっしゃいます</span>（呢個係講對方）。</li>
+<li><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/197_cde6be9c0f1d.mp3">「確認させていただいてもよろしいでしょうか」</span></strong>：請示批准的黃金句 ＝ 使役て形＋<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/086_dbcf1b85bfb8.mp3">いただく</span>＋<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/222_224881be8774.mp3">てもよろしいでしょうか。</span>商務 email 同電話都用得。</li>
+</ul>
+<p><strong>⚠️ 一個易錯位</strong>：林最後講「受付に<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/080_f1ba11d1731a.mp3">伺います</span></strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/199_460e82b84d04.mp3">」係正確。如果講「伺わせていただきます」</span>，文法上唔算錯，但「伺う」本身已係謙讓語，<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/086_dbcf1b85bfb8.mp3">再加「させていただく」</span>就變成<strong>雙重謙讓</strong>，日本人會覺得你刻意堆砌。原則：<strong>專用謙讓動詞後面唔好再包一層。</strong></p>
+<p><strong>朗讀任務</strong>：大聲讀三次。每次見到「お／ご＋動詞」就問一句：<strong>「係我做，定係對方做？」</strong>自己做 → 用得；對方做 → <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/201_2cb807383012.mp3">要換成「お〜になる</span>／<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/202_e15ef7c285ad.mp3">いらっしゃる」。</span></p>
+<hr>
+<h3>🧠 聽讀理解 3 題（答案喺文末）</h3>
+<p><strong>① <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/203_d0ecce9d67e1.mp3">林は資料をどうしますか。</span></strong></p>
+<div class="num-item"><span class="num">1</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/204_f61899e3e3b0.mp3">今日中に自分で送ります</span></div></div>
+<div class="num-item"><span class="num">2</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/205_c9e68a431aff.mp3">課長に送ってもらいます</span></div></div>
+<div class="num-item"><span class="num">3</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/206_9a30e6cfa210.mp3">明日持って行きます</span></div></div>
+<p><strong>② 明日、ABC<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/207_843d34f62223.mp3">社の社長はどうしますか。</span></strong></p>
+<div class="num-item"><span class="num">1</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/208_eb3afc7886d4.mp3">欠席します</span></div></div>
+<div class="num-item"><span class="num">2</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/209_8d8858856ab2.mp3">出席するそうです</span></div></div>
+<div class="num-item"><span class="num">3</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/210_0b0b628b9c3c.mp3">まだ分かりません</span></div></div>
+<p><strong>③ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/211_3d26a598c9c3.mp3">林は会議室の件をどうしたいと言っていますか。</span></strong></p>
+<div class="num-item"><span class="num">1</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/212_89e60c294bac.mp3">自分で予約したい</span></div></div>
+<div class="num-item"><span class="num">2</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/213_c78d24e754a6.mp3">先方に確認させてほしい</span></div></div>
+<div class="num-item"><span class="num">3</span><div class="num-body"><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/214_cf1f39f7ef4a.mp3">課長に確認してほしい</span></div></div>
+<hr>
+<h3>📥 答案與解析</h3>
+<h4>造句練習答案</h4>
+<p><strong>1. <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/133_1a7c497af953.mp3">資料は明日、私のほうから</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/134_1e0bcd096508.mp3">送ります</span>）。</strong></p>
+<p>→ <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/215_9c3059d843f2.mp3">資料は明日、私のほうからお送りいたします。</span></strong></p>
+<ul>
+<li>「送る」係和語 → お＋送り＋<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/003_fdb567ffcf4f.mp3">する</span>；<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/216_df8f115468c8.mp3">再用最鄭重形「いたします」。</span></li>
+<li>亦可：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/217_f70e5c05acac.mp3">お送りします</span>（普通禮貌）／<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/101_1a10539a7e59.mp3">送らせていただきます</span>（強調「為你而做」，語氣稍重）。</li>
+<li>✗ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/218_b76a9a683111.mp3">ご送りいたします</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀">「送る」唔係漢語サ</span>変，唔可以用ご）。</li>
+</ul>
+<p><strong>2. 會議室想用，請求批准。</strong></p>
+<p>→ <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/219_af69ce5a3871.mp3">会議室を使わせていただいてもよろしいでしょうか。</span></strong></p>
+<ul>
+<li>「使う」→ 使役 <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/220_e8ef19959786.mp3">使わせる</span> → て形 <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/221_439548f7a8a5.mp3">使わせて</span> ＋ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/086_dbcf1b85bfb8.mp3">いただく</span> ＋ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/222_224881be8774.mp3">てもよろしいでしょうか。</span></li>
+<li>亦可：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/223_ba01914f0b94.mp3">使わせていただけませんか</span>（更口語，禮貌度稍低少少）。</li>
+<li>✗ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/224_c6f038115085.mp3">会議室をお使いしてもいいですか</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/003_fdb567ffcf4f.mp3">「お使いする」</span>唔存在；<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/225_5b81335769ae.mp3">對方用「お使いになる」</span>）。</li>
+</ul>
+<p><strong>3. 改正：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/137_3d07d9ee52a3.mp3">本日は私がご説明させていただきます。</span></strong></p>
+<p>→ <strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/226_0cf9cea93a73.mp3">本日は私がご説明いたします。</span></strong>（或：<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/227_33d5fc2dd853.mp3">本日は私が説明させていただきます。</span></strong>）</p>
+<ul>
+<li>錯在「ご説明」＋<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/092_4da6a79340c9.mp3">「させていただく」</span>＝兩層謙讓疊埋。</li>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/006_d59c7687b28f.mp3">揀邊個？一般商務場面用「ご説明いたします」</span>最自然；如果重點係「經你批准／為你而做」，<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/229_03724526e60a.mp3">就用「説明させていただきます」</span>（注意呢個版本<strong>唔加「ご」</strong>）。</li>
+</ul>
+<h4>聽讀理解答案</h4>
+<p><strong>① → 1（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/204_f61899e3e3b0.mp3">今日中に自分で送ります</span>）</strong></p>
+<ul>
+<li>原話：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/230_12fe55157d47.mp3">「資料は今日中に私のほうからお送りいたします」。</span></li>
+<li>✗ 2：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/231_cd2387c8c9d1.mp3">課長只係話「私からもご連絡しておきます」</span>——課長負責<strong>聯絡</strong>，唔係送資料。</li>
+<li>✗ 3：明日係去拜訪，但資料係<strong>事先</strong>送。</li>
+</ul>
+<p><strong>② → 2（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/209_8d8858856ab2.mp3">出席するそうです</span>）</strong></p>
+<ul>
+<li>原話：「明日はABC<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/232_03ec72a2b927.mp3">社の社長もいらっしゃるそうですよ」。</span></li>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/233_02741ca80d85.mp3">留意「いらっしゃる</span>＋<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/234_a4638d2a4d2e.mp3">そうです」</span>＝傳聞：「聽講會出席」。唔係確定事實，<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/235_3da5a82bcc71.mp3">所以答案係「そうです」。</span></li>
+</ul>
+<p><strong>③ → 2（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/213_c78d24e754a6.mp3">先方に確認させてほしい</span>）</strong></p>
+<ul>
+<li>原話：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/236_0c348f6cda41.mp3">「先方に確認させていただいてもよろしいでしょうか」。</span></li>
+<li><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/092_4da6a79340c9.mp3">「させていただく」</span>＝請求批准「<strong>我</strong>去做」，所以係自己想確認，唔係叫課長做。</li>
+</ul>
+<hr>
+<h3>📋 今日小結</h3>
+<div class="num-item"><span class="num">1</span><div class="num-body"><strong>お／<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/047_1db813216d39.mp3">ご〜する</span></strong>：和語用「お」（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/237_e26f856be245.mp3">お待ちする、お送りする、お伝えする</span>），<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/238_87b5ae265012.mp3">漢語サ変用「ご」</span>（<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/239_dda21c64162c.mp3">ご説明する、ご連絡する、ご案内する</span>）。</div></div>
+<div class="num-item"><span class="num">2</span><div class="num-body"><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/240_fa45d94b0b5c.mp3">升級做「いたす」</span></strong>：ご説明<strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/067_81998374882a.mp3">いたします</span></strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/241_409f782227d7.mp3">、お伝え</span><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/067_81998374882a.mp3">いたします</span></strong>——呢個係正確的，商務場合首選。</div></div>
+<div class="num-item"><span class="num">3</span><div class="num-body"><strong><span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/004_ac2c168e7cd3.mp3">〜させていただく</span></strong>：使役て形＋<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/086_dbcf1b85bfb8.mp3">いただく</span>；用喺「需要批准」或「對方受益」的場合。</div></div>
+<div class="num-item"><span class="num">4</span><div class="num-body"><strong>唔需要批准就唔好用</strong>：✗ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/115_205d1117cc54.mp3">頑張らせていただきます</span> → ○ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/242_d4eac957952e.mp3">頑張ります。</span></div></div>
+<div class="num-item"><span class="num">5</span><div class="num-body"><strong>兩張牌唔可以同時出</strong>：✗ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/243_b71b9ca74b3a.mp3">ご説明させていただきます</span> → ○ <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/008_001c8e8da926.mp3">ご説明いたします</span>／<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/244_499b46460040.mp3">説明させていただきます。</span></div></div>
+<div class="num-item"><span class="num">6</span><div class="num-body"><strong>三個例外用「お」</strong>：<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/245_94568d760c3b.mp3">お電話する、お約束する、お勉強する。</span></div></div>
+<div class="num-item"><span class="num">7</span><div class="num-body"><strong>主語判斷照舊</strong>：自己 → お／<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/246_9f95665cd4c0.mp3">ご〜する、させていただく</span>；對方 → <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/247_e3b45b2d74e6.mp3">お〜になる、いらっしゃる、くださる。</span></div></div>
+<p><strong>明日（Day 59，星期六）</strong>：<strong>本週總複習 + 5 題小測驗</strong>——範圍係 Day 53–58：授受表現收尾、謙讓語專用動詞、お／<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/003_fdb567ffcf4f.mp3">ご〜する、させていただく。</span>會出改正題同聽解題，記得帶紙筆。</p>
+<p>今晚只需記一句：<strong>「自己做、對方批 → <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/092_4da6a79340c9.mp3">させていただく</span>；自己做、對方收 → お／<span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/047_1db813216d39.mp3">ご〜する</span>；兩樣都唔係 → <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/249_6537b367a0b4.mp3">します。」</span></strong> <span class="jp" onclick="speak(this)" title="🔊 撳我讀" data-audio="audio/day58/250_96d018df4cc7.mp3">お疲れ様でした！</span>😴</p>
+<a class="back" href="index.html">← 返回目錄</a>
+</main>
+<script>
+var _audio=null, _last=null;
+function speak(el){
+  try{
+    var mp3=el.dataset.audio;
+    if(mp3){
+      if(_audio && _last===el && !_audio.paused){_audio.pause();_audio.currentTime=0;el.classList.remove('speaking');return;}
+      if(_audio){_audio.pause();}
+      _audio=new Audio(mp3);_last=el;
+      el.classList.add('speaking');
+      _audio.onended=function(){el.classList.remove('speaking');};
+      _audio.play();
+      return;
+    }
+    var t=(el.dataset.speak||el.textContent||'').replace(/\s+/g,' ').trim();
+    if(!('speechSynthesis' in window))return;
+    var u=new SpeechSynthesisUtterance(t);u.lang='ja-JP';u.rate=0.85;
+    speechSynthesis.cancel();speechSynthesis.speak(u);
+    el.classList.add('speaking');
+    u.onend=function(){el.classList.remove('speaking');};
+  }catch(e){}
+}
+</script>
+</body>
+</html>
