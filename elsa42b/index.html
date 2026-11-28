@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#c9403b">
+<title>Elsa 文法42個學習App（下篇）</title>
+<style>
+:root{--bg:#faf7f2;--card:#ffffff;--text:#2b2620;--muted:#97907f;--primary:#c9403b;--primary-soft:#fdeeee;--primary-deep:#a93229;--radius:18px}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{font-family:-apple-system,"PingFang TC","Noto Sans TC","Hiragino Sans",sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+header{background:linear-gradient(140deg,#c9403b 0%,#d9534a 55%,#e07a3f 100%);color:#fff;padding:2rem 1.2rem 1.5rem;border-radius:0 0 28px 28px}
+header h1{font-size:1.35rem;font-weight:800;line-height:1.4}
+header .sub{opacity:.88;font-size:.82rem;margin-top:.35rem}
+main{max-width:600px;margin:0 auto;padding:1rem .9rem 5rem}
+.card{background:var(--card);border-radius:var(--radius);padding:1rem 1.05rem;margin-bottom:.85rem;box-shadow:0 1px 3px rgba(43,38,32,.06),0 4px 14px rgba(43,38,32,.05)}
+.sec-title{font-size:1rem;font-weight:800;margin:1.4rem 0 .7rem;display:flex;align-items:center;gap:.45rem}
+.sec-title .dot{width:9px;height:9px;border-radius:50%;background:var(--primary)}
+.player{position:relative;width:100%;padding-top:56.25%;border-radius:var(--radius);overflow:hidden;box-shadow:0 1px 3px rgba(43,38,32,.1);margin-bottom:.85rem;background:#000}
+.player iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+.progress-wrap{background:var(--card);border-radius:var(--radius);padding:.9rem 1.05rem;margin-bottom:.85rem;box-shadow:0 1px 3px rgba(43,38,32,.06)}
+.progress-bar{height:10px;border-radius:99px;background:#efe8dc;overflow:hidden;margin-top:.45rem}
+.progress-fill{height:100%;background:var(--primary);width:0%;transition:width .3s}
+.tabs{display:flex;gap:.45rem;flex-wrap:wrap;margin:.6rem 0}
+.tab-btn{border:1px solid #e8ddd2;background:#fff;color:var(--muted);border-radius:999px;padding:.42rem .9rem;font-size:.85rem;cursor:pointer}
+.tab-btn.active{background:var(--primary);border-color:var(--primary);color:#fff;font-weight:700}
+.search{width:100%;border:1px solid #e8ddd2;border-radius:999px;padding:.65rem 1rem;font-size:.95rem;margin:.2rem 0 .6rem;background:#fff;color:var(--text)}
+.unit-no{font-weight:800;color:var(--primary);font-size:.85rem}
+.unit-title{font-weight:800;font-size:1.08rem;margin:.15rem 0}
+.unit-zh{color:var(--primary-deep);font-weight:700;font-size:.92rem}
+.unit-meta{font-size:.8rem;color:var(--muted);margin:.3rem 0}
+.jp{cursor:pointer;border-bottom:1.5px dotted #d98a85;border-radius:4px;padding:0 1px}
+.jp:active,.jp.speaking{background:var(--primary-soft)}
+.vocab-row{display:flex;gap:.6rem;align-items:baseline;padding:.4rem 0;border-bottom:1px dashed #e8e0d2}
+.vocab-row:last-child{border-bottom:none}
+.reading{color:var(--muted);font-size:.85em}
+.ex-block{margin:.5rem 0;font-size:.95rem}
+.watch-btn{display:inline-block;background:var(--primary);color:#fff;border:none;border-radius:999px;padding:.5rem 1rem;font-size:.88rem;font-weight:700;cursor:pointer;margin:.4rem .4rem .4rem 0}
+.done-btn{display:inline-block;background:#fff;color:var(--primary-deep);border:1.5px solid var(--primary);border-radius:999px;padding:.45rem 1rem;font-size:.88rem;font-weight:700;cursor:pointer}
+.done-btn.done{background:var(--primary);color:#fff}
+.opt-btn{display:block;width:100%;text-align:left;background:#fff;border:1px solid #e8ddd2;border-radius:12px;padding:.6rem .8rem;margin:.35rem 0;font-size:.92rem;cursor:pointer}
+.opt-btn.correct{background:#e8f5e9;border-color:#43a047}
+.opt-btn.wrong{background:#fdecea;border-color:#c9403b}
+.quiz-explain{font-size:.88rem;color:#5b544a;margin-top:.4rem;display:none}
+.quiz-explain.show{display:block}
+.quiz-box{background:var(--primary-soft);border-radius:12px;padding:.7rem .9rem;margin-top:.6rem}
+.score{font-size:1.1rem;font-weight:800;color:var(--primary-deep)}
+.small{font-size:.8rem;color:var(--muted);line-height:1.6}
+a{color:var(--primary-deep)}
+footer{text-align:center;padding:1.5rem;color:var(--muted);font-size:.72rem}
+.nav{display:flex;gap:.7rem;margin-top:1.2rem}
+.nav a{flex:1;text-align:center;background:var(--card);border-radius:14px;padding:.8rem;text-decoration:none;color:var(--primary-deep);font-weight:700;box-shadow:0 1px 3px rgba(43,38,32,.08)}
+</style>
+</head>
+<body>
+<header>
+  <div><h1>📘 Elsa 文法42個學習App（下篇）</h1>
+  <div class="sub">學日文最開始要記住的基礎文法，下篇21個（第22–42個），約24分27秒 ｜ 作者：Elsaの放送</div></div>
+</header>
+<main>
+  <div class="progress-wrap"><b>學習進度</b><div id="progressText">已學完 0 / 21 個單元（0%）</div><div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div></div>
+  <div class="player" id="playerBox"><iframe id="yt" src="https://www.youtube.com/embed/22BQp7CCj10?rel=0" title="日文文法42個（下篇）" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+  <div class="card small">撳任何單元嘅「▶ 由呢度睇」，播放器就會跳去該段開始。撳日文單字即用日文語音朗讀，搵唔到日文聲會提示，唔會用英文聲亂讀。</div>
+  <div class="tabs">
+    <button class="tab-btn active" onclick="setFilter('all',this)">全部 21</button>
+    <button class="tab-btn" onclick="setFilter('quiz',this)">測驗</button>
+  </div>
+  <input class="search" id="searchBox" type="search" placeholder="搜尋標題／單字，例如：なければならない、つもり、すぎる">
+  <div class="small" id="countText"></div>
+  <div id="unitList"></div>
+  <div id="finalQuiz" style="display:none">
+    <div class="sec-title"><span class="dot"></span>綜合測驗（10題，固定取頭10個文法單元）</div>
+    <div class="card"><span class="score" id="finalScore"></span><br><button class="watch-btn" onclick="renderFinalQuiz()">重做一次</button></div>
+    <div id="finalQuizBox"></div>
+  </div>
+  <div class="card small">出處聲明：呢個App係學習導覽，文法內容只係標題、時間戳、關鍵單字同原創例句練習，唔係原片講稿抄錄。呢條片係42個文法系列嘅下篇，片中講咗第22–42個文法，首21個喺<a href="../elsa42/">上篇</a>。原片：<a href="https://youtu.be/22BQp7CCj10">https://youtu.be/22BQp7CCj10</a>（Elsaの放送，2021-06-30，全長24分27秒）</div>
+  <div class="nav"><a href="../elsa42/">← 上篇：第 1–21 個</a><a href="../n5n4/">返回N5→N4目錄</a><a href="https://youtu.be/22BQp7CCj10">原片 ▶</a></div>
+</main>
+<footer>Elsa 文法42個學習導覽（下篇） ｜ 內容為原創例句練習，原文請睇原片</footer>
+<script>
+var DATA = {"video_id": "22BQp7CCj10", "video_url": "https://youtu.be/22BQp7CCj10", "title": "學日文最開始要記住的42個日文文法｜基礎日文文法", "author": "Elsaの放送", "duration_sec": 1467, "note": "呢條片係42個文法系列嘅下篇，片中講咗第22–42個文法點（g22-g42），接續上篇（g01-g21）。", "units": [{"id": "g22", "part": "grammar", "no": "22", "title_ja": "〜てはいけません", "title_zh": "「唔可以…」：禁止", "start_sec": 0, "duration_sec": 63, "vocab": [{"ja": "タバコ", "reading": "タバコ", "zh": "煙"}, {"ja": "図書館", "reading": "としょかん", "zh": "圖書館"}, {"ja": "騒ぐ", "reading": "さわぐ", "zh": "嘈"}], "examples": [{"ja": "電車の中でタバコを吸ってはいけません。", "zh": "喺電車入面唔可以食煙。"}, {"ja": "図書館では大きな声で話してはいけません。", "zh": "喺圖書館唔可以大聲講嘢。"}], "explain": "動詞て形＋「はいけません」，意思係「唔可以…」，用嚟講規則或者禁止。語氣比較正式，係長輩或者告示對住人講嘅講法。留意「ては」唔可以縮寫，口語有時會講「〜ちゃいけない」，但意思同場合正式程度唔同。", "quiz": {"q": "「ここで写真を撮ってはいけません。」係咩意思？", "options": ["呢度可以影相。", "呢度唔可以影相。", "呢度一定要影相。", "呢度影相好靚。"], "answer": 1, "explain": "「〜てはいけません」係禁止，意思係「唔可以…」。"}}, {"id": "g23", "part": "grammar", "no": "23", "title_ja": "どうやって", "title_zh": "「點樣…」：問方法", "start_sec": 63, "duration_sec": 54, "vocab": [{"ja": "使う", "reading": "つかう", "zh": "用"}, {"ja": "駅", "reading": "えき", "zh": "車站"}, {"ja": "行く", "reading": "いく", "zh": "去"}], "examples": [{"ja": "この機械はどうやって使いますか。", "zh": "呢部機點樣用呀？"}, {"ja": "駅までどうやって行きますか。", "zh": "去車站點樣去呀？"}], "explain": "「どうやって」係問「用乜方法、點樣做」，後面通常跟動詞。留意唔好同「どう」撈亂：「どう」問狀態或者感想，「どうやって」專門問做法。", "quiz": {"q": "「どうやって」通常問乜？", "options": ["時間", "地方", "方法", "原因"], "answer": 2, "explain": "「どうやって」係問做法、方法，意思係「點樣…」。"}}, {"id": "g24", "part": "grammar", "no": "24", "title_ja": "〜たり〜たりする", "title_zh": "「又…又…」：列舉例子", "start_sec": 117, "duration_sec": 81, "vocab": [{"ja": "買い物", "reading": "かいもの", "zh": "買嘢"}, {"ja": "映画", "reading": "えいが", "zh": "電影"}, {"ja": "健康", "reading": "けんこう", "zh": "健康"}], "examples": [{"ja": "休みの日は買い物したり、映画を見たりします。", "zh": "放假嗰日，我又買嘢又睇戲。"}, {"ja": "健康のために、野菜を食べたり、魚を食べたりしています。", "zh": "為咗健康，我又食菜又食魚。"}], "explain": "動詞た形＋「り」，列出兩三個代表性嘅例子，意思係「又…又…」，仲有其他未講出嚟嘅嘢。只用一個「〜たり」都得，但意思會變成「例如…」。留意最後一個動詞要用「する」，唔好漏咗。", "quiz": {"q": "「週末は掃除したり、洗濯したりしました。」講咩？", "options": ["週末淨係掃地。", "週末掃地、洗衫等等做咗幾樣嘢。", "週末乜都冇做。", "週末去咗旅行。"], "answer": 1, "explain": "「〜たり〜たりする」係列舉幾個代表性例子，呢句係話做咗掃地、洗衫等幾樣嘢。"}}, {"id": "g25", "part": "grammar", "no": "25", "title_ja": "〜ないでください", "title_zh": "「唔好…」：叫人唔好做", "start_sec": 198, "duration_sec": 62, "vocab": [{"ja": "寝る", "reading": "ねる", "zh": "瞓覺"}, {"ja": "捨てる", "reading": "すてる", "zh": "掉"}, {"ja": "ゴミ", "reading": "ゴミ", "zh": "垃圾"}], "examples": [{"ja": "授業中に寝ないでください。", "zh": "上堂嗰陣唔好瞓覺。"}, {"ja": "ここにゴミを捨てないでください。", "zh": "唔好將垃圾掉喺呢度。"}], "explain": "動詞ない形＋「でください」，用嚟叫對方唔好做某件事，意思係「唔好…」。同「〜てください」相反，一個係叫人做，一個係叫人唔好做。語氣算有禮貌，正式場合都用得。", "quiz": {"q": "「ここで走らないでください。」係咩意思？", "options": ["請喺呢度跑。", "呢度可以跑。", "跑快啲。", "唔好喺呢度跑。"], "answer": 3, "explain": "「〜ないでください」係叫對方唔好做某件事，意思係「唔好…」。"}}, {"id": "g26", "part": "grammar", "no": "26", "title_ja": "〜ながら", "title_zh": "「一邊…一邊…」：同時做兩件事", "start_sec": 260, "duration_sec": 73, "vocab": [{"ja": "歌う", "reading": "うたう", "zh": "唱歌"}, {"ja": "掃除", "reading": "そうじ", "zh": "打掃"}, {"ja": "聞く", "reading": "きく", "zh": "聽"}], "examples": [{"ja": "音楽を聞きながら、掃除します。", "zh": "我一邊聽音樂，一邊打掃。"}, {"ja": "話を聞きながら、メモします。", "zh": "我一邊聽人講嘢，一邊做筆記。"}], "explain": "動詞ます形去ます＋「ながら」，講同一個人同時做兩件事，意思係「一邊…一邊…」。留意前後兩個動作一定要同一個主語，唔可以話「我一邊食飯，媽媽一邊睇電視」。", "quiz": {"q": "「歩きながら、スマホを見ないでください。」係咩意思？", "options": ["行路嗰陣唔好睇電話。", "停低先可以睇電話。", "行路嗰陣要睇電話。", "唔好行路。"], "answer": 0, "explain": "「〜ながら」講同時做兩件事，呢句係話行路嗰陣唔好睇電話。"}}, {"id": "g27", "part": "grammar", "no": "27", "title_ja": "〜なくてもいい", "title_zh": "「唔…都得」：唔使做", "start_sec": 333, "duration_sec": 87, "vocab": [{"ja": "食べる", "reading": "たべる", "zh": "食"}, {"ja": "行く", "reading": "いく", "zh": "去"}, {"ja": "授業", "reading": "じゅぎょう", "zh": "堂課"}], "examples": [{"ja": "好きじゃないものは食べなくてもいいですよ。", "zh": "唔鍾意食嘅嘢，唔食都得。"}, {"ja": "明日は授業がないから、学校に行かなくてもいいです。", "zh": "聽日冇堂，所以唔使返學校。"}], "explain": "動詞ない形去い＋「くてもいい」，意思係「唔做都得」，講冇必要做某件事。留意佢同「〜なければならない」啱啱相反：一個係一定要做，一個係唔做都得。", "quiz": {"q": "「今日は来なくてもいいです。」係咩意思？", "options": ["今日一定要嚟。", "今日唔可以嚟。", "今日遲啲先嚟。", "今日唔嚟都得。"], "answer": 3, "explain": "「〜なくてもいい」意思係「唔做都得」，呢句係話今日唔嚟都得。"}}, {"id": "g28", "part": "grammar", "no": "28", "title_ja": "〜くなる／〜になる", "title_zh": "「變得…／成為…」：狀態變化", "start_sec": 420, "duration_sec": 85, "vocab": [{"ja": "熱い", "reading": "あつい", "zh": "熱"}, {"ja": "医者", "reading": "いしゃ", "zh": "醫生"}, {"ja": "卒業", "reading": "そつぎょう", "zh": "畢業"}], "examples": [{"ja": "6月になって、少し熱くなりましたね。", "zh": "入咗六月，變得有啲熱喇。"}, {"ja": "田中さんは大学を卒業して、医者になりました。", "zh": "田中先生大學畢業之後，做咗醫生。"}], "explain": "講狀態變化：い形容詞去い＋「くなる」（變熱、變凍），な形容詞或者名詞＋「になる」（變得方便、成為醫生）。留意「なる」前面係變化之後嘅狀態，唔係變化之前。", "quiz": {"q": "「だんだん寒くなりました。」係咩意思？", "options": ["一路都好凍。", "忽然變熱。", "慢慢變凍。", "唔會再凍。"], "answer": 2, "explain": "「〜くなる」講狀態變化，「寒くなる」係話慢慢變凍。"}}, {"id": "g29", "part": "grammar", "no": "29", "title_ja": "〜はどうですか", "title_zh": "「…點呀？」：問意見感想", "start_sec": 505, "duration_sec": 43, "vocab": [{"ja": "最近", "reading": "さいきん", "zh": "最近"}, {"ja": "生活", "reading": "せいかつ", "zh": "生活"}, {"ja": "どう", "reading": "どう", "zh": "點樣"}], "examples": [{"ja": "日本の生活はどうですか。", "zh": "日本嘅生活點呀？"}, {"ja": "この料理はどうですか。", "zh": "呢味餸點呀？"}], "explain": "名詞＋「はどうですか」，用嚟問對方對某樣嘢嘅意見、印象或者感想，意思係「…點呀？」。答嘅時候可以直接講形容詞，例如「おいしいです」「楽しいです」。", "quiz": {"q": "「最近どうですか。」通常係咩意思？", "options": ["你最近點呀？", "你最近去邊？", "你最近幾點起身？", "你最近食咩？"], "answer": 0, "explain": "「〜はどうですか」係問對方嘅意見或者近況，「最近どうですか」即係「你最近點呀？」。"}}, {"id": "g30", "part": "grammar", "no": "30", "title_ja": "〜前に", "title_zh": "「…之前」：先做某事", "start_sec": 548, "duration_sec": 77, "vocab": [{"ja": "寝る", "reading": "ねる", "zh": "瞓覺"}, {"ja": "食事", "reading": "しょくじ", "zh": "食飯"}, {"ja": "手", "reading": "て", "zh": "手"}], "examples": [{"ja": "寝る前に、少し日本語を勉強します。", "zh": "瞓覺之前，我會學一陣日文。"}, {"ja": "食事の前に、手を洗いましょう。", "zh": "食飯之前，我哋洗手啦。"}], "explain": "動詞辭書形＋「前に」，或者名詞＋「の前に」，講「喺…之前」做某件事。留意同「〜後で」啱啱相反：一個係之前，一個係之後。", "quiz": {"q": "「出かける前に、かぎを忘れないでください。」係咩意思？", "options": ["出門之後，唔好唔記得鎖匙。", "出門嗰陣，記得帶鎖匙。", "唔出門就唔使帶鎖匙。", "出門之前，唔好唔記得鎖匙。"], "answer": 3, "explain": "「〜前に」講「…之前」，呢句係話出門之前，唔好唔記得鎖匙。"}}, {"id": "g31", "part": "grammar", "no": "31", "title_ja": "〜ましょう", "title_zh": "「一齊…啦」：邀請建議", "start_sec": 625, "duration_sec": 69, "vocab": [{"ja": "寝る", "reading": "ねる", "zh": "瞓覺"}, {"ja": "帰る", "reading": "かえる", "zh": "返屋企"}, {"ja": "早く", "reading": "はやく", "zh": "早啲"}], "examples": [{"ja": "今日は早く寝ましょう。", "zh": "今日我哋早啲瞓啦。"}, {"ja": "一緒に帰りましょう。", "zh": "我哋一齊返屋企啦。"}], "explain": "動詞ます形去ます＋「ましょう」，意思係「一齊…啦」，用嚟提議同對方一齊做某件事。留意語氣係提議，唔係命令，對方可以答應或者拒絕。", "quiz": {"q": "「一緒に行きましょう。」係咩意思？", "options": ["你自己去啦。", "我哋一齊去啦。", "唔好去。", "聽日先去。"], "answer": 1, "explain": "「〜ましょう」係提議一齊做某件事，意思係「一齊…啦」。"}}, {"id": "g32", "part": "grammar", "no": "32", "title_ja": "〜ませんか", "title_zh": "「一齊…好唔好？」：邀請對方", "start_sec": 694, "duration_sec": 73, "vocab": [{"ja": "行く", "reading": "いく", "zh": "去"}, {"ja": "食事", "reading": "しょくじ", "zh": "食飯"}, {"ja": "今晩", "reading": "こんばん", "zh": "今晚"}], "examples": [{"ja": "一緒に行きませんか。", "zh": "一齊去好唔好？"}, {"ja": "今晩、一緒に食事しませんか。", "zh": "今晚一齊食飯好唔好？"}], "explain": "動詞ません形＋「か」，用嚟邀請對方一齊做某件事，意思係「一齊…好唔好？」。同「〜ましょう」分別喺邊？「〜ましょう」係我提議一齊做，「〜ませんか」係問對方去唔去，語氣更加客氣，更加畀對方選擇。", "quiz": {"q": "「一緒に映画を見ませんか。」係咩意思？", "options": ["我唔想睇戲。", "你自己去睇戲啦。", "一齊去睇戲好唔好？", "套戲唔好睇。"], "answer": 2, "explain": "「〜ませんか」係邀請對方，意思係「一齊…好唔好？」。"}}, {"id": "g33", "part": "grammar", "no": "33", "title_ja": "〜をください", "title_zh": "「請俾…我」：點單買嘢", "start_sec": 767, "duration_sec": 47, "vocab": [{"ja": "コーヒー", "reading": "コーヒー", "zh": "咖啡"}, {"ja": "薬", "reading": "くすり", "zh": "藥"}, {"ja": "ください", "reading": "ください", "zh": "請俾"}], "examples": [{"ja": "コーヒーをください。", "zh": "請俾杯咖啡我。"}, {"ja": "すみません、かぜ薬をください。", "zh": "唔好意思，請俾感冒藥我。"}], "explain": "名詞＋「をください」，意思係「請俾…我」，喺餐廳點單、商店買嘢嗰陣最常用。留意「ください」本身已經有「請」嘅意思，唔使再加「お願いします」，不過加埋都得，語氣更加客氣。", "quiz": {"q": "「水をください。」係咩意思？", "options": ["請俾水我。", "我唔要水。", "水好貴。", "水喺邊度？"], "answer": 0, "explain": "「〜をください」係請對方俾某樣嘢自己，意思係「請俾…我」。"}}, {"id": "g34", "part": "grammar", "no": "34", "title_ja": "AはBより〜です", "title_zh": "「A比B更加…」：兩者比較", "start_sec": 814, "duration_sec": 59, "vocab": [{"ja": "電車", "reading": "でんしゃ", "zh": "電車"}, {"ja": "バス", "reading": "バス", "zh": "巴士"}, {"ja": "早い", "reading": "はやい", "zh": "快"}], "examples": [{"ja": "電車はバスより早いです。", "zh": "電車比巴士快。"}, {"ja": "今日は昨日より忙しいです。", "zh": "今日比琴日忙。"}], "explain": "AはBより＋形容詞，講兩樣嘢比較，意思係「A比B更加…」。留意A係比較之下程度高嗰個，B係用嚟比較嘅對象，次序唔可以調轉。三個或者以上比較就唔用呢個，要用「〜が一番〜」（上篇第9個文法）。", "quiz": {"q": "「日本は香港より寒いです。」係咩意思？", "options": ["香港比日本凍。", "日本比香港凍。", "日本同香港一樣凍。", "日本唔凍。"], "answer": 1, "explain": "「AはBより〜」係A比B更加，呢句係話日本比香港凍。"}}, {"id": "g35", "part": "grammar", "no": "35", "title_ja": "〜なければならない", "title_zh": "「一定要…」：必須", "start_sec": 873, "duration_sec": 93, "vocab": [{"ja": "薬", "reading": "くすり", "zh": "藥"}, {"ja": "飲む", "reading": "のむ", "zh": "食／飲"}, {"ja": "テスト", "reading": "テスト", "zh": "考試"}], "examples": [{"ja": "この薬を毎日飲まなければなりません。", "zh": "呢隻藥一定要每日食。"}, {"ja": "もうすぐテストですから、勉強しなければなりません。", "zh": "就快考試，所以一定要溫書。"}], "explain": "動詞ない形去い＋「ければなりません」，意思係「一定要…」，講必須做某件事。口語可以講「〜なきゃ」，例如「行かなきゃ」，意思一樣但隨意好多。留意佢同「〜なくてもいい」（第27個文法）啱啱相反。", "quiz": {"q": "「宿題をしなければなりません。」係咩意思？", "options": ["功課唔使做。", "功課可以遲啲做。", "功課唔重要。", "功課一定要做。"], "answer": 3, "explain": "「〜なければならない」意思係「一定要…」，呢句係話功課一定要做。"}}, {"id": "g36", "part": "grammar", "no": "36", "title_ja": "〜方", "title_zh": "「…嘅方法」：做法", "start_sec": 966, "duration_sec": 71, "vocab": [{"ja": "切符", "reading": "きっぷ", "zh": "飛；票"}, {"ja": "買う", "reading": "かう", "zh": "買"}, {"ja": "読み方", "reading": "よみかた", "zh": "讀法"}], "examples": [{"ja": "切符の買い方がわかりません。", "zh": "我唔識點買飛。"}, {"ja": "この漢字の読み方を教えてください。", "zh": "請話我知呢個漢字點讀。"}], "explain": "動詞ます形去ます＋「方」，意思係「…嘅方法」，例如買い方（買嘢嘅方法）、読み方（讀法）、書き方（寫法）。留意「方」呢度讀「かた」，唔係「ほう」，唔好同比較嘅「〜た方がいい」撈亂。", "quiz": {"q": "「この漢字の書き方がわかりません。」係咩意思？", "options": ["我唔識寫呢個漢字。", "我唔識讀呢個漢字。", "呢個漢字好難。", "呢個漢字好靚。"], "answer": 0, "explain": "「〜方」講做法，「書き方」係寫法，呢句係話唔識寫呢個漢字。"}}, {"id": "g37", "part": "grammar", "no": "37", "title_ja": "〜た方がいい", "title_zh": "「最好…」：建議勸告", "start_sec": 1037, "duration_sec": 90, "vocab": [{"ja": "運動", "reading": "うんどう", "zh": "運動"}, {"ja": "疲れる", "reading": "つかれる", "zh": "攰"}, {"ja": "健康", "reading": "けんこう", "zh": "健康"}], "examples": [{"ja": "健康のために、できるだけ運動した方がいいです。", "zh": "為咗健康，最好盡量做運動。"}, {"ja": "疲れているときは、早く寝た方がいいですよ。", "zh": "攰嗰陣，最好早啲瞓。"}], "explain": "動詞た形＋「方がいい」，用嚟畀建議或者勸告，意思係「最好…」。動詞ない形＋「方がいい」都得，例如「行かない方がいい」，意思係「最好唔好去」。留意呢個「方」讀「ほう」，同第36個文法嘅「方（かた）」唔同。", "quiz": {"q": "「風邪を引いたら、家で休んだ方がいいです。」係咩意思？", "options": ["感冒咗要去返工。", "感冒咗唔使理。", "感冒咗最好喺屋企休息。", "感冒咗要去旅行。"], "answer": 2, "explain": "「〜た方がいい」係建議，意思係「最好…」，呢句係話感冒咗最好喺屋企休息。"}}, {"id": "g38", "part": "grammar", "no": "38", "title_ja": "〜すぎる", "title_zh": "「太…」：過分", "start_sec": 1127, "duration_sec": 90, "vocab": [{"ja": "食べる", "reading": "たべる", "zh": "食"}, {"ja": "甘い", "reading": "あまい", "zh": "甜"}, {"ja": "ケーキ", "reading": "ケーキ", "zh": "蛋糕"}], "examples": [{"ja": "ちょっと食べ過ぎました。", "zh": "我食多咗少少。"}, {"ja": "あの店のケーキは甘すぎるから、食べたくないです。", "zh": "嗰間舖嘅蛋糕太甜，所以我唔想食。"}], "explain": "動詞ます形去ます／い形容詞去い／な形容詞語幹＋「すぎる」，意思係「太…」，講程度過咗頭。留意「すぎる」本身係動詞，可以再變形，例如「食べ過ぎました」「甘すぎます」。", "quiz": {"q": "「このズボンは大きすぎます。」係咩意思？", "options": ["條褲啱啱好。", "條褲太大。", "條褲太細。", "條褲好平。"], "answer": 1, "explain": "「〜すぎる」意思係「太…」，呢句係話條褲太大。"}}, {"id": "g39", "part": "grammar", "no": "39", "title_ja": "〜たことがある", "title_zh": "「曾經…過」：過去經驗", "start_sec": 1217, "duration_sec": 58, "vocab": [{"ja": "行く", "reading": "いく", "zh": "去"}, {"ja": "書く", "reading": "かく", "zh": "寫"}, {"ja": "漫画", "reading": "まんが", "zh": "漫畫"}], "examples": [{"ja": "日本に行ったことがあります。", "zh": "我去過日本。"}, {"ja": "漫画を書いたことがあります。", "zh": "我畫過漫畫。"}], "explain": "動詞た形＋「ことがある」，講過去曾經做過某件事，意思係「曾經…過」。否定就講「〜たことがありません」，意思係「從來冇…過」。留意唔好同「〜ている」撈亂，一個講經驗，一個講進行緊。", "quiz": {"q": "「富士山に登ったことがあります。」係咩意思？", "options": ["我而家喺富士山。", "我聽日去富士山。", "我曾經爬過富士山。", "我唔想去富士山。"], "answer": 2, "explain": "「〜たことがある」講過去經驗，意思係「曾經…過」。"}}, {"id": "g40", "part": "grammar", "no": "40", "title_ja": "〜ので", "title_zh": "「因為…」：客觀原因", "start_sec": 1275, "duration_sec": 53, "vocab": [{"ja": "頭", "reading": "あたま", "zh": "頭"}, {"ja": "痛い", "reading": "いたい", "zh": "痛"}, {"ja": "エアコン", "reading": "エアコン", "zh": "冷氣"}], "examples": [{"ja": "頭が痛いので、帰ってもいいですか。", "zh": "我頭痛，可唔可以返屋企？"}, {"ja": "暑いので、エアコンをつけてもいいですか。", "zh": "好熱，我可唔可以開冷氣？"}], "explain": "普通形＋「ので」，講原因理由，意思係「因為…」。同「〜から」（上篇第11個文法）分別喺邊？「ので」語氣比較軟，講客觀原因；「から」語氣直接啲，講主觀理由。問人哋准唔准嗰陣，通常用「ので」。", "quiz": {"q": "「雨が降っているので、傘を持って行きます。」係咩意思？", "options": ["因為落雨，所以帶遮去。", "雖然落雨，但唔帶遮。", "落雨之後先帶遮。", "唔落雨都要帶遮。"], "answer": 0, "explain": "「〜ので」講原因，意思係「因為…」，呢句係話因為落雨，所以帶遮去。"}}, {"id": "g41", "part": "grammar", "no": "41", "title_ja": "〜つもりだ", "title_zh": "「打算…」：計劃打算", "start_sec": 1328, "duration_sec": 62, "vocab": [{"ja": "来年", "reading": "らいねん", "zh": "出年"}, {"ja": "会社", "reading": "かいしゃ", "zh": "公司"}, {"ja": "あげる", "reading": "あげる", "zh": "送"}], "examples": [{"ja": "私は来年、この会社をやめるつもりです。", "zh": "我打算出年離開呢間公司。"}, {"ja": "母の誕生日にネックレスをあげるつもりです。", "zh": "我打算喺媽媽生日嗰陣送條頸鏈俾佢。"}], "explain": "動詞辭書形或者ない形＋「つもりです」，講自己嘅計劃或者打算，意思係「打算…」。留意「つもり」只可以講自己嘅打算，唔可以用嚟講人哋打算做乜；問人哋就講「〜つもりですか」。", "quiz": {"q": "「来月、北海道に行くつもりです。」係咩意思？", "options": ["下個月我去過北海道。", "下個月我唔去北海道。", "下個月北海道好凍。", "下個月我打算去北海道。"], "answer": 3, "explain": "「〜つもりです」講自己嘅計劃，意思係「打算…」。"}}, {"id": "g42", "part": "grammar", "no": "42", "title_ja": "〜かもしれない", "title_zh": "「可能…」：推測", "start_sec": 1390, "duration_sec": 77, "vocab": [{"ja": "かぜ", "reading": "かぜ", "zh": "感冒"}, {"ja": "台風", "reading": "たいふう", "zh": "颱風"}, {"ja": "来週", "reading": "らいしゅう", "zh": "下星期"}], "examples": [{"ja": "のどが痛いから、かぜを引いたかもしれません。", "zh": "我喉嚨痛，可能感冒咗。"}, {"ja": "来週、大きな台風が来るかもしれません。", "zh": "下星期可能會有大颱風。"}], "explain": "普通形＋「かもしれない」，講自己嘅推測，意思係「可能…」，語氣唔肯定。肯定啲就用「〜でしょう」（上篇第17個文法），更加唔肯定就用「〜かもしれない」。留意「かもしれない」唔可以講肯定嘅事實。", "quiz": {"q": "「明日は雨が降るかもしれません。」係咩意思？", "options": ["聽日一定落雨。", "聽日可能落雨。", "聽日一定唔落雨。", "聽日落雨就唔出門。"], "answer": 1, "explain": "「〜かもしれない」係推測，意思係「可能…」，唔係肯定。"}}]};
+var VIDEO_ID = DATA.video_id;
+var doneSet = {};
+try { var saved = JSON.parse(localStorage.getItem('elsa42b_done') || '[]'); saved.forEach(function(id){ doneSet[id] = true; }); } catch(e) {}
+var currentFilter = 'all';
+var currentQuery = '';
+var jaVoice = null;
+function loadJaVoice(){
+  try {
+    var vs = speechSynthesis.getVoices() || [];
+    for (var i = 0; i < vs.length; i++) { if (String(vs[i].lang || '').toLowerCase().indexOf('ja') === 0) { jaVoice = vs[i]; return; } }
+    for (var j = 0; j < vs.length; j++) { if (/kyoko|otoya|japan/i.test(String(vs[j].name || ''))) { jaVoice = vs[j]; return; } }
+  } catch(e) {}
+}
+try { if ('speechSynthesis' in window) { loadJaVoice(); speechSynthesis.onvoiceschanged = loadJaVoice; } } catch(e) {}
+function speakJa(el){
+  try {
+    if (!('speechSynthesis' in window)) { alert('你個瀏覽器唔支援語音朗讀'); return; }
+    var t = (el.dataset.speak || el.textContent || '').replace(/\s+/g, ' ').trim();
+    if (!t) return;
+    loadJaVoice();
+    if (!jaVoice) { alert('部機搵唔到日文語音，請先安裝日文語音再撳一次'); return; }
+    try { speechSynthesis.cancel(); } catch(e) {}
+    var u = new SpeechSynthesisUtterance(t);
+    u.lang = 'ja-JP'; u.rate = 0.85; u.voice = jaVoice;
+    el.classList.add('speaking');
+    u.onend = function(){ el.classList.remove('speaking'); };
+    u.onerror = function(){ el.classList.remove('speaking'); };
+    speechSynthesis.speak(u);
+  } catch(e) {}
+}
+function fmt(sec){
+  var m = Math.floor(sec / 60), s = sec % 60;
+  return (m < 10 ? '0' + m : m) + ':' + (s < 10 ? '0' + s : s);
+}
+function esc(s){
+  return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+function jumpTo(sec){
+  var f = document.getElementById('yt');
+  f.src = 'https://www.youtube.com/embed/' + VIDEO_ID + '?start=' + sec + '&autoplay=1&rel=0';
+  var top = document.getElementById('playerBox');
+  if (top) top.scrollIntoView({behavior: 'smooth'});
+}
+function saveDone(){
+  try { localStorage.setItem('elsa42b_done', JSON.stringify(Object.keys(doneSet))); } catch(e) {}
+}
+function updateProgress(){
+  var total = DATA.units.length;
+  var n = Object.keys(doneSet).length;
+  var pct = total ? Math.round(n / total * 100) : 0;
+  var fill = document.getElementById('progressFill');
+  var txt = document.getElementById('progressText');
+  if (fill) fill.style.width = pct + '%';
+  if (txt) txt.textContent = '已學完 ' + n + ' / ' + total + ' 個單元（' + pct + '%）';
+}
+function toggleDone(btn){
+  var id = btn.dataset.unit;
+  if (doneSet[id]) { delete doneSet[id]; } else { doneSet[id] = true; }
+  saveDone(); updateProgress(); renderUnits();
+}
+function answerQuiz(btn){
+  var unitId = btn.dataset.unit;
+  var chosen = parseInt(btn.dataset.idx, 10);
+  var unit = null;
+  for (var i = 0; i < DATA.units.length; i++) { if (DATA.units[i].id === unitId) unit = DATA.units[i]; }
+  if (!unit) return;
+  var box = btn.closest('.quiz-box');
+  if (!box || box.dataset.answered) return;
+  box.dataset.answered = '1';
+  var opts = box.querySelectorAll('.opt-btn');
+  for (var j = 0; j < opts.length; j++) {
+    var idx = parseInt(opts[j].dataset.idx, 10);
+    if (idx === unit.quiz.answer) opts[j].classList.add('correct');
+    else if (idx === chosen) opts[j].classList.add('wrong');
+  }
+  var ex = box.querySelector('.quiz-explain');
+  if (ex) { ex.textContent = (chosen === unit.quiz.answer ? '答啱咗！' : '答錯咗，正確答案係上面綠色嗰個。') + unit.quiz.explain; ex.classList.add('show'); }
+}
+function unitCard(u){
+  var isDone = !!doneSet[u.id];
+  var vocabHtml = u.vocab.map(function(v){
+    return '<div class="vocab-row"><span class="jp" data-speak="' + esc(v.ja) + '" onclick="speakJa(this)">' + esc(v.ja) + '</span><span class="reading">（' + esc(v.reading) + '）</span><span>— ' + esc(v.zh) + '</span></div>';
+  }).join('');
+  var exHtml = u.examples.map(function(e){
+    return '<div class="ex-block">例：<span class="jp" data-speak="' + esc(e.ja) + '" onclick="speakJa(this)">' + esc(e.ja) + '</span><br>（' + esc(e.zh) + '）</div>';
+  }).join('');
+  var optHtml = u.quiz.options.map(function(o, idx){
+    return '<button class="opt-btn" data-unit="' + u.id + '" data-idx="' + idx + '" onclick="answerQuiz(this)">' + '（' + String.fromCharCode(65 + idx) + '）' + esc(o) + '</button>';
+  }).join('');
+  var partLabel = '基礎文法';
+  return '<article class="card" id="unit-' + u.id + '">' +
+    '<div class="unit-no">' + partLabel + ' ｜ ' + esc(u.no) + '</div>' +
+    '<div class="unit-title">' + esc(u.title_ja) + '</div>' +
+    '<div class="unit-zh">' + esc(u.title_zh) + '</div>' +
+    '<div class="unit-meta">開始 ' + fmt(u.start_sec) + ' ｜ 長度 ' + fmt(u.duration_sec) + '</div>' +
+    '<button class="watch-btn" onclick="jumpTo(' + u.start_sec + ')">▶ 由呢度睇</button>' +
+    '<button class="done-btn"' + (isDone ? ' done' : '') + '" onclick="toggleDone(this)" data-unit="' + u.id + '">' + (isDone ? '✓ 已學完' : '✓ 學完') + '</button>' +
+    '<div class="sec-title" style="margin-top:.9rem"><span class="dot"></span>關鍵單字（撳日文即讀出）</div>' + vocabHtml +
+    '<div class="sec-title"><span class="dot"></span>原創例句</div>' + exHtml +
+    '<div class="sec-title"><span class="dot"></span>分辨重點</div><div>' + esc(u.explain) + '</div>' +
+    '<div class="quiz-box"><b>測驗：</b>' + esc(u.quiz.q) + optHtml +
+    '<div class="quiz-explain"></div></div></article>';
+}
+function renderUnits(){
+  var list = document.getElementById('unitList');
+  var quizSec = document.getElementById('finalQuiz');
+  if (currentFilter === 'quiz') { if (list) list.style.display = 'none'; if (quizSec) quizSec.style.display = 'block'; return; }
+  if (list) list.style.display = 'block';
+  if (quizSec) quizSec.style.display = 'none';
+  var q = currentQuery.trim().toLowerCase();
+  var html = '';
+  var count = 0;
+  DATA.units.forEach(function(u){
+    if (currentFilter !== 'all' && u.part !== currentFilter) return;
+    if (q) {
+      var hay = (u.title_ja + ' ' + u.title_zh + ' ' + u.no + ' ' + u.vocab.map(function(v){ return v.ja + ' ' + v.zh; }).join(' ')).toLowerCase();
+      if (hay.indexOf(q) === -1) return;
+    }
+    html += unitCard(u); count++;
+  });
+  if (list) list.innerHTML = html || '<div class="card">搵唔到相關單元，試下改第二個關鍵字。</div>';
+  var cnt = document.getElementById('countText');
+  if (cnt) cnt.textContent = '顯示 ' + count + ' 個單元';
+}
+function setFilter(f, btn){
+  currentFilter = f;
+  var btns = document.querySelectorAll('.tab-btn');
+  for (var i = 0; i < btns.length; i++) btns[i].classList.toggle('active', btns[i] === btn);
+  renderUnits();
+}
+var finalState = { score: 0, answered: 0, total: 10 };
+function renderFinalQuiz(){
+  var qs = DATA.units.slice(0, 10);
+  var box = document.getElementById('finalQuizBox');
+  if (!box) return;
+  finalState = { score: 0, answered: 0, total: qs.length };
+  var html = '';
+  qs.forEach(function(u, qi){
+    var opts = u.quiz.options.map(function(o, idx){
+      return '<button class="opt-btn" data-q="' + qi + '" data-idx="' + idx + '" onclick="answerFinal(' + qi + ',' + idx + ',this)">（' + String.fromCharCode(65 + idx) + '）' + esc(o) + '</button>';
+    }).join('');
+    html += '<div class="card" data-final-q="' + qi + '"><b>Q' + (qi + 1) + '. ' + esc(u.quiz.q) + '</b><div class="small">' + esc(u.no) + ' ' + esc(u.title_ja) + '</div>' + opts + '<div class="quiz-explain"></div></div>';
+  });
+  box.innerHTML = html;
+  var sc = document.getElementById('finalScore');
+  if (sc) sc.textContent = '';
+}
+function answerFinal(qi, chosen, btn){
+  var qs = DATA.units.slice(0, 10);
+  var u = qs[qi];
+  var card = btn.closest('[data-final-q]');
+  if (!card || card.dataset.answered) return;
+  card.dataset.answered = '1';
+  finalState.answered++;
+  if (chosen === u.quiz.answer) finalState.score++;
+  var opts = card.querySelectorAll('.opt-btn');
+  for (var j = 0; j < opts.length; j++) {
+    var idx = parseInt(opts[j].dataset.idx, 10);
+    if (idx === u.quiz.answer) opts[j].classList.add('correct');
+    else if (idx === chosen) opts[j].classList.add('wrong');
+  }
+  var ex = card.querySelector('.quiz-explain');
+  if (ex) { ex.textContent = (chosen === u.quiz.answer ? '答啱咗！' : '答錯咗。') + u.quiz.explain; ex.classList.add('show'); }
+  if (finalState.answered >= finalState.total) {
+    var sc = document.getElementById('finalScore');
+    if (sc) sc.textContent = '成績：' + finalState.score + ' / ' + finalState.total + '（' + Math.round(finalState.score / finalState.total * 100) + '%）';
+  }
+}
+document.addEventListener('DOMContentLoaded', function(){
+  var s = document.getElementById('searchBox');
+  if (s) s.addEventListener('input', function(){ currentQuery = s.value; renderUnits(); });
+  updateProgress(); renderUnits(); renderFinalQuiz();
+});
+</script>
+</body>
+</html>
