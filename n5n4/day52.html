@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#c9403b">
+<title>Day 52 ｜ N5→N4 九十二日課程</title>
+<style>
+:root{
+  --bg:#faf7f2; --card:#ffffff; --text:#2b2620; --muted:#97907f;
+  --primary:#c9403b; --primary-soft:#fdeeee; --primary-deep:#a93229;
+  --radius:18px;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{font-family:-apple-system,"PingFang TC","Noto Sans TC","Hiragino Sans",sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+header{background:linear-gradient(140deg,#c9403b 0%,#d9534a 55%,#e07a3f 100%);color:#fff;padding:2.2rem 1.2rem 1.6rem;border-radius:0 0 28px 28px}
+.header-row{display:flex;justify-content:space-between;align-items:center}
+header h1{font-size:1.45rem;font-weight:800;letter-spacing:.5px}
+header .sub{opacity:.88;font-size:.82rem;margin-top:.3rem}
+.ring{width:74px;height:74px;border-radius:50%;background:conic-gradient(#fff calc(var(--p)*1%),rgba(255,255,255,.25) 0);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ring-in{width:58px;height:58px;border-radius:50%;background:#b23a34;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.ring-in b{font-size:1.05rem}.ring-in span{font-size:.55rem;opacity:.8}
+.stats{display:flex;gap:.6rem;margin-top:1.1rem}
+.stat{flex:1;background:rgba(255,255,255,.16);backdrop-filter:blur(6px);border-radius:14px;padding:.6rem .8rem}
+.stat b{font-size:1.15rem;display:block}.stat span{font-size:.68rem;opacity:.85}
+main{max-width:600px;margin:0 auto;padding:1rem .9rem 5rem}
+.sec-title{font-size:1rem;font-weight:800;margin:1.4rem 0 .7rem;display:flex;align-items:center;gap:.45rem}
+.sec-title .dot{width:9px;height:9px;border-radius:50%;background:var(--primary)}
+.card{background:var(--card);border-radius:var(--radius);padding:1rem 1.05rem;margin-bottom:.85rem;box-shadow:0 1px 3px rgba(43,38,32,.06),0 4px 14px rgba(43,38,32,.05)}
+.jp{cursor:pointer;border-bottom:1.5px dotted #d98a85;transition:background .15s;border-radius:4px;padding:0 1px}
+.jp:active,.jp.speaking{background:var(--primary-soft)}
+.jp.speaking{border-bottom:2px solid var(--primary)}
+.rate-ctl{position:sticky;top:0;z-index:50;display:flex;gap:.4rem;align-items:center;justify-content:center;
+  background:rgba(255,255,255,.94);padding:.45rem;border-radius:0 0 14px 14px;
+  box-shadow:0 2px 12px rgba(0,0,0,.06);font-size:.82rem;color:var(--muted);margin:0 -.5rem .6rem}
+.rate-ctl .rate-btn{border:1px solid #e8ddd2;background:#fff;color:var(--muted);border-radius:999px;
+  padding:.28rem .8rem;font-size:.82rem;cursor:pointer}
+.rate-ctl .rate-btn.active{background:var(--primary);border-color:var(--primary);color:#fff;font-weight:700}
+.reading{color:var(--muted);font-size:.85em}
+.vocab-num{display:inline-flex;width:1.7rem;height:1.7rem;border-radius:50%;background:var(--primary-soft);color:var(--primary-deep);font-weight:800;font-size:.85rem;align-items:center;justify-content:center;margin-right:.5rem}
+.vocab-zh{color:var(--primary-deep);font-weight:700}
+.vocab-ex{margin:.35rem 0 0 2.2rem;font-size:.92rem;color:#5b544a}
+.pattern{background:#2b2620;color:#f5e9d8;border-radius:12px;padding:.7rem .9rem;font-size:.95rem;margin:.5rem 0;font-family:inherit}
+.g-title{font-weight:800;font-size:1.02rem;color:var(--primary-deep)}
+.g-explain{margin:.4rem 0}
+.g-ex{margin:.3rem 0 .3rem 1rem}
+.practice{background:var(--primary-soft);border-radius:12px;padding:.7rem .9rem;margin-top:.6rem;font-size:.92rem}
+.practice b{color:var(--primary-deep)}
+.practice .ans{color:var(--muted);font-size:.85rem;margin-top:.25rem}
+.kanji-row{display:flex;gap:.8rem;align-items:baseline;padding:.45rem 0;border-bottom:1px dashed #e8e0d2}
+.kanji-row:last-child{border-bottom:none}
+.kanji-ch{font-size:1.5rem;font-weight:800;min-width:2.2rem;text-align:center}
+.kanji-rd{font-size:.82rem;color:var(--muted)}
+.kanji-wd{font-size:.9rem}
+.task{background:var(--card);border-radius:var(--radius);padding:1rem 1.05rem;margin-bottom:.85rem;box-shadow:0 1px 3px rgba(43,38,32,.06)}
+.task b{color:var(--primary-deep)}
+.nav{display:flex;justify-content:space-between;gap:.7rem;margin-top:1.4rem}
+.nav a{flex:1;text-align:center;background:var(--card);border-radius:14px;padding:.8rem;text-decoration:none;color:var(--primary-deep);font-weight:700;box-shadow:0 1px 3px rgba(43,38,32,.08)}
+.nav a.disabled{opacity:.35;pointer-events:none}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
+@media(min-width:480px){.grid{grid-template-columns:1fr 1fr 1fr}}
+.dcard{background:var(--card);border-radius:var(--radius);padding:.95rem 1rem;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(43,38,32,.06),0 4px 14px rgba(43,38,32,.05);transition:transform .12s;display:block}
+.dcard:active{transform:scale(.96)}
+.dcard-top{display:flex;justify-content:space-between;align-items:baseline}
+.dcard-day{font-weight:800;font-size:1.05rem;color:var(--primary)}
+.dcard-wd{font-size:.75rem;color:var(--muted)}
+.dcard-date{font-size:.72rem;color:var(--muted);margin-top:.15rem}
+.dcard-theme{font-size:.76rem;color:#5b544a;margin-top:.35rem;line-height:1.35}
+.chip{display:inline-block;font-size:.64rem;padding:.18rem .55rem;border-radius:99px;margin-top:.5rem;font-weight:600;background:var(--primary-soft);color:var(--primary-deep)}
+footer{text-align:center;padding:1.5rem;color:var(--muted);font-size:.72rem}
+.back{display:inline-block;color:#fff;opacity:.9;text-decoration:none;font-size:.85rem;margin-bottom:.6rem}
+.day-meta{opacity:.88;font-size:.82rem;margin-top:.3rem}
+h2.lesson-h{font-size:1.25rem;font-weight:800;margin-bottom:.2rem}
+</style>
+</head>
+<body>
+<header>
+  <a class="back" href="index.html">← 目錄</a>
+  <div class="header-row">
+    <div>
+      <h1>📘 Day 52 / 92</h1>
+      <div class="day-meta">2026-11-28（六）｜N4期・Week 8</div>
+    </div>
+  </div>
+  <div class="sub" style="margin-top:.5rem;font-size:.95rem;font-weight:700">Week 8 週測驗（可能形・意向形・條件）</div>
+</header>
+<main>
+  <div class="rate-ctl">🔊 語速
+    <button class="rate-btn" data-rate="0.7" onclick="setRate(0.7)">0.7x 慢</button>
+    <button class="rate-btn" data-rate="1" onclick="setRate(1)">1.0x 標準</button>
+    <button class="rate-btn" data-rate="1.25" onclick="setRate(1.25)">1.25x 快</button>
+  </div>
+  <div class="card">🔊 撳任何 <span class="jp" onclick="speak(this)" data-speak="日文">日文</span>（虛線底線）即播真人錄音，再撳一下停止</div>
+  <div class="card">一個星期學咗可能形、意向形、〜ようになる・〜ようにする，仲有條件句四兄弟 〜と・〜ば・〜たら・〜なら。今日測驗即係將佢哋排排坐睇清楚——邊個「如果」用邊個接續、邊個先係你嘅打算、邊個先係能力，今日補返。唔駛急，慢慢嚟。</div>
+  <div class="sec-title"><span class="dot"></span>📝 測驗（Week 8 週測驗（可能形・意向形・條件））</div><div class="card"><b>Q1. 「私は日本語が___。」（我識講日文。）應選：</b><div>（A）話せます</div><div>（B）話します</div><div>（C）話しました</div><div>（D）話す</div><div class="ans" style="color:var(--muted);font-size:.85rem;margin-top:.3rem">答案：（A）話せます。——可能形＝識／能夠做某件事：話す→話せる。「話します」只係講「我講日文」，唔係講能力。</div></div>
+<div class="card"><b>Q2. 「彼はピアノが___。」（佢識彈鋼琴。）應選：</b><div>（A）弾けます</div><div>（B）弾きます</div><div>（C）弾きました</div><div>（D）弾く</div><div class="ans" style="color:var(--muted);font-size:.85rem;margin-top:.3rem">答案：（A）弾けます。——可能形：弾く→弾ける。「弾きます」係「我彈鋼琴」，唔係講識唔識。</div></div>
+<div class="card"><b>Q3. 「明日は早く起き___と思います。」（聽日我打算早起。）應選：</b><div>（A）よう</div><div>（B）ます</div><div>（C）る</div><div>（D）た</div><div class="ans" style="color:var(--muted);font-size:.85rem;margin-top:.3rem">答案：（A）よう。——意向形＋と思います＝講自己嘅打算、決心：「起きようと思います」＝我打算早起。「起きると思います」係推測（我諗我會早起），唔係打算。</div></div>
+<div class="card"><b>Q4. 「毎日練習して、日本語が話せる___なりました。」（每日練習，變得識講日文。）應選：</b><div>（A）ように</div><div>（B）よう</div><div>（C）ため</div><div>（D）こと</div><div class="ans" style="color:var(--muted);font-size:.85rem;margin-top:.3rem">答案：（A）ように。——可能形＋ようになる＝變成能夠…：「話せるようになりました」＝變得識講日文。「よう」後面要接動詞，唔可以直接接「なりました」。</div></div>
+<div class="card"><b>Q5. 「健康のために、毎日野菜を食べる___しています。」（為咗健康，我特登每日食菜。）應選：</b><div>（A）ように</div><div>（B）よう</div><div>（C）ため</div><div>（D）こと</div><div class="ans" style="color:var(--muted);font-size:.85rem;margin-top:.3rem">答案：（A）ように。——〜ようにする＝刻意、特登去做某件事（養成習慣）：「食べるようにしています」＝我特登每日食菜。「〜ようになる」係自然變化，唔係自己刻意做。</div></div>
+<div class="card"><b>Q6. 「春に___、桜が咲きます。」（一到春天，櫻花就會開。）應選：</b><div>（A）なると</div><div>（B）なれば</div><div>（C）なったら</div><div>（D）なら</div><div class="ans" style="color:var(--muted);font-size:.85rem;margin-top:.3rem">答案：（A）なると。——自然條件：〜と講必然結果——一到春天，櫻花一定會開。「なれば」係純粹假設，「なったら」強調完成後，「なら」係以前提講判斷，意思唔啱。</div></div>
+<div class="card"><b>Q7. 「安い___、買います。」（如果平，我就買。）應選：</b><div>（A）ければ</div><div>（B）かったら</div><div>（C）なら</div><div>（D）と</div><div class="ans" style="color:var(--muted);font-size:.85rem;margin-top:.3rem">答案：（A）ければ。——〜ば係純粹假設「如果…就…」：安い→安ければ。「かったら」強調完成後，「なら」係以前提講判斷，「と」係必然結果——呢句係純粹假設。</div></div>
+<div class="card"><b>Q8. 「家に帰っ___、シャワーを浴びます。」（返到屋企之後，我會沖涼。）應選：</b><div>（A）たら</div><div>（B）ば</div><div>（C）と</div><div>（D）なら</div><div class="ans" style="color:var(--muted);font-size:.85rem;margin-top:.3rem">答案：（A）たら。——〜たら強調前句完成咗，先講後句：「帰ったら」＝返到屋企之後。「〜ば」係純粹假設，「〜と」係必然結果，「〜なら」係以前提講判斷，意思唔啱。</div></div>
+<div class="card"><b>Q9. 「行く___、早く行きましょう。」（如果要去，就早啲去啦。）應選：</b><div>（A）なら</div><div>（B）と</div><div>（C）ば</div><div>（D）たら</div><div class="ans" style="color:var(--muted);font-size:.85rem;margin-top:.3rem">答案：（A）なら。——〜なら以已知事實做前提講判斷、建議：「行くなら」＝如果要去嘅話（已知對方想去）。「〜と」係必然結果，「〜ば」係純粹假設，「〜たら」強調完成後，意思唔啱。</div></div>
+<div class="card"><b>Q10. 「雨が降る___、試合は中止です。」（一落雨，比賽就取消。）應選：</b><div>（A）と</div><div>（B）ば</div><div>（C）たら</div><div>（D）なら</div><div class="ans" style="color:var(--muted);font-size:.85rem;margin-top:.3rem">答案：（A）と。——講既定規則／必然結果用 〜と：「一落雨，比賽就取消」係固定安排，唔係假設。「〜たら」強調完成後，「〜ば」係純粹假設，「〜なら」係以已知事實做前提回應人哋嘅提議——呢句三樣都唔係。</div></div>
+<div class="card"><b>造句 1：</b>提示：私／日本語／話す——組句（我識講日文。）<div class="ans" style="color:var(--muted);font-size:.85rem;margin-top:.3rem">參考：私は日本語が話せます。——可能形：話す→話せる，「識／能夠」做某件事。</div></div>
+<div class="card"><b>造句 2：</b>提示：明日／早い／起きる／思う——組句（聽日我打算早起。）<div class="ans" style="color:var(--muted);font-size:.85rem;margin-top:.3rem">參考：明日は早く起きようと思います。——意向形＋と思います＝講自己嘅打算、決心。</div></div>
+<div class="card"><b>造句 3：</b>提示：毎日／練習する／漢字／読む——組句（每日練習，變得識讀漢字。）<div class="ans" style="color:var(--muted);font-size:.85rem;margin-top:.3rem">參考：毎日練習して、漢字が読めるようになりました。——可能形＋ようになる＝變成能夠…。</div></div>
+<div class="card"><b>造句 4：</b>提示：安い／買う——組句（如果平，我就買。）<div class="ans" style="color:var(--muted);font-size:.85rem;margin-top:.3rem">參考：安ければ、買います。——い形容詞＋ければ＝如果…就…（〜ば純粹假設）。</div></div>
+<div class="card"><b>造句 5：</b>提示：家／帰る／電話する——組句（返到屋企之後，我會打電話。）<div class="ans" style="color:var(--muted);font-size:.85rem;margin-top:.3rem">參考：家に帰ったら、電話します。——動詞た形＋ら＝完成後先至…。</div></div><div class="sec-title"><span class="dot"></span>👂 聽讀任務</div><div class="task"><b>讀：</b>將10條選擇題嘅日文句逐句大聲讀一次，錯咗嘅嗰題讀5次；5句造句參考答案各自讀3次。</div><div class="task"><b>聽：</b>YouTube 搜尋「日本語 可能形 意向形 と ば たら なら 練習」，揀一條 Week 8 文法總整理片，聽到佢講你做錯題目嗰個文法為止；或者重播 Week 8 任何一堂嘅單字例句錄音跟讀。</div><div class="sec-title"><span class="dot"></span>🔁 複習</div><div class="card">Week 8 總點：①可能形：動詞變可能形（話す→話せる、読む→読める）＝識／能夠；同 〜ことができます 意思相近，可能形較口語 ②意向形：動詞意向形＋と思います＝自己嘅打算・決心（起きようと思います） ③〜ようになる＝自然變成能夠／變成…（話せるようになりました）；〜ようにする＝刻意、特登去做（食べるようにしています） ④條件四兄弟：〜と＝自然・必然結果（春になると桜が咲きます）；〜ば＝純粹假設（安ければ買います）；〜たら＝完成後先至（帰ったら電話します）；〜なら＝以已知事實做前提講判斷・建議（行くなら早く行きましょう）。聽日進入 Week 9：命令・推量・傳聞——D53 命令形・禁止形、D54 〜なさい、D55 〜そうです（傳聞）。</div>
+  <div class="card">💪 「如果」四兄弟齊晒，可能形同意向形都入袋——N4 嘅條件句就係咁，識分先至識用。測驗照到嘅鬆位唔使驚，聽日開始 Week 9，命令、推量、傳聞逐日嚟，越練越熟，繼續！</div>
+  <div class="nav"><a href="day51.html">← Day 51</a><a href="index.html">目錄</a><a class="disabled">聽日見 →</a></div>
+</main>
+<footer>每晚 21:00 自動更新 ｜ Pison自編課程</footer>
+<script>
+var currentAudio=null, currentEl=null;
+var playRate=1;
+try{ var saved=parseFloat(localStorage.getItem('n5n4_rate')); if(saved>0) playRate=saved; }catch(e){}
+function setRate(r){
+  playRate=r;
+  try{ localStorage.setItem('n5n4_rate',String(r)); }catch(e){}
+  var btns=document.querySelectorAll('.rate-btn');
+  for(var i=0;i<btns.length;i++){ btns[i].classList.toggle('active', parseFloat(btns[i].dataset.rate)===r); }
+  stopAll();
+}
+function stopAll(){
+  try{ if('speechSynthesis' in window) speechSynthesis.cancel(); }catch(e){}
+  if(currentAudio){ try{ currentAudio.pause(); }catch(e){} currentAudio=null; }
+  if(currentEl){ currentEl.classList.remove('speaking'); currentEl=null; }
+}
+/* 日文語音選擇：後備朗讀一定要用日文聲，唔可以靜靜跌去英文聲 */
+var jaVoice=null;
+function loadJaVoice(){
+  try{
+    var vs=speechSynthesis.getVoices()||[];
+    var i, lg;
+    for(i=0;i<vs.length;i++){ lg=String(vs[i].lang||'').toLowerCase(); if(lg.indexOf('ja')===0){ jaVoice=vs[i]; return; } }
+    for(i=0;i<vs.length;i++){ if(/kyoko|otoya|japan/i.test(String(vs[i].name||''))){ jaVoice=vs[i]; return; } }
+  }catch(e){}
+}
+try{ if('speechSynthesis' in window){ loadJaVoice(); speechSynthesis.onvoiceschanged=loadJaVoice; } }catch(e){}
+function speakFallback(el){
+  try{
+    if(!('speechSynthesis' in window)){alert('你個瀏覽器唔支援語音朗讀');return;}
+    var t=(el.dataset.speak||el.textContent||'').replace(/\s+/g,' ').trim();
+    if(!t) return;
+    try{ speechSynthesis.cancel(); }catch(e){}
+    var startSpeak=function(){
+      var u=new SpeechSynthesisUtterance(t);
+      u.lang='ja-JP'; u.rate=0.85;
+      if(jaVoice){ u.voice=jaVoice; }
+      currentEl=el; el.classList.add('speaking');
+      var done=function(){ el.classList.remove('speaking'); if(currentEl===el) currentEl=null; };
+      u.onend=done; u.onerror=done;
+      speechSynthesis.speak(u);
+    };
+    var restoreHandler=function(){ try{ speechSynthesis.onvoiceschanged=loadJaVoice; }catch(e){} };
+    loadJaVoice();
+    if(jaVoice){ startSpeak(); return; }
+    /* iOS 嘅 voices 係異步載入，等一等；等極都冇日文聲就唔讀（唔好用英文聲亂讀） */
+    var settled=false;
+    var noVoice=function(){
+      if(settled) return; settled=true; restoreHandler();
+      alert('錄音載入唔到，部機又搵唔到日文語音——請檢查網絡之後再撳一次');
+    };
+    var timer=setTimeout(function(){
+      if(settled) return;
+      loadJaVoice();
+      settled=true; restoreHandler();
+      if(jaVoice){ startSpeak(); } else { noVoice(); }
+    },1500);
+    try{
+      speechSynthesis.onvoiceschanged=function(){
+        if(settled) return;
+        loadJaVoice();
+        settled=true; clearTimeout(timer); restoreHandler();
+        if(jaVoice){ startSpeak(); } else { noVoice(); }
+      };
+    }catch(e){ clearTimeout(timer); noVoice(); }
+  }catch(e){}
+}
+function speak(el){
+  try{
+    if(currentEl===el){ stopAll(); return; }
+    stopAll();
+    var au=el.dataset.audio;
+    if(au){
+      var fellBack=false;
+      var doFallback=function(){ if(fellBack) return; fellBack=true; stopAll(); speakFallback(el); };
+      var a=new Audio(au);
+      try{ a.playbackRate=playRate; }catch(e){}
+      currentAudio=a; currentEl=el; el.classList.add('speaking');
+      a.onended=function(){ stopAll(); };
+      a.onerror=doFallback;
+      var p=a.play();
+      if(p&&p.catch){ p.catch(doFallback); }
+      return;
+    }
+    speakFallback(el);
+  }catch(e){}
+}
+try{ setRate(playRate); }catch(e){}
+</script>
+</body>
+</html>
